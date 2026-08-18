@@ -16,7 +16,7 @@ public class DiceSO_JCY : ScriptableObject
     //Vector3(0f, 270f, 0f),   // Index 3 (기본 모델링의 5번 면)
     //Vector3(90f, 0f, 0f),    // Index 4 (기본 모델링의 4번 면)
     //Vector3(-90f, 0f, 0f)    // Index 5 (기본 모델링의 6번 면)
-    public int[] faceValues = new int[6];  //주사위 눈 값
+    public int[] faceValues = { 1 , 2, 3, 4,5, 6};  //주사위 눈 값
 
     // 무작위로 눈 하나를 뽑아주는 함수
     public int GetRandomIndex()
