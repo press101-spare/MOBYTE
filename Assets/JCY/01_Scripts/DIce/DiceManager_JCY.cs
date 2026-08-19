@@ -8,9 +8,21 @@ public class DiceManager_JCY : MonoBehaviour
     [SerializeField] private Transform[] spawnPositions; // 주사위 스폰 위치들
 
     private List<GameObject> activeDiceObjects = new List<GameObject>();
+    
     private List<DiceObject> activeDiceScripts = new List<DiceObject>();
 
 
+    // 0~5번 인덱스 면이 정면을 볼 때의 회전 각도 배열 (제시해주신 각도 데이터 적용)
+    public readonly Vector3[] faceRotations = new Vector3[]
+    {
+        new Vector3(0f, 180f, 0f),   // Index 1 (숫자 1)
+        new Vector3(0f, 90f, 0f),    // Index 2 (숫자 2)
+        new Vector3(0f, 0f, 0f),     // Index 3 (숫자 3)
+        new Vector3(90f, 0f, 0f),    // Index 4 (숫자 4)
+        new Vector3(0f, 270f, 0f),   // Index 5 (숫자 5)
+        new Vector3(-90f, 0f, 0f)    // Index 6 (숫자 6)
+    };
+    
     private void Awake()
     {
         if (Instance == null)

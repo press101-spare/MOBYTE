@@ -16,16 +16,7 @@ public class DIceRoller_JCY : MonoBehaviour
 
     private bool isRolling = false;
 
-    // 0~5번 인덱스 면이 정면을 볼 때의 회전 각도 배열 (제시해주신 각도 데이터 적용)
-    private readonly Vector3[] faceRotations = new Vector3[]
-    {
-        new Vector3(0f, 0f, 0f),     // Index 0 (숫자 3)
-        new Vector3(0f, 90f, 0f),    // Index 1 (숫자 2)
-        new Vector3(0f, 180f, 0f),   // Index 2 (숫자 1)
-        new Vector3(0f, 270f, 0f),   // Index 3 (숫자 5)
-        new Vector3(90f, 0f, 0f),    // Index 4 (숫자 4)
-        new Vector3(-90f, 0f, 0f)    // Index 5 (숫자 6)
-    };
+  
 
     public void RollDice()
     {
@@ -46,7 +37,7 @@ public class DIceRoller_JCY : MonoBehaviour
 
         // 2. SO에서 무작위 면 '인덱스(0~5)' 추출 및 목표 각도 계산
         int targetIndex = currentDice.GetRandomIndex();
-        Vector3 finalRotation = faceRotations[targetIndex];
+        Vector3 finalRotation = DiceManager_JCY.Instance.faceRotations[targetIndex];
         int finalResultValue = currentDice.faceValues[targetIndex]; // 최종 결과값
 
         // 3. 연출 변수 계산
