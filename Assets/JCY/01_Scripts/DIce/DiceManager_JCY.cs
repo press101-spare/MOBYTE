@@ -9,7 +9,7 @@ public class DiceManager_JCY : MonoBehaviour
 
     private List<GameObject> activeDiceObjects = new List<GameObject>();
     
-    private List<DiceObject> activeDiceScripts = new List<DiceObject>();
+    private List<DiceObject_JCY> activeDiceScripts = new List<DiceObject_JCY>();
 
 
     // 0~5번 인덱스 면이 정면을 볼 때의 회전 각도 배열 (제시해주신 각도 데이터 적용)
@@ -48,7 +48,7 @@ public class DiceManager_JCY : MonoBehaviour
 
             // SO에 지정된 전용 프리팹 생성
             GameObject newDice = Instantiate(currentSO.dicePrefab, spawnPositions[i].position, spawnPositions[i].rotation ,spawnPositions[i] );
-            DiceObject diceScript = newDice.GetComponent<DiceObject>();
+            DiceObject_JCY diceScript = newDice.GetComponent<DiceObject_JCY>();
             
 
             // 스크립트에 SO 데이터 전달

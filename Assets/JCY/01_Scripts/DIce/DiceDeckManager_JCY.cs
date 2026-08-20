@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class DiceDeckManager : MonoBehaviour
+public class DiceDeckManager_JCY : MonoBehaviour
 {
     // 내가 보유한 전체 주사위
     [SerializeField] private List<DiceSO_JCY> diceCollection;
@@ -24,7 +24,7 @@ public class DiceDeckManager : MonoBehaviour
     // 한 턴에 뽑을 주사위 개수
     [SerializeField] private int drawCount = 6;
 
-    public static DiceDeckManager Instance { get; private set; }
+    public static DiceDeckManager_JCY Instance { get; private set; }
     private void Awake()
     {
         if (Instance == null)

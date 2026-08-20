@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class DiceObject : MonoBehaviour
+public class DiceObject_JCY : MonoBehaviour
 {
     private Transform diceTransform;
     private DiceSO_JCY currentDiceSO;
