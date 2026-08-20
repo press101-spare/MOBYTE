@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a326c7ca9c5a0e489ab8a0314c65030, type: 3}
+  m_Name: NormalDice
+  m_EditorClassIdentifier: 
+  diceName: "\uAE30\uBCF8 \uC8FC\uC0AC\uC704"
+  diceDescription: "\uAE30\uBCF8\uC801\uC778 \uC8FC\uC0AC\uC704\uB2E4."
+  diceIcon: {fileID: 0}
+  dicePrefab: {fileID: 4661092021641085283, guid: a14007e458ec05c4e8b706eec7ed0dce, type: 3}
+  faceValues: 000000000000000000000000000000000000000000000000
