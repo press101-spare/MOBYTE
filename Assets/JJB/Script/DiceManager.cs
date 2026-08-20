@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace JJB.Script
 {
@@ -17,14 +18,16 @@ namespace JJB.Script
 
             if (_diceRoller == null)
             {
-                Debug.LogError(
-                    "Dice Roller Source가 IDiceRoller를 구현하지 않았습니다.",
-                    this
-                );
+                Debug.LogError("Dice Roller Source가 IDiceRoller를 구현하지 않았습니다.", this);
             }
         }
 
-        public void RollDices()
+        private void Start()
+        {
+            RollDices();
+        }
+        
+        private void RollDices()
         {
             if (_diceRoller == null)
                 return;
@@ -40,7 +43,7 @@ namespace JJB.Script
 
                 dicePhysics[i].Throw();
 
-                Debug.Log($"Dice {i + 1} : {value}");
+                Debug.Log($"Dice {i + 1} Value : {dices[i].Value}");
             }
         }
     }
