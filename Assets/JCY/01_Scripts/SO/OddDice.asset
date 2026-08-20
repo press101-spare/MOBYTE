@@ -16,5 +16,5 @@ MonoBehaviour:
   diceDescription: "\uD640\uC218\uB85C\uB9CC \uC774\uB8E8\uC5B4\uC9C4 \uC8FC\uC0AC\uC704\uB2E4."
   diceIcon: {fileID: 0}
   dicePrefab: {fileID: 1780928802759302715, guid: dce779c59195d2842a624a3e8873d6ba, type: 3}
-  diceEffectType: 0
+  diceEffectType: 2
   faceValues: 010000000200000003000000040000000500000006000000

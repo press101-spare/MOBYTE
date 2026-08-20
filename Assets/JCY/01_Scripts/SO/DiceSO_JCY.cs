@@ -52,6 +52,7 @@ public class DiceSO_JCY : ScriptableObject
             }
         }
 
-        return availableIndexes[Random.Range(0, availableIndexes.Count)];
+        int num = availableIndexes[Random.Range(0, availableIndexes.Count)];
+        return num;
     }
 }
