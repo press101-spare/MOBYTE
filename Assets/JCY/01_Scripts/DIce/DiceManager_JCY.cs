@@ -47,8 +47,9 @@ public class DiceManager_JCY : MonoBehaviour
             DiceSO_JCY currentSO = drawnDiceSOList[i];
 
             // SO에 지정된 전용 프리팹 생성
-            GameObject newDice = Instantiate(currentSO.dicePrefab, spawnPositions[i].position, spawnPositions[i].rotation);
+            GameObject newDice = Instantiate(currentSO.dicePrefab, spawnPositions[i].position, spawnPositions[i].rotation ,spawnPositions[i] );
             DiceObject diceScript = newDice.GetComponent<DiceObject>();
+            
 
             // 스크립트에 SO 데이터 전달
             diceScript.Setup(currentSO);
@@ -56,6 +57,7 @@ public class DiceManager_JCY : MonoBehaviour
             activeDiceObjects.Add(newDice);
             activeDiceScripts.Add(diceScript);
         }
+        RollAllDice();
     }
 
     public void RollAllDice()

@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class DiceDeckManager : MonoBehaviour
 {
@@ -17,7 +19,7 @@ public class DiceDeckManager : MonoBehaviour
     [SerializeField] private List<DiceSO_JCY> drawnDice;
     
     //버려진 주사위들
-    [SerializeField] private List<DiceSO_JCY> discardPile;
+    [SerializeField] private List<DiceSO_JCY> diceFile_JCy;
 
     // 한 턴에 뽑을 주사위 개수
     [SerializeField] private int drawCount = 6;
@@ -69,8 +71,7 @@ public class DiceDeckManager : MonoBehaviour
     //덱에서 주사위 뽑아서 전달
     public void DrawDice()
     {
-        if(diceDeck.Count < drawCount)
-            ReshuffleDeck();
+       
         DiscardDice(); 
         for (int i = 0; i < drawCount; i++)
         {
@@ -83,23 +84,36 @@ public class DiceDeckManager : MonoBehaviour
             
             diceDeck.RemoveAt(randomIndex);
         }
+     
 
         // 3. DiceManager에게 전달
         DiceManager_JCY.Instance.StartTurn(drawnDice);
+        if (diceDeck.Count < drawCount)
+        {
+            ReshuffleDeck();
+        }
+        else
+        {
+          DiscardDice();
+        }
     }
 
     //다이스 버린거 버리는 덱에 넣고 드로우한 다이스 초기화
     public void DiscardDice()
     {
-        discardPile.AddRange(drawnDice);
+        diceFile_JCy.AddRange(drawnDice);
         drawnDice.Clear();
     }
     
     //덱에 있는 다이스가 6개 이하면 보충해주는 함수
     public void ReshuffleDeck()
     {
-        diceDeck.AddRange(discardPile);
-        discardPile.Clear();
+        diceFile_JCy.AddRange(drawnDice);
+        drawnDice.Clear();
+        // Debug.Log(drawnDice.Count);
+        // Debug.Log("현재" + diceFile_JCy.Count);
+        diceDeck.AddRange(diceFile_JCy);
+        diceFile_JCy.Clear();
 
         // 여기서 랜덤하게 섞기
         for (int i = 0; i < diceDeck.Count; i++)
@@ -110,5 +124,6 @@ public class DiceDeckManager : MonoBehaviour
             diceDeck[i] = diceDeck[randomIndex];
             diceDeck[randomIndex] = temp;
         }
+        // Debug.Log("이후" + diceFile_JCy.Count);
     }
 }
