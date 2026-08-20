@@ -10,10 +10,7 @@ public class DiceObject : MonoBehaviour
     [SerializeField] private float rollDuration = 1.5f;
     [SerializeField] private float rollDistance = 5.0f;
 
-    private void Awake()
-    {
-        diceTransform = transform;
-    }
+
 
     public void Setup(DiceSO_JCY diceSO)
     {
@@ -46,6 +43,8 @@ public class DiceObject : MonoBehaviour
         // 2. 시작 위치 / 회전
         // --------------------------------
 
+        diceTransform = gameObject.transform;
+        
         Vector3 startPos = diceTransform.position;
 
         diceTransform.rotation = Quaternion.Euler(
@@ -95,6 +94,7 @@ public class DiceObject : MonoBehaviour
             float easeT = t * t * (3f - 2f * t);
 
 
+            if (diceTransform == null) yield break;
             // 위치 이동
             diceTransform.position =
                 Vector3.Lerp(startPos, targetPos, easeT);
