@@ -53,6 +53,7 @@ public class DiceSO_JCY : ScriptableObject
         }
 
         int num = availableIndexes[Random.Range(0, availableIndexes.Count)];
+        Debug.Log("나온 주사위 값:" + num);
         return num;
     }
 }
