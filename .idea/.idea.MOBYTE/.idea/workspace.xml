@@ -11,16 +11,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/DiceValueView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/DiceValueView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Dice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Dice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/DiceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/DiceManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/DicePhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/DicePhysics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenUpgradeManager.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenUpgradeManager.XML.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenUpgradeManager.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenUpgradeManager.dll.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/PanelController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/PanelController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/panels/panel_08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Scene/JJBMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Scene/JJBMap.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +36,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceDeckManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/DiceValueView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/PanelController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -125,7 +126,7 @@
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "JCY",
+    "git-widget-placeholder": "JJB",
     "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -183,6 +184,7 @@
       <option name="presentableId" value="Default" />
       <updated>1787058741691</updated>
       <workItem from="1787220138001" duration="2275000" />
+      <workItem from="1787559325924" duration="845000" />
     </task>
     <servers />
   </component>
