@@ -1,20 +1,62 @@
+using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DiceObject_JCY : MonoBehaviour
 {
+    [Header("주사위 정보")]
     private Transform diceTransform;
     public DiceSO_JCY currentDiceSO;
+    public int currentIndex;
 
     [Header("굴리기 설정")]
     [SerializeField] private float rollDuration = 1.5f;
     [SerializeField] private float rollDistance = 5.0f;
+    
+   
 
+    
+    [Header("셀렉트 설정")]
+    public MeshRenderer MeshCompo { get; private set; }
+    [field:SerializeField] public Material OutLine { get; private set; }
+    [field:SerializeField] public bool select { get; private set; }
 
+    private void OnEnable()
+    {
+        select = true;
+        MeshCompo = GetComponentInChildren<MeshRenderer>();
+    }
 
     public void Setup(DiceSO_JCY diceSO)
     {
         currentDiceSO = diceSO;
+    }
+
+    public void OnMouseDown()
+    {
+        if (select)
+        {
+            select = false;
+            Debug.Log(currentIndex);
+            Material[] cureentMaterials = MeshCompo.materials;
+
+            Material[] newMaterials = new Material[cureentMaterials.Length + 1];
+
+            int index = 0;
+            for (index = 0; index < cureentMaterials.Length; index++)
+            {
+                newMaterials[index] = cureentMaterials[index];
+            }
+
+            newMaterials[index] = OutLine;
+            index = 0;
+            MeshCompo.materials = newMaterials;
+        }
+        else
+        {
+            
+        }
     }
 
     // public IEnumerator RollRoutine(System.Action<int> onComplete)

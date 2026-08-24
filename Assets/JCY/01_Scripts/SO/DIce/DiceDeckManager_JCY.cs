@@ -11,6 +11,10 @@ public class DiceDeckManager_JCY : MonoBehaviour
     
     // 기본 덱에 들어가는 주사위
     [SerializeField] private DiceSO_JCY defaultDice;
+    
+    // 기본 덱에 들어갈 주사위 개수
+    [SerializeField] private int defaultDiceCount;
+    
 
     // 현재 덱에 들어있는 주사위
     [SerializeField] private List<DiceSO_JCY> diceDeck;
@@ -47,7 +51,7 @@ public class DiceDeckManager_JCY : MonoBehaviour
     {
         diceDeck.Clear();
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < defaultDiceCount; i++)
         {
             diceDeck.Add(defaultDice);
         }
