@@ -51,7 +51,9 @@ MonoBehaviour:
   currentIndex: 0
   rollDuration: 1.5
   rollDistance: 5
-  <OutLine>k__BackingField: {fileID: 2100000, guid: 6fa4e4c131dc4674180187e65659de16, type: 2}
+  <OutLine>k__BackingField: {fileID: 2100000, guid: c6f288c5f5c442d498ba189ddcc568ec,
+    type: 2}
+  <select>k__BackingField: 0
 --- !u!54 &508322639934586137
 Rigidbody:
   m_ObjectHideFlags: 0
