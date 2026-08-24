@@ -11,16 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/DiceValueView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/DiceValueView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Dice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Dice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/DiceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/DiceManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/DicePhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/DicePhysics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenUpgradeManager.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenUpgradeManager.XML.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenUpgradeManager.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenUpgradeManager.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Scene/JJBGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Scene/JJBGameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Dice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/JJB_Dice.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Dice.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/JJB_Dice.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/DiceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/JJB_DiceManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/DiceManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/JJB_DiceManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/DicePhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/JJB_DicePhysics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/DicePhysics.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/JJB_DicePhysics.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/DiceValueView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/DiceValueView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/DiceView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/DiceView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/RandomDiceRoller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/JJB_RandomDiceRoller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/RandomDiceRoller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/JJB_RandomDiceRoller.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +129,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "JJB",
+    "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -183,6 +187,7 @@
       <option name="presentableId" value="Default" />
       <updated>1787058741691</updated>
       <workItem from="1787220138001" duration="2275000" />
+      <workItem from="1787224814011" duration="1149000" />
     </task>
     <servers />
   </component>

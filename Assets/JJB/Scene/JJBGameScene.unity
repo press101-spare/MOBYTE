@@ -1317,10 +1317,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xForce: 2
-  yForce: 4
+  yForce: 3
   liftForce: 4
   torqueForce: 10
-  gravityForce: 9.81
+  gravityForce: 10
 --- !u!114 &2136607707
 MonoBehaviour:
   m_ObjectHideFlags: 0
