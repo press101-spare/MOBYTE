@@ -2,7 +2,7 @@
 
 namespace JJB.Script
 {
-    public class RandomDiceRoller : MonoBehaviour, IDiceRoller
+    public class JJB_RandomDiceRoller : MonoBehaviour, IDiceRoller
     {
         public int Roll()
         {

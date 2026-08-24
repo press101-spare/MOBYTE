@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace JJB.Script
 {
-    public class DicePhysics : MonoBehaviour
+    public class JJB_DicePhysics : MonoBehaviour
     {
         [Header("Throw")]
         [SerializeField] private float xForce = 8f;
