@@ -11,7 +11,7 @@ public class DiceManager_JCY : MonoBehaviour
     [Header("주사위 리스트들")]
     [SerializeField] private List<GameObject> activeDiceObjects = new List<GameObject>();
     [SerializeField] private List<DiceObject_JCY> activeDiceScripts = new List<DiceObject_JCY>();
-    [SerializeField] private List<DicePhysics> activeDicePhysicd = new List<DicePhysics>();
+    [SerializeField] private List<JJB_DicePhysics> activeDicePhysicd = new List<JJB_DicePhysics>();
 
     [Header("기타 수치")] 
     [SerializeField] private float minTime = 0.3f;
@@ -55,14 +55,14 @@ public class DiceManager_JCY : MonoBehaviour
             // SO에 지정된 전용 프리팹 생성
             GameObject newDice = Instantiate(currentSO.dicePrefab, spawnPositions[i].position, spawnPositions[i].rotation ,spawnPositions[i] );
             DiceObject_JCY diceScript = newDice.GetComponent<DiceObject_JCY>();
-            DicePhysics dicePhysicdScript = newDice.GetComponent<DicePhysics>();
+            JJB_DicePhysics jjbDicePhysicdScript = newDice.GetComponent<JJB_DicePhysics>();
 
             // 스크립트에 SO 데이터 전달
             diceScript.Setup(currentSO);
 
             activeDiceObjects.Add(newDice);
             activeDiceScripts.Add(diceScript);
-            activeDicePhysicd.Add(dicePhysicdScript);
+            activeDicePhysicd.Add(jjbDicePhysicdScript);
         }
         RollAllDice();
     }
@@ -86,7 +86,7 @@ public class DiceManager_JCY : MonoBehaviour
         // 2. 주사위마다 개별적인 코루틴 실행
         for (int i = 0; i < activeDiceScripts.Count; i++)
         {
-            DicePhysics physics = activeDicePhysicd[i];
+            JJB_DicePhysics physics = activeDicePhysicd[i];
 
             // 💡 수정된 부분: 불필요한 시간 변수들을 빼고 매개변수 2개만 전달
             StartCoroutine(RollSingleDiceRoutine(physics, (resultValue) =>
@@ -101,7 +101,7 @@ public class DiceManager_JCY : MonoBehaviour
     }
 
 // 💡 매개변수 구조 맞추기
-    private IEnumerator RollSingleDiceRoutine(DicePhysics physics, System.Action<int> onResult)
+    private IEnumerator RollSingleDiceRoutine(JJB_DicePhysics physics, System.Action<int> onResult)
     {
         if (physics == null) yield break;
         Rigidbody rb = physics.GetComponent<Rigidbody>();
@@ -120,8 +120,10 @@ public class DiceManager_JCY : MonoBehaviour
         physics.LockDice();
         
         int targetIndex = System.Array.IndexOf(faceRotations, closestRot);
-        int resultValue = physics.GetComponent<DiceObject_JCY>().currentDiceSO.faceValues[targetIndex];
+        DiceObject_JCY currentDice = physics.GetComponent<DiceObject_JCY>();
 
+        int resultValue = currentDice.currentDiceSO.faceValues[targetIndex];
+        currentDice.currentIndex = resultValue;
         // 각도를 억지로 돌리는 DOTween 코드를 호출하지 않고 바로 결과 전달!
         Debug.Log("주사위 결과:"+ resultValue);
         onResult?.Invoke(resultValue);

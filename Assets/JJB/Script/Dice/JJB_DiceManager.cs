@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace JJB.Script
 {
-    public class DiceManager : MonoBehaviour
+    public class JJB_DiceManager : MonoBehaviour
     {
-        [SerializeField] private Dice[] dices;
-        [SerializeField] private DicePhysics[] dicePhysics;
+        [SerializeField] private JJB_Dice[] dices;
+        [SerializeField] private JJB_DicePhysics[] dicePhysics;
 
         [SerializeField] private MonoBehaviour diceRollerSource;
 

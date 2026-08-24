@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace JJB.Script
 {
-    public class Dice : MonoBehaviour
+    public class JJB_Dice : MonoBehaviour
     {
         private int _value;
         private bool _isHeld;
