@@ -309,7 +309,7 @@ Transform:
   m_GameObject: {fileID: 605988004}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.83, y: 0.62, z: 0}
+  m_LocalPosition: {x: -4.79, y: 1.7, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -340,7 +340,7 @@ Transform:
   m_GameObject: {fileID: 934633991}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.49, y: 0.55, z: 0}
+  m_LocalPosition: {x: -0.32999992, y: 2.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -406,7 +406,7 @@ Transform:
   m_GameObject: {fileID: 954824523}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.39, y: 0.7, z: 0}
+  m_LocalPosition: {x: 6.2700005, y: -2.83, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -437,7 +437,7 @@ Transform:
   m_GameObject: {fileID: 1150621425}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.9, y: 0.52, z: 0}
+  m_LocalPosition: {x: 5.3999996, y: 1.96, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -613,10 +613,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diceCollection: []
   defaultDice: {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
+  defaultDiceCount: 40
   diceDeck: []
   drawnDice: []
   diceFile_JCy: []
-  drawCount: 6
+  drawCount: 5
 --- !u!1 &1443411510
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +776,7 @@ Transform:
   m_GameObject: {fileID: 1500399825}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.52, y: 0.38, z: 0}
+  m_LocalPosition: {x: -5.78, y: -2.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1415,7 +1416,7 @@ Transform:
   m_GameObject: {fileID: 2143129773}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.47, y: 0.32, z: 0}
+  m_LocalPosition: {x: 0.72, y: -2.69, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

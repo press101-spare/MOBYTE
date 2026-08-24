@@ -7,10 +7,10 @@ namespace JJB.Script
     public class DicePhysics : MonoBehaviour
     {
         [Header("Throw")]
-        [SerializeField] private float xForce = 5f;
-        [SerializeField] private float yForce = 5f;
+        [SerializeField] private float xForce = 8f;
+        [SerializeField] private float yForce = 8f;
         [SerializeField] private float liftForce = 4f;
-        [SerializeField] private float torqueForce = 3f;
+        [SerializeField] private float torqueForce = 5f;
 
         private Rigidbody _rb;
 
@@ -42,11 +42,11 @@ namespace JJB.Script
         public void SmoothRotateToTarget(Vector3 targetEulerRotation, float duration, System.Action onComplete)
         {
             if (this == null || transform == null) return;
-
+        
             _rb.isKinematic = true;
             _rb.linearVelocity = Vector3.zero;
             _rb.angularVelocity = Vector3.zero;
-
+        
             transform.DORotate(targetEulerRotation, duration, RotateMode.Fast)
                 .SetEase(Ease.OutSine)
                 .OnComplete(() => { onComplete?.Invoke(); });

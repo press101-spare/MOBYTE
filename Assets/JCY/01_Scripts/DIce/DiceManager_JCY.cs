@@ -120,8 +120,10 @@ public class DiceManager_JCY : MonoBehaviour
         physics.LockDice();
         
         int targetIndex = System.Array.IndexOf(faceRotations, closestRot);
-        int resultValue = physics.GetComponent<DiceObject_JCY>().currentDiceSO.faceValues[targetIndex];
+        DiceObject_JCY currentDice = physics.GetComponent<DiceObject_JCY>();
 
+        int resultValue = currentDice.currentDiceSO.faceValues[targetIndex];
+        currentDice.currentIndex = resultValue;
         // 각도를 억지로 돌리는 DOTween 코드를 호출하지 않고 바로 결과 전달!
         Debug.Log("주사위 결과:"+ resultValue);
         onResult?.Invoke(resultValue);
