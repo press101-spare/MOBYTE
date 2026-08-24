@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5468591312274152409}
   - component: {fileID: 8646076973592781697}
+  - component: {fileID: -4022811084857938459}
   m_Layer: 0
   m_Name: NormalDice
   m_TagString: Untagged
@@ -45,8 +46,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c024f222935324f896b4d6e771be70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentDiceSO: {fileID: 0}
   rollDuration: 1.5
   rollDistance: 5
+--- !u!114 &-4022811084857938459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4661092021641085283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5181525cf424b0aa2e27af268bff8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xForce: 2
+  yForce: 4
+  liftForce: 4
+  torqueForce: 10
+  gravityForce: 9.81
 --- !u!1 &5453267357824860518
 GameObject:
   m_ObjectHideFlags: 0
