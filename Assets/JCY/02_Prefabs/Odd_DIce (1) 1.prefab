@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7439096558994289600}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.093, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48,8 +48,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDiceSO: {fileID: 0}
+  currentIndex: 0
   rollDuration: 1.5
   rollDistance: 5
+  <OutLine>k__BackingField: {fileID: 2100000, guid: c6f288c5f5c442d498ba189ddcc568ec,
+    type: 2}
+  <select>k__BackingField: 0
 --- !u!54 &4132127441796470907
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -92,8 +96,7 @@ MonoBehaviour:
   xForce: 8
   yForce: 8
   liftForce: 4
-  torqueForce: 3
-  gravityForce: 9.81
+  torqueForce: 5
 --- !u!1 &8371439093628576446
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +125,7 @@ Transform:
   m_GameObject: {fileID: 8371439093628576446}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
