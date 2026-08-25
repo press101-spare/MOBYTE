@@ -14,6 +14,7 @@ public class DiceManager_JCY : MonoBehaviour
     [SerializeField] private List<JJB_DicePhysics> activeDicePhysicd = new List<JJB_DicePhysics>();
 
     [Header("기타 수치")] 
+    [SerializeField] private int[] currentDiceValue = new int[5];
     [SerializeField] private float minTime = 0.3f;
     [SerializeField] private float maxTime = 1.5f;
 
@@ -126,6 +127,14 @@ public class DiceManager_JCY : MonoBehaviour
         currentDice.currentIndex = resultValue;
         // 각도를 억지로 돌리는 DOTween 코드를 호출하지 않고 바로 결과 전달!
         Debug.Log("주사위 결과:"+ resultValue);
+        for (int i = 0; i < currentDiceValue.Length; i++)
+        {
+            if (currentDiceValue[i] == 0)
+            {
+                currentDiceValue[i] = resultValue;
+                break;
+            }
+        }
         onResult?.Invoke(resultValue);
     }
 
@@ -138,6 +147,11 @@ public class DiceManager_JCY : MonoBehaviour
         activeDiceObjects.Clear();
         activeDiceScripts.Clear();
         activeDicePhysicd.Clear();
+        for (int i = 0; i < currentDiceValue.Length; i++)
+        {
+            Debug.Log("이전 주사위 값:" + currentDiceValue[i]);
+            currentDiceValue[i] = 0;
+        }
     }
 }
 
