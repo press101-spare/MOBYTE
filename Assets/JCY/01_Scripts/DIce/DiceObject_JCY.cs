@@ -6,7 +6,6 @@ using UnityEngine;
 public class DiceObject_JCY : MonoBehaviour
 {
     [Header("주사위 정보")]
-    private Transform diceTransform;
     public DiceSO_JCY currentDiceSO;
     public int currentIndex;
 
