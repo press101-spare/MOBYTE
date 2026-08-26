@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using JJB.Script;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -15,8 +16,8 @@ public class DiceManager_JCY : MonoBehaviour
     [SerializeField] private List<DiceObject_JCY> activeDiceScripts = new List<DiceObject_JCY>();
     [SerializeField] private List<JJB_DicePhysics> activeDicePhysicd = new List<JJB_DicePhysics>();
 
-    [Header("기타 수치")] 
-    [SerializeField] private int[] currentDiceValue = new int[5];
+    [Header("기타 수치")] [field: SerializeField]
+    public int[] currentDiceValue = new int[5]; 
     [SerializeField] private float minTime = 0.3f;
     [SerializeField] private float maxTime = 1.5f;
     [SerializeField] private float reRollUp= 1.5f;
@@ -25,6 +26,11 @@ public class DiceManager_JCY : MonoBehaviour
     [SerializeField] private Transform[] spawnPositions; // 주사위 스폰 위치들
     [SerializeField] private Transform[] dicePositions; // 주사위 화면 위치들
     [SerializeField] private float sortTime = 1f;
+    
+    [Header("UI 관련")]
+    [SerializeField] string sumUiTxt;
+    [SerializeField] TextMeshProUGUI sumTxt;
+    [SerializeField] GameObject backUiPannel;
 
 
     // 0~5번 인덱스 면이 정면을 볼 때의 회전 각도 배열 (제시해주신 각도 데이터 적용)
@@ -43,6 +49,7 @@ public class DiceManager_JCY : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            backUiPannel.SetActive(false);
             DontDestroyOnLoad(gameObject); // 씬이 넘어가도 파괴되지 않음
         }
         else
@@ -73,6 +80,10 @@ public class DiceManager_JCY : MonoBehaviour
             activeDiceScripts.Add(diceScript);
             activeDicePhysicd.Add(jjbDicePhysicdScript);
         }
+        
+        Debug.Log("패널 생성");
+        sumTxt.gameObject.SetActive(false);
+        backUiPannel.SetActive(true);
         RollAllDice();
     }
 
@@ -137,10 +148,7 @@ public class DiceManager_JCY : MonoBehaviour
         int resultValue = currentDice.currentDiceSO.faceValues[targetIndex];
         currentDice.currentIndex = resultValue;
         
-
-        Debug.Log("주사위 결과:"+ resultValue);
-        
-        
+        UpdateCurrentDiceValues();
         onResult?.Invoke(resultValue);
     }
 
@@ -243,6 +251,9 @@ public class DiceManager_JCY : MonoBehaviour
         yield return moveSequence.WaitForCompletion();
 
         Debug.Log("주사위 정렬 및 배치 완료!");
+        Debug.Log("패널 사라지기");
+        sumTxt.gameObject.SetActive(true);
+        backUiPannel.SetActive(false);
     }
 
     #endregion
@@ -384,8 +395,21 @@ public class DiceManager_JCY : MonoBehaviour
 
             currentDiceValue[i] = activeDiceScripts[i].currentIndex;
         }
+        SumDiceValue();
     }
 
     #endregion
+
+    public void SumDiceValue()
+    {
+        int totalsum = 0;
+
+        for (int i = 0; i < currentDiceValue.Length; i++)
+        {
+            totalsum += currentDiceValue[i];
+        }
+        Debug.Log("주사위 결과:"+ totalsum);
+        sumTxt.text = sumUiTxt + totalsum;
+    }
 }
 

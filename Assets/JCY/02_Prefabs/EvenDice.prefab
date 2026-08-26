@@ -53,7 +53,7 @@ MonoBehaviour:
   rollDistance: 5
   <OutLine>k__BackingField: {fileID: 2100000, guid: c6f288c5f5c442d498ba189ddcc568ec,
     type: 2}
-  <select>k__BackingField: 0
+  <IsSelected>k__BackingField: 0
 --- !u!54 &-7327674058187207886
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   xForce: 8
   yForce: 8
   liftForce: 4
-  torqueForce: 5
+  torqueForce: 15
 --- !u!1 &8323711194831256594
 GameObject:
   m_ObjectHideFlags: 0
