@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a326c7ca9c5a0e489ab8a0314c65030, type: 3}
-  m_Name: OddDice
+  m_Name: ShieldDice
   m_EditorClassIdentifier: 
-  diceName: "\uD640\uC218 \uC8FC\uC0AC\uC704"
-  diceDescription: "\uD640\uC218\uB85C\uB9CC \uC774\uB8E8\uC5B4\uC9C4 \uC8FC\uC0AC\uC704\uB2E4."
+  diceName: "\uBC29\uC5B4 \uC8FC\uC0AC\uC704"
+  diceDescription: "\uBC29\uC5B4 \uC8FC\uC0AC\uC704\uAC00 \uD558\uB098 \uCD94\uAC00\uB41C\uB2E4."
   diceIcon: {fileID: 0}
-  cost: 0
-  Color: {r: 0, g: 0, b: 0, a: 0}
-  dicePrefab: {fileID: 34949007336262702, guid: 185ada6a311823f4eaf28effc2a07aec,
+  dicePrefab: {fileID: 34949007336262702, guid: ba632a86679e3cf4fbea4eabfa14a5dc,
     type: 3}
-  diceEffectType: 2
+  diceEffectType: 0
   shodice: []
-  faceValues: 010000000100000003000000050000000500000003000000
+  faceValues: 010000000200000003000000040000000500000006000000

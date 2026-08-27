@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a326c7ca9c5a0e489ab8a0314c65030, type: 3}
-  m_Name: OddDice
+  m_Name: BloodDice
   m_EditorClassIdentifier: 
-  diceName: "\uD640\uC218 \uC8FC\uC0AC\uC704"
-  diceDescription: "\uD640\uC218\uB85C\uB9CC \uC774\uB8E8\uC5B4\uC9C4 \uC8FC\uC0AC\uC704\uB2E4."
+  diceName: "\uCD9C\uD608 \uC8FC\uC0AC\uC704"
+  diceDescription: "\uACF5\uACA9\uC2DC \uCD9C\uD608 \uC0C1\uD0DC\uC774\uC0C1\uC744
+    \uBD80\uC5EC\uD569\uB2C8\uB2E4."
   diceIcon: {fileID: 0}
   cost: 0
   Color: {r: 0, g: 0, b: 0, a: 0}
-  dicePrefab: {fileID: 34949007336262702, guid: 185ada6a311823f4eaf28effc2a07aec,
+  dicePrefab: {fileID: 34949007336262702, guid: 89b908de02e37954c862c37291b37190,
     type: 3}
-  diceEffectType: 2
+  diceEffectType: 3
   shodice: []
-  faceValues: 010000000100000003000000050000000500000003000000
+  faceValues: 010000000200000003000000040000000500000006000000
