@@ -1,0 +1,43 @@
+{
+    "bubblet_37e7be4b": {
+        "properties": "bottom_left"
+    },
+    "bubblet_3c8a33e9": {
+        "area": [
+            1200,
+            45,
+            640,
+            360
+        ],
+        "clear_retain": true,
+        "properties": "thought"
+    },
+    "bubblet_4c1de6f7": {
+        "area": [
+            240,
+            405,
+            400,
+            450
+        ],
+        "clear_retain": true,
+        "properties": "bottom_right"
+    },
+    "bubblet_dd0cfb8a": {
+        "area": [
+            1200,
+            45,
+            640,
+            315
+        ],
+        "clear_retain": true,
+        "properties": "bottom_left"
+    },
+    "start_f41f55d7": {
+        "area": [
+            1280,
+            315,
+            400,
+            270
+        ]
+    }
+}
