@@ -31,6 +31,9 @@ public class DiceManager_JCY : MonoBehaviour
     [SerializeField] string sumUiTxt;
     [SerializeField] TextMeshProUGUI sumTxt;
     [SerializeField] GameObject backUiPannel;
+    
+    [Header("관련 스크립트")] 
+    [SerializeField] private DiceTree_JCY diceTree;
 
 
     // 0~5번 인덱스 면이 정면을 볼 때의 회전 각도 배열 (제시해주신 각도 데이터 적용)
@@ -268,6 +271,7 @@ public class DiceManager_JCY : MonoBehaviour
     
     private IEnumerator RerollSelectedDiceRoutine()
     {
+        backUiPannel.SetActive(true);
         List<DiceObject_JCY> selectedDice = new List<DiceObject_JCY>();
 
         // 선택된 주사위 찾기
@@ -379,8 +383,24 @@ public class DiceManager_JCY : MonoBehaviour
         UpdateCurrentDiceValues();
 
         Debug.Log("선택한 주사위 다시 굴리기 완료!");
+        backUiPannel.SetActive(false);
     }
     
+   
+
+    #endregion
+
+    public void SumDiceValue()
+    {
+        int totalsum = 0;
+
+        for (int i = 0; i < currentDiceValue.Length; i++)
+        {
+            totalsum += currentDiceValue[i];
+        }
+        Debug.Log("주사위 결과:"+ totalsum);
+        sumTxt.text = sumUiTxt + totalsum;
+    }
     private void UpdateCurrentDiceValues()
     {
         for (int i = 0; i < currentDiceValue.Length; i++)
@@ -395,21 +415,14 @@ public class DiceManager_JCY : MonoBehaviour
 
             currentDiceValue[i] = activeDiceScripts[i].currentIndex;
         }
+        
         SumDiceValue();
-    }
-
-    #endregion
-
-    public void SumDiceValue()
-    {
-        int totalsum = 0;
-
-        for (int i = 0; i < currentDiceValue.Length; i++)
+        
+        // DiceTree에 주사위 값 배열 전달하여 UI 갱신
+        if (diceTree != null)
         {
-            totalsum += currentDiceValue[i];
+            diceTree.UpdateTreeStatus(currentDiceValue);
         }
-        Debug.Log("주사위 결과:"+ totalsum);
-        sumTxt.text = sumUiTxt + totalsum;
     }
 }
 

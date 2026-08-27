@@ -71,7 +71,7 @@ public class DiceObject_JCY : MonoBehaviour
         MeshCompo.materials = newMaterials;
     }
     
-    private void RemoveOutline()
+    public void RemoveOutline()
     {
         Material[] currentMaterials = MeshCompo.materials;
 
