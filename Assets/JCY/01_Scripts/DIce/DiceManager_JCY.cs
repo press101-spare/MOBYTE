@@ -86,6 +86,7 @@ public class DiceManager_JCY : MonoBehaviour
         
         Debug.Log("패널 생성");
         sumTxt.gameObject.SetActive(false);
+        diceTree.Reset();
         backUiPannel.SetActive(true);
         RollAllDice();
     }
