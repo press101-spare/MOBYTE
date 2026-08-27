@@ -1,0 +1,38 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 6, in script
+    define e = Character("Eileen", kind=bubble, retain=True)
+  File "game/script.rpy", line 6, in <module>
+    define e = Character("Eileen", kind=bubble, retain=True)
+               ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: BubbleCharacter require an image tag (the image='...' parameter).
+
+-- Full Traceback ------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "game/script.rpy", line 6, in script
+    define e = Character("Eileen", kind=bubble, retain=True)
+  File "renpy/ast.py", line 2452, in execute
+    self.set()
+    ~~~~~~~~^^
+  File "renpy/ast.py", line 2464, in set
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1285, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/script.rpy", line 6, in <module>
+    define e = Character("Eileen", kind=bubble, retain=True)
+               ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/character.py", line 1881, in Character
+    return type(kind)(name, kind=kind, **properties)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/00speechbubble.rpy", line 132, in __init__
+    raise Exception("BubbleCharacter require an image tag (the image='...' parameter).")
+Exception: BubbleCharacter require an image tag (the image='...' parameter).
+
+Windows-10-10.0.19045-SP0 AMD64
+Ren'Py 8.4.1.25072401
+modern_fantasy 1.0
+Sat Nov 15 16:47:57 2025
