@@ -11,7 +11,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleTurn.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleTurn.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleTurnManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleTurnManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/EnemyHealthSetup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/EnemyHealthSetup.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/EnemyTurnController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/EnemyTurnController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Health.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/HealthBarUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/PlayerActionUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/PlayerActionUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/PlayerHealthSetup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/PlayerHealthSetup.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/TurnText.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/TurnText.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Scene/JJBBattleUI.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Scene/JJBBattleUI.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Enemy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Enemy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/EnemyData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/EnemyData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/EnemyData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Health.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Health.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Health.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/HealthBarUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/HealthBarUI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/HealthBarUI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/IEnemyAbility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/IEnemyAbility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/PlayerData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/PlayerData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/SettingUI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/SettingUI/TabCarouselItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/SettingUI/TabCarouselItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/SettingUI/TabCarouselSnap.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/SettingUI/TabCarouselSnap.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/SettingUI/TabCarouselVisual.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/SettingUI/TabCarouselVisual.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Sprite/modern_fantasy/modern_fantasy/game/fonts/CrimsonText-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Sprite/modern_fantasy/modern_fantasy/game/fonts/CrimsonText-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Sprite/modern_fantasy/modern_fantasy/game/fonts/SpaceAndAstronomy-pZRD SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Sprite/modern_fantasy/modern_fantasy/game/fonts/SpaceAndAstronomy-pZRD SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,21 +60,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="47" />
+    <option name="cachedIndexableFilesCount" value="46" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/System/CameraMove_JCY.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleTurn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleTurnManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/EnemyHealthSetup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/EnemyTurnController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/PlayerActionUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/PlayerHealthSetup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/TurnText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/PanelController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@bff931d63a7a/Editor/Drawing/Controllers/BlackboardController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Core/Utilities/LinqUtility.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/00/6c18beff/List`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/9c/ebc9f031/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e07a8438207b407f87d60eb34d7db5121e1000/1b/df3c16d5/Renderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e07a8438207b407f87d60eb34d7db5121e1000/95/89ff2a26/Transform.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e07a8438207b407f87d60eb34d7db5121e1000/98/65ad1667/Component.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -42,61 +85,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000831482345" />
-      <entry key="MS500" value="1.0816253133746692" />
-      <entry key="S2" value="2.2110496212747206" />
-      <entry key="S5" value="3.086097063046066" />
-      <entry key="S10" value="3.5014647928211837" />
-      <entry key="S30" value="3.8236111813371756" />
-      <entry key="S60" value="3.9104944423820798" />
-      <entry key="M2" value="3.9614520059241123" />
-      <entry key="M5" value="4.171914988573956" />
-      <entry key="M10" value="4.599841326644239" />
-      <entry key="M15" value="4.896546752307312" />
-      <entry key="M30" value="5.338652736485099" />
-      <entry key="H1" value="5.6360027494981315" />
-      <entry key="H2" value="5.80878803582301" />
-      <entry key="H4" value="5.901969980733967" />
-      <entry key="D1" value="5.9833142221785796" />
-      <entry key="W1" value="5.99760766457606" />
+      <entry key="MS100" value="1.4184569312366482" />
+      <entry key="MS500" value="2.3105925721473444" />
+      <entry key="S2" value="4.5543758041329365" />
+      <entry key="S5" value="7.1570922611146495" />
+      <entry key="S10" value="10.480866413429396" />
+      <entry key="S30" value="15.982976620701889" />
+      <entry key="S60" value="18.224686949517835" />
+      <entry key="M2" value="19.54354830615306" />
+      <entry key="M5" value="20.577211490367926" />
+      <entry key="M10" value="21.28926108563867" />
+      <entry key="M15" value="21.684068989338456" />
+      <entry key="M30" value="22.22852425117674" />
+      <entry key="H1" value="22.579656350416126" />
+      <entry key="H2" value="22.780245261225037" />
+      <entry key="H4" value="22.887599288634917" />
+      <entry key="D1" value="22.980904687670403" />
+      <entry key="W1" value="22.997263083779508" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.2894575417112894E-45" />
-      <entry key="MS500" value="1.0523805474685477E-9" />
-      <entry key="S2" value="0.006381350944399184" />
-      <entry key="S5" value="0.18080054991607192" />
-      <entry key="S10" value="0.5886678028228385" />
-      <entry key="S30" value="1.3238479904198597" />
-      <entry key="S60" value="1.6261908353462518" />
-      <entry key="M2" value="1.8083572534243626" />
-      <entry key="M5" value="2.040896782529288" />
-      <entry key="M10" value="2.3084560449592275" />
-      <entry key="M15" value="2.4687182002455463" />
-      <entry key="M30" value="2.6906238005676237" />
-      <entry key="H1" value="2.83238610240714" />
-      <entry key="H2" value="2.9126727906525898" />
-      <entry key="H4" value="2.955417401606341" />
-      <entry key="D1" value="2.9924384841825495" />
-      <entry key="W1" value="2.998916527366865" />
+      <entry key="MS100" value="4.589173172323655E-108" />
+      <entry key="MS500" value="3.4075190443789713E-22" />
+      <entry key="S2" value="4.8136997648801415E-6" />
+      <entry key="S5" value="0.010191222772954768" />
+      <entry key="S10" value="0.13976021392333918" />
+      <entry key="S30" value="0.8197395301891929" />
+      <entry key="S60" value="1.2796476050492422" />
+      <entry key="M2" value="1.6041451847504535" />
+      <entry key="M5" value="1.9453816579814132" />
+      <entry key="M10" value="2.2537902590061916" />
+      <entry key="M15" value="2.4295888029951254" />
+      <entry key="M30" value="2.669215320046885" />
+      <entry key="H1" value="2.821095378173826" />
+      <entry key="H2" value="2.90686160830337" />
+      <entry key="H4" value="2.9524676977455755" />
+      <entry key="D1" value="2.9919405014885867" />
+      <entry key="W1" value="2.998845227891765" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.008608684828039627" />
-      <entry key="MS500" value="0.450584245521139" />
-      <entry key="S2" value="1.9066496037121559" />
-      <entry key="S5" value="3.048922903852139" />
-      <entry key="S10" value="3.904479056829296" />
-      <entry key="S30" value="5.041822441041388" />
-      <entry key="S60" value="5.47497202046175" />
-      <entry key="M2" value="5.736249400358397" />
-      <entry key="M5" value="6.197578792698118" />
-      <entry key="M10" value="6.899314835507824" />
-      <entry key="M15" value="7.35867587180982" />
-      <entry key="M30" value="8.025543442432015" />
-      <entry key="H1" value="8.466376693251341" />
-      <entry key="H2" value="8.720412690999897" />
-      <entry key="H4" value="8.856852006773268" />
-      <entry key="D1" value="8.975661834721503" />
-      <entry key="W1" value="8.996511169090097" />
+      <entry key="MS100" value="1.3051621240068205" />
+      <entry key="MS500" value="2.2691639851111187" />
+      <entry key="S2" value="4.528233019223148" />
+      <entry key="S5" value="7.135860536324736" />
+      <entry key="S10" value="10.559920791034514" />
+      <entry key="S30" value="16.727593497939996" />
+      <entry key="S60" value="19.450053212021455" />
+      <entry key="M2" value="21.114810070038192" />
+      <entry key="M5" value="22.506761294865672" />
+      <entry key="M10" value="23.533614060369395" />
+      <entry key="M15" value="24.106725567049207" />
+      <entry key="M30" value="24.89381107498063" />
+      <entry key="H1" value="25.398634708395594" />
+      <entry key="H2" value="25.686004301143665" />
+      <entry key="H4" value="25.83950386238773" />
+      <entry key="D1" value="25.972749615966435" />
+      <entry key="W1" value="25.99609461524674" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -123,7 +166,7 @@
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "JCY",
+    "git-widget-placeholder": "JJB",
     "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -183,6 +226,7 @@
       <workItem from="1787220138001" duration="2275000" />
       <workItem from="1787559325924" duration="845000" />
       <workItem from="1787645131941" duration="611000" />
+      <workItem from="1787824610699" duration="4871000" />
     </task>
     <servers />
   </component>
