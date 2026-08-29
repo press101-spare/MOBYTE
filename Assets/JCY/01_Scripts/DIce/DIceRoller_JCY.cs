@@ -37,7 +37,7 @@ public class DIceRoller_JCY : MonoBehaviour
 
         // 2. SO에서 무작위 면 '인덱스(0~5)' 추출 및 목표 각도 계산
         int targetIndex = currentDice.GetRandomIndex();
-        Vector3 finalRotation = DiceManager_JCY.Instance.faceRotations[targetIndex];
+        Vector3 finalRotation = DiceManager_JCY.Instance.FaceRotations[targetIndex];
         int finalResultValue = currentDice.faceValues[targetIndex]; // 최종 결과값
 
         // 3. 연출 변수 계산

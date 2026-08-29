@@ -8,8 +8,13 @@ public class DiceSO_JCY : ScriptableObject
     public string diceName;          // 주사위 이름
     public string diceDescription;   // 주사위 설명
     public Sprite diceIcon;          // 대표 아이콘
+    public int cost;          // 주사위 상점 가격
+    public Color Color;
     public GameObject dicePrefab; // 각 주사위 전용 3D 프리팹 등록
     public DiceEffectType diceEffectType;
+
+    public DiceSO_JCY[] shodice;
+    
 
     // [Header("주사위 눈 설정")]
     // new Vector3(0f, 180f, 0f),   // Index 1 (숫자 1)
@@ -24,7 +29,7 @@ public class DiceSO_JCY : ScriptableObject
     
     public enum DiceEffectType
     {
-        None , Even , Odd 
+        None , Even , Odd , Blood , Shield , Allin , Vampire , Reroll , Joker , Debt
     }
 
     // 무작위로 눈 하나를 뽑아주는 함수

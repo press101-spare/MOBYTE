@@ -23,7 +23,7 @@ namespace JJB.Script
             _rb.isKinematic = true; // 처음에는 가만히 있도록 설정
         }
 
-        public void Throw()
+        public void Throw(float forceMultiplier = 1f)
         {
             _rb.isKinematic = false;
             _rb.linearVelocity = Vector3.zero;
@@ -33,10 +33,32 @@ namespace JJB.Script
                 Random.Range(-xForce, xForce),
                 Random.Range(-yForce, yForce),
                 liftForce
-            );
+            ) * forceMultiplier;
 
             _rb.AddForce(force, ForceMode.Impulse);
-            _rb.AddTorque(Random.insideUnitSphere * torqueForce, ForceMode.Impulse);
+
+            _rb.AddTorque(
+                Random.insideUnitSphere * torqueForce * forceMultiplier,
+                ForceMode.Impulse
+            );
+        }
+        
+        public void RerollThrow(float value)
+        {
+            _rb.isKinematic = false;
+            _rb.linearVelocity = Vector3.zero;
+            _rb.angularVelocity = Vector3.zero;
+
+            // 위쪽으로 튀어오르는 힘
+            Vector3 force = Vector3.up * value;
+
+            _rb.AddForce(force, ForceMode.Impulse);
+
+            // 랜덤하게 회전
+            _rb.AddTorque(
+                Random.insideUnitSphere * torqueForce,
+                ForceMode.Impulse
+            );
         }
 
         public void SmoothRotateToTarget(Vector3 targetEulerRotation, float duration, System.Action onComplete)
