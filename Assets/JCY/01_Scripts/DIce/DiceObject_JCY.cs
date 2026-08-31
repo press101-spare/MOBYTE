@@ -35,6 +35,8 @@ public class DiceObject_JCY : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if (DiceManager_JCY.Instance.isRolling)
+            return;
         SetSelected(!IsSelected);
     }
     
