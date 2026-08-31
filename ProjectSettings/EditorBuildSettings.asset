@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/LYW/StartBackGround.unity
+    path: Assets/LYW/01.Scene/StartBackGround.unity
     guid: aed0de8814e135f4093d4039e4608698
   - enabled: 1
     path: Assets/LYW/GameScene.unity
     guid: 8c45884c6ab8eed46b702a4ca1da7c8f
   - enabled: 1
-    path: Assets/LYW/Map.unity
+    path: Assets/LYW/01.Scene/Map.unity
     guid: de77bbbb7573d334ba9d123b9a672ee7
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
