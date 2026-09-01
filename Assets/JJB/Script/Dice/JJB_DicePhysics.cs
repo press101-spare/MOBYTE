@@ -23,7 +23,7 @@ namespace JJB.Script
             _rb.isKinematic = true; // 처음에는 가만히 있도록 설정
         }
 
-        public void Throw()
+        public void Throw(float forceMultiplier = 1f)
         {
             _rb.isKinematic = false;
             _rb.linearVelocity = Vector3.zero;
@@ -33,10 +33,32 @@ namespace JJB.Script
                 Random.Range(-xForce, xForce),
                 Random.Range(-yForce, yForce),
                 liftForce
-            );
+            ) * forceMultiplier;
 
             _rb.AddForce(force, ForceMode.Impulse);
-            _rb.AddTorque(Random.insideUnitSphere * torqueForce, ForceMode.Impulse);
+
+            _rb.AddTorque(
+                Random.insideUnitSphere * torqueForce * forceMultiplier,
+                ForceMode.Impulse
+            );
+        }
+        
+        public void RerollThrow(float value)
+        {
+            _rb.isKinematic = false;
+            _rb.linearVelocity = Vector3.zero;
+            _rb.angularVelocity = Vector3.zero;
+
+            // 위쪽으로 튀어오르는 힘
+            Vector3 force = Vector3.up * value;
+
+            _rb.AddForce(force, ForceMode.Impulse);
+
+            // 랜덤하게 회전
+            _rb.AddTorque(
+                Random.insideUnitSphere * torqueForce,
+                ForceMode.Impulse
+            );
         }
 
         public void SmoothRotateToTarget(Vector3 targetEulerRotation, float duration, System.Action onComplete)
@@ -54,29 +76,33 @@ namespace JJB.Script
 
         public Vector3 GetClosestRotation(Vector3[] rotations)
         {
-            // 💡 화면(카메라)을 바라보는 기준 축 설정
-            // 2D 게임처럼 카메라가 정면을 보고 있다면 Vector3.back
-            // 3D 보드게임처럼 바닥에 닿고 '윗면'을 본다면 Vector3.up 으로 바꿔주세요!
-            Vector3 viewDir = Vector3.back; 
-    
+            // 1. faceRotations 데이터가 생성될 때 기준이었던 로컬 방향 (기존에 잘 작동하던 Back)
+            Vector3 baseDir = Vector3.back; 
+
+            // 2. 판정 대상이 되는 방향 (카메라 시선 반대 방향 = 주사위 윗면이 바라보는 방향)
+            // 메인 카메라가 있다면 카메라 시선 기준으로 자동 판정하고, 없으면 World Up(Vector3.up) 적용
+            Vector3 targetWorldDir = Vector3.up;
+            if (Camera.main != null)
+            {
+                targetWorldDir = -Camera.main.transform.forward;
+            }
+
             float maxDot = -2f;
             Vector3 bestRotation = rotations[0];
 
             foreach (var rot in rotations)
             {
-                // 1. 해당 숫자 면이 정면을 볼 때의 기준 회전값
                 Quaternion targetRot = Quaternion.Euler(rot);
-        
-                // 2. 그 상태일 때 '정면'을 향하는 주사위의 '진짜 로컬 방향' 역추적
-                Vector3 localFaceDir = Quaternion.Inverse(targetRot) * viewDir;
-        
-                // 3. 현재 굴러가서 멈춘 주사위의 그 로컬 방향이 월드에서 어디를 향하고 있는지 계산
-                Vector3 currentWorldFaceDir = transform.rotation * localFaceDir;
-        
-                // 4. 그 방향이 카메라(viewDir)를 얼마나 똑바로 쳐다보고 있는지 확인
-                float dot = Vector3.Dot(currentWorldFaceDir, viewDir);
 
-                // 내적(Dot)이 가장 큰(1에 가까운) 면이 카메라를 보고 있는 진짜 숫자!
+                // 로컬 면 방향 계산 시에는 회전 데이터 기준축(baseDir) 사용
+                Vector3 localFaceDir = Quaternion.Inverse(targetRot) * baseDir;
+
+                // 주사위의 현재 회전을 적용한 월드 면 방향
+                Vector3 currentWorldFaceDir = transform.rotation * localFaceDir;
+
+                // 타겟 방향(카메라/위쪽)과 내적하여 최댓값 비교
+                float dot = Vector3.Dot(currentWorldFaceDir, targetWorldDir);
+
                 if (dot > maxDot)
                 {
                     maxDot = dot;

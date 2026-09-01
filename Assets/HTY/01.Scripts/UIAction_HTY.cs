@@ -9,6 +9,9 @@ public class UIAction_HTY : MonoBehaviour
     [SerializeField] private float duration = 0.3f;
     private Vector2 _originalPos;
 
+
+    
+
     private void Awake()
     {
         _myRect = GetComponent<RectTransform>();

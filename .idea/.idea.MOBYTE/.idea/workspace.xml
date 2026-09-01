@@ -18,17 +18,26 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="46" />
+    <option name="cachedIndexableFilesCount" value="47" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/ReRollUI_JCY.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/System/CameraMove_JCY.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/PanelController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@bff931d63a7a/Editor/Drawing/Controllers/BlackboardController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Core/Utilities/LinqUtility.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e07a8438207b407f87d60eb34d7db5121e1000/1b/df3c16d5/Renderer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/00/6c18beff/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/9c/ebc9f031/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e07a8438207b407f87d60eb34d7db5121e1000/1b/df3c16d5/Renderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e07a8438207b407f87d60eb34d7db5121e1000/95/89ff2a26/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e07a8438207b407f87d60eb34d7db5121e1000/98/65ad1667/Component.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -37,61 +46,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.674828223184427E-125" />
-      <entry key="S2" value="1.3212683565728817E-31" />
-      <entry key="S5" value="1.2138100937957035E-12" />
-      <entry key="S10" value="2.6686031582371086E-6" />
-      <entry key="S30" value="0.04569062859793233" />
-      <entry key="S60" value="0.5234352581973495" />
-      <entry key="M2" value="1.7720493039732252" />
-      <entry key="M5" value="3.684212416283653" />
-      <entry key="M10" value="4.825025747081623" />
-      <entry key="M15" value="5.833533731108996" />
-      <entry key="M30" value="9.894901050425736" />
-      <entry key="H1" value="16.409077691622798" />
-      <entry key="H2" value="22.518346562688805" />
-      <entry key="H4" value="26.831354721782006" />
-      <entry key="D1" value="34.04092029240238" />
-      <entry key="W1" value="37.295232276154145" />
+      <entry key="MS100" value="1.0000000831482345" />
+      <entry key="MS500" value="1.0816253133746692" />
+      <entry key="S2" value="2.2110496212747206" />
+      <entry key="S5" value="3.086097063046066" />
+      <entry key="S10" value="3.5014647928211837" />
+      <entry key="S30" value="3.8236111813371756" />
+      <entry key="S60" value="3.9104944423820798" />
+      <entry key="M2" value="3.9614520059241123" />
+      <entry key="M5" value="4.171914988573956" />
+      <entry key="M10" value="4.599841326644239" />
+      <entry key="M15" value="4.896546752307312" />
+      <entry key="M30" value="5.338652736485099" />
+      <entry key="H1" value="5.6360027494981315" />
+      <entry key="H2" value="5.80878803582301" />
+      <entry key="H4" value="5.901969980733967" />
+      <entry key="D1" value="5.9833142221785796" />
+      <entry key="W1" value="5.99760766457606" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000138840144" />
-      <entry key="S2" value="1.0108549733934284" />
-      <entry key="S5" value="1.1637764696688462" />
-      <entry key="S10" value="1.404693056116418" />
-      <entry key="S30" value="1.7396766642671717" />
-      <entry key="S60" value="1.860044571093366" />
-      <entry key="M2" value="1.927385880364728" />
-      <entry key="M5" value="1.9703355443747252" />
-      <entry key="M10" value="1.993941350019866" />
-      <entry key="M15" value="2.0441294953245484" />
-      <entry key="M30" value="2.3240166848537784" />
-      <entry key="H1" value="2.808698709108934" />
-      <entry key="H2" value="3.273222661448779" />
-      <entry key="H4" value="3.6424785686949845" />
-      <entry key="D1" value="5.426840972764587" />
-      <entry key="W1" value="6.70663379655591" />
+      <entry key="MS100" value="1.2894575417112894E-45" />
+      <entry key="MS500" value="1.0523805474685477E-9" />
+      <entry key="S2" value="0.006381350944399184" />
+      <entry key="S5" value="0.18080054991607192" />
+      <entry key="S10" value="0.5886678028228385" />
+      <entry key="S30" value="1.3238479904198597" />
+      <entry key="S60" value="1.6261908353462518" />
+      <entry key="M2" value="1.8083572534243626" />
+      <entry key="M5" value="2.040896782529288" />
+      <entry key="M10" value="2.3084560449592275" />
+      <entry key="M15" value="2.4687182002455463" />
+      <entry key="M30" value="2.6906238005676237" />
+      <entry key="H1" value="2.83238610240714" />
+      <entry key="H2" value="2.9126727906525898" />
+      <entry key="H4" value="2.955417401606341" />
+      <entry key="D1" value="2.9924384841825495" />
+      <entry key="W1" value="2.998916527366865" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.1548555257880812E-4" />
-      <entry key="MS500" value="0.16311936884730172" />
-      <entry key="S2" value="0.6399488474863716" />
-      <entry key="S5" value="0.9486290014652736" />
-      <entry key="S10" value="1.251656774381467" />
-      <entry key="S30" value="1.7124486161947334" />
-      <entry key="S60" value="2.3415216852359766" />
-      <entry key="M2" value="3.675298370961701" />
-      <entry key="M5" value="5.643341631018179" />
-      <entry key="M10" value="6.8128366947760055" />
-      <entry key="M15" value="7.872997822062005" />
-      <entry key="M30" value="12.215063323027888" />
-      <entry key="H1" value="19.214540197981595" />
-      <entry key="H2" value="25.789324268190427" />
-      <entry key="H4" value="30.472484086822526" />
-      <entry key="D1" value="39.46745496738475" />
-      <entry key="W1" value="44.001816008259695" />
+      <entry key="MS100" value="0.008608684828039627" />
+      <entry key="MS500" value="0.450584245521139" />
+      <entry key="S2" value="1.9066496037121559" />
+      <entry key="S5" value="3.048922903852139" />
+      <entry key="S10" value="3.904479056829296" />
+      <entry key="S30" value="5.041822441041388" />
+      <entry key="S60" value="5.47497202046175" />
+      <entry key="M2" value="5.736249400358397" />
+      <entry key="M5" value="6.197578792698118" />
+      <entry key="M10" value="6.899314835507824" />
+      <entry key="M15" value="7.35867587180982" />
+      <entry key="M30" value="8.025543442432015" />
+      <entry key="H1" value="8.466376693251341" />
+      <entry key="H2" value="8.720412690999897" />
+      <entry key="H4" value="8.856852006773268" />
+      <entry key="D1" value="8.975661834721503" />
+      <entry key="W1" value="8.996511169090097" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -115,10 +124,11 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Unity 에디터에 연결.Unity 에디터에 연결.executor&quot;: &quot;Debug&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;LYW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;JCY&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -177,6 +187,7 @@
       <updated>1787058741691</updated>
       <workItem from="1787220138001" duration="2275000" />
       <workItem from="1787559325924" duration="845000" />
+      <workItem from="1787645131941" duration="611000" />
     </task>
     <servers />
   </component>
