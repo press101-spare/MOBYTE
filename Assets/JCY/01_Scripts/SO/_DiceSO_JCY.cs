@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "DiceSO_JCY", menuName = "Scriptable Objects/DiceSO_JCY")]
 public class DiceSO_JCY : ScriptableObject
@@ -13,7 +14,6 @@ public class DiceSO_JCY : ScriptableObject
     public GameObject dicePrefab; // 각 주사위 전용 3D 프리팹 등록
     public DiceEffectType diceEffectType;
 
-    public DiceSO_JCY[] shodice;
     
 
     // [Header("주사위 눈 설정")]
@@ -29,36 +29,7 @@ public class DiceSO_JCY : ScriptableObject
     
     public enum DiceEffectType
     {
-        None , Even , Odd , Blood , Shield , Allin , Vampire , Reroll , Joker , Debt
+        None , Even , Odd , Blood , Shield , Allin , Vampire , Reroll , Joker , Debt , Gamble
     }
 
-    // 무작위로 눈 하나를 뽑아주는 함수
-    public int GetRandomIndex()
-    {
-        List<int> availableIndexes = new List<int>();
-
-        for (int i = 0; i < faceValues.Length; i++)
-        {
-            switch (diceEffectType)
-            {
-                case DiceEffectType.None:
-                    availableIndexes.Add(i);
-                    break;
-
-                case DiceEffectType.Even:
-                    if (faceValues[i] % 2 == 0)
-                        availableIndexes.Add(i);
-                    break;
-
-                case DiceEffectType.Odd:
-                    if (faceValues[i] % 2 != 0)
-                        availableIndexes.Add(i);
-                    break;
-            }
-        }
-
-        int num = availableIndexes[Random.Range(0, availableIndexes.Count)];
-        Debug.Log("나온 주사위 값:" + num);
-        return num;
-    }
 }

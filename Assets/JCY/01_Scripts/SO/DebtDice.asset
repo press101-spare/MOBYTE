@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a326c7ca9c5a0e489ab8a0314c65030, type: 3}
   m_Name: DebtDice
   m_EditorClassIdentifier: 
-  diceName: "\uBE5A \uC8FC\uC0AC"
-  diceDescription: "\uAE30\uBCF8\uC801\uC778 \uC8FC\uC0AC\uC704\uB2E4."
+  diceName: "\uBE5A \uC8FC\uC0AC\uC704"
+  diceDescription: "\uB192\uC740 \uB208\uAE08\uC774 \uC798\uB098\uC624\uC9C0\uB9CC
+    \uB2E4\uC74C \uD134 \uD589\uB3D9\uB825\uC744 \uAE4E\uC2B5\uB2C8\uB2E4."
   diceIcon: {fileID: 0}
   cost: 0
   Color: {r: 0, g: 0, b: 0, a: 0}
   dicePrefab: {fileID: 34949007336262702, guid: ba632a86679e3cf4fbea4eabfa14a5dc,
     type: 3}
   diceEffectType: 9
-  shodice: []
-  faceValues: 010000000200000003000000040000000500000006000000
+  faceValues: 020000000300000004000000050000000600000006000000

@@ -70,6 +70,13 @@ public class DiceTree_JCY : MonoBehaviour
         foreach (int val in diceValues)
         {
             if (val >= 1 && val <= 6) counts[val]++;
+            else if (val == 7)
+            {
+                foreach (var counter in counts)
+                {
+                    counts[counter]++;
+                }
+            }
         }
 
         int totalSum = diceValues.Sum();
