@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using JJB.Script.Battle.Enemy;
 using UnityEngine;
 
 namespace JJB.Script.Battle

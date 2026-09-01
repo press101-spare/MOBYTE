@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace JJB.Script.Battle
+namespace JJB.Script.Battle.Enemy
 {
     [RequireComponent(typeof(Health))]
     public class EnemyHealthSetup : MonoBehaviour
