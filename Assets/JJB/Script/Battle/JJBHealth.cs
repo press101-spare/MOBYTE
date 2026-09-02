@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace JJB.Script
 {
-    public class Health : MonoBehaviour
+    public class JJBHealth : MonoBehaviour
     {
         private int _maxHealth;
         private int _currentHealth;

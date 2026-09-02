@@ -6,8 +6,8 @@ namespace JJB.Script.Battle.Enemy
     {
         public abstract void Execute(
             EnemyData enemyData,
-            Health selfHealth,
-            Health targetHealth
+            JJBHealth selfJjbHealth,
+            JJBHealth targetJjbHealth
         );
     }
 }
