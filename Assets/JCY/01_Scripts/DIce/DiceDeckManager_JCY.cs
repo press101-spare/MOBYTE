@@ -130,4 +130,9 @@ public class DiceDeckManager_JCY : MonoBehaviour
         }
         // Debug.Log("이후" + diceFile_JCy.Count);
     }
+
+    public void AddDice(DiceSO_JCY AppendDice)
+    {
+        diceDeck.Add(AppendDice);
+    }
 }

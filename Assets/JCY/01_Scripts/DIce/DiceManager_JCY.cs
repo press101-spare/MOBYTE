@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using JJB.Script;
+using JJB.Script.Battle;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -34,8 +35,9 @@ public class DiceManager_JCY : MonoBehaviour
     public bool isRolling;
     
     [Header("관련 스크립트")] 
-    [SerializeField] private DiceTree_JCY diceTree;
-    [SerializeField] private ReRollUI_JCY reRollUI;
+    public DiceTree_JCY diceTree;
+    public DiceEffect diceEffect;
+    public ReRollCount_JCY reRollUI;
 
 
     // 0~5번 인덱스 면이 정면을 볼 때의 회전 각도 배열 (제시해주신 각도 데이터 적용)
@@ -80,6 +82,7 @@ public class DiceManager_JCY : MonoBehaviour
 
             // 스크립트에 SO 데이터 전달
             diceScript.Setup(currentSO);
+            diceEffect.Effect(currentSO);
 
             activeDiceObjects.Add(newDice);
             activeDiceScripts.Add(diceScript);
@@ -409,7 +412,6 @@ public class DiceManager_JCY : MonoBehaviour
         {
             totalsum += currentDiceValue[i];
         }
-        Debug.Log("주사위 결과:"+ totalsum);
         sumTxt.text = sumUiTxt + totalsum;
     }
     private void UpdateCurrentDiceValues()
@@ -435,5 +437,12 @@ public class DiceManager_JCY : MonoBehaviour
             diceTree.UpdateTreeStatus(currentDiceValue);
         }
     }
+
+    public void Attack()
+    {
+        if(diceTree.CurrentScore == 0) return;
+        JJBGameManager.Instance.PlayerJjbHealth.TakeDamage(diceTree.CurrentScore);
+    }
+    
 }
 
