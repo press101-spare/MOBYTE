@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using JJB.Script;
+using JJB.Script.Battle;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -436,5 +437,12 @@ public class DiceManager_JCY : MonoBehaviour
             diceTree.UpdateTreeStatus(currentDiceValue);
         }
     }
+
+    public void Attack()
+    {
+        if(diceTree.CurrentScore == 0) return;
+        JJBGameManager.Instance.PlayerJjbHealth.TakeDamage(diceTree.CurrentScore);
+    }
+    
 }
 

@@ -21,7 +21,7 @@ public class DiceTree_JCY : MonoBehaviour
         Yahtzee
     }
 
-    [SerializeField] private Transform treePanel;
+    public int CurrentScore { get; private set; }
 
     [System.Serializable]
     public struct TreeUI
@@ -190,7 +190,7 @@ public class DiceTree_JCY : MonoBehaviour
             if (int.TryParse(scoreText.text, out int score))
             {
                 Debug.Log($"선택한 버튼{clickBtn.name}의 점수: {score}");
-                //Attack(clickBtn.name)
+                CurrentScore = score;
             }
         }
     }
@@ -201,5 +201,6 @@ public class DiceTree_JCY : MonoBehaviour
         {
             ui.checkMarkUI.SetActive(false);
         }
+        CurrentScore = 0;
     }
 }

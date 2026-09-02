@@ -1552,10 +1552,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2123197321}
-        m_TargetAssemblyTypeName: DiceTree_JCY, Assembly-CSharp
-        m_MethodName: AttackTree
-        m_Mode: 3
+      - m_Target: {fileID: 1605801673}
+        m_TargetAssemblyTypeName: DiceManager_JCY, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2971,7 +2971,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281754f435eaea346b3fd3fdb268385a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CM: {fileID: 1978276192}
 --- !u!1 &934633991
 GameObject:
   m_ObjectHideFlags: 0
@@ -4726,7 +4725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diceCollection: []
-  defaultDice: {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
+  defaultDice: {fileID: 11400000, guid: 050444cd0548ecd4786e3ecd3595e53e, type: 2}
   defaultDiceCount: 40
   diceDeck: []
   drawnDice: []
@@ -5373,6 +5372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reRollCount: 0
   reRollCountUI: {fileID: 1293855158}
+  Debt: 0
 --- !u!1 &1611707674
 GameObject:
   m_ObjectHideFlags: 0
@@ -6815,11 +6815,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f91bcec046ba5f4c962c40f8f56fe10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highAngleTf: {x: 0, y: 10, z: 1.5}
-  highAngleRo: {x: 90, y: 0, z: 0}
-  moveTime: 0.4
-  currentCameraTf: {x: 0, y: 0, z: 0}
-  currentCameraRo: {x: 0, y: 0, z: 0}
 --- !u!1 &1988804538
 GameObject:
   m_ObjectHideFlags: 0
@@ -7068,7 +7063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb308d317845c744bb028282027a7d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treePanel: {fileID: 0}
   treeUIList:
   - treeType: 0
     checkMarkUI: {fileID: 181047133}

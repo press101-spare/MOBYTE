@@ -18,7 +18,7 @@ MonoBehaviour:
   diceIcon: {fileID: 0}
   cost: 0
   Color: {r: 0, g: 0, b: 0, a: 0}
-  dicePrefab: {fileID: 34949007336262702, guid: ba632a86679e3cf4fbea4eabfa14a5dc,
+  dicePrefab: {fileID: 34949007336262702, guid: 645e6b1b48776e04eb664e2ed4d707de,
     type: 3}
   diceEffectType: 9
-  faceValues: 020000000300000004000000050000000600000006000000
+  faceValues: 020000000300000004000000060000000600000006000000
