@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -32,6 +33,11 @@ public class DiceTree_JCY : MonoBehaviour
 
     [Header("UI 목록 설정")] [SerializeField] private List<TreeUI> treeUIList;
 
+    private void Start()
+    {
+        Reset();
+    }
+
     public void UpdateTreeStatus(int[] diceValues)
     {
         Dictionary<Trees, int> evaluatedScores = EvaluateAll(diceValues, 0);
@@ -64,6 +70,13 @@ public class DiceTree_JCY : MonoBehaviour
         foreach (int val in diceValues)
         {
             if (val >= 1 && val <= 6) counts[val]++;
+            else if (val == 7)
+            {
+                foreach (var counter in counts)
+                {
+                    counts[counter]++;
+                }
+            }
         }
 
         int totalSum = diceValues.Sum();
@@ -164,6 +177,14 @@ public class DiceTree_JCY : MonoBehaviour
             {
                 Debug.Log($"선택한 버튼({clickBtn.name})의 점수: {score}");
             }
+        }
+    }
+
+    public void Reset()
+    {
+        foreach (var ui in treeUIList)
+        {
+            ui.checkMarkUI.SetActive(false);
         }
     }
 }

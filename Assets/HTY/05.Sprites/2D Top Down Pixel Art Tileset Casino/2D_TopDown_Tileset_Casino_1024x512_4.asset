@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 2D_TopDown_Tileset_Casino_1024x512_4
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1341191637824417626, guid: 17b7a35047c4c6d47a3b5cc68a603ab2, type: 3}
+  m_Sprite: {fileID: 1341191637824417626, guid: 17b7a35047c4c6d47a3b5cc68a603ab2,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
-    e00: 1
+    e00: 1.882352941
     e01: 0
     e02: 0
     e03: 0
     e10: 0
-    e11: 1
+    e11: 1.939393939
     e12: 0
     e13: 0
     e20: 0

@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +9,7 @@ public class BlackJackCard : MonoBehaviour
     public Sprite _myImage;
     private SpriteRenderer _myRenderer;
     public int _myId;
+    public bool _iamCheck;
 
     private void Awake()
     {
@@ -15,6 +17,8 @@ public class BlackJackCard : MonoBehaviour
     }
     public void OpenCard()
     {
-
+        _myRenderer.sprite=_myImage;
+        Debug.Log("내숫자" +_myNumber);
+        _iamCheck = true;
     }
 }

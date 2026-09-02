@@ -31,9 +31,11 @@ public class DiceManager_JCY : MonoBehaviour
     [SerializeField] string sumUiTxt;
     [SerializeField] TextMeshProUGUI sumTxt;
     [SerializeField] GameObject backUiPannel;
+    public bool isRolling;
     
     [Header("관련 스크립트")] 
     [SerializeField] private DiceTree_JCY diceTree;
+    [SerializeField] private ReRollUI_JCY reRollUI;
 
 
     // 0~5번 인덱스 면이 정면을 볼 때의 회전 각도 배열 (제시해주신 각도 데이터 적용)
@@ -64,7 +66,7 @@ public class DiceManager_JCY : MonoBehaviour
     public void StartTurn(List<DiceSO_JCY> drawnDiceSoList)
     {
         ClearDice();
-
+        reRollUI.ResetReRollCount(2);
         for (int i = 0; i < drawnDiceSoList.Count; i++)
         {
             if (i >= spawnPositions.Length) break;
@@ -86,7 +88,9 @@ public class DiceManager_JCY : MonoBehaviour
         
         Debug.Log("패널 생성");
         sumTxt.gameObject.SetActive(false);
+        diceTree.Reset();
         backUiPannel.SetActive(true);
+        isRolling = true;
         RollAllDice();
     }
 
@@ -257,6 +261,7 @@ public class DiceManager_JCY : MonoBehaviour
         Debug.Log("패널 사라지기");
         sumTxt.gameObject.SetActive(true);
         backUiPannel.SetActive(false);
+        isRolling = false;
     }
 
     #endregion
@@ -266,12 +271,16 @@ public class DiceManager_JCY : MonoBehaviour
 
     public void RerollSelectedDice()
     {
+        if(reRollUI.reRollCount <= 0)
+            return;
+        reRollUI.UpdateReRollCount(-1);
         StartCoroutine(RerollSelectedDiceRoutine());
     }
     
     private IEnumerator RerollSelectedDiceRoutine()
     {
         backUiPannel.SetActive(true);
+        isRolling = true;
         List<DiceObject_JCY> selectedDice = new List<DiceObject_JCY>();
 
         // 선택된 주사위 찾기
@@ -294,6 +303,7 @@ public class DiceManager_JCY : MonoBehaviour
         // 선택된 주사위만 다시 굴리기
         foreach (DiceObject_JCY dice in selectedDice)
         {
+            dice.SetSelected(false);
             JJB_DicePhysics physics =
                 dice.GetComponent<JJB_DicePhysics>();
 
@@ -376,7 +386,7 @@ public class DiceManager_JCY : MonoBehaviour
         // 선택 해제
         foreach (DiceObject_JCY dice in selectedDice)
         {
-            dice.SetSelected(false);
+           
         }
 
         // 현재 결과 갱신
@@ -384,6 +394,7 @@ public class DiceManager_JCY : MonoBehaviour
 
         Debug.Log("선택한 주사위 다시 굴리기 완료!");
         backUiPannel.SetActive(false);
+        isRolling = false;
     }
     
    
