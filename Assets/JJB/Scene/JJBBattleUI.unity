@@ -345,6 +345,11 @@ PrefabInstance:
       propertyPath: turnManager
       value: 
       objectReference: {fileID: 722691651}
+    - target: {fileID: 1464642541808169068, guid: dd0defd4c2a8e6b4c87708d6dcc99482,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4681484543347819547, guid: dd0defd4c2a8e6b4c87708d6dcc99482,
         type: 3}
       propertyPath: m_Name
@@ -388,6 +393,21 @@ PrefabInstance:
     - target: {fileID: 4685259052678165585, guid: dd0defd4c2a8e6b4c87708d6dcc99482,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685259052678165585, guid: dd0defd4c2a8e6b4c87708d6dcc99482,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685259052678165585, guid: dd0defd4c2a8e6b4c87708d6dcc99482,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685259052678165585, guid: dd0defd4c2a8e6b4c87708d6dcc99482,
+        type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4685259052678165585, guid: dd0defd4c2a8e6b4c87708d6dcc99482,
@@ -455,6 +475,11 @@ PrefabInstance:
       propertyPath: jjbHealth
       value: 
       objectReference: {fileID: 1024515026}
+    - target: {fileID: 5880454723496547892, guid: dd0defd4c2a8e6b4c87708d6dcc99482,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7181053401547211043, guid: dd0defd4c2a8e6b4c87708d6dcc99482,
         type: 3}
       propertyPath: jjbHealth
