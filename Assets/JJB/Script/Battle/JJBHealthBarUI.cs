@@ -1,29 +1,30 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace JJB.Script.Battle
 {
-    public class HealthBarUI : MonoBehaviour
+    public class JJBHealthBarUI : MonoBehaviour
     {
-        [SerializeField] private Health health;
+        [FormerlySerializedAs("health")] [SerializeField] private JJBHealth jjbHealth;
 
         [SerializeField] private TMP_Text healthText;
         [SerializeField] private Image fillImage;
 
         private void Start()
         {
-            Refresh(health.CurrentHealth, health.MaxHealth);
+            Refresh(jjbHealth.CurrentHealth, jjbHealth.MaxHealth);
         }
 
         private void OnEnable()
         {
-            health.OnHealthChanged += Refresh;
+            jjbHealth.OnHealthChanged += Refresh;
         }
 
         private void OnDisable()
         {
-            health.OnHealthChanged -= Refresh;
+            jjbHealth.OnHealthChanged -= Refresh;
         }
 
         private void Refresh(int current, int max)
