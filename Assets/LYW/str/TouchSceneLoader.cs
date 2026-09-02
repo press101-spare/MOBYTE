@@ -1,31 +1,19 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class TouchSceneLoader : MonoBehaviour, IPointerClickHandler
+public class TouchSceneLoader : MonoBehaviour
 {
-    [SerializeField] private string nextSceneName = "MainGame";
+    [SerializeField] private string nextScene;
+    
+    private bool isLoading;
 
-    private bool _isLoading;
-
-    public void OnPointerClick(PointerEventData eventData)
+    private void OnMouseDown()
     {
-        if (_isLoading)
-        {
+        if (isLoading)
             return;
-        }
-
-        if (!Application.CanStreamedLevelBeLoaded(nextSceneName))
-        {
-            Debug.LogError(
-                $"'{nextSceneName}' 씬을 찾을 수 없습니다. " +
-                "Build Profiles와 씬 이름을 확인하세요."
-            );
-
-            return;
-        }
-
-        _isLoading = true;
-        SceneManager.LoadScene(nextSceneName);
+        isLoading = true;
+        SceneManager.LoadScene(nextScene);
     }
 }

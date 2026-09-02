@@ -1,10 +1,6 @@
 using DG.Tweening;
-using JetBrains.Annotations;
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -16,278 +12,442 @@ public class BlackJackManager : MonoBehaviour
     public int _playerSum;
     public int _dealerSum;
     public bool _morePlay = false;
-    public int _notMorePlayer;
+    public bool _notMorePlayer;
+    public bool _notMoreDealer;
+    public bool _checkCard;
+    private bool _first = true;
+    private bool _gameEnd;
+
+    [Header("블랙잭 룰")]
+    [SerializeField] private int _blackJackNumber = 21;
+    [SerializeField] private int _dealerStopNumber = 17;
+    [SerializeField] private float _choiceTime = 10f;
+
     [Header("UI오브젝트")]
     public Slider _timer;
     public GameObject _checkButton;
     public GameObject _moreButton;
+    public GameObject _standButton;
     public TextMeshProUGUI _endingText;
     public TextMeshProUGUI _titleText;
+
     [Header("카드덱")]
-    public List<Sprite> _originCard = new List<Sprite>();//원본
-    public List<Sprite> _copyCard = new List<Sprite>();//쓸거
+    public List<Sprite> _originCard = new List<Sprite>();
+    public List<Sprite> _copyCard = new List<Sprite>();
+
     [Header("연출용")]
     [SerializeField] private Transform _fristVec;
     [SerializeField] private Transform _endVecPlayer;
     [SerializeField] private Transform _endVecDealer;
     [SerializeField] private Vector3 _endRotate;
     public float _during = 2f;
-    public GameObject _thisCard;//프리팹
+    public GameObject _thisCard;
 
+    private List<GameObject> _spawnedCards = new List<GameObject>();
 
-
-
-
-
-
-
-    private async Task BlackJackGameManager()
-    {
-        StartCoroutine(StartBlackjack());
-        await CheckPlayerCard();
-        WaitPlayer();
-    }
-    public void WaitPlayer()
-    {
-        _moreButton.SetActive(true);
-        _titleText.text = "Drow more Card?";
-        _timer.value = 1;
-        _timer.gameObject.SetActive(true);
-
-        while(_timer.value>0)
-        {
-            _timer.value -= 0.01f;
-            if(_morePlay)
-            {
-                _timer.value = 1;
-                _morePlay = false;
-                _moreButton.SetActive(false);
-                _timer.gameObject.SetActive(false);
-                _titleText.text = "";
-               
-                NewCard(0);
-            }
-        }
-
-
-    }
     private void Update()
     {
-        if(_notMorePlayer>=2)
+        if (Keyboard.current != null && Keyboard.current.yKey.wasPressedThisFrame)
         {
-            Ending();
-        }
-        if (Keyboard.current.yKey.wasPressedThisFrame)
-        {
-            
-        }
-    }
-    
-    public void CheckCardKey()
-    {
-        if(Keyboard.current.pKey.wasPressedThisFrame)
-        {
-            OpenCard();
-            WhoWinandLose();
+            StartCoroutine(BlackjackGame());
         }
     }
 
-
-    public async Task CheckPlayerCard()
+    private IEnumerator BlackjackGame()
     {
-        await CheckPlayerCard();
-        if(Keyboard.current.iKey.wasPressedThisFrame)
-        {
-            OpenCard();
-        }
-    }
+        ResetGame();
 
-    private IEnumerator StartBlackjack()//시작 세팅
-    {
         NewCard(0);
         yield return new WaitForSeconds(1.2f);
+
         NewCard(1);
         yield return new WaitForSeconds(1.2f);
+
         NewCard(0);
         yield return new WaitForSeconds(1.2f);
+
         NewCard(1);
         yield return new WaitForSeconds(3f);
 
-
+        StartCoroutine(TimerCol());
     }
+
+    private void ResetGame()
+    {
+        _playerSum = 0;
+        _dealerSum = 0;
+
+        _morePlay = false;
+        _notMorePlayer = false;
+        _notMoreDealer = false;
+        _checkCard = false;
+        _first = true;
+        _gameEnd = false;
+
+        _copyCard = new List<Sprite>(_originCard);
+
+        for (int i = 0; i < _spawnedCards.Count; i++)
+        {
+            if (_spawnedCards[i] != null)
+            {
+                Destroy(_spawnedCards[i]);
+            }
+        }
+
+        _spawnedCards.Clear();
+
+        _timer.gameObject.SetActive(false);
+        _checkButton.SetActive(false);
+        _moreButton.SetActive(false);
+
+        if (_standButton != null)
+        {
+            _standButton.SetActive(false);
+        }
+
+        _endingText.text = "";
+        _titleText.text = "";
+    }
+
+    private IEnumerator TimerCol()
+    {
+        if (_gameEnd) yield break;
+
+        _checkCard = false;
+
+        _titleText.text = "카드를 확인하세요";
+        _checkButton.SetActive(true);
+
+        _timer.gameObject.SetActive(true);
+        _timer.value = 1;
+
+        float time = _choiceTime;
+
+        while (time > 0)
+        {
+            time -= Time.deltaTime;
+            _timer.value = time / _choiceTime;
+
+            if (_checkCard)
+            {
+                break;
+            }
+
+            yield return null;
+        }
+
+        _timer.gameObject.SetActive(false);
+        _checkButton.SetActive(false);
+        _titleText.text = "";
+
+        if (!_checkCard)
+        {
+            CheckPlayerCard();
+        }
+    }
+
+    public void CheckPlayerCard()
+    {
+        if (_gameEnd) return;
+
+        BlackJackCard[] cards = transform.GetComponentsInChildren<BlackJackCard>();
+
+        for (int i = 0; i < cards.Length; i++)
+        {
+            if (!cards[i]._iamCheck)
+            {
+                cards[i].OpenCard();
+                _playerSum += cards[i]._myNumber;
+            }
+        }
+
+        _checkCard = true;
+
+        if (_playerSum > _blackJackNumber)
+        {
+            FinishGame();
+            return;
+        }
+
+        if (_playerSum == _blackJackNumber)
+        {
+            _notMorePlayer = true;
+        }
+
+        if (_first)
+        {
+            _first = false;
+            StartCoroutine(MoreGame());
+        }
+    }
+
+    public void MoreTurn()
+    {
+        if (_gameEnd) return;
+
+        _morePlay = true;
+    }
+
+    public void StandTurn()
+    {
+        if (_gameEnd) return;
+
+        _notMorePlayer = true;
+        _morePlay = false;
+    }
+
     public IEnumerator MoreGame()
     {
-        yield return new WaitForSeconds(5f);
-        
+        yield return new WaitForSeconds(1f);
 
-
-        while(_notMorePlayer <2)
+        while (!_notMorePlayer || !_notMoreDealer)
         {
-            while (_timer.value > 0|| !_morePlay)//플레이어의 moreTurn
+            if (_gameEnd) yield break;
+
+            if (!_notMorePlayer)
             {
-                _timer.value -= 0.01f;
-                yield return new WaitForSeconds(0.01f);
+                _morePlay = false;
+
+                _moreButton.SetActive(true);
+
+                if (_standButton != null)
+                {
+                    _standButton.SetActive(true);
+                }
+
+                _titleText.text = "카드를 더?";
+
+                _timer.gameObject.SetActive(true);
+                _timer.value = 1;
+
+                float time = _choiceTime;
+
+                while (time > 0)
+                {
+                    time -= Time.deltaTime;
+                    _timer.value = time / _choiceTime;
+
+                    if (_morePlay || _notMorePlayer)
+                    {
+                        break;
+                    }
+
+                    yield return null;
+                }
+
+                _timer.gameObject.SetActive(false);
+                _moreButton.SetActive(false);
+
+                if (_standButton != null)
+                {
+                    _standButton.SetActive(false);
+                }
+
+                _titleText.text = "";
 
                 if (_morePlay)
                 {
                     NewCard(0);
-                    yield return new WaitForSeconds(1.5f);
-                    _titleText.text = "dealerTurn";
-                    yield return null;
-                    break;
+                    yield return new WaitForSeconds(_during);
+
+                    yield return StartCoroutine(TimerCol());
+
+                    if (_playerSum > _blackJackNumber)
+                    {
+                        FinishGame();
+                        yield break;
+                    }
+                }
+                else
+                {
+                    _notMorePlayer = true;
                 }
             }
 
+            if (!_notMoreDealer)
+            {
+                if (_dealerSum < _dealerStopNumber)
+                {
+                    _titleText.text = "딜러가 카드를 뽑습니다";
 
+                    NewCard(1);
+                    yield return new WaitForSeconds(_during);
 
-            if (!_morePlay)
-            {
-                if (_notMorePlayer == 1) _notMorePlayer = 2;
-                else if (_notMorePlayer == 0) _notMorePlayer = 1;
-            }
-            else
-            {
-                _morePlay = false;
-            }
-            yield return new WaitForSeconds(1.5f);
-            if (_dealerSum <= 16)
-            {
-                NewCard(1);
-                yield return new WaitForSeconds(1.5f);
-            }
-            else
-            {
-                if (_notMorePlayer == 1) _notMorePlayer = 2;
-                else if(_notMorePlayer==0)_notMorePlayer = 1;
+                    _titleText.text = "";
 
+                    if (_dealerSum > _blackJackNumber)
+                    {
+                        FinishGame();
+                        yield break;
+                    }
+                }
+                else
+                {
+                    _notMoreDealer = true;
+                }
             }
+
+            yield return new WaitForSeconds(0.5f);
         }
-        
+
+        FinishGame();
     }
 
-    public void TurnSelet()
+    private void FinishGame()
     {
-        _morePlay = true;
-    }
+        if (_gameEnd) return;
 
-    public void Ending()
-    {
-        Debug.Log("임시 테스트 끝");
-    }
+        _gameEnd = true;
 
-    public void WhoWinandLose()
-    {
-        if (_playerSum == 21 || _dealerSum == 21)
+        StopAllCoroutines();
+
+        _timer.gameObject.SetActive(false);
+        _checkButton.SetActive(false);
+        _moreButton.SetActive(false);
+
+        if (_standButton != null)
         {
-            Ending();
+            _standButton.SetActive(false);
         }
-        else if (_playerSum > 21 || _dealerSum > 21)
+
+        string result = "";
+
+        if (_playerSum > _blackJackNumber)
         {
-            Ending();
+            result = "플레이어 버스트!\n딜러 승리";
         }
-    }
-
-
-    public void OpenCard()
-    {
-        BlackJackCard[] a = transform.GetComponentsInChildren<BlackJackCard>();
-
-        
-        for (int i = 0; i < a.Length; i++)
+        else if (_dealerSum > _blackJackNumber)
         {
-            if (a[i]._myId==0)
-            {
-                a[i].OpenCard();
-            }
+            result = "딜러 버스트!\n플레이어 승리";
         }
-    }
-    #region 카드전용
-    public void NewCard(int id)
-    {
-        Transform _endVec;
-        if(id==0)
+        else if (_playerSum > _dealerSum)
         {
-            _endVec = _endVecPlayer;
+            result = "플레이어 승리!";
+        }
+        else if (_playerSum < _dealerSum)
+        {
+            result = "딜러 승리!";
         }
         else
         {
-            _endVec = _endVecDealer;
+            result = "무승부!";
         }
-        GameObject moveCard = Instantiate(_thisCard, _fristVec.position, Quaternion.identity);//카드를 생성
-        _endRotate = new Vector3(0, 0, UnityEngine.Random.Range(90, 210));//랜덤한 회전값
-        moveCard.transform.parent = gameObject.transform;//부모를 지정
-        moveCard.transform.DOMove(_endVec.position, _during);//목표된 위치까지 이동
-        moveCard.transform.DORotate(_endRotate, _during - 1f);//랜덤한 각도로 회전함
 
+        _titleText.text = "게임 종료";
 
-        //각각의 카드들의 정보를 넣음
-        BlackJackCard cardCompo = moveCard.GetComponent<BlackJackCard>();
-        CardInfo(cardCompo, id);
-    }//카드 드로우&세팅
-    private void CardInfo(BlackJackCard Compo, int id)
+        _endingText.text =
+            result +
+            "\n\n플레이어: " + _playerSum +
+            "\n딜러: " + _dealerSum;
+    }
+
+    #region 카드전용
+
+    public void NewCard(int id)
     {
-        Compo._myId = id;
+        if (_copyCard.Count <= 0)
+        {
+            FinishGame();
+            return;
+        }
+
+        Transform endVec;
+
+        if (id == 0)
+        {
+            endVec = _endVecPlayer;
+        }
+        else
+        {
+            endVec = _endVecDealer;
+        }
+
+        GameObject moveCard = Instantiate(_thisCard, _fristVec.position, Quaternion.identity);
+        _spawnedCards.Add(moveCard);
+
+        _endRotate = new Vector3(0, 0, UnityEngine.Random.Range(90, 210));
+
+        moveCard.transform.DOMove(endVec.position, _during);
+        moveCard.transform.DORotate(_endRotate, _during - 1f);
+
+        BlackJackCard cardCompo = moveCard.GetComponent<BlackJackCard>();
+
+        CardInfo(cardCompo, id);
+    }
+
+    private void CardInfo(BlackJackCard compo, int id)
+    {
+        compo._myId = id;
+
+        if (id == 0)
+        {
+            compo.gameObject.transform.parent = gameObject.transform;
+        }
+
         Sprite sprite = CheckSprite();
-        Compo._myImage = sprite;
-        Compo._myNumber = CheckNum(sprite.name);
-        if(id==1) _dealerSum += CheckNum(sprite.name);
-    }//카드 정보 입력 
+
+        compo._myImage = sprite;
+        compo._myNumber = CheckNum(sprite.name);
+
+        if (id == 1)
+        {
+            _dealerSum += compo._myNumber;
+        }
+    }
+
     public Sprite CheckSprite()
     {
         int ran = UnityEngine.Random.Range(0, _copyCard.Count);
+
         Sprite sprite = _copyCard[ran];
-        _copyCard.Remove(_copyCard[ran]);
+
+        _copyCard.RemoveAt(ran);
 
         return sprite;
-    }//스프라이트 정보값 결정
+    }
+
     public int CheckNum(string name)
     {
         switch (name.Split("_")[0])
         {
             case "2":
-                {
-                    return 2;
-                }
+                return 2;
+
             case "3":
-                {
-                    return 3;
-                }
+                return 3;
+
             case "4":
-                {
-                    return 4;
-                }
+                return 4;
+
             case "5":
-                {
-                    return 5;
-                }
+                return 5;
+
             case "6":
-                {
-                    return 6;
-                }
+                return 6;
+
             case "7":
-                {
-                    return 7;
-                }
+                return 7;
+
             case "8":
-                {
-                    return 8;
-                }
+                return 8;
+
             case "9":
-                {
-                    return 9;
-                }
+                return 9;
+
+            case "10":
+                return 10;
+
             case "ace":
-                {
-                    return 1;
-                }
+                return 1;
+
             case "jack":
-            case "king":
             case "queen":
-                {
-                    return 10;
-                }
+            case "king":
+                return 10;
         }
+
         return 0;
-    }//카드 숫자 체크
-    #endregion 
+    }
+
+    #endregion
 }
