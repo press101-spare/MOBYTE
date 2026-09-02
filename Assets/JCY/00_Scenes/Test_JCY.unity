@@ -403,7 +403,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 370590115}
   m_HandleRect: {fileID: 370590114}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3078,6 +3078,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965567176}
   m_CullTransparentMesh: 1
+--- !u!1 &981339965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 981339966}
+  - component: {fileID: 981339967}
+  m_Layer: 0
+  m_Name: DiceEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &981339966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981339965}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1951136216}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &981339967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981339965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46f1e8daab768045ab7c09d81a7723f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1018945425
 GameObject:
   m_ObjectHideFlags: 0
@@ -4540,7 +4584,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 114.98126, y: -640}
+  m_AnchoredPosition: {x: 114.98126, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1414268190
@@ -4684,11 +4728,7 @@ MonoBehaviour:
   diceCollection: []
   defaultDice: {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
   defaultDiceCount: 40
-  diceDeck:
-  - {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
-  - {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
-  - {fileID: 11400000, guid: c434f24f11970f14385529eb31992fef, type: 2}
-  - {fileID: 11400000, guid: eb1e2a53ceebb4d48b0ed9a3dfc9f8e9, type: 2}
+  diceDeck: []
   drawnDice: []
   diceFile_JCy: []
   drawCount: 5
@@ -5317,6 +5357,7 @@ MonoBehaviour:
   backUiPannel: {fileID: 965567176}
   isRolling: 0
   diceTree: {fileID: 2123197321}
+  diceEffect: {fileID: 981339967}
   reRollUI: {fileID: 1605801674}
 --- !u!114 &1605801674
 MonoBehaviour:
@@ -6483,6 +6524,7 @@ Transform:
   - {fileID: 1605801672}
   - {fileID: 863602532}
   - {fileID: 2123197320}
+  - {fileID: 981339966}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1963824394
