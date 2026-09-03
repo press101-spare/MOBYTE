@@ -2,13 +2,14 @@
 using System.Collections;
 using JJB.Script.Battle.Enemy;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace JJB.Script.Battle
 {
     public class EnemyTurnController : MonoBehaviour
     {
         [SerializeField] private EnemyHealthSetup enemy;
-        [SerializeField] private Health playerHealth;
+        [FormerlySerializedAs("playerHealth")] [SerializeField] private JJBHealth playerJjbHealth;
 
         [SerializeField] private float actionDelay = 0.7f;
 
@@ -21,7 +22,7 @@ namespace JJB.Script.Battle
         {
             yield return new WaitForSeconds(actionDelay);
 
-            playerHealth.TakeDamage(enemy.Data.AttackPower);
+            playerJjbHealth.TakeDamage(enemy.Data.AttackPower);
 
             yield return new WaitForSeconds(actionDelay);
 

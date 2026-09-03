@@ -2,7 +2,7 @@
 
 namespace JJB.Script.Battle.Enemy
 {
-    [RequireComponent(typeof(Health))]
+    [RequireComponent(typeof(JJBHealth))]
     public class EnemyHealthSetup : MonoBehaviour
     {
         [SerializeField] private EnemyData enemyData;
@@ -11,7 +11,7 @@ namespace JJB.Script.Battle.Enemy
 
         private void Awake()
         {
-            GetComponent<Health>().Initialize(enemyData.MaxHealth);
+            GetComponent<JJBHealth>().Initialize(enemyData.MaxHealth);
         }
     }
 }

@@ -10,6 +10,7 @@ public class DiceEffect : MonoBehaviour
             case DiceSO_JCY.DiceEffectType.Even:
             case DiceSO_JCY.DiceEffectType.None:
             case DiceSO_JCY.DiceEffectType.Odd:
+            case DiceSO_JCY.DiceEffectType.Joker:
                 break;
             
             case DiceSO_JCY.DiceEffectType.Blood:
@@ -22,9 +23,7 @@ public class DiceEffect : MonoBehaviour
                 break;
             
             case DiceSO_JCY.DiceEffectType.Debt:
-                break;
-            
-            case DiceSO_JCY.DiceEffectType.Joker:
+                DiceManager_JCY.Instance.reRollUI.Debt = true;
                 break;
             
             case DiceSO_JCY.DiceEffectType.Allin:
@@ -34,6 +33,7 @@ public class DiceEffect : MonoBehaviour
                 break;
             
             case DiceSO_JCY.DiceEffectType.Reroll:
+                DiceManager_JCY.Instance.reRollUI.UpdateReRollCount(1);
                 break;
         }
     }
