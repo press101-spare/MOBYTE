@@ -18,8 +18,7 @@ namespace JJB.Script.Slot
         [Header("릴 설정")]
         [SerializeField] private float symbolHeight = 100f;
         [SerializeField] private int symbolCount = 35;
-
-        // 시작할 때 중앙에 있는 심볼 번호
+        
         [SerializeField] private int startCenterIndex = 1;
 
         public int ResultIndex { get; private set; }
@@ -37,62 +36,55 @@ namespace JJB.Script.Slot
         {
             for (int i = 0; i < symbolCount; i++)
             {
-                Image newSymbol =
-                    Instantiate(symbolPrefab, content);
+                Image newSymbol = Instantiate(symbolPrefab, content);
 
-                RectTransform rect =
-                    newSymbol.rectTransform;
+                RectTransform rect = newSymbol.rectTransform;
 
-                rect.anchorMin =
-                    new Vector2(0.5f, 0.5f);
+                rect.anchorMin = new Vector2(0.5f, 0.5f);
+                rect.anchorMax = new Vector2(0.5f, 0.5f);
+                rect.pivot = new Vector2(0.5f, 0.5f);
+                rect.anchoredPosition = new Vector2(0f, (i - startCenterIndex) * symbolHeight);
 
-                rect.anchorMax =
-                    new Vector2(0.5f, 0.5f);
-
-                rect.pivot =
-                    new Vector2(0.5f, 0.5f);
-
-                rect.anchoredPosition =
-                    new Vector2(
-                        0f,
-                        (i - startCenterIndex)
-                        * symbolHeight
-                    );
-
-                newSymbol.sprite =
-                    GetRandomSymbol();
+                newSymbol.sprite = GetRandomSymbol();
 
                 _symbolImages.Add(newSymbol);
             }
 
-            ResultIndex =
-                Random.Range(0, symbols.Length);
+            ResultIndex = Random.Range(0, symbols.Length);
 
-            _symbolImages[startCenterIndex].sprite =
-                symbols[ResultIndex];
+            _symbolImages[startCenterIndex].sprite = symbols[ResultIndex];
         }
 
         public IEnumerator Spin(float duration)
         {
             _spinTween?.Kill();
-        
+
             content.anchoredPosition = Vector2.zero;
 
             RandomizeSymbols();
 
             _symbolImages[startCenterIndex].sprite = symbols[ResultIndex];
-        
+
             int newResult = Random.Range(0, symbols.Length);
+
             int targetIndex = symbolCount - 3;
 
             _symbolImages[targetIndex].sprite = symbols[newResult];
 
             float targetSymbolY = (targetIndex - startCenterIndex) * symbolHeight;
             float targetContentY = -targetSymbolY;
+            float stopDuration = 0.16f;
+            float beforeStopY = targetContentY + symbolHeight;
 
-            _spinTween = content.DOAnchorPosY(targetContentY, duration).SetEase(Ease.OutQuart);
+            Sequence sequence = DOTween.Sequence();
+
+            sequence.Append(content.DOAnchorPosY(beforeStopY, duration - stopDuration).SetEase(Ease.Linear));
+            sequence.Append(content.DOAnchorPosY(targetContentY, stopDuration).SetEase(Ease.OutCubic));
+
+            _spinTween = sequence;
 
             yield return _spinTween.WaitForCompletion();
+
             ResultIndex = newResult;
         }
 
