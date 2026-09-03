@@ -15,8 +15,9 @@ MonoBehaviour:
   diceName: "\uBC29\uC5B4 \uC8FC\uC0AC\uC704"
   diceDescription: "\uBC29\uC5B4 \uC8FC\uC0AC\uC704\uAC00 \uD558\uB098 \uCD94\uAC00\uB41C\uB2E4."
   diceIcon: {fileID: 0}
-  dicePrefab: {fileID: 34949007336262702, guid: ba632a86679e3cf4fbea4eabfa14a5dc,
+  cost: 0
+  Color: {r: 0, g: 0, b: 0, a: 0}
+  dicePrefab: {fileID: 34949007336262702, guid: b32f19a31ff44274492eb67049646675,
     type: 3}
-  diceEffectType: 0
-  shodice: []
+  diceEffectType: 4
   faceValues: 010000000200000003000000040000000500000006000000
