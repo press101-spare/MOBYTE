@@ -22,6 +22,9 @@ public class DiceTree_JCY : MonoBehaviour
     }
 
     public int CurrentScore { get; private set; }
+    public string CurrentTree { get; private set; }
+    public DiceTree_JCY Instance { get; set; }
+    
 
     [System.Serializable]
     public struct TreeUI
@@ -37,6 +40,21 @@ public class DiceTree_JCY : MonoBehaviour
     {
         Reset();
     }
+
+    
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // 씬이 넘어가도 파괴되지 않음
+        }
+        else
+        {
+            Destroy(gameObject); // 중복 생성 방지
+        }
+    }
+
 
     public void UpdateTreeStatus(int[] diceValues)
     {
@@ -190,6 +208,7 @@ public class DiceTree_JCY : MonoBehaviour
             if (int.TryParse(scoreText.text, out int score))
             {
                 Debug.Log($"선택한 버튼{clickBtn.name}의 점수: {score}");
+                CurrentTree = clickBtn.name;
                 CurrentScore = score;
             }
         }
@@ -201,6 +220,8 @@ public class DiceTree_JCY : MonoBehaviour
         {
             ui.checkMarkUI.SetActive(false);
         }
+
+        CurrentTree = "";
         CurrentScore = 0;
     }
 }

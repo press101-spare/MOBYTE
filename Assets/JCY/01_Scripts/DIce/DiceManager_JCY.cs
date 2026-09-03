@@ -19,8 +19,6 @@ public class DiceManager_JCY : MonoBehaviour
 
     [Header("기타 수치")] [field: SerializeField]
     public int[] currentDiceValue = new int[5]; 
-    [SerializeField] private float minTime = 0.3f;
-    [SerializeField] private float maxTime = 1.5f;
     [SerializeField] private float reRollUp= 1.5f;
     
     [Header("주사위 정렬 관련")]
@@ -33,11 +31,13 @@ public class DiceManager_JCY : MonoBehaviour
     [SerializeField] TextMeshProUGUI sumTxt;
     [SerializeField] GameObject backUiPannel;
     public bool isRolling;
+    public bool isShled;
     
     [Header("관련 스크립트")] 
     public DiceTree_JCY diceTree;
-    public DiceEffect diceEffect;
+    public DiceEffect_JCY diceEffect;
     public ReRollCount_JCY reRollUI;
+    public ShledDice_JCY shledDice;
 
 
     // 0~5번 인덱스 면이 정면을 볼 때의 회전 각도 배열 (제시해주신 각도 데이터 적용)
@@ -68,7 +68,6 @@ public class DiceManager_JCY : MonoBehaviour
     public void StartTurn(List<DiceSO_JCY> drawnDiceSoList)
     {
         ClearDice();
-        reRollUI.ResetReRollCount(2);
         for (int i = 0; i < drawnDiceSoList.Count; i++)
         {
             if (i >= spawnPositions.Length) break;
@@ -194,78 +193,7 @@ public class DiceManager_JCY : MonoBehaviour
     }
 
     // 나온 결괏값을 바탕으로 오름차순 정렬 후 화면 위치로 배치하는 코루틴
-    public IEnumerator FaceDiceCO()
-    {
-        yield return new WaitForSeconds(sortTime);
-        
-        // 1. 현재 생성되어 있는 주사위들의 데이터를 수집합니다.
-        List<DiceSortData> sortList = new List<DiceSortData>();
-
-        for (int i = 0; i < activeDiceObjects.Count; i++)
-        {
-            GameObject diceObj = activeDiceObjects[i];
-            DiceObject_JCY diceScript = activeDiceScripts[i];
-            JJB_DicePhysics physics = activeDicePhysicd[i];
-
-            int resultVal = diceScript.currentIndex; // 위에서 계산된 주사위 숫자
-            
-            // 해당 숫자가 faceRotations 배열에서 몇 번째 인덱스인지 찾고 회전값 가져오기
-            // (주의: faceRotations와 faceValues 매칭 방식에 따라 다를 수 있으므로 현재 로직에 맞게 조절)
-            int targetIndex = -1;
-            for (int f = 0; f < diceScript.currentDiceSO.faceValues.Length; f++)
-            {
-                if (diceScript.currentDiceSO.faceValues[f] == resultVal)
-                {
-                    targetIndex = f;
-                    break;
-                }
-            }
-
-            Vector3 targetRot = (targetIndex != -1) ? FaceRotations[targetIndex] : diceObj.transform.eulerAngles;
-            sortList.Add(new DiceSortData(diceObj, resultVal, targetRot));
-        }
-
-        // 2. 결과값(resultValue)을 기준으로 오름차순 정렬 (LINQ OrderBy 사용)
-        sortList = sortList.OrderBy(x => x.resultValue).ToList();
-
-        // 3. 정렬된 순서대로 dicePositions에 DOTween을 이용해 이동 및 회전
-        Sequence moveSequence = DOTween.Sequence();
-
-        for (int i = 0; i < sortList.Count; i++)
-        {
-            if (i >= dicePositions.Length) break;
-
-            Transform diceTransform = sortList[i].diceObject.transform;
-            Transform targetPos = dicePositions[i];
-            Vector3 finalRotation = sortList[i].targetRotation;
-            
-            DiceObject_JCY diceScript = 
-                sortList[i].diceObject.GetComponent<DiceObject_JCY>();
-
-            diceScript.SetDicePosition(targetPos);
-
-            Rigidbody rb = sortList[i].diceObject.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.isKinematic = true;
-            }
-
-            // 위치 이동
-            moveSequence.Join(diceTransform.DOMove(targetPos.position, 0.5f).SetEase(Ease.OutQuad));
-    
-            // 💡 수정 포인트: DORotate 대신 DOLocalRotate를 사용하거나, 
-            // 부모의 회전을 고려한 로컬 회전값으로 지정해 보세요.
-            moveSequence.Join(diceTransform.DOLocalRotate(finalRotation, 0.5f, RotateMode.FastBeyond360).SetEase(Ease.OutQuad));
-        }
-
-        yield return moveSequence.WaitForCompletion();
-
-        Debug.Log("주사위 정렬 및 배치 완료!");
-        Debug.Log("패널 사라지기");
-        sumTxt.gameObject.SetActive(true);
-        backUiPannel.SetActive(false);
-        isRolling = false;
-    }
+   
 
     #endregion
     
@@ -276,14 +204,11 @@ public class DiceManager_JCY : MonoBehaviour
     {
         if(reRollUI.reRollCount <= 0)
             return;
-        reRollUI.UpdateReRollCount(-1);
         StartCoroutine(RerollSelectedDiceRoutine());
     }
     
     private IEnumerator RerollSelectedDiceRoutine()
     {
-        backUiPannel.SetActive(true);
-        isRolling = true;
         List<DiceObject_JCY> selectedDice = new List<DiceObject_JCY>();
 
         // 선택된 주사위 찾기
@@ -300,6 +225,9 @@ public class DiceManager_JCY : MonoBehaviour
             Debug.Log("선택된 주사위가 없습니다.");
             yield break;
         }
+        backUiPannel.SetActive(true);
+        isRolling = true;
+        reRollUI.UpdateReRollCount(-1);
 
         int completedCount = 0;
 
@@ -404,15 +332,77 @@ public class DiceManager_JCY : MonoBehaviour
 
     #endregion
 
-    public void SumDiceValue()
+     public IEnumerator FaceDiceCO()
     {
-        int totalsum = 0;
+        yield return new WaitForSeconds(sortTime);
+        
+        // 1. 현재 생성되어 있는 주사위들의 데이터를 수집합니다.
+        List<DiceSortData> sortList = new List<DiceSortData>();
 
-        for (int i = 0; i < currentDiceValue.Length; i++)
+        for (int i = 0; i < activeDiceObjects.Count; i++)
         {
-            totalsum += currentDiceValue[i];
+            GameObject diceObj = activeDiceObjects[i];
+            DiceObject_JCY diceScript = activeDiceScripts[i];
+            JJB_DicePhysics physics = activeDicePhysicd[i];
+
+            int resultVal = diceScript.currentIndex; // 위에서 계산된 주사위 숫자
+            
+            // 해당 숫자가 faceRotations 배열에서 몇 번째 인덱스인지 찾고 회전값 가져오기
+            // (주의: faceRotations와 faceValues 매칭 방식에 따라 다를 수 있으므로 현재 로직에 맞게 조절)
+            int targetIndex = -1;
+            for (int f = 0; f < diceScript.currentDiceSO.faceValues.Length; f++)
+            {
+                if (diceScript.currentDiceSO.faceValues[f] == resultVal)
+                {
+                    targetIndex = f;
+                    break;
+                }
+            }
+
+            Vector3 targetRot = (targetIndex != -1) ? FaceRotations[targetIndex] : diceObj.transform.eulerAngles;
+            sortList.Add(new DiceSortData(diceObj, resultVal, targetRot));
         }
-        sumTxt.text = sumUiTxt + totalsum;
+
+        // 2. 결과값(resultValue)을 기준으로 오름차순 정렬 (LINQ OrderBy 사용)
+        sortList = sortList.OrderBy(x => x.resultValue).ToList();
+
+        // 3. 정렬된 순서대로 dicePositions에 DOTween을 이용해 이동 및 회전
+        Sequence moveSequence = DOTween.Sequence();
+
+        for (int i = 0; i < sortList.Count; i++)
+        {
+            if (i >= dicePositions.Length) break;
+
+            Transform diceTransform = sortList[i].diceObject.transform;
+            Transform targetPos = dicePositions[i];
+            Vector3 finalRotation = sortList[i].targetRotation;
+            
+            DiceObject_JCY diceScript = 
+                sortList[i].diceObject.GetComponent<DiceObject_JCY>();
+
+            diceScript.SetDicePosition(targetPos);
+
+            Rigidbody rb = sortList[i].diceObject.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.isKinematic = true;
+            }
+
+            // 위치 이동
+            moveSequence.Join(diceTransform.DOMove(targetPos.position, 0.5f).SetEase(Ease.OutQuad));
+    
+            // 💡 수정 포인트: DORotate 대신 DOLocalRotate를 사용하거나, 
+            // 부모의 회전을 고려한 로컬 회전값으로 지정해 보세요.
+            moveSequence.Join(diceTransform.DOLocalRotate(finalRotation, 0.5f, RotateMode.FastBeyond360).SetEase(Ease.OutQuad));
+        }
+
+        yield return moveSequence.WaitForCompletion();
+
+        Debug.Log("주사위 정렬 및 배치 완료!");
+        Debug.Log("패널 사라지기");
+        sumTxt.gameObject.SetActive(true);
+        backUiPannel.SetActive(false);
+        isRolling = false;
     }
     private void UpdateCurrentDiceValues()
     {
@@ -430,18 +420,38 @@ public class DiceManager_JCY : MonoBehaviour
         }
         
         SumDiceValue();
-        
+        if (isShled) return;
         // DiceTree에 주사위 값 배열 전달하여 UI 갱신
         if (diceTree != null)
         {
             diceTree.UpdateTreeStatus(currentDiceValue);
         }
     }
+    public void SumDiceValue()
+    {
+        int totalsum = 0;
+
+        for (int i = 0; i < currentDiceValue.Length; i++)
+        {
+            totalsum += currentDiceValue[i];
+        }
+        sumTxt.text = sumUiTxt + totalsum;
+        if (isShled)
+        {
+            shledDice.ShledeHP(totalsum);
+        }
+    }
+  
 
     public void Attack()
     {
-        if(diceTree.CurrentScore == 0) return;
-        JJBGameManager.Instance.PlayerJjbHealth.TakeDamage(diceTree.CurrentScore);
+        if(diceTree.CurrentScore == 0)
+        {
+            Debug.Log("족보 선택 ㄱ");
+            return;
+        }
+        JJBGameManager.Instance.EnemyJjbHealth.TakeDamage(diceTree.CurrentScore);
+        Debug.Log($"{diceTree.CurrentScore} + {diceTree.CurrentTree} + 로 공격 시도!");
     }
     
 }

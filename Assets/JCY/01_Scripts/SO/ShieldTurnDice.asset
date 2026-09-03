@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a326c7ca9c5a0e489ab8a0314c65030, type: 3}
-  m_Name: VampireDice
+  m_Name: ShieldTurnDice
   m_EditorClassIdentifier: 
-  diceName: "\uD761\uD608 \uC8FC\uC0AC\uC704"
-  diceDescription: "\uACF5\uACA9\uC2DC \uD53C\uD574 \uC77C\uBD80\uB97C \uCE58\uD658\uD574
-    HP\uB97C \uD68C\uBCF5\uD55C\uB2E4."
+  diceName: "\uBC29\uC5B4 \uC8FC\uC0AC\uC704"
+  diceDescription: "\uBC29\uC5B4 \uC8FC\uC0AC\uC704\uAC00 \uD558\uB098 \uCD94\uAC00\uB41C\uB2E4."
   diceIcon: {fileID: 0}
   cost: 0
   Color: {r: 0, g: 0, b: 0, a: 0}
-  dicePrefab: {fileID: 34949007336262702, guid: ba632a86679e3cf4fbea4eabfa14a5dc,
+  dicePrefab: {fileID: 34949007336262702, guid: e9e548c0f2dc5ea408e5704d3f5193aa,
     type: 3}
-  diceEffectType: 6
-  faceValues: 010000000200000003000000040000000500000006000000
+  diceEffectType: 5
+  faceValues: 010000000100000002000000020000000300000003000000
