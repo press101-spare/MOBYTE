@@ -29,7 +29,7 @@ public class DiceSO_JCY : ScriptableObject
     
     public enum DiceEffectType
     {
-        None , Even , Odd , Blood , Shield , Allin , Vampire , Reroll , Joker , Debt , Gamble
+        None , Even , Odd , Blood , Shield ,ShieldTurn  , Allin , Vampire , Reroll , Joker , Debt , Gamble
     }
 
 }

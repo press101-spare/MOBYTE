@@ -1,7 +1,23 @@
+using System;
 using UnityEngine;
 
-public class DiceEffect : MonoBehaviour
+public class DiceEffect_JCY : MonoBehaviour
 {
+    public DiceEffect_JCY Instance { get; set; }
+    
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
+
+
+
     public void Effect(DiceSO_JCY diseSO)
     {
         DiceSO_JCY.DiceEffectType _effect = diseSO.diceEffectType;
@@ -19,7 +35,12 @@ public class DiceEffect : MonoBehaviour
             case DiceSO_JCY.DiceEffectType.Gamble:
                 break;
             
-            case DiceSO_JCY.DiceEffectType.Shield:
+            case DiceSO_JCY.DiceEffectType.Shield: 
+                DiceManager_JCY.Instance.shledDice.ShledAdd(1);
+                break;
+            
+            case DiceSO_JCY.DiceEffectType.ShieldTurn:
+                Debug.Log("쉴드 턴!");
                 break;
             
             case DiceSO_JCY.DiceEffectType.Debt:

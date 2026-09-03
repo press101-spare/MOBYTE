@@ -20,6 +20,5 @@ MonoBehaviour:
   Color: {r: 0, g: 0, b: 0, a: 0}
   dicePrefab: {fileID: 34949007336262702, guid: ba632a86679e3cf4fbea4eabfa14a5dc,
     type: 3}
-  diceEffectType: 0
-  shodice: []
+  diceEffectType: 6
   faceValues: 010000000200000003000000040000000500000006000000
