@@ -70,7 +70,7 @@ public class BlackJackManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         StartCoroutine(TimerCol());
-    }
+    }//기초 진행
 
     private void ResetGame()
     {
@@ -107,7 +107,7 @@ public class BlackJackManager : MonoBehaviour
 
         _endingText.text = "";
         _titleText.text = "";
-    }
+    }//게임 리셋
 
     private IEnumerator TimerCol()
     {
@@ -144,7 +144,7 @@ public class BlackJackManager : MonoBehaviour
         {
             CheckPlayerCard();
         }
-    }
+    }//타이머용
 
     public void CheckPlayerCard()
     {
@@ -179,14 +179,14 @@ public class BlackJackManager : MonoBehaviour
             _first = false;
             StartCoroutine(MoreGame());
         }
-    }
+    }//확인용
 
     public void MoreTurn()
     {
         if (_gameEnd) return;
 
         _morePlay = true;
-    }
+    }//연장용
 
     public void StandTurn()
     {
@@ -194,7 +194,7 @@ public class BlackJackManager : MonoBehaviour
 
         _notMorePlayer = true;
         _morePlay = false;
-    }
+    }//멈춤용
 
     public IEnumerator MoreGame()
     {
@@ -291,7 +291,7 @@ public class BlackJackManager : MonoBehaviour
         }
 
         FinishGame();
-    }
+    }//연장전
 
     private void FinishGame()
     {
@@ -339,7 +339,7 @@ public class BlackJackManager : MonoBehaviour
             result +
             "\n\n플레이어: " + _playerSum +
             "\n딜러: " + _dealerSum;
-    }
+    }//끝?
 
     #region 카드전용
 
