@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: OddDice
   m_EditorClassIdentifier: 
   diceName: "\uD640\uC218 \uC8FC\uC0AC\uC704"
-  diceDescription: "\uD640\uC218\uB85C\uB9CC \uC774\uB8E8\uC5B4\uC9C4 \uC8FC\uC0AC\uC704\uB2E4."
   diceIcon: {fileID: 0}
   cost: 0
   Color: {r: 0, g: 0, b: 0, a: 0}
   dicePrefab: {fileID: 34949007336262702, guid: 185ada6a311823f4eaf28effc2a07aec,
     type: 3}
   diceEffectType: 2
-  shodice: []
+  diceDescription: "[1,1,3,3,5,5]\n\uD640\uC218\uB85C\uB9CC \uC774\uB8E8\uC5B4\uC9C4
+    \uC8FC\uC0AC\uC704\uB2E4."
   faceValues: 010000000100000003000000050000000500000003000000
