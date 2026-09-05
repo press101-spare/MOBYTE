@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a326c7ca9c5a0e489ab8a0314c65030, type: 3}
+  m_Name: ReRollDice
+  m_EditorClassIdentifier: 
+  diceName: "\uB9AC\uB864 \uC8FC\uC0AC\uC704"
+  diceDescription: "\uB2E4\uC2DC \uAD74\uB9AC\uAE30 \uD69F\uC218\uAC00 \uD558\uB098
+    \uCD94\uAC00\uB41C\uB2E4."
+  diceIcon: {fileID: 0}
+  cost: 0
+  Color: {r: 1, g: 1, b: 1, a: 0}
+  dicePrefab: {fileID: 34949007336262702, guid: 2d4a25d9d93230942908348c7e3acebc,
+    type: 3}
+  diceEffectType: 7
+  faceValues: 010000000200000003000000040000000500000006000000

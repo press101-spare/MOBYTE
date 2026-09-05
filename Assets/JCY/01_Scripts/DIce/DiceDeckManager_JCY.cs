@@ -77,6 +77,7 @@ public class DiceDeckManager_JCY : MonoBehaviour
     {
        
         DiscardDice(); 
+        DiceManager_JCY.Instance.reRollUI.ResetReRollCount(2);
         for (int i = 0; i < drawCount; i++)
         {
             int randomIndex = Random.Range(0, diceDeck.Count);
@@ -129,5 +130,10 @@ public class DiceDeckManager_JCY : MonoBehaviour
             diceDeck[randomIndex] = temp;
         }
         // Debug.Log("이후" + diceFile_JCy.Count);
+    }
+
+    public void AddDice(DiceSO_JCY AppendDice)
+    {
+        diceDeck.Add(AppendDice);
     }
 }

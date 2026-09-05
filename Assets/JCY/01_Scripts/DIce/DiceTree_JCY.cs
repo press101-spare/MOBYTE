@@ -21,7 +21,10 @@ public class DiceTree_JCY : MonoBehaviour
         Yahtzee
     }
 
-    [SerializeField] private Transform treePanel;
+    public int CurrentScore { get; private set; }
+    public string CurrentTree { get; private set; }
+    public DiceTree_JCY Instance { get; set; }
+    
 
     [System.Serializable]
     public struct TreeUI
@@ -37,6 +40,21 @@ public class DiceTree_JCY : MonoBehaviour
     {
         Reset();
     }
+
+    
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // 씬이 넘어가도 파괴되지 않음
+        }
+        else
+        {
+            Destroy(gameObject); // 중복 생성 방지
+        }
+    }
+
 
     public void UpdateTreeStatus(int[] diceValues)
     {
@@ -72,9 +90,9 @@ public class DiceTree_JCY : MonoBehaviour
             if (val >= 1 && val <= 6) counts[val]++;
             else if (val == 7)
             {
-                foreach (var counter in counts)
+                for (int i = 1; i <= 6; i++)
                 {
-                    counts[counter]++;
+                    counts[i]++;
                 }
             }
         }
@@ -140,16 +158,30 @@ public class DiceTree_JCY : MonoBehaviour
         bool has5 = counts.Contains(5); // 5개가 같아도 풀하우스로 인정
         scores[Trees.FullHouse] = ((has3 && has2) || has5) ? 20 + attackPower : 0;
 
-        // 7 & 8. 스트레이트 판별용 문자열
-        string straightStr = string.Join("", diceValues.Distinct().OrderBy(x => x));
+        // 연속된 주사위 눈금(카운트가 1 이상인 눈금)의 최대 연속 개수를 계산합니다.
+        int consecutive = 0;
+        int maxConsecutive = 0;
 
-        // 7. 스몰 스트레이트 (17 + 공격력)
-        bool isSS = straightStr.Contains("1234") || straightStr.Contains("2345") || straightStr.Contains("3456");
+        for (int i = 1; i <= 6; i++)
+        {
+            if (counts[i] > 0)
+            {
+                consecutive++;
+                if (consecutive > maxConsecutive) maxConsecutive = consecutive;
+            }
+            else
+            {
+                consecutive = 0;
+            }
+        }
+
+        // 7. 스몰 스트레이트 (연속 4개 이상)
+        bool isSS = maxConsecutive >= 4;
         scores[Trees.SmallStraight] = isSS ? 17 + attackPower : 0;
 
-        // 8. 라지 스트레이트 (26 + 공격력)
-        bool isLS = straightStr.Contains("12345") || straightStr.Contains("23456");
-        scores[Trees.LargeStraight] = isLS ? 26 + attackPower : 0;
+        // 8. 라지 스트레이트 (연속 5개 이상)
+        bool isLS = maxConsecutive >= 5;
+        scores[Trees.LargeStraight] = isLS ? 20 + attackPower : 0; // (예시 점수)
 
         // 9. 야추 (36 + 동일 눈금 * 2 + 공격력)
         int yahtzeeFace = 0;
@@ -175,7 +207,9 @@ public class DiceTree_JCY : MonoBehaviour
             // 3. 텍스트 문자열을 int 정수로 변환해서 반환
             if (int.TryParse(scoreText.text, out int score))
             {
-                Debug.Log($"선택한 버튼({clickBtn.name})의 점수: {score}");
+                Debug.Log($"선택한 버튼{clickBtn.name}의 점수: {score}");
+                CurrentTree = clickBtn.name;
+                CurrentScore = score;
             }
         }
     }
@@ -186,5 +220,8 @@ public class DiceTree_JCY : MonoBehaviour
         {
             ui.checkMarkUI.SetActive(false);
         }
+
+        CurrentTree = "";
+        CurrentScore = 0;
     }
 }

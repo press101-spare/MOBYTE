@@ -8,9 +8,9 @@ namespace JJB.Script.Battle
 
         private void Awake()
         {
-            Health health = GetComponent<Health>();
+            JJBHealth jjbHealth = GetComponent<JJBHealth>();
 
-            health.Initialize(MaxHealth);
+            jjbHealth.Initialize(MaxHealth);
         }
     }
 }
