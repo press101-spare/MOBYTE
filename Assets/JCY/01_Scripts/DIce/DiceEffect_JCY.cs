@@ -63,7 +63,9 @@ public class DiceEffect_JCY : MonoBehaviour
     // DiceEffect_JCY 또는 DiceManager_JCY 내의 계산 메서드 예시
     public int CalculateFinalDamage(List<DiceObject_JCY> activeDice, int baseDamage)
     {
-        int finalDamage = baseDamage;
+        float finalDamage = baseDamage;
+        int allinStack = 0;
+        int growStack = 0;
 
         foreach (DiceObject_JCY dice in activeDice)
         {
@@ -74,30 +76,27 @@ public class DiceEffect_JCY : MonoBehaviour
             int rolledValue = dice.currentIndex;
 
             // 3. Allin 주사위 판별 예시
-            if (effectType == DiceSO_JCY.DiceEffectType.Allin)
+            if (effectType == DiceSO_JCY.DiceEffectType.Allin && allinStack < 2)
             {
                 if (rolledValue == 6)
                 {
-                    finalDamage += 50; // 6이 나왔을 때 대폭 증가
+                    finalDamage *= 1.5f ; // 6이 나왔을 때 대폭 증가
+                    allinStack++;
                 }
             }
             
-            if (effectType == DiceSO_JCY.DiceEffectType.Allin)
-            {
-                if (rolledValue == 6)
-                {
-                    finalDamage += 50; // 6이 나왔을 때 대폭 증가
-                }
-            }
 
-            if (effectType == DiceSO_JCY.DiceEffectType.Grow)
+            if (effectType == DiceSO_JCY.DiceEffectType.Grow && growStack < 2)
             {
-                Debug.Log("성장");
-                //finalDamage += Battl
+                Debug.Log("성장"); 
+                // finalDamage += JJBGameManager.Instance.
+                growStack++;
+                Debug.Log(growStack);
             }
             
         }
 
-        return finalDamage;
+        int returnDamage = (int)Math.Round(finalDamage);
+        return returnDamage;
     }
 }
