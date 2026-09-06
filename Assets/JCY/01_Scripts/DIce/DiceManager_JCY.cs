@@ -450,7 +450,9 @@ public class DiceManager_JCY : MonoBehaviour
             Debug.Log("족보 선택 ㄱ");
             return;
         }
-        JJBGameManager.Instance.EnemyJjbHealth.TakeDamage(diceTree.CurrentScore);
+        int finalDamage = diceEffect.CalculateFinalDamage(activeDiceScripts, diceTree.CurrentScore);
+
+        JJBGameManager.Instance.EnemyJjbHealth.TakeDamage(finalDamage);
         Debug.Log($"{diceTree.CurrentScore} + {diceTree.CurrentTree} + 로 공격 시도!");
     }
     

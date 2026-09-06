@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using JJB.Script.Battle;
 using UnityEngine;
 
 public class DiceEffect_JCY : MonoBehaviour
@@ -46,9 +48,7 @@ public class DiceEffect_JCY : MonoBehaviour
             case DiceSO_JCY.DiceEffectType.Debt:
                 DiceManager_JCY.Instance.reRollUI.Debt = true;
                 break;
-            
-            case DiceSO_JCY.DiceEffectType.Allin:
-                break;
+
             
             case DiceSO_JCY.DiceEffectType.Vampire:
                 break;
@@ -57,5 +57,47 @@ public class DiceEffect_JCY : MonoBehaviour
                 DiceManager_JCY.Instance.reRollUI.UpdateReRollCount(1);
                 break;
         }
+        
+        
+    }
+    // DiceEffect_JCY 또는 DiceManager_JCY 내의 계산 메서드 예시
+    public int CalculateFinalDamage(List<DiceObject_JCY> activeDice, int baseDamage)
+    {
+        int finalDamage = baseDamage;
+
+        foreach (DiceObject_JCY dice in activeDice)
+        {
+            // 1. 주사위 종류(EffectType) 가져오기
+            DiceSO_JCY.DiceEffectType effectType = dice.currentDiceSO.diceEffectType;
+        
+            // 2. 주사위 결과 눈금 가져오기
+            int rolledValue = dice.currentIndex;
+
+            // 3. Allin 주사위 판별 예시
+            if (effectType == DiceSO_JCY.DiceEffectType.Allin)
+            {
+                if (rolledValue == 6)
+                {
+                    finalDamage += 50; // 6이 나왔을 때 대폭 증가
+                }
+            }
+            
+            if (effectType == DiceSO_JCY.DiceEffectType.Allin)
+            {
+                if (rolledValue == 6)
+                {
+                    finalDamage += 50; // 6이 나왔을 때 대폭 증가
+                }
+            }
+
+            if (effectType == DiceSO_JCY.DiceEffectType.Grow)
+            {
+                Debug.Log("성장");
+                //finalDamage += Battl
+            }
+            
+        }
+
+        return finalDamage;
     }
 }
