@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8654103232055264533}
   - component: {fileID: 3736139516345149935}
   - component: {fileID: 7766693688690129091}
+  - component: {fileID: -4620849034145042152}
+  - component: {fileID: -1634304207480817652}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -73,6 +75,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnManager: {fileID: 0}
   actionButtons: []
+--- !u!114 &-4620849034145042152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6284040726363081931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b763ebbbf7c1443b98b7a05b9a0f47b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
+  shieldDice: {fileID: 0}
+--- !u!114 &-1634304207480817652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6284040726363081931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f172661d614abeb389844f6eb95e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyJjbHealth: {fileID: 0}
 --- !u!1 &7024952691638659729
 GameObject:
   m_ObjectHideFlags: 0
