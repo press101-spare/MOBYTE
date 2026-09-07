@@ -8,10 +8,14 @@ namespace JJB.Script.Battle
 {
     public class EnemyTurnController : MonoBehaviour
     {
-        [SerializeField] private EnemyHealthSetup enemy;
-        [FormerlySerializedAs("playerHealth")] [SerializeField] private JJBHealth playerJjbHealth;
+        [SerializeField]
+        private EnemyHealthSetup enemy;
 
-        [SerializeField] private float actionDelay = 0.7f;
+        [SerializeField]
+        private PlayerDamageReceiver playerDamageReceiver;
+
+        [SerializeField]
+        private float actionDelay = 0.7f;
 
         public void ExecuteTurn(Action onFinished)
         {
@@ -21,9 +25,7 @@ namespace JJB.Script.Battle
         private IEnumerator ExecuteRoutine(Action onFinished)
         {
             yield return new WaitForSeconds(actionDelay);
-
-            playerJjbHealth.TakeDamage(enemy.Data.AttackPower);
-
+            playerDamageReceiver.TakeDamage(enemy.Data.AttackPower);
             yield return new WaitForSeconds(actionDelay);
 
             onFinished?.Invoke();
