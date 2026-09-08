@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections;
 using JJB.Script.Battle.Enemy;
+using JJB.Script.Battle.Player;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace JJB.Script.Battle
 {

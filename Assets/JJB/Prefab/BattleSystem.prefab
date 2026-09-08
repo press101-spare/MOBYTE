@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 738054216338750757}
   - component: {fileID: 1239083189498809652}
+  - component: {fileID: 4773307051682725989}
+  - component: {fileID: -6731537103482611300}
   m_Layer: 0
-  m_Name: BattleTurnManager
+  m_Name: BattleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,4 +46,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eed89872413441c86b8593fef1d093d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTurnController: {fileID: 0}
   enemyTurnController: {fileID: 0}
+  playerHealth: {fileID: 0}
+  enemyHealth: {fileID: 0}
+--- !u!114 &4773307051682725989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3130255591501919900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe09c62778f4e798e208aad5afe38d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnManager: {fileID: 0}
+  drawButton: {fileID: 0}
+  attackButton: {fileID: 0}
+  turnEndButton: {fileID: 0}
+--- !u!114 &-6731537103482611300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3130255591501919900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87e2638fe8b4dd396870a70b5c3106a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceManager: {fileID: 0}
+  shieldDice: {fileID: 0}
+  playerAttackController: {fileID: 0}

@@ -38,6 +38,8 @@ public class DiceManager_JCY : MonoBehaviour
     public DiceEffect_JCY diceEffect;
     public ReRollCount_JCY reRollUI;
     public ShledDice_JCY shledDice;
+    
+    public IReadOnlyList<DiceObject_JCY> ActiveDiceScripts => activeDiceScripts;
 
 
     // 0~5번 인덱스 면이 정면을 볼 때의 회전 각도 배열 (제시해주신 각도 데이터 적용)

@@ -61,7 +61,7 @@ public class DiceEffect_JCY : MonoBehaviour
         
     }
     // DiceEffect_JCY 또는 DiceManager_JCY 내의 계산 메서드 예시
-    public int CalculateFinalDamage(List<DiceObject_JCY> activeDice, int baseDamage)
+    public int CalculateFinalDamage(IReadOnlyList<DiceObject_JCY> activeDice, int baseDamage)
     {
         float finalDamage = baseDamage;
         int allinStack = 0;
@@ -88,8 +88,8 @@ public class DiceEffect_JCY : MonoBehaviour
 
             if (effectType == DiceSO_JCY.DiceEffectType.Grow && growStack < 2)
             {
-                Debug.Log($"성장 {(float)JJBGameManager.Instance.BattleTurnManager.CurrentTurn / 2f}만큼");
-                finalDamage += (float)JJBGameManager.Instance.BattleTurnManager.CurrentTurn / 2f;
+                Debug.Log($"성장 {(float)JJBGameManager.Instance.BattleTurnManager.CurrentPhase / 2f}만큼");
+                finalDamage += (float)JJBGameManager.Instance.BattleTurnManager.CurrentPhase / 2f;
                 growStack++;
                 Debug.Log(growStack);
             }

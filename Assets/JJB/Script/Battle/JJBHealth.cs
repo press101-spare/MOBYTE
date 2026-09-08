@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace JJB.Script
+namespace JJB.Script.Battle
 {
     public class JJBHealth : MonoBehaviour
     {

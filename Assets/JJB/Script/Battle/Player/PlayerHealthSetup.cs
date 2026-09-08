@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace JJB.Script.Battle
+namespace JJB.Script.Battle.Player
 {
     public class PlayerHealthSetup : MonoBehaviour
     {

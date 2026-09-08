@@ -1,163 +1,154 @@
 ﻿using System;
-using System.Collections;
+using JJB.Script.Battle.Player;
 using UnityEngine;
 
 namespace JJB.Script.Battle
 {
     public class BattleTurnManager : MonoBehaviour
     {
-        [Header("Dice")]
-        [SerializeField] private DiceManager_JCY diceManager;
-        [SerializeField] private ShledDice_JCY shieldDice;
-
-        [Header("Battle")]
-        [SerializeField] private PlayerAttackController playerAttackController;
+        [Header("Turn")]
+        [SerializeField] private PlayerTurnController playerTurnController;
         [SerializeField] private EnemyTurnController enemyTurnController;
 
-        public BattleTurn CurrentTurn { get; private set; }
 
-        public event Action<BattleTurn> OnTurnChanged;
+        [Header("Health")]
+        [SerializeField] private JJBHealth playerHealth;
+        [SerializeField] private JJBHealth enemyHealth;
         
-        private bool _canDraw;
-        private bool _canAttack;
+        public BattlePhase CurrentPhase { get; private set; }
+        public event Action<BattlePhase> OnPhaseChanged;
 
         private void Start()
         {
-            StartCoroutine(StartPlayerTurn());
+            ChangePhase(BattlePhase.Start);
+            StartPlayerTurn();
         }
 
-        // ==============================
-        // 플레이어 턴
-        // ==============================
 
-        private IEnumerator StartPlayerTurn()
+        // =========================
+        // 새로운 플레이어 턴
+        // =========================
+
+        private void StartPlayerTurn()
         {
-            CurrentTurn = BattleTurn.Player;
-            OnTurnChanged?.Invoke(CurrentTurn);
-
-            Debug.Log("플레이어 턴 시작 - Draw 버튼 대기");
-
-            _canDraw = true;
-            _canAttack = false;
-
-            yield break;
+            ChangePhase(BattlePhase.Draw);
         }
-        
-        public void DrawDice()
+
+
+        // =========================
+        // DRAW 버튼
+        // =========================
+
+        public void Draw()
         {
-            if (CurrentTurn != BattleTurn.Player)
+            if (CurrentPhase != BattlePhase.Draw)
+            {
                 return;
+            }
 
-            if (!_canDraw)
-                return;
-
-            if (diceManager.isRolling)
-                return;
-
-            _canDraw = false;
-
-            DiceDeckManager_JCY.Instance.DrawDice();
-
-            StartCoroutine(WaitForAttackDice());
+            playerTurnController.DrawDice(OnDrawFinished);
         }
 
-        private IEnumerator WaitForAttackDice()
+        private void OnDrawFinished()
         {
-            yield return new WaitUntil(
-                () => !diceManager.isRolling
-            );
-
-            Debug.Log("공격 주사위 완료 - 공격 가능");
-
-            _canAttack = true;
+            ChangePhase(BattlePhase.HandSelect);
         }
-        
+
+        // =========================
+        // ATTACK 버튼
+        // =========================
+
         public void Attack()
         {
-            if (CurrentTurn != BattleTurn.Player)
-                return;
-
-            if (!_canAttack)
-                return;
-
-            if (diceManager.isRolling)
-                return;
-
-            int score = diceManager.diceTree.CurrentScore;
-
-            if (score <= 0)
+            if (CurrentPhase != BattlePhase.HandSelect)
             {
-                Debug.Log("족보를 먼저 선택해주세요.");
                 return;
             }
-
-            _canAttack = false;
-            playerAttackController.Attack(score);
-            
-            StartCoroutine(DefensePhase());
+            ChangePhase(BattlePhase.Attack);
+            bool success = playerTurnController.TryAttack();
+            if (!success)
+            {
+                ChangePhase(BattlePhase.HandSelect);
+                return;
+            }
+            if (enemyHealth.IsDead)
+            {
+                EndBattle();
+                return;
+            }
+            StartDefense();
         }
 
-        // ==============================
-        // 방어 주사위
-        // ==============================
 
-        private IEnumerator DefensePhase()
+        // =========================
+        // 방어
+        // =========================
+
+        private void StartDefense()
         {
-            Debug.Log("방어 주사위 시작");
-
-            shieldDice.shideDraw();
-
-            if (shieldDice.shledDiceCount > 0)
-            {
-                yield return new WaitUntil(() => !diceManager.isRolling);
-            }
-
-            diceManager.isShled = false;
-
-            Debug.Log($"방어 주사위 종료 / 쉴드: {shieldDice.shledValue}");
-            
-            yield return StartEnemyTurn();
+            ChangePhase(BattlePhase.Defense);
+            playerTurnController.StartDefense(OnDefenseFinished);
         }
 
-        // ==============================
+        private void OnDefenseFinished()
+        {
+            ChangePhase(BattlePhase.TurnEnd);
+        }
+
+
+        // =========================
+        // TURN END 버튼
+        // =========================
+
+        public void TurnEnd()
+        {
+            if (CurrentPhase != BattlePhase.TurnEnd)
+            {
+                return;
+            }
+            StartEnemyTurn();
+        }
+
+
+        // =========================
         // 적 턴
-        // ==============================
+        // =========================
 
-        private IEnumerator StartEnemyTurn()
+        private void StartEnemyTurn()
         {
-            CurrentTurn = BattleTurn.Enemy;
-            OnTurnChanged?.Invoke(CurrentTurn);
-
-            Debug.Log("적 턴 시작");
-
-            bool enemyTurnFinished = false;
-
-            enemyTurnController.ExecuteTurn(
-                () =>
-                {
-                    enemyTurnFinished = true;
-                }
-            );
-            
-            yield return new WaitUntil(() => enemyTurnFinished);
-
-            Debug.Log("적 턴 종료");
-            
-            yield return StartPlayerTurn();
+            ChangePhase(BattlePhase.Enemy);
+            enemyTurnController.ExecuteTurn(OnEnemyTurnFinished);
         }
 
-        // ==============================
-        // 전투 종료
-        // ==============================
-
-        public void EndBattle()
+        private void OnEnemyTurnFinished()
         {
-            CurrentTurn = BattleTurn.BattleEnd;
-            
-            OnTurnChanged?.Invoke(CurrentTurn);
-            
-            _canAttack = false;
-            Debug.Log("전투 종료");
+            if (playerHealth.IsDead)
+            {
+                EndBattle();
+                return;
+            }
+            StartPlayerTurn();
+        }
+
+
+        // =========================
+        // 전투 종료
+        // =========================
+
+        private void EndBattle()
+        {
+            ChangePhase(BattlePhase.BattleEnd);
+        }
+
+
+        // =========================
+        // Phase 변경
+        // =========================
+
+        private void ChangePhase(BattlePhase phase)
+        {
+            CurrentPhase = phase;
+            OnPhaseChanged?.Invoke(phase);
         }
     }
 }
