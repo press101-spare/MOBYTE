@@ -8,13 +8,6 @@ public class DiceObject_JCY : MonoBehaviour
     [Header("주사위 정보")]
     public DiceSO_JCY currentDiceSO;
     public int currentIndex;
-
-    [Header("굴리기 설정")]
-    [SerializeField] private float rollDuration = 1.5f;
-    [SerializeField] private float rollDistance = 5.0f;
-    
-   
-
     
     [Header("셀렉트 설정")]
     public MeshRenderer MeshCompo { get; private set; }

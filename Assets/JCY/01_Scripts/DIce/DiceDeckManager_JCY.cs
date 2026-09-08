@@ -49,8 +49,6 @@ public class DiceDeckManager_JCY : MonoBehaviour
 
     private void InitializeDeck()
     {
-        diceDeck.Clear();
-
         for (int i = 0; i < defaultDiceCount; i++)
         {
             diceDeck.Add(defaultDice);
@@ -75,8 +73,8 @@ public class DiceDeckManager_JCY : MonoBehaviour
     //덱에서 주사위 뽑아서 전달
     public void DrawDice()
     {
-       
         DiscardDice(); 
+        DiceManager_JCY.Instance.reRollUI.ResetReRollCount(2);
         for (int i = 0; i < drawCount; i++)
         {
             int randomIndex = Random.Range(0, diceDeck.Count);
@@ -135,4 +133,5 @@ public class DiceDeckManager_JCY : MonoBehaviour
     {
         diceDeck.Add(AppendDice);
     }
+    
 }

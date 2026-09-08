@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: JokerDice
   m_EditorClassIdentifier: 
   diceName: "\uC870\uCEE4 \uC8FC\uC0AC\uC704"
-  diceDescription: "\uC8FC\uC0AC\uC704 \uB208 \uC911 6\uC774 \uC871\uBCF4\uC5D0\uC11C
-    \uBAA8\uB4E0\uB208\uC73C\uB85C \uD310\uC815\uB418\uB294 \uBB38\uC591\uB85C \uB300\uCCB4\uB429\uB2C8\uB2E4."
   diceIcon: {fileID: 0}
   cost: 0
   Color: {r: 0, g: 0, b: 0, a: 0}
   dicePrefab: {fileID: 34949007336262702, guid: f3fd63190fb198b469ddbf6620b23e3a,
     type: 3}
   diceEffectType: 8
+  diceDescription: "[1,2,3,4,5,7]\n\uC8FC\uC0AC\uC704 \uB208 \uC911 6\uC774 \uC871\uBCF4\uC5D0\uC11C
+    \uBAA8\uB4E0\uB208\uC73C\uB85C \uD310\uC815\uB418\uB294 \uBB38\uC591\uB85C \uB300\uCCB4\uB429\uB2C8\uB2E4.
+    \uD574\uB2F9 \uBB38\uC591\uC758 \uC22B\uC790\uB294 7\uB85C \uD310\uC815\uB429\uB2C8\uB2E4."
   faceValues: 010000000200000003000000040000000500000007000000
