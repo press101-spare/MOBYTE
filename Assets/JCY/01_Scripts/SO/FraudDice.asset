@@ -16,7 +16,8 @@ MonoBehaviour:
   diceIcon: {fileID: 0}
   cost: 0
   Color: {r: 0, g: 0, b: 0, a: 0}
-  dicePrefab: {fileID: 0}
+  dicePrefab: {fileID: 34949007336262702, guid: a009e545d2feca2438a6dbd71b7fce42,
+    type: 3}
   diceEffectType: 0
   diceDescription: "[6,6,6,6,6,6]\n\uBB34\uC870\uAC74 6\uC774 \uB098\uC624\uB294
     \uC0AC\uAE30\uC801\uC778 \uC8FC\uC0AC\uC704\uB2E4."

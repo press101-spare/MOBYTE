@@ -400,6 +400,7 @@ public class DiceManager_JCY : MonoBehaviour
 
         Debug.Log("주사위 정렬 및 배치 완료!");
         Debug.Log("패널 사라지기");
+        Debug.Log("던지기 종료");
         sumTxt.gameObject.SetActive(true);
         backUiPannel.SetActive(false);
         isRolling = false;

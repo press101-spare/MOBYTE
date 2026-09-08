@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 508322639934586137}
   - component: {fileID: 8486688524588890306}
   m_Layer: 0
-  m_Name: AliiinDIce
+  m_Name: FraudDIce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentDiceSO: {fileID: 0}
   currentIndex: 0
-  <OutLine>k__BackingField: {fileID: 2100000, guid: c6f288c5f5c442d498ba189ddcc568ec,
+  <OutLine>k__BackingField: {fileID: 2100000, guid: ac928dbf12f83dc409b5d103464f0be4,
     type: 2}
   <IsSelected>k__BackingField: 0
 --- !u!54 &508322639934586137
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 5275044575769219845}
   - component: {fileID: 349285545318697747}
   m_Layer: 0
-  m_Name: Allin
+  m_Name: Fraud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +136,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4864258240423658053}
-  m_Mesh: {fileID: 4111267197319836950, guid: eb82e669a382ba044ba274bfed78d00e, type: 3}
+  m_Mesh: {fileID: -5495902117074765545, guid: a75ab1ad3b6ad0d42ac6cbfae3b376b9, type: 3}
 --- !u!23 &5275044575769219845
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -160,8 +160,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1459630551807184411, guid: cd867057ad8079746a4d37cc6905f8c6, type: 3}
-  - {fileID: 3112961330819457637, guid: cd867057ad8079746a4d37cc6905f8c6, type: 3}
+  - {fileID: 2100000, guid: d2ffb5b748d0d5046b36992070bafb02, type: 2}
+  - {fileID: 5200791041605815783, guid: efe90f2f4056df24e93ca025cb59808d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

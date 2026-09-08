@@ -342,6 +342,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1239083189498809652, guid: cdca587241b6cdf4497455059fa62c31,
+        type: 3}
+      propertyPath: shieldDice
+      value: 
+      objectReference: {fileID: 511187799}
+    - target: {fileID: 1239083189498809652, guid: cdca587241b6cdf4497455059fa62c31,
+        type: 3}
+      propertyPath: diceManager
+      value: 
+      objectReference: {fileID: 1605801673}
+    - target: {fileID: 1239083189498809652, guid: cdca587241b6cdf4497455059fa62c31,
+        type: 3}
+      propertyPath: enemyTurnController
+      value: 
+      objectReference: {fileID: 1310583562}
+    - target: {fileID: 1239083189498809652, guid: cdca587241b6cdf4497455059fa62c31,
+        type: 3}
+      propertyPath: playerAttackController
+      value: 
+      objectReference: {fileID: 1874176868}
     - target: {fileID: 3130255591501919900, guid: cdca587241b6cdf4497455059fa62c31,
         type: 3}
       propertyPath: m_Name
@@ -922,6 +942,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1310583562 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4373792885254486964, guid: 00401452268649344993465eb8c8732d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1991829888}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 713dae7ab9f54823afe01b77451f1f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1332270549 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8654103232055264533, guid: 525203ba92e8c1a47bff68e4b75db295,
@@ -991,7 +1023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diceCollection: []
-  defaultDice: {fileID: 11400000, guid: b8a7a84e4f923a64fa82c0ac6ab03975, type: 2}
+  defaultDice: {fileID: 11400000, guid: 7c523a41f465be04abaf139677a546c4, type: 2}
   defaultDiceCount: 40
   diceDeck: []
   drawnDice: []
@@ -1389,6 +1421,30 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5031859623849011873}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1874176868 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -1634304207480817652, guid: 525203ba92e8c1a47bff68e4b75db295,
+    type: 3}
+  m_PrefabInstance: {fileID: 1975530143}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f172661d614abeb389844f6eb95e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1874176869 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4620849034145042152, guid: 525203ba92e8c1a47bff68e4b75db295,
+    type: 3}
+  m_PrefabInstance: {fileID: 1975530143}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b763ebbbf7c1443b98b7a05b9a0f47b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1951136215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,6 +1490,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4620849034145042152, guid: 525203ba92e8c1a47bff68e4b75db295,
+        type: 3}
+      propertyPath: shieldDice
+      value: 
+      objectReference: {fileID: 511187799}
+    - target: {fileID: -4620849034145042152, guid: 525203ba92e8c1a47bff68e4b75db295,
+        type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1332270549}
+    - target: {fileID: -1634304207480817652, guid: 525203ba92e8c1a47bff68e4b75db295,
+        type: 3}
+      propertyPath: enemyJjbHealth
+      value: 
+      objectReference: {fileID: 544517432}
     - target: {fileID: 2201453867814422692, guid: 525203ba92e8c1a47bff68e4b75db295,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1729,6 +1800,11 @@ PrefabInstance:
       propertyPath: playerJjbHealth
       value: 
       objectReference: {fileID: 1332270549}
+    - target: {fileID: 4373792885254486964, guid: 00401452268649344993465eb8c8732d,
+        type: 3}
+      propertyPath: playerDamageReceiver
+      value: 
+      objectReference: {fileID: 1874176869}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1827,6 +1903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <PlayerJjbHealth>k__BackingField: {fileID: 1332270549}
   <EnemyJjbHealth>k__BackingField: {fileID: 544517432}
+  <BattleTurnManager>k__BackingField: {fileID: 1979813268}
 --- !u!1 &2123197319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2232,7 +2309,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1440119839}
+      objectReference: {fileID: 1979813268}
+    - target: {fileID: 6018555437056959890, guid: b15f0bfb919220d4e9cb23a2bc07a209,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DrawDice
+      objectReference: {fileID: 0}
+    - target: {fileID: 6018555437056959890, guid: b15f0bfb919220d4e9cb23a2bc07a209,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: JJB.Script.Battle.BattleTurnManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6027514149784308598, guid: b15f0bfb919220d4e9cb23a2bc07a209,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -2325,14 +2412,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7221502455171165387, guid: b15f0bfb919220d4e9cb23a2bc07a209,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221502455171165387, guid: b15f0bfb919220d4e9cb23a2bc07a209,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1605801673}
+      objectReference: {fileID: 1979813268}
     - target: {fileID: 7221502455171165387, guid: b15f0bfb919220d4e9cb23a2bc07a209,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 511187799}
+    - target: {fileID: 7221502455171165387, guid: b15f0bfb919220d4e9cb23a2bc07a209,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221502455171165387, guid: b15f0bfb919220d4e9cb23a2bc07a209,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: JJB.Script.Battle.BattleTurnManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7916622876014154891, guid: b15f0bfb919220d4e9cb23a2bc07a209,
         type: 3}
       propertyPath: m_AnchorMax.y

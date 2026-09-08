@@ -88,8 +88,8 @@ public class DiceEffect_JCY : MonoBehaviour
 
             if (effectType == DiceSO_JCY.DiceEffectType.Grow && growStack < 2)
             {
-                Debug.Log("성장"); 
-                // finalDamage += JJBGameManager.Instance.
+                Debug.Log($"성장 {(float)JJBGameManager.Instance.BattleTurnManager.CurrentTurn / 2f}만큼");
+                finalDamage += (float)JJBGameManager.Instance.BattleTurnManager.CurrentTurn / 2f;
                 growStack++;
                 Debug.Log(growStack);
             }
