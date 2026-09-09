@@ -9,7 +9,7 @@ public class DiceSO_JCY : ScriptableObject
     public string diceName;          // 주사위 이름
     public Sprite diceIcon;          // 대표 아이콘
     public int cost;          // 주사위 상점 가격
-    public Color Color;
+    public Color color;
     public GameObject dicePrefab; // 각 주사위 전용 3D 프리팹 등록
     public DiceEffectType diceEffectType;
     

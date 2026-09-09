@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: BloodDice
   m_EditorClassIdentifier: 
   diceName: "\uCD9C\uD608 \uC8FC\uC0AC\uC704"
-  diceIcon: {fileID: 0}
+  diceIcon: {fileID: 3084373858569167587, guid: 521538992aafd7244a014093f911eaea,
+    type: 3}
   cost: 0
-  Color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 0.8867924, g: 0.12548937, b: 0.12548937, a: 1}
   dicePrefab: {fileID: 34949007336262702, guid: 89b908de02e37954c862c37291b37190,
     type: 3}
   diceEffectType: 3
