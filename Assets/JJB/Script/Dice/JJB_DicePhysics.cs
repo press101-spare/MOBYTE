@@ -9,6 +9,7 @@ namespace JJB.Script
         [Header("Throw")]
         [SerializeField] private float xForce = 8f;
         [SerializeField] private float yForce = 8f;
+        [SerializeField] private float yForce_min = 8f;
         [SerializeField] private float liftForce = 4f;
         [SerializeField] private float torqueForce = 5f;
 
@@ -31,7 +32,7 @@ namespace JJB.Script
 
             Vector3 force = new Vector3(
                 Random.Range(-xForce, xForce),
-                Random.Range(-yForce, yForce),
+                Random.Range(yForce_min, -yForce),
                 liftForce
             ) * forceMultiplier;
 
