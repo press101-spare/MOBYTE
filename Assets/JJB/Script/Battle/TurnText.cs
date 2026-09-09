@@ -10,21 +10,28 @@ namespace JJB.Script.Battle
 
         private void OnEnable()
         {
-            turnManager.OnTurnChanged += UpdateUI;
+            turnManager.OnPhaseChanged += UpdateText;
         }
 
         private void OnDisable()
         {
-            turnManager.OnTurnChanged -= UpdateUI;
+            turnManager.OnPhaseChanged -= UpdateText;
         }
 
-        private void UpdateUI(BattleTurn turn)
+        private void UpdateText(BattlePhase phase)
         {
-            turnText.text = turn switch
+            turnText.text = phase switch
             {
-                BattleTurn.Player => "PLAYER TURN",
-                BattleTurn.Enemy => "ENEMY TURN",
-                _ => "BATTLE END"
+                BattlePhase.Start => "BATTLE START",
+                BattlePhase.Draw => "DRAW",
+                BattlePhase.HandSelect => "SELECT HAND",
+                BattlePhase.Attack => "ATTACK",
+                BattlePhase.Defense => "DEFENSE",
+                BattlePhase.TurnEnd => "TURN END",
+                BattlePhase.Enemy => "ENEMY TURN",
+                BattlePhase.BattleEnd => "BATTLE END",
+
+                _ => ""
             };
         }
     }

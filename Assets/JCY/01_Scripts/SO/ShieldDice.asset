@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: ShieldDice
   m_EditorClassIdentifier: 
   diceName: "\uBC29\uC5B4 \uC8FC\uC0AC\uC704"
-  diceDescription: "\uBC29\uC5B4 \uC8FC\uC0AC\uC704\uAC00 \uD558\uB098 \uCD94\uAC00\uB41C\uB2E4."
   diceIcon: {fileID: 0}
   cost: 0
   Color: {r: 0, g: 0, b: 0, a: 0}
   dicePrefab: {fileID: 34949007336262702, guid: b32f19a31ff44274492eb67049646675,
     type: 3}
   diceEffectType: 4
+  diceDescription: "[1,2,3,4,5,6]\n\uBC29\uC5B4 \uC8FC\uC0AC\uC704\uAC00 \uD558\uB098
+    \uCD94\uAC00\uB41C\uB2E4."
   faceValues: 010000000200000003000000040000000500000006000000
