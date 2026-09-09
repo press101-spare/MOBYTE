@@ -11,6 +11,7 @@ using UnityEngine.Serialization;
 public class DiceManager_JCY : MonoBehaviour
 {
     public static DiceManager_JCY Instance { get; private set; }
+    public DiceSO_JCY[] allDiceSo;
     
     [Header("주사위 리스트들")]
     [SerializeField] private List<GameObject> activeDiceObjects = new List<GameObject>();
@@ -38,6 +39,8 @@ public class DiceManager_JCY : MonoBehaviour
     public DiceEffect_JCY diceEffect;
     public ReRollCount_JCY reRollUI;
     public ShledDice_JCY shledDice;
+    
+    public IReadOnlyList<DiceObject_JCY> ActiveDiceScripts => activeDiceScripts;
 
 
     // 0~5번 인덱스 면이 정면을 볼 때의 회전 각도 배열 (제시해주신 각도 데이터 적용)
@@ -56,7 +59,8 @@ public class DiceManager_JCY : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            backUiPannel.SetActive(false);
+            if(backUiPannel != null)
+                 backUiPannel.SetActive(false);
             DontDestroyOnLoad(gameObject); // 씬이 넘어가도 파괴되지 않음
         }
         else
@@ -90,7 +94,6 @@ public class DiceManager_JCY : MonoBehaviour
         
         Debug.Log("패널 생성");
         sumTxt.gameObject.SetActive(false);
-        diceTree.Reset();
         backUiPannel.SetActive(true);
         isRolling = true;
         RollAllDice();
@@ -161,21 +164,7 @@ public class DiceManager_JCY : MonoBehaviour
         onResult?.Invoke(resultValue);
     }
 
-    public void ClearDice()
-    {
-        foreach (var diceObj in activeDiceObjects)
-        {
-            Destroy(diceObj);
-        }
-        activeDiceObjects.Clear();
-        activeDiceScripts.Clear();
-        activeDicePhysicd.Clear();
-        for (int i = 0; i < currentDiceValue.Length; i++)
-        {
-            currentDiceValue[i] = 0;
-        }
-    }
-
+  
     //나온 결괏값을 바탕으로 나온 인덱스의 오름차순으로 주사위 화면 
    // 주사위 정렬 및 이동 정보를 담을 임시 구조체
     private struct DiceSortData
@@ -188,7 +177,9 @@ public class DiceManager_JCY : MonoBehaviour
         {
             diceObject = obj;
             resultValue = val;
-            targetRotation = rot;
+            targetRotation.x = rot.x;
+            targetRotation.y = rot.y;
+            targetRotation.z = 0;
         }
     }
 
@@ -313,12 +304,7 @@ public class DiceManager_JCY : MonoBehaviour
         }
 
         yield return sequence.WaitForCompletion();
-
-        // 선택 해제
-        foreach (DiceObject_JCY dice in selectedDice)
-        {
-           
-        }
+        
 
         // 현재 결과 갱신
         UpdateCurrentDiceValues();
@@ -332,6 +318,25 @@ public class DiceManager_JCY : MonoBehaviour
 
     #endregion
 
+    public void ClearDice()
+    {
+        foreach (var diceObj in activeDiceObjects)
+        {
+            Destroy(diceObj);
+        }
+        activeDiceObjects.Clear();
+        activeDiceScripts.Clear();
+        activeDicePhysicd.Clear();
+        
+        for (int i = 0; i < currentDiceValue.Length; i++)
+        {
+            currentDiceValue[i] = 0;
+        }
+        diceTree.Reset();
+        
+    }
+
+    
      public IEnumerator FaceDiceCO()
     {
         yield return new WaitForSeconds(sortTime);
@@ -400,6 +405,7 @@ public class DiceManager_JCY : MonoBehaviour
 
         Debug.Log("주사위 정렬 및 배치 완료!");
         Debug.Log("패널 사라지기");
+        Debug.Log("던지기 종료");
         sumTxt.gameObject.SetActive(true);
         backUiPannel.SetActive(false);
         isRolling = false;

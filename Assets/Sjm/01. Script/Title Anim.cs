@@ -18,15 +18,14 @@ public class TitleAnim : MonoBehaviour
     {   
         sequence = DOTween.Sequence();
         sequence.Append(rotate.DORotate(new Vector3(0, 0, 180), 0.4f));
-        Debug.Log("D");
-        sequence.Append(text.rectTransform.DOAnchorPos(rectTransform.anchoredPosition, 0.6f));
-        sequence.Append(title.rectTransform.DOAnchorPos(dicepo.anchoredPosition, 0.5f)); ;
-        sequence.AppendInterval(0.4f);
+        sequence.Append(title.rectTransform.DOAnchorPos(dicepo.anchoredPosition, 0.4f));
+        sequence.AppendInterval(0.2f);
+
         sequence.AppendCallback(() =>
         {
-           backGround.gameObject.SetActive(true);
+           backGround.DOFade(1f, 0.2f);
         });
-      
+       
     }
    
 }

@@ -1,13 +1,12 @@
 ﻿using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace JJB.Script.Battle
 {
     public class JJBHealthBarUI : MonoBehaviour
     {
-        [FormerlySerializedAs("health")] [SerializeField] private JJBHealth jjbHealth;
+        [SerializeField] private JJBHealth jjbHealth;
 
         [SerializeField] private TMP_Text healthText;
         [SerializeField] private Image fillImage;
