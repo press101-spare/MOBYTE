@@ -1,21 +1,22 @@
 ﻿using System;
 using System.Collections;
-using JJB.Script.Battle.Enemy;
 using JJB.Script.Battle.Player;
 using UnityEngine;
 
-namespace JJB.Script.Battle
+namespace JJB.Script.Battle.Enemy
 {
     public class EnemyTurnController : MonoBehaviour
     {
-        [SerializeField]
-        private EnemyHealthSetup enemy;
+        [SerializeField] private EnemyHealthSetup enemy;
+        [SerializeField] private PlayerDamageReceiver playerDamageReceiver;
+        [SerializeField] private float actionDelay = 0.7f;
 
-        [SerializeField]
-        private PlayerDamageReceiver playerDamageReceiver;
+        private EnemyAbilityController _abilityController;
 
-        [SerializeField]
-        private float actionDelay = 0.7f;
+        private void Awake()
+        {
+            _abilityController = GetComponent<EnemyAbilityController>();
+        }
 
         public void ExecuteTurn(Action onFinished)
         {
@@ -24,10 +25,15 @@ namespace JJB.Script.Battle
 
         private IEnumerator ExecuteRoutine(Action onFinished)
         {
+            _abilityController.OnTurnStart();
             yield return new WaitForSeconds(actionDelay);
-            playerDamageReceiver.TakeDamage(enemy.Data.AttackPower);
+            
+            int damage = enemy.Data.AttackPower;
+            damage = _abilityController.ModifyAttackDamage(damage);
+            playerDamageReceiver.TakeDamage(damage);
             yield return new WaitForSeconds(actionDelay);
 
+            _abilityController.OnTurnEnd();
             onFinished?.Invoke();
         }
     }

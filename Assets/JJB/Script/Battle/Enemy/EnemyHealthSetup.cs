@@ -6,12 +6,21 @@ namespace JJB.Script.Battle.Enemy
     public class EnemyHealthSetup : MonoBehaviour
     {
         [SerializeField] private EnemyData enemyData;
-
+        
+        private JJBHealth _health;
+        private EnemyAbilityController _abilityController;
         public EnemyData Data => enemyData;
 
         private void Awake()
         {
-            GetComponent<JJBHealth>().Initialize(enemyData.MaxHealth);
+            _health = GetComponent<JJBHealth>();
+            _abilityController = GetComponent<EnemyAbilityController>();
+        }
+
+        private void Start()
+        {
+            _health.Initialize(enemyData.MaxHealth);
+            _abilityController.Initialize(enemyData);
         }
     }
 }
