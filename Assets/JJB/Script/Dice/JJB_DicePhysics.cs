@@ -8,9 +8,11 @@ namespace JJB.Script
     {
         [Header("Throw")]
         [SerializeField] private float xForce = 8f;
+        [SerializeField] private float xForceMin = 8f;
         [SerializeField] private float yForce = 8f;
-        [SerializeField] private float yForce_min = 8f;
+        [SerializeField] private float yForceMin = 8f;
         [SerializeField] private float liftForce = 4f;
+        [SerializeField] private float liftForceMin = 4f;
         [SerializeField] private float torqueForce = 5f;
 
         private Rigidbody _rb;
@@ -31,9 +33,9 @@ namespace JJB.Script
             _rb.angularVelocity = Vector3.zero;
 
             Vector3 force = new Vector3(
-                Random.Range(-xForce, xForce),
-                Random.Range(yForce_min, -yForce),
-                liftForce
+                Random.Range(xForceMin, xForce),
+                Random.Range(yForceMin, yForce),
+                Random.Range(liftForceMin, liftForceMin)
             ) * forceMultiplier;
 
             _rb.AddForce(force, ForceMode.Impulse);

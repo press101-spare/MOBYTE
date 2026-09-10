@@ -1,7 +1,11 @@
-﻿namespace JJB.Script.Battle.Enemy
+﻿using System.Collections;
+
+namespace JJB.Script.Battle.Enemy
 {
     public interface IEnemy
     {
-        void Execute();
+        void Enter();
+        IEnumerator Execute();
+        void Exit();
     }
 }

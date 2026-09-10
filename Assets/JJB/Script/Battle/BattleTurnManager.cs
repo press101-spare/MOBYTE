@@ -1,29 +1,45 @@
 ﻿using System;
+using JJB.Script.Battle.Enemy;
 using JJB.Script.Battle.Player;
 using UnityEngine;
 
 namespace JJB.Script.Battle
 {
+    [RequireComponent(typeof(PlayerTurnController))]
     public class BattleTurnManager : MonoBehaviour
     {
         [Header("Turn")]
-        [SerializeField] private PlayerTurnController playerTurnController;
-        [SerializeField] private EnemyTurnController enemyTurnController;
+        private PlayerTurnController _playerTurnController;
+        private EnemyTurnController _enemyTurnController;
 
 
         [Header("Health")]
-        [SerializeField] private JJBHealth playerHealth;
-        [SerializeField] private JJBHealth enemyHealth;
+        private JJBHealth _playerHealth;
+        private JJBHealth _enemyHealth;
         
         public BattlePhase CurrentPhase { get; private set; }
         public event Action<BattlePhase> OnPhaseChanged;
+
+        private void Awake()
+        {
+            _playerTurnController = GetComponent<PlayerTurnController>();
+        }
+
+        public void Initialize(
+            JJBHealth playerHealth, 
+            JJBHealth enemyHealth, 
+            EnemyTurnController enemyTurnController)
+        {
+            _playerHealth = playerHealth;
+            _enemyHealth = enemyHealth;
+            _enemyTurnController = enemyTurnController;
+        }
 
         private void Start()
         {
             ChangePhase(BattlePhase.Start);
             StartPlayerTurn();
         }
-
 
         // =========================
         // 새로운 플레이어 턴
@@ -32,21 +48,7 @@ namespace JJB.Script.Battle
         private void StartPlayerTurn()
         {
             ChangePhase(BattlePhase.Draw);
-        }
-
-
-        // =========================
-        // DRAW 버튼
-        // =========================
-
-        public void Draw()
-        {
-            if (CurrentPhase != BattlePhase.Draw)
-            {
-                return;
-            }
-
-            playerTurnController.DrawDice(OnDrawFinished);
+            _playerTurnController.DrawDice(OnDrawFinished);
         }
 
         private void OnDrawFinished()
@@ -65,13 +67,13 @@ namespace JJB.Script.Battle
                 return;
             }
             ChangePhase(BattlePhase.Attack);
-            bool success = playerTurnController.TryAttack();
+            bool success = _playerTurnController.TryAttack();
             if (!success)
             {
                 ChangePhase(BattlePhase.HandSelect);
                 return;
             }
-            if (enemyHealth.IsDead)
+            if (_enemyHealth.IsDead)
             {
                 EndBattle();
                 return;
@@ -87,7 +89,7 @@ namespace JJB.Script.Battle
         private void StartDefense()
         {
             ChangePhase(BattlePhase.Defense);
-            playerTurnController.StartDefense(OnDefenseFinished);
+            _playerTurnController.StartDefense(OnDefenseFinished);
         }
 
         private void OnDefenseFinished()
@@ -117,12 +119,13 @@ namespace JJB.Script.Battle
         private void StartEnemyTurn()
         {
             ChangePhase(BattlePhase.Enemy);
-            enemyTurnController.ExecuteTurn(OnEnemyTurnFinished);
+            _enemyTurnController.ExecuteTurn(OnEnemyTurnFinished);
         }
 
         private void OnEnemyTurnFinished()
         {
-            if (playerHealth.IsDead)
+            DiceManager_JCY.Instance.ClearDice();
+            if (_playerHealth.IsDead)
             {
                 EndBattle();
                 return;
