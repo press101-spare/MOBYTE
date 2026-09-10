@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3736139516345149935}
   - component: {fileID: -4620849034145042152}
   - component: {fileID: -1634304207480817652}
+  - component: {fileID: 6624435527814135437}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -72,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b763ebbbf7c1443b98b7a05b9a0f47b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 8654103232055264533}
   shieldDice: {fileID: 0}
 --- !u!114 &-1634304207480817652
 MonoBehaviour:
@@ -87,6 +88,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyJjbHealth: {fileID: 0}
+--- !u!114 &6624435527814135437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6284040726363081931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610cf8fef74b469fa6028867ecbef2b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7024952691638659729
 GameObject:
   m_ObjectHideFlags: 0

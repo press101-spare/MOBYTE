@@ -2428,7 +2428,7 @@ PrefabInstance:
     - target: {fileID: 7221502455171165387, guid: b15f0bfb919220d4e9cb23a2bc07a209,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Attack
+      value: TurnEnd
       objectReference: {fileID: 0}
     - target: {fileID: 7221502455171165387, guid: b15f0bfb919220d4e9cb23a2bc07a209,
         type: 3}

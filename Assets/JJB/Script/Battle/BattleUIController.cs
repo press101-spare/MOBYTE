@@ -8,7 +8,6 @@ namespace JJB.Script.Battle
         [SerializeField] private BattleTurnManager turnManager;
 
         [Header("Buttons")]
-        [SerializeField] private Button drawButton;
         [SerializeField] private Button attackButton;
         [SerializeField] private Button turnEndButton;
         
@@ -24,7 +23,6 @@ namespace JJB.Script.Battle
 
         private void UpdateButtons(BattlePhase phase)
         {
-            drawButton.interactable = phase == BattlePhase.Draw;
             attackButton.interactable = phase == BattlePhase.HandSelect;
             turnEndButton.interactable = phase == BattlePhase.TurnEnd;
         }
