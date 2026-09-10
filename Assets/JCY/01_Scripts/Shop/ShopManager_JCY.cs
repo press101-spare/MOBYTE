@@ -30,7 +30,7 @@ public class ShopManager_JCY : MonoBehaviour
             beckGround[i].color =  currentDiceSO[i].color;
             nameText[i].text = currentDiceSO[i].diceName;
             nameText[i].color  = currentDiceSO[i].color;
-            costText[i].text = currentDiceSO[i].cost.ToString();
+            costText[i].text = $"{currentDiceSO[i].cost.ToString()} 칩";
             description[i].text = currentDiceSO[i].diceDescription;
         }
     }
