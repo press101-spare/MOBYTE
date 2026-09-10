@@ -8,41 +8,30 @@ using UnityEngine.UI;
 
 public class SelectTest_HTY : MonoBehaviour
 {
-    public GameObject _bt;
-    public enum Gamble {gam,ble }
-    public Transform _playerTrans;
-    private Image[] _image;
-    public Material shader;
-    public Dictionary<Gamble, GameObject> _gambleDic;
-    public Dictionary<Gamble, GameObject> _panelDic;
-    private Gamble currentEnum;
-
-    private void Update()
-    {
-        foreach (var image in _gambleDic.Keys)
-        {
-            float a = Vector2.Distance(_gambleDic[image].gameObject.transform.position, _playerTrans.position);
-            if(a<5)
-            {
-                _gambleDic[image].gameObject.GetComponent<Image>().material = shader;
-                currentEnum = image;
-                _bt.SetActive(true);
-                return;
-            }
-            else
-            {
-                _gambleDic[image].gameObject.GetComponent<Image>().material = null;
-            }
-        }
-        _bt.SetActive(false);
-
-    }
+    public GambleSoList _gameList;
+    [SerializeField] private GambleTable_HTY[] _scripts;
+    private List<GambleTable_HTY> a = new List<GambleTable_HTY>();
+    private float _currnetMin;
+    private GambleTable_HTY _currnetTable;
 
     public void Select()
     {
-        if (_bt)
+        _currnetMin = 10;
+        foreach (var script in _scripts)
         {
-            _panelDic[currentEnum].SetActive(true);
+            if(script._rangeToPlayer < 5)
+            {
+                if(script._rangeToPlayer<_currnetMin)
+                {
+                    _currnetMin= script._rangeToPlayer;
+                    _currnetTable = script;
+                }
+            }
         }
+        if (_currnetTable == null) return;
+
+        Instantiate(_currnetTable._myGamble._panel);
+        
+
     }
 }
