@@ -14,14 +14,11 @@ namespace JJB.Script.Battle.Player
                 return false;
             }
 
-            if (enemyJjbHealth.IsDead)
-                return false;
+            if (enemyJjbHealth.IsDead) return false;
 
-            if (baseDamage <= 0)
-                return false;
+            if (baseDamage <= 0) return false;
 
-            DiceManager_JCY diceManager =
-                DiceManager_JCY.Instance;
+            DiceManager_JCY diceManager = DiceManager_JCY.Instance;
 
             if (diceManager == null)
             {
@@ -33,11 +30,7 @@ namespace JJB.Script.Battle.Player
 
             // 실제 적 피해
             enemyJjbHealth.TakeDamage(finalDamage);
-
-            Debug.Log(
-                $"기본 피해 : {baseDamage} / 최종 피해 : {finalDamage}"
-            );
-
+            
             return true;
         }
     }

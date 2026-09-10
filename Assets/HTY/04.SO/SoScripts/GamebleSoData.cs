@@ -5,5 +5,4 @@ using UnityEngine.UI;
 public class GamebleSoData : ScriptableObject
 {
     public GameObject _panel;
-    public Image _objectUI;
 }

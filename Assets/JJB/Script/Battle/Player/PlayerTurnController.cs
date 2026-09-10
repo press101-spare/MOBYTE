@@ -6,21 +6,23 @@ namespace JJB.Script.Battle.Player
 {
     public class PlayerTurnController : MonoBehaviour
     {
-        [Header("Dice")]
-        [SerializeField] private DiceManager_JCY diceManager;
-        [SerializeField] private ShledDice_JCY shieldDice;
+        private PlayerAttackController _playerAttackController;
 
-        [Header("Attack")]
-        [SerializeField] private PlayerAttackController playerAttackController;
-
-
+        private DiceManager_JCY DiceManager => DiceManager_JCY.Instance;
+        private ShledDice_JCY ShieldDice => DiceManager_JCY.Instance.shledDice;
+        
+        public void Initialize(PlayerAttackController playerAttackController)
+        {
+            _playerAttackController = playerAttackController;
+        }
+        
         // =========================
         // 공격 주사위 Draw
         // =========================
 
         public void DrawDice(Action onFinished)
         {
-            if (diceManager.isRolling) return;
+            if (DiceManager.isRolling) return;
 
             DiceDeckManager_JCY.Instance.DrawDice();
 
@@ -29,7 +31,7 @@ namespace JJB.Script.Battle.Player
 
         private IEnumerator WaitForDraw(Action onFinished)
         {
-            yield return new WaitUntil(() => !diceManager.isRolling);
+            yield return new WaitUntil(() => !DiceManager.isRolling);
             onFinished?.Invoke();
         }
 
@@ -40,16 +42,21 @@ namespace JJB.Script.Battle.Player
 
         public bool TryAttack()
         {
-            if (diceManager.isRolling) return false;
+            if (DiceManager.isRolling) return false;
 
-            int score = diceManager.diceTree.CurrentScore;
+            int score = DiceManager.diceTree.CurrentScore;
 
             if (score <= 0)
             {
                 return false;
             }
-
-            playerAttackController.Attack(score);
+            
+            if (_playerAttackController == null)
+            {
+                Debug.LogError("PlayerAttackController가 초기화되지 않았습니다.");
+                return false;
+            }
+            _playerAttackController.Attack(score);
 
             return true;
         }
@@ -66,19 +73,19 @@ namespace JJB.Script.Battle.Player
 
         private IEnumerator DefenseRoutine(Action onFinished)
         {
-            shieldDice.shideDraw();
+            ShieldDice.shideDraw();
             
-            if (shieldDice.shledDiceCount <= 0)
+            if (ShieldDice.shledDiceCount <= 0)
             {
-                diceManager.isShled = false;
+                DiceManager.isShled = false;
 
                 onFinished?.Invoke();
                 yield break;
             }
 
-            yield return new WaitUntil(() => !diceManager.isRolling);
+            yield return new WaitUntil(() => !DiceManager.isRolling);
 
-            diceManager.isShled = false;
+            DiceManager.isShled = false;
 
             onFinished?.Invoke();
         }
