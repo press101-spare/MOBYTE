@@ -6,7 +6,6 @@ using JJB.Script;
 using JJB.Script.Battle;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class DiceManager_JCY : MonoBehaviour
 {
@@ -39,6 +38,7 @@ public class DiceManager_JCY : MonoBehaviour
     public DiceEffect_JCY diceEffect;
     public ReRollCount_JCY reRollUI;
     public ShledDice_JCY shledDice;
+    public DiceCamera_JCY diceCamera;
     
     public IReadOnlyList<DiceObject_JCY> ActiveDiceScripts => activeDiceScripts;
 
@@ -72,10 +72,10 @@ public class DiceManager_JCY : MonoBehaviour
     public void StartTurn(List<DiceSO_JCY> drawnDiceSoList)
     {
         ClearDice();
+        diceCamera.DiceCameraMove();
         for (int i = 0; i < drawnDiceSoList.Count; i++)
         {
             if (i >= spawnPositions.Length) break;
-
             DiceSO_JCY currentSO = drawnDiceSoList[i];
 
             // SO에 지정된 전용 프리팹 생성
@@ -92,7 +92,6 @@ public class DiceManager_JCY : MonoBehaviour
             activeDicePhysicd.Add(jjbDicePhysicdScript);
         }
         
-        Debug.Log("패널 생성");
         sumTxt.gameObject.SetActive(false);
         backUiPannel.SetActive(true);
         isRolling = true;
@@ -110,7 +109,7 @@ public class DiceManager_JCY : MonoBehaviour
     {
         int totalScore = 0;
         int completedCount = 0;
-
+       // yield return new WaitForSeconds(diceCamera.moveDuration);
         // 1. 모든 주사위 물리 던지기 실행
         for (int i = 0; i < activeDicePhysicd.Count; i++)
         {
@@ -340,7 +339,8 @@ public class DiceManager_JCY : MonoBehaviour
      public IEnumerator FaceDiceCO()
     {
         yield return new WaitForSeconds(sortTime);
-        
+        diceCamera.BattleCameraMove();
+       // yield return new WaitForSeconds(diceCamera.moveDuration);
         // 1. 현재 생성되어 있는 주사위들의 데이터를 수집합니다.
         List<DiceSortData> sortList = new List<DiceSortData>();
 
@@ -348,7 +348,6 @@ public class DiceManager_JCY : MonoBehaviour
         {
             GameObject diceObj = activeDiceObjects[i];
             DiceObject_JCY diceScript = activeDiceScripts[i];
-            JJB_DicePhysics physics = activeDicePhysicd[i];
 
             int resultVal = diceScript.currentIndex; // 위에서 계산된 주사위 숫자
             
