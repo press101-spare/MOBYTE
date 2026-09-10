@@ -4,7 +4,6 @@ using UnityEngine.WSA;
 
 public class TotalManager : MonoBehaviour
 {
-    [SerializeField] private DiceSO_JCY diceSO;
     public int Cost {  get; private set; }
     public static TotalManager Instance { get; private set; }
     private void Awake()
@@ -15,10 +14,14 @@ public class TotalManager : MonoBehaviour
         else
             Destroy(gameObject);
     }
-    public void BuyItem()
+    public void BuyItem(DiceSO_JCY dice)
     {
-        Cost -= diceSO.cost;
-        Debug.Log(Cost);
+        Cost -= dice.cost;
+        Debug.Log(Cost+dice.diceName);
+    }
+    public void BuyItem(int cost)//혹시몰라서 회복물약의 쓸거면 쓰기
+    {
+
     }
 
 

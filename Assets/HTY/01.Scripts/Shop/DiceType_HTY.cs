@@ -11,6 +11,7 @@ public class DiceType_HTY : MonoBehaviour
 
     public void BuyDice()
     {
-        //다이스를 사면됨
+        TotalManager.Instance.BuyItem(_myDice);
+        //여기에 인벤토리 추가 구현
     }
 }

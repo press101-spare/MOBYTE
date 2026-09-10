@@ -1893,7 +1893,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 466784194}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 991929140}
+        m_TargetAssemblyTypeName: DiceType_HTY, Assembly-CSharp
+        m_MethodName: BuyDice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &466784194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2223,18 +2235,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568444490}
   m_CullTransparentMesh: 1
---- !u!114 &579600855 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7673683541270754491, guid: c5cb3330539ec7e48b01208402445a9d,
-    type: 3}
-  m_PrefabInstance: {fileID: 722618140}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0ad90742738a814b9242f0120a18b93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &599543808
 GameObject:
   m_ObjectHideFlags: 0
@@ -2364,6 +2364,12 @@ MonoBehaviour:
   - {fileID: 1768447716}
   - {fileID: 1106399492}
   - {fileID: 252851280}
+  _btType:
+  - {fileID: 1835223980}
+  - {fileID: 631557191}
+  - {fileID: 2031761132}
+  - {fileID: 764353865}
+  - {fileID: 991929140}
   currentDiceSO:
   - {fileID: 0}
   - {fileID: 0}
@@ -2553,6 +2559,7 @@ GameObject:
   - component: {fileID: 631557188}
   - component: {fileID: 631557190}
   - component: {fileID: 631557189}
+  - component: {fileID: 631557191}
   m_Layer: 5
   m_Name: DiceBuy (2)
   m_TagString: Untagged
@@ -2622,6 +2629,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631557187}
   m_CullTransparentMesh: 1
+--- !u!114 &631557191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631557187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac58d07d4590f34b8dbbd130c567dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myDice: {fileID: 0}
 --- !u!1 &654223539
 GameObject:
   m_ObjectHideFlags: 0
@@ -3029,6 +3049,7 @@ GameObject:
   - component: {fileID: 764353862}
   - component: {fileID: 764353864}
   - component: {fileID: 764353863}
+  - component: {fileID: 764353865}
   m_Layer: 5
   m_Name: DiceBuy (4)
   m_TagString: Untagged
@@ -3098,6 +3119,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764353861}
   m_CullTransparentMesh: 1
+--- !u!114 &764353865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764353861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac58d07d4590f34b8dbbd130c567dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myDice: {fileID: 0}
 --- !u!1 &773315702
 GameObject:
   m_ObjectHideFlags: 0
@@ -3183,9 +3217,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 579600855}
-        m_TargetAssemblyTypeName: TotalManager, Assembly-CSharp
-        m_MethodName: BuyItem
+      - m_Target: {fileID: 631557191}
+        m_TargetAssemblyTypeName: DiceType_HTY, Assembly-CSharp
+        m_MethodName: BuyDice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3916,6 +3950,7 @@ GameObject:
   - component: {fileID: 991929137}
   - component: {fileID: 991929139}
   - component: {fileID: 991929138}
+  - component: {fileID: 991929140}
   m_Layer: 5
   m_Name: DiceBuy (5)
   m_TagString: Untagged
@@ -3985,6 +4020,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991929136}
   m_CullTransparentMesh: 1
+--- !u!114 &991929140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991929136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac58d07d4590f34b8dbbd130c567dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myDice: {fileID: 0}
 --- !u!1 &1005581895
 GameObject:
   m_ObjectHideFlags: 0
@@ -4633,7 +4681,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1129317405}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 764353865}
+        m_TargetAssemblyTypeName: DiceType_HTY, Assembly-CSharp
+        m_MethodName: BuyDice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1129317405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5583,6 +5643,7 @@ MonoBehaviour:
   diceEffect: {fileID: 0}
   reRollUI: {fileID: 1321388279}
   shledDice: {fileID: 0}
+  diceCamera: {fileID: 0}
 --- !u!4 &1321388281
 Transform:
   m_ObjectHideFlags: 0
@@ -6577,7 +6638,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1652361272}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2031761132}
+        m_TargetAssemblyTypeName: DiceType_HTY, Assembly-CSharp
+        m_MethodName: BuyDice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1652361272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6971,6 +7044,7 @@ GameObject:
   - component: {fileID: 1835223977}
   - component: {fileID: 1835223979}
   - component: {fileID: 1835223978}
+  - component: {fileID: 1835223980}
   m_Layer: 5
   m_Name: DiceBuy (1)
   m_TagString: Untagged
@@ -7040,6 +7114,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835223976}
   m_CullTransparentMesh: 1
+--- !u!114 &1835223980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835223976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac58d07d4590f34b8dbbd130c567dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myDice: {fileID: 0}
 --- !u!1 &1849472076
 GameObject:
   m_ObjectHideFlags: 0
@@ -7534,7 +7621,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1979230623}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1835223980}
+        m_TargetAssemblyTypeName: DiceType_HTY, Assembly-CSharp
+        m_MethodName: BuyDice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1979230623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7995,6 +8094,7 @@ GameObject:
   - component: {fileID: 2031761129}
   - component: {fileID: 2031761131}
   - component: {fileID: 2031761130}
+  - component: {fileID: 2031761132}
   m_Layer: 5
   m_Name: DiceBuy (3)
   m_TagString: Untagged
@@ -8064,6 +8164,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031761128}
   m_CullTransparentMesh: 1
+--- !u!114 &2031761132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031761128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac58d07d4590f34b8dbbd130c567dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myDice: {fileID: 0}
 --- !u!1 &2074478076
 GameObject:
   m_ObjectHideFlags: 0
