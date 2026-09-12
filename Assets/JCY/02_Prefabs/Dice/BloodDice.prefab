@@ -74,9 +74,9 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 2
 --- !u!114 &8486688524588890306
@@ -91,10 +91,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5181525cf424b0aa2e27af268bff8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xForce: 15
-  yForce: 8
-  liftForce: 4
-  torqueForce: 15
+  xForce: -25
+  xForceMin: -50
+  yForce: 5
+  yForceMin: 0
+  liftForce: 10
+  liftForceMin: 0
+  torqueForce: 10
 --- !u!1 &4864258240423658053
 GameObject:
   m_ObjectHideFlags: 0

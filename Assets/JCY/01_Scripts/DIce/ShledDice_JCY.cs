@@ -26,11 +26,12 @@ public class ShledDice_JCY : MonoBehaviour
     {
         shledDiceCount = DiceManager_JCY.Instance.reRollUI.reRollCount + ShledAddValue;
         ShledeReset();
+        if (shledDiceCount == 0) return;
         for (int i = 0; i <shledDiceCount ; i++)
         {
             shideDiceList.Add(shideDiceSO);
         }
-
+        
         DiceManager_JCY.Instance.reRollUI.ResetReRollCount(0);
         DiceManager_JCY.Instance.isShled = true;
         DiceManager_JCY.Instance.StartTurn(shideDiceList);

@@ -180,16 +180,16 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c4a628913cf31e8489a7bc399d8ca30d, type: 2}
-  m_sharedMaterial: {fileID: -690071951450899378, guid: c4a628913cf31e8489a7bc399d8ca30d,
+  m_fontAsset: {fileID: 11400000, guid: e8818f8cbfd25c94db770b4339751d00, type: 2}
+  m_sharedMaterial: {fileID: 3152988014464106541, guid: e8818f8cbfd25c94db770b4339751d00,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4294954240
+  m_fontColor: {r: 0, g: 0.8041401, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 3.5170078, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -292,7 +292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -134.53}
+  m_AnchoredPosition: {x: 6, y: 197}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &557131682
@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 916501601}
   - component: {fileID: 916501600}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -523,8 +523,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20.257, y: 7.0135}
-  m_SizeDelta: {x: 2204.5, y: 1218.1003}
+  m_AnchoredPosition: {x: -0.00058172, y: 0.00075148}
+  m_SizeDelta: {x: 2164, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &916501600
 MonoBehaviour:
@@ -597,12 +597,12 @@ RectTransform:
   m_Children:
   - {fileID: 916501599}
   - {fileID: 1675459676}
+  - {fileID: 536463286}
   - {fileID: 486843587}
   - {fileID: 1848011741}
   - {fileID: 557131684}
   - {fileID: 802419121}
   - {fileID: 1219884245}
-  - {fileID: 536463286}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -902,12 +902,12 @@ GameObject:
   - component: {fileID: 1675459678}
   - component: {fileID: 1675459677}
   m_Layer: 5
-  m_Name: Back
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1675459676
 RectTransform:
   m_ObjectHideFlags: 0
@@ -924,8 +924,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.2506, y: -12.326}
-  m_SizeDelta: {x: 248.5081, y: 136.066}
+  m_AnchoredPosition: {x: 0.0027294, y: 0.0079727}
+  m_SizeDelta: {x: 240.45, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1675459677
 MonoBehaviour:
@@ -940,7 +940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1043,8 +1043,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c4a628913cf31e8489a7bc399d8ca30d, type: 2}
-  m_sharedMaterial: {fileID: -690071951450899378, guid: c4a628913cf31e8489a7bc399d8ca30d,
+  m_fontAsset: {fileID: 11400000, guid: e8818f8cbfd25c94db770b4339751d00, type: 2}
+  m_sharedMaterial: {fileID: 3152988014464106541, guid: e8818f8cbfd25c94db770b4339751d00,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1138,7 +1138,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13.0023, y: 2.6291}
+  m_AnchoredPosition: {x: -8, y: -5}
   m_SizeDelta: {x: 131.0008, y: 50.457}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807

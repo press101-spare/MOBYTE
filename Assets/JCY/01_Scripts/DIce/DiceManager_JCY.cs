@@ -6,11 +6,11 @@ using JJB.Script;
 using JJB.Script.Battle;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class DiceManager_JCY : MonoBehaviour
 {
     public static DiceManager_JCY Instance { get; private set; }
+    public DiceSO_JCY[] allDiceSo;
     
     [Header("주사위 리스트들")]
     [SerializeField] private List<GameObject> activeDiceObjects = new List<GameObject>();
@@ -38,6 +38,9 @@ public class DiceManager_JCY : MonoBehaviour
     public DiceEffect_JCY diceEffect;
     public ReRollCount_JCY reRollUI;
     public ShledDice_JCY shledDice;
+    public DiceCamera_JCY diceCamera;
+    
+    public IReadOnlyList<DiceObject_JCY> ActiveDiceScripts => activeDiceScripts;
 
 
     // 0~5번 인덱스 면이 정면을 볼 때의 회전 각도 배열 (제시해주신 각도 데이터 적용)
@@ -56,7 +59,8 @@ public class DiceManager_JCY : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            backUiPannel.SetActive(false);
+            if(backUiPannel != null)
+                 backUiPannel.SetActive(false);
             DontDestroyOnLoad(gameObject); // 씬이 넘어가도 파괴되지 않음
         }
         else
@@ -68,10 +72,10 @@ public class DiceManager_JCY : MonoBehaviour
     public void StartTurn(List<DiceSO_JCY> drawnDiceSoList)
     {
         ClearDice();
+        diceCamera.DiceCameraMove();
         for (int i = 0; i < drawnDiceSoList.Count; i++)
         {
             if (i >= spawnPositions.Length) break;
-
             DiceSO_JCY currentSO = drawnDiceSoList[i];
 
             // SO에 지정된 전용 프리팹 생성
@@ -88,9 +92,7 @@ public class DiceManager_JCY : MonoBehaviour
             activeDicePhysicd.Add(jjbDicePhysicdScript);
         }
         
-        Debug.Log("패널 생성");
         sumTxt.gameObject.SetActive(false);
-        diceTree.Reset();
         backUiPannel.SetActive(true);
         isRolling = true;
         RollAllDice();
@@ -107,7 +109,7 @@ public class DiceManager_JCY : MonoBehaviour
     {
         int totalScore = 0;
         int completedCount = 0;
-
+       // yield return new WaitForSeconds(diceCamera.moveDuration);
         // 1. 모든 주사위 물리 던지기 실행
         for (int i = 0; i < activeDicePhysicd.Count; i++)
         {
@@ -161,21 +163,7 @@ public class DiceManager_JCY : MonoBehaviour
         onResult?.Invoke(resultValue);
     }
 
-    public void ClearDice()
-    {
-        foreach (var diceObj in activeDiceObjects)
-        {
-            Destroy(diceObj);
-        }
-        activeDiceObjects.Clear();
-        activeDiceScripts.Clear();
-        activeDicePhysicd.Clear();
-        for (int i = 0; i < currentDiceValue.Length; i++)
-        {
-            currentDiceValue[i] = 0;
-        }
-    }
-
+  
     //나온 결괏값을 바탕으로 나온 인덱스의 오름차순으로 주사위 화면 
    // 주사위 정렬 및 이동 정보를 담을 임시 구조체
     private struct DiceSortData
@@ -188,7 +176,9 @@ public class DiceManager_JCY : MonoBehaviour
         {
             diceObject = obj;
             resultValue = val;
-            targetRotation = rot;
+            targetRotation.x = rot.x;
+            targetRotation.y = rot.y;
+            targetRotation.z = 0;
         }
     }
 
@@ -313,12 +303,7 @@ public class DiceManager_JCY : MonoBehaviour
         }
 
         yield return sequence.WaitForCompletion();
-
-        // 선택 해제
-        foreach (DiceObject_JCY dice in selectedDice)
-        {
-           
-        }
+        
 
         // 현재 결과 갱신
         UpdateCurrentDiceValues();
@@ -332,10 +317,30 @@ public class DiceManager_JCY : MonoBehaviour
 
     #endregion
 
+    public void ClearDice()
+    {
+        foreach (var diceObj in activeDiceObjects)
+        {
+            Destroy(diceObj);
+        }
+        activeDiceObjects.Clear();
+        activeDiceScripts.Clear();
+        activeDicePhysicd.Clear();
+        
+        for (int i = 0; i < currentDiceValue.Length; i++)
+        {
+            currentDiceValue[i] = 0;
+        }
+        diceTree.Reset();
+        
+    }
+
+    
      public IEnumerator FaceDiceCO()
     {
         yield return new WaitForSeconds(sortTime);
-        
+        diceCamera.BattleCameraMove();
+       // yield return new WaitForSeconds(diceCamera.moveDuration);
         // 1. 현재 생성되어 있는 주사위들의 데이터를 수집합니다.
         List<DiceSortData> sortList = new List<DiceSortData>();
 
@@ -343,7 +348,6 @@ public class DiceManager_JCY : MonoBehaviour
         {
             GameObject diceObj = activeDiceObjects[i];
             DiceObject_JCY diceScript = activeDiceScripts[i];
-            JJB_DicePhysics physics = activeDicePhysicd[i];
 
             int resultVal = diceScript.currentIndex; // 위에서 계산된 주사위 숫자
             
@@ -400,6 +404,7 @@ public class DiceManager_JCY : MonoBehaviour
 
         Debug.Log("주사위 정렬 및 배치 완료!");
         Debug.Log("패널 사라지기");
+        Debug.Log("던지기 종료");
         sumTxt.gameObject.SetActive(true);
         backUiPannel.SetActive(false);
         isRolling = false;
@@ -450,7 +455,9 @@ public class DiceManager_JCY : MonoBehaviour
             Debug.Log("족보 선택 ㄱ");
             return;
         }
-        JJBGameManager.Instance.EnemyJjbHealth.TakeDamage(diceTree.CurrentScore);
+        int finalDamage = diceEffect.CalculateFinalDamage(activeDiceScripts, diceTree.CurrentScore);
+
+        JJBGameManager.Instance.EnemyJjbHealth.TakeDamage(finalDamage);
         Debug.Log($"{diceTree.CurrentScore} + {diceTree.CurrentTree} + 로 공격 시도!");
     }
     
