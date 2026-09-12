@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class SelectTest_HTY : MonoBehaviour
 {
     public GambleSoList _gameList;
-    [SerializeField] private GambleTable_HTY[] _scripts;
+    [SerializeField] private GambleTable_HTY[] _scripts;//나중에 수정 자동화에 어려움
     private List<GambleTable_HTY> a = new List<GambleTable_HTY>();
     private float _currnetMin;
     private GambleTable_HTY _currnetTable;
@@ -31,6 +31,7 @@ public class SelectTest_HTY : MonoBehaviour
         if (_currnetTable == null) return;
 
         Instantiate(_currnetTable._myGamble._panel);
+        Instantiate(_currnetTable._myGamble._object);
         
 
     }

@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc6e9deb7aeffd94292fd7ee2cda37df, type: 3}
-  m_Name: GamebleSoList
+  m_Script: {fileID: 11500000, guid: 956d3722d78af9c4288f2902a18baae1, type: 3}
+  m_Name: Roulette
   m_EditorClassIdentifier: 
-  gameble: []
+  _name: Roulette
+  _panel: {fileID: 4407917404809429642, guid: 428f71335f5653d46bd879d1d31b1f42, type: 3}
+  _object: {fileID: 6568139518206471912, guid: 28197a3b0e4c0be44a5118a77770489b, type: 3}
