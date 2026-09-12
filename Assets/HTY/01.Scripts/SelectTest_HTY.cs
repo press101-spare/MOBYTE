@@ -14,6 +14,8 @@ public class SelectTest_HTY : MonoBehaviour
     private float _currnetMin;
     private GambleTable_HTY _currnetTable;
 
+    [SerializeField] private GameObject _gambleUICanvas;
+
     public void Select()
     {
         _currnetMin = 10;
@@ -30,9 +32,10 @@ public class SelectTest_HTY : MonoBehaviour
         }
         if (_currnetTable == null) return;
 
-        Instantiate(_currnetTable._myGamble._panel);
-        Instantiate(_currnetTable._myGamble._object);
-        
+        _gambleUICanvas.SetActive(true);
+        _gambleUICanvas.transform.GetChild(0).gameObject.SetActive(true);
+        GameObject a= Instantiate(_currnetTable._myGamble._object);
+        a.SetActive(true);
 
     }
 }
