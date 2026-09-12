@@ -4,45 +4,37 @@ using UnityEngine.UI;
 
 public class NextSceneTile : MonoBehaviour
 {
-    [Header("이동할 씬 이름")]
     [SerializeField] private string nextSceneName;
 
     private GameObject panel;
-    private bool playerInside = false;
 
     private void Start()
     {
         CreateUI();
-
-        // 처음에는 선택창 숨김
         panel.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    // 플레이어가 타일맵 콜라이더에 닿았을 때
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Player 태그를 가진 오브젝트가 들어왔을 때
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            playerInside = true;
-
             panel.SetActive(true);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    // 타일맵 콜라이더에서 떨어졌을 때
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        // 플레이어가 타일에서 벗어났을 때
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            playerInside = false;
-
             panel.SetActive(false);
         }
     }
 
     private void CreateUI()
     {
-
+        // Canvas 생성
         GameObject canvasObj = new GameObject("MoveCanvas");
 
         Canvas canvas = canvasObj.AddComponent<Canvas>();
@@ -53,222 +45,136 @@ public class NextSceneTile : MonoBehaviour
         scaler.referenceResolution = new Vector2(1920, 1080);
 
         canvasObj.AddComponent<GraphicRaycaster>();
-        
 
+
+        // Panel 생성
         panel = new GameObject("MovePanel");
-
         panel.transform.SetParent(canvasObj.transform, false);
 
         Image panelImage = panel.AddComponent<Image>();
+        panelImage.color = new Color(0.1f, 0.1f, 0.1f, 0.9f);
 
-        // 패널 색
-        panelImage.color = new Color(
-            0.1f,
-            0.1f,
-            0.1f,
-            0.9f
-        );
-
-        RectTransform panelRect =
-            panel.GetComponent<RectTransform>();
-
-        panelRect.anchorMin =
-            new Vector2(0.5f, 0.5f);
-
-        panelRect.anchorMax =
-            new Vector2(0.5f, 0.5f);
-
-        panelRect.pivot =
-            new Vector2(0.5f, 0.5f);
-
-        panelRect.sizeDelta =
-            new Vector2(550, 280);
-
-        panelRect.anchoredPosition =
-            Vector2.zero;
+        RectTransform panelRect = panel.GetComponent<RectTransform>();
+        panelRect.anchorMin = new Vector2(0.5f, 0.5f);
+        panelRect.anchorMax = new Vector2(0.5f, 0.5f);
+        panelRect.pivot = new Vector2(0.5f, 0.5f);
+        panelRect.sizeDelta = new Vector2(500, 250);
+        panelRect.anchoredPosition = Vector2.zero;
 
 
-        
+        // 안내 문구
+        GameObject textObj = new GameObject("MessageText");
+        textObj.transform.SetParent(panel.transform, false);
 
-        GameObject textObj =
-            new GameObject("MessageText");
+        Text text = textObj.AddComponent<Text>();
 
-        textObj.transform.SetParent(
-            panel.transform,
-            false
-        );
-
-        Text text =
-            textObj.AddComponent<Text>();
-
-        text.text =
-            "다음으로 이동하시겠습니까?";
-
+        text.text = "다음으로 이동하시겠습니까?";
         text.font =
-            Resources.GetBuiltinResource<Font>(
-                "LegacyRuntime.ttf"
-            );
+            Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
 
         text.fontSize = 28;
-
-        text.alignment =
-            TextAnchor.MiddleCenter;
-
+        text.alignment = TextAnchor.MiddleCenter;
         text.color = Color.white;
 
         RectTransform textRect =
             textObj.GetComponent<RectTransform>();
 
-        textRect.anchorMin =
-            new Vector2(0.5f, 0.5f);
+        textRect.anchorMin = new Vector2(0.5f, 0.5f);
+        textRect.anchorMax = new Vector2(0.5f, 0.5f);
+        textRect.pivot = new Vector2(0.5f, 0.5f);
 
-        textRect.anchorMax =
-            new Vector2(0.5f, 0.5f);
+        textRect.sizeDelta = new Vector2(450, 100);
+        textRect.anchoredPosition = new Vector2(0, 50);
 
-        textRect.pivot =
-            new Vector2(0.5f, 0.5f);
 
-        textRect.sizeDelta =
-            new Vector2(500, 100);
-
-        textRect.anchoredPosition =
-            new Vector2(0, 60);
-        
-
+        // 이동 버튼
         CreateButton(
-            panel.transform,
-            "YesButton",
             "이동",
-            new Vector2(-110, -70),
+            new Vector2(-100, -60),
             YesButton
         );
-        
 
+
+        // 취소 버튼
         CreateButton(
-            panel.transform,
-            "NoButton",
             "취소",
-            new Vector2(110, -70),
+            new Vector2(100, -60),
             NoButton
         );
     }
 
 
     private void CreateButton(
-        Transform parent,
-        string objectName,
         string buttonText,
         Vector2 position,
         UnityEngine.Events.UnityAction action
     )
     {
-        // 버튼 오브젝트
         GameObject buttonObj =
-            new GameObject(objectName);
+            new GameObject(buttonText + "Button");
 
-        buttonObj.transform.SetParent(
-            parent,
-            false
-        );
+        buttonObj.transform.SetParent(panel.transform, false);
 
 
-        // 버튼 이미지
-        Image image =
-            buttonObj.AddComponent<Image>();
+        Image image = buttonObj.AddComponent<Image>();
 
         image.color =
-            new Color(
-                0.25f,
-                0.25f,
-                0.25f,
-                1f
-            );
+            new Color(0.25f, 0.25f, 0.25f, 1f);
 
 
-        // Button 컴포넌트
         Button button =
             buttonObj.AddComponent<Button>();
 
         button.onClick.AddListener(action);
 
 
-        // 버튼 위치 / 크기
         RectTransform buttonRect =
             buttonObj.GetComponent<RectTransform>();
 
-        buttonRect.anchorMin =
-            new Vector2(0.5f, 0.5f);
+        buttonRect.anchorMin = new Vector2(0.5f, 0.5f);
+        buttonRect.anchorMax = new Vector2(0.5f, 0.5f);
+        buttonRect.pivot = new Vector2(0.5f, 0.5f);
 
-        buttonRect.anchorMax =
-            new Vector2(0.5f, 0.5f);
+        buttonRect.sizeDelta = new Vector2(150, 60);
+        buttonRect.anchoredPosition = position;
 
-        buttonRect.pivot =
-            new Vector2(0.5f, 0.5f);
 
-        buttonRect.sizeDelta =
-            new Vector2(170, 65);
+        // 버튼 글자
+        GameObject textObj = new GameObject("Text");
 
-        buttonRect.anchoredPosition =
-            position;
-        
+        textObj.transform.SetParent(buttonObj.transform, false);
 
-        GameObject textObj =
-            new GameObject("Text");
-
-        textObj.transform.SetParent(
-            buttonObj.transform,
-            false
-        );
-
-        Text text =
-            textObj.AddComponent<Text>();
+        Text text = textObj.AddComponent<Text>();
 
         text.text = buttonText;
 
         text.font =
-            Resources.GetBuiltinResource<Font>(
-                "LegacyRuntime.ttf"
-            );
+            Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
 
         text.fontSize = 24;
-
-        text.alignment =
-            TextAnchor.MiddleCenter;
-
+        text.alignment = TextAnchor.MiddleCenter;
         text.color = Color.white;
 
 
         RectTransform textRect =
             textObj.GetComponent<RectTransform>();
 
-        textRect.anchorMin =
-            Vector2.zero;
+        textRect.anchorMin = Vector2.zero;
+        textRect.anchorMax = Vector2.one;
 
-        textRect.anchorMax =
-            Vector2.one;
-
-        textRect.offsetMin =
-            Vector2.zero;
-
-        textRect.offsetMax =
-            Vector2.zero;
+        textRect.offsetMin = Vector2.zero;
+        textRect.offsetMax = Vector2.zero;
     }
-    
 
+
+    // 이동 버튼
     public void YesButton()
     {
-        if (string.IsNullOrEmpty(nextSceneName))
-        {
-            Debug.LogError(
-                "Next Scene Name이 설정되지 않았습니다."
-            );
-
-            return;
-        }
-
         SceneManager.LoadScene(nextSceneName);
     }
-    
+
+
+    // 취소 버튼
     public void NoButton()
     {
         panel.SetActive(false);

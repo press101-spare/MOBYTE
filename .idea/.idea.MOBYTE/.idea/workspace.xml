@@ -11,13 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/LYW/str/NextSceneTile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LYW/str/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/indexLayout.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HTY/03.Tiles/H_palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/03.Tiles/H_palette.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HTY/03.Tiles/New Palette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/03.Tiles/New Palette.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/LYW/01.Scene/Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LYW/01.Scene/Map.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/str/NextSceneTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LYW/str/NextSceneTile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,22 +25,18 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="24" />
+    <option name="cachedIndexableFilesCount" value="29" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/ReRollUI_JCY.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/System/CameraMove_JCY.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/PanelController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@81172dccd143/Editor/GridBrushEditorBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@81172dccd143/Editor/GridEditorUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@81172dccd143/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@bff931d63a7a/Editor/Drawing/Controllers/BlackboardController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Core/Utilities/LinqUtility.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/00/6c18beff/List`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/9c/ebc9f031/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e07a8438207b407f87d60eb34d7db5121e1000/1b/df3c16d5/Renderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e07a8438207b407f87d60eb34d7db5121e1000/95/89ff2a26/Transform.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e07a8438207b407f87d60eb34d7db5121e1000/98/65ad1667/Component.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -196,6 +189,7 @@
       <workItem from="1787645131941" duration="611000" />
       <workItem from="1788275652841" duration="2150000" />
       <workItem from="1788338161865" duration="6569000" />
+      <workItem from="1788606975348" duration="2322000" />
     </task>
     <servers />
   </component>
