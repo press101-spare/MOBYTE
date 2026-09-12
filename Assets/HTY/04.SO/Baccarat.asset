@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 956d3722d78af9c4288f2902a18baae1, type: 3}
-  m_Name: GamebleSoData 3
+  m_Name: Baccarat
   m_EditorClassIdentifier: 
-  _panel: {fileID: 0}
-  _objectUI: {fileID: 0}
+  _name: Baccarat
+  _panel: {fileID: 3892583586830317213, guid: b0ce50f37ec18f945b277dfcd6d30b84, type: 3}
+  _object: {fileID: 5410590223145004306, guid: 1b2d5efa160289b4ca7154fb163f4787, type: 3}
