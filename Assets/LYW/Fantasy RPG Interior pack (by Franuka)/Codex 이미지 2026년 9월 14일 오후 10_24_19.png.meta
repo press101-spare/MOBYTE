@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9cab06629e1c48d488688ccff27eddc4
+guid: 575105dd7c423184f9bf2df84c990022
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8017969406509030259
-    second: corner_top_right_0
+      213: -6295664349885912279
+    second: "Codex \uC774\uBBF8\uC9C0 2026\uB144 9\uC6D4 14\uC77C \uC624\uD6C4 10_24_19_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: corner_top_right_0
+      name: "Codex \uC774\uBBF8\uC9C0 2026\uB144 9\uC6D4 14\uC77C \uC624\uD6C4 10_24_19_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8464194e437ab090800000000000000
-      internalID: -8017969406509030259
+      spriteID: 92ba5ff21ae41a8a0800000000000000
+      internalID: -6295664349885912279
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      corner_top_right_0: -8017969406509030259
+      "Codex \uC774\uBBF8\uC9C0 2026\uB144 9\uC6D4 14\uC77C \uC624\uD6C4 10_24_19_0": -6295664349885912279
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
