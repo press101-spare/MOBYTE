@@ -20,7 +20,7 @@ namespace JJB.Script.Battle.Enemy
         private void Start()
         {
             _health.Initialize(enemyData.MaxHealth);
-            _abilityController.Initialize(enemyData);
+            //_abilityController.Initialize(enemyData);
         }
     }
 }

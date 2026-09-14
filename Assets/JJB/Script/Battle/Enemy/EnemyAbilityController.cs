@@ -7,17 +7,46 @@ namespace JJB.Script.Battle.Enemy
     {
         private readonly List<EnemyAbility> _abilities = new();
 
-        public void Initialize(EnemyData data)
+        private EnemyHealthSetup _enemy;
+
+        private void Awake()
+        {
+            _enemy = GetComponent<EnemyHealthSetup>();
+        }
+
+        private void Start()
+        {
+            LoadAbilities();
+        }
+
+        private void LoadAbilities()
         {
             _abilities.Clear();
 
-            foreach (EnemyAbility ability in data.Abilities)
+            if (_enemy == null)
+            {
+                Debug.LogError("EnemyHealthSetup이 없습니다.");
+                return;
+            }
+
+            if (_enemy.Data == null)
+            {
+                Debug.LogError("EnemyData가 없습니다.");
+                return;
+            }
+
+            if (_enemy.Data.Abilities == null)
+                return;
+
+            foreach (EnemyAbility ability in _enemy.Data.Abilities)
             {
                 if (ability == null)
                     continue;
 
                 _abilities.Add(Instantiate(ability));
             }
+
+            Debug.Log($"적 능력 {_abilities.Count}개 로드");
         }
 
         public void OnTurnStart()
@@ -46,32 +75,6 @@ namespace JJB.Script.Battle.Enemy
             {
                 if (ability is IEnemyAttackModifier modifier)
                     result = modifier.ModifyAttackDamage(result);
-            }
-
-            return result;
-        }
-
-        public int ModifyPlayerDamage(int damage)
-        {
-            int result = damage;
-
-            foreach (EnemyAbility ability in _abilities)
-            {
-                if (ability is IPlayerAttackModifier modifier)
-                    result = modifier.ModifyPlayerDamage(result);
-            }
-
-            return result;
-        }
-
-        public int ModifyRerollCost(int cost)
-        {
-            int result = cost;
-
-            foreach (EnemyAbility ability in _abilities)
-            {
-                if (ability is IRerollModifier modifier)
-                    result = modifier.ModifyRerollCost(result);
             }
 
             return result;

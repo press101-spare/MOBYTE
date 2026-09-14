@@ -2,15 +2,21 @@
 
 namespace JJB.Script.Battle.Player
 {
+    [RequireComponent(typeof(JJBHealth))]
     public class PlayerHealthSetup : MonoBehaviour
     {
-        private const int MaxHealth = 70;
+        [SerializeField] private int maxHealth = 70;
+
+        private JJBHealth _health;
+
+        public JJBHealth Health => _health;
 
         private void Awake()
         {
-            JJBHealth jjbHealth = GetComponent<JJBHealth>();
+            _health = GetComponent<JJBHealth>();
+            _health.Initialize(maxHealth);
 
-            jjbHealth.Initialize(MaxHealth);
+            Debug.Log($"Player HP 초기화 : {_health.CurrentHealth}/{_health.MaxHealth}");
         }
     }
 }

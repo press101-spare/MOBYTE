@@ -17,6 +17,12 @@ namespace JJB.Script.Battle.Enemy
         {
             _abilityController = GetComponent<EnemyAbilityController>();
         }
+        
+        public void Initialize(PlayerDamageReceiver _playerDamageReceiver)
+        {
+            playerDamageReceiver = _playerDamageReceiver;
+        }
+
 
         public void ExecuteTurn(Action onFinished)
         {
@@ -25,6 +31,30 @@ namespace JJB.Script.Battle.Enemy
 
         private IEnumerator ExecuteRoutine(Action onFinished)
         {
+            if (enemy == null)
+            {
+                Debug.LogError("EnemyHealthSetup이 없습니다.");
+                yield break;
+            }
+
+            if (enemy.Data == null)
+            {
+                Debug.LogError("EnemyData가 없습니다.");
+                yield break;
+            }
+
+            if (playerDamageReceiver == null)
+            {
+                Debug.LogError("PlayerDamageReceiver가 초기화되지 않았습니다.");
+                yield break;
+            }
+
+            if (_abilityController == null)
+            {
+                Debug.LogError("EnemyAbilityController가 없습니다.");
+                yield break;
+            }
+            
             _abilityController.OnTurnStart();
             yield return new WaitForSeconds(actionDelay);
             

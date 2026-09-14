@@ -21,9 +21,11 @@ namespace JJB.Script.Battle
         }
 
         public void Initialize(PlayerBattleActor player, EnemyBattleActor enemy)
-        {
+        {          
             _turnManager.Initialize(player.Health, enemy.Health, enemy.TurnController);
             _playerTurnController.Initialize(player.AttackController);
+
+            enemy.TurnController.Initialize(player.DamageReceiver);
         }
     }
 }
