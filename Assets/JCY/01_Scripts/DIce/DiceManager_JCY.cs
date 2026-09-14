@@ -340,6 +340,7 @@ public class DiceManager_JCY : MonoBehaviour
     {
         yield return new WaitForSeconds(sortTime);
         diceCamera.BattleCameraMove();
+        yield return new WaitForSeconds(0.15f);
        // yield return new WaitForSeconds(diceCamera.moveDuration);
         // 1. 현재 생성되어 있는 주사위들의 데이터를 수집합니다.
         List<DiceSortData> sortList = new List<DiceSortData>();
