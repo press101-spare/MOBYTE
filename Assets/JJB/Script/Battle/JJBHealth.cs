@@ -30,8 +30,6 @@ namespace JJB.Script.Battle
 
             CurrentHealth = Mathf.Max(0, CurrentHealth - damage);
 
-            Debug.Log($"{gameObject.name} 데미지 {damage} / HP : {CurrentHealth}/{MaxHealth}");
-
             OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
 
             if (IsDead)

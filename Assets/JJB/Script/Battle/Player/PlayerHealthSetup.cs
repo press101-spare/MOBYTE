@@ -15,8 +15,6 @@ namespace JJB.Script.Battle.Player
         {
             _health = GetComponent<JJBHealth>();
             _health.Initialize(maxHealth);
-
-            Debug.Log($"Player HP 초기화 : {_health.CurrentHealth}/{_health.MaxHealth}");
         }
     }
 }
