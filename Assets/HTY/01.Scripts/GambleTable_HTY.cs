@@ -3,19 +3,24 @@ using UnityEngine.UI;
 
 public class GambleTable_HTY : MonoBehaviour
 {
-    public GamebleSoData _myGamble;
+    public GambleSoData _myGamble;
     [Header("OutLine")]
     public Material _material;
-    [SerializeField] private Transform _playerTrans;
-    [SerializeField] private float _range;
-    private Image _myImage;
+    public Material _material2;
+    private Transform _playerTrans;
+    public float _range = 3f;
+    private SpriteRenderer _myImage;
     public float _rangeToPlayer;
 
     private void Awake()
     {
-        _myImage = GetComponent<Image>();
+        _myImage = GetComponent<SpriteRenderer>();
+        _playerTrans = FindAnyObjectByType<PlayerMovement_HTY>().transform;//나중에 사용하는 이동스크립트로 바꾸기
     }
-
+    private void Start()
+    {
+        _myImage.sprite = _myGamble._icon;
+    }
     private void Update()
     {
         _rangeToPlayer = Vector2.Distance(transform.position, _playerTrans.position);
@@ -25,7 +30,7 @@ public class GambleTable_HTY : MonoBehaviour
         }
         else
         {
-            _myImage.material = null;
+            _myImage.material = _material2;
         }
     }
 }

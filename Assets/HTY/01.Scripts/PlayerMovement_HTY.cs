@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerMovement_HTY : MonoBehaviour
 {
-    public Vector2 _moveDir;
-    public float _moveSpeed;
+    private Vector2 _moveDir;
+    private float _moveSpeed = 5f;
     private Rigidbody2D _rb;
 
     private void Awake()

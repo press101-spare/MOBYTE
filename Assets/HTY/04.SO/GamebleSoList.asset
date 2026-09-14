@@ -9,7 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc6e9deb7aeffd94292fd7ee2cda37df, type: 3}
+  m_Script: {fileID: 11500000, guid: 29283bdab7b4c404f8dbcd64e104adbd, type: 3}
   m_Name: GamebleSoList
   m_EditorClassIdentifier: 
-  gameble: []
+  _gambleList:
+  - {fileID: 11400000, guid: 24d20e6e419faee48af010a9ce60afff, type: 2}
+  - {fileID: 11400000, guid: bcdf86e1517bcb8479e48ca3cbf37fad, type: 2}
+  - {fileID: 11400000, guid: e0abdec79508c9e44897a54d86dcf87d, type: 2}
+  - {fileID: 11400000, guid: 07682b96e22ccfa47b0a971df67be37f, type: 2}

@@ -11,6 +11,7 @@ public class ShopManager_JCY : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] nameText;
     [SerializeField] private TextMeshProUGUI[] costText;
     [SerializeField] private TextMeshProUGUI[] description;
+    [SerializeField] private DiceType_HTY[] _btType;
 
     [Header("SO 관련")]
     public DiceSO_JCY[] currentDiceSO = new DiceSO_JCY[10];
@@ -30,8 +31,9 @@ public class ShopManager_JCY : MonoBehaviour
             beckGround[i].color =  currentDiceSO[i].color;
             nameText[i].text = currentDiceSO[i].diceName;
             nameText[i].color  = currentDiceSO[i].color;
-            costText[i].text = currentDiceSO[i].cost.ToString();
+            costText[i].text = $"{currentDiceSO[i].cost.ToString()} 칩";
             description[i].text = currentDiceSO[i].diceDescription;
+            _btType[i]._myDice = currentDiceSO[i];
         }
     }
 }
