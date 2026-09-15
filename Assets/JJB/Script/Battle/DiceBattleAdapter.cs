@@ -7,7 +7,16 @@ namespace JJB.Script.Battle
         private DiceManager_JCY DiceManager => DiceManager_JCY.Instance;
         private DiceDeckManager_JCY DiceDeckManager => DiceDeckManager_JCY.Instance;
 
-        public bool IsRolling => DiceManager != null && DiceManager.isRolling;
+        public bool IsRolling
+        {
+            get
+            {
+                if (DiceManager == null)
+                    return false;
+
+                return DiceManager.isRolling;
+            }
+        }
 
         public int CurrentScore
         {
@@ -19,18 +28,7 @@ namespace JJB.Script.Battle
                 return DiceManager.diceTree.CurrentScore;
             }
         }
-
-        public string CurrentTree
-        {
-            get
-            {
-                if (DiceManager == null || DiceManager.diceTree == null)
-                    return "";
-
-                return DiceManager.diceTree.CurrentTree;
-            }
-        }
-
+        
         public int ShieldValue
         {
             get
@@ -78,6 +76,24 @@ namespace JJB.Script.Battle
                 return;
 
             DiceManager.isShled = value;
+        }
+        
+        public int DamageWithShield(int damage)
+        {
+            if (DiceManager_JCY.Instance == null)
+                return damage;
+
+            ShledDice_JCY shledDice = DiceManager_JCY.Instance.shledDice;
+
+            if (shledDice == null || shledDice.shledValue <= 0)
+                return damage;
+
+            int absorbedDamage = Mathf.Min(shledDice.shledValue, damage);
+
+            shledDice.shledValue -= absorbedDamage;
+            damage -= absorbedDamage;
+
+            return damage;
         }
     }
 }

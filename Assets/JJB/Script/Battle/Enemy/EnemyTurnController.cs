@@ -2,27 +2,27 @@
 using System.Collections;
 using JJB.Script.Battle.Player;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace JJB.Script.Battle.Enemy
 {
+    [RequireComponent(typeof(EnemyHealthSetup))]
     public class EnemyTurnController : MonoBehaviour
     {
-        [SerializeField] private EnemyHealthSetup enemy;
-        [SerializeField] private PlayerDamageReceiver playerDamageReceiver;
-        [SerializeField] private float actionDelay = 0.7f;
+        private EnemyHealthSetup _enemy;
+        private PlayerDamageReceiver _playerDamageReceiver;
 
-        private EnemyAbilityController _abilityController;
-
+        private const float ActionDelay = 0.7f;
+        
         private void Awake()
         {
-            _abilityController = GetComponent<EnemyAbilityController>();
-        }
-        
-        public void Initialize(PlayerDamageReceiver _playerDamageReceiver)
-        {
-            playerDamageReceiver = _playerDamageReceiver;
+            _enemy = GetComponent<EnemyHealthSetup>();
         }
 
+        public void Initialize(PlayerDamageReceiver playerDamageReceiver)
+        {
+            _playerDamageReceiver = playerDamageReceiver;
+        }
 
         public void ExecuteTurn(Action onFinished)
         {
@@ -31,40 +31,33 @@ namespace JJB.Script.Battle.Enemy
 
         private IEnumerator ExecuteRoutine(Action onFinished)
         {
-            if (enemy == null)
-            {
-                Debug.LogError("EnemyHealthSetup이 없습니다.");
-                yield break;
-            }
+            yield return new WaitForSeconds(ActionDelay);
 
-            if (enemy.Data == null)
-            {
-                Debug.LogError("EnemyData가 없습니다.");
-                yield break;
-            }
+            int damage = SelectAttackDamage();
 
-            if (playerDamageReceiver == null)
-            {
-                Debug.LogError("PlayerDamageReceiver가 초기화되지 않았습니다.");
-                yield break;
-            }
+            if (_enemy.Ability != null)
+                damage = _enemy.Ability.ModifyAttackDamage(damage);
 
-            if (_abilityController == null)
-            {
-                Debug.LogError("EnemyAbilityController가 없습니다.");
-                yield break;
-            }
-            
-            _abilityController.OnTurnStart();
-            yield return new WaitForSeconds(actionDelay);
-            
-            int damage = enemy.Data.AttackPower;
-            damage = _abilityController.ModifyAttackDamage(damage);
-            playerDamageReceiver.TakeDamage(damage);
-            yield return new WaitForSeconds(actionDelay);
+            _playerDamageReceiver.TakeDamage(damage);
 
-            _abilityController.OnTurnEnd();
+            _enemy.Ability?.AfterAttack();
+
+            yield return new WaitForSeconds(ActionDelay);
+
             onFinished?.Invoke();
+        }
+
+        private int SelectAttackDamage()
+        {
+            int randomValue = Random.Range(0, 100);
+
+            if (randomValue < 20)
+                return _enemy.Data.AttackPower;
+
+            if (randomValue < 70)
+                return _enemy.Data.AttackPower2;
+
+            return _enemy.Data.AttackPower3;
         }
     }
 }

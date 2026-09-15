@@ -5,23 +5,27 @@ namespace JJB.Script.Battle
 {
     public class BattleUIController : MonoBehaviour
     {
-        [SerializeField] private BattleTurnManager turnManager;
-
-        [Header("Buttons")]
         [SerializeField] private Button attackButton;
         [SerializeField] private Button turnEndButton;
-        
-        private void OnEnable()
+
+        private BattleTurnManager _battleTurnManager;
+
+        public void Initialize(BattleTurnManager battleTurnManager)
         {
-            turnManager.OnPhaseChanged += UpdateButtons;
+            _battleTurnManager = battleTurnManager;
+
+            _battleTurnManager.OnPhaseChanged += UpdateUI;
+
+            UpdateUI(_battleTurnManager.CurrentPhase);
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
-            turnManager.OnPhaseChanged -= UpdateButtons;
+            if (_battleTurnManager != null)
+                _battleTurnManager.OnPhaseChanged -= UpdateUI;
         }
 
-        private void UpdateButtons(BattlePhase phase)
+        private void UpdateUI(BattlePhase phase)
         {
             attackButton.interactable = phase == BattlePhase.HandSelect;
             turnEndButton.interactable = phase == BattlePhase.TurnEnd;
