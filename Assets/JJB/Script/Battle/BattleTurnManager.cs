@@ -59,6 +59,15 @@ namespace JJB.Script.Battle
                 return;
             }
 
+            // 여기서 바로 Defense로 넘어가지 않음
+            StartCoroutine(WaitForAttackFinished());
+        }
+
+        private IEnumerator WaitForAttackFinished()
+        {
+            // 일단 임시로 2초 기다림
+            yield return new WaitForSeconds(2f);
+
             ChangePhase(BattlePhase.Defense);
 
             _playerTurnController.StartDefense(OnDefenseFinished);
