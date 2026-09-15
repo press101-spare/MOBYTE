@@ -15,6 +15,7 @@ namespace JJB.Script.Battle
         private JJBHealth _enemyHealth;
 
         public BattlePhase CurrentPhase { get; private set; }
+        public int TurnCount { get; private set; }
 
         public event Action<BattlePhase> OnPhaseChanged;
 
@@ -29,11 +30,26 @@ namespace JJB.Script.Battle
             _enemyHealth = enemyHealth;
             _enemyTurnController = enemyTurnController;
 
+            TurnCount = 0;
+
+            ChangePhase(BattlePhase.Start);
+        }
+
+        public void StartBattle()
+        {
+            if (_playerHealth ==null || _enemyHealth == null)
+            {
+                Debug.LogError("BattleTurnManager 없음");
+                return;
+            }
+            
             StartPlayerTurn();
         }
 
         private void StartPlayerTurn()
         {
+            TurnCount++;
+            
             ChangePhase(BattlePhase.Draw);
 
             _playerTurnController.DrawDice(OnDrawFinished);
@@ -49,8 +65,15 @@ namespace JJB.Script.Battle
             if (CurrentPhase != BattlePhase.HandSelect)
                 return;
 
-            if (!_playerTurnController.TryAttack())
+            ChangePhase(BattlePhase.Attack);
+
+            bool attacked = _playerTurnController.TryAttack();
+
+            if (!attacked)
+            {
+                ChangePhase(BattlePhase.HandSelect);
                 return;
+            }
 
             if (_enemyHealth.IsDead)
             {
@@ -58,6 +81,11 @@ namespace JJB.Script.Battle
                 return;
             }
 
+            StartDefense();
+        }
+        
+        private void StartDefense()
+        {
             ChangePhase(BattlePhase.Defense);
 
             _playerTurnController.StartDefense(OnDefenseFinished);
@@ -72,7 +100,12 @@ namespace JJB.Script.Battle
         {
             if (CurrentPhase != BattlePhase.TurnEnd)
                 return;
-
+            
+            StartEnemyTurn();
+        }
+        
+        private void StartEnemyTurn()
+        {
             ChangePhase(BattlePhase.Enemy);
 
             _enemyTurnController.ExecuteTurn(OnEnemyTurnFinished);
@@ -93,6 +126,8 @@ namespace JJB.Script.Battle
 
         private void EndBattle()
         {
+            _playerTurnController.ClearDice();
+
             ChangePhase(BattlePhase.BattleEnd);
         }
 
@@ -100,8 +135,6 @@ namespace JJB.Script.Battle
         {
             CurrentPhase = phase;
             OnPhaseChanged?.Invoke(phase);
-
-            Debug.Log($"Battle Phase : {phase}");
         }
     }
 }
