@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using JJB.Script.Battle.Enemy;
 using JJB.Script.Battle.Player;
 using UnityEngine;
@@ -66,6 +67,12 @@ namespace JJB.Script.Battle
         private void OnDefenseFinished()
         {
             ChangePhase(BattlePhase.TurnEnd);
+            StartCoroutine(DelayCoroutine());
+        }
+
+        private IEnumerator DelayCoroutine()
+        {
+            yield return new WaitForSeconds(2f);
         }
 
         public void TurnEnd()
