@@ -4,35 +4,43 @@ using UnityEngine.UI;
 
 namespace JJB.Script.Battle
 {
-    public class JJBHealthBarUI : MonoBehaviour
+    public class JjbHealthBarUI : MonoBehaviour
     {
-        [SerializeField] private JJBHealth jjbHealth;
-
+        [SerializeField] private JJBHealth health;
+        [SerializeField] private Slider healthSlider;
         [SerializeField] private TMP_Text healthText;
-        [SerializeField] private Image fillImage;
-
-        private void Start()
-        {
-            Refresh(jjbHealth.CurrentHealth, jjbHealth.MaxHealth);
-        }
 
         private void OnEnable()
         {
-            jjbHealth.OnHealthChanged += Refresh;
+            if (health == null)
+            {
+                Debug.LogError("JJBHealth가 연결되지 않았습니다.", this);
+                return;
+            }
+
+            health.OnHealthChanged += UpdateUI;
+
+            UpdateUI(health.CurrentHealth, health.MaxHealth);
         }
 
         private void OnDisable()
         {
-            jjbHealth.OnHealthChanged -= Refresh;
+            if (health == null)
+                return;
+
+            health.OnHealthChanged -= UpdateUI;
         }
 
-        private void Refresh(int current, int max)
+        private void UpdateUI(int currentHealth, int maxHealth)
         {
-            healthText.text =
-                $"{current}/{max}";
+            if (healthSlider != null)
+            {
+                healthSlider.maxValue = maxHealth;
+                healthSlider.value = currentHealth;
+            }
 
-            fillImage.fillAmount =
-                (float)current / max;
+            if (healthText != null)
+                healthText.text = $"{currentHealth} / {maxHealth}";
         }
     }
 }

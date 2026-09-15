@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace JJB.Script.Battle.Enemy
 {
@@ -8,13 +9,18 @@ namespace JJB.Script.Battle.Enemy
         [SerializeField] private string enemyName;
         [SerializeField] private int maxHealth;
         [SerializeField] private int attackPower;
+        [SerializeField] private int attackPower2;
+        [SerializeField] private int attackPower3;
 
+        [FormerlySerializedAs("abilities")]
         [Header("Abilities")]
-        [SerializeField] private EnemyAbility[] abilities;
+        [SerializeField] private EnemyAbility ability;
 
         public string EnemyName => enemyName;
         public int MaxHealth => maxHealth;
         public int AttackPower => attackPower;
-        public EnemyAbility[] Abilities => abilities;
+        public int AttackPower2 => attackPower2;
+        public int AttackPower3 => attackPower3;
+        public EnemyAbility Ability => ability;
     }
 }

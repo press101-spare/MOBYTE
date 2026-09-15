@@ -5,30 +5,32 @@ namespace JJB.Script.Battle
 {
     public class JJBHealth : MonoBehaviour
     {
-        private int _maxHealth;
-        private int _currentHealth;
+        public int CurrentHealth { get; private set; }
+        public int MaxHealth { get; private set; }
 
-        public int MaxHealth => _maxHealth;
-        public int CurrentHealth => _currentHealth;
-        public bool IsDead => _currentHealth <= 0;
+        public bool IsDead => CurrentHealth <= 0;
 
         public event Action<int, int> OnHealthChanged;
         public event Action OnDied;
 
         public void Initialize(int maxHealth)
         {
-            _maxHealth = Mathf.Max(1, maxHealth);
-            _currentHealth = _maxHealth;
-            OnHealthChanged?.Invoke(_currentHealth, _maxHealth);
+            MaxHealth = Mathf.Max(1, maxHealth);
+            CurrentHealth = MaxHealth;
+
+            OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
         }
 
         public void TakeDamage(int damage)
         {
-            if (damage <= 0 || IsDead)
+            if (IsDead)
                 return;
-            
-            _currentHealth = Mathf.Max(0, _currentHealth - damage);
-            OnHealthChanged?.Invoke(_currentHealth, _maxHealth);
+
+            damage = Mathf.Max(0, damage);
+
+            CurrentHealth = Mathf.Max(0, CurrentHealth - damage);
+
+            OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
 
             if (IsDead)
                 OnDied?.Invoke();
@@ -36,11 +38,14 @@ namespace JJB.Script.Battle
 
         public void Heal(int amount)
         {
-            if (amount <= 0 || IsDead)
+            if (IsDead)
                 return;
 
-            _currentHealth = Mathf.Min(_maxHealth, _currentHealth + amount);
-            OnHealthChanged?.Invoke(_currentHealth, _maxHealth);
+            amount = Mathf.Max(0, amount);
+
+            CurrentHealth = Mathf.Min(MaxHealth, CurrentHealth + amount);
+
+            OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
         }
     }
 }

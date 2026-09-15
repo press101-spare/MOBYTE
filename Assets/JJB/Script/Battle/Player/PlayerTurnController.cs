@@ -4,88 +4,78 @@ using UnityEngine;
 
 namespace JJB.Script.Battle.Player
 {
+    [RequireComponent(typeof(DiceBattleAdapter))]
     public class PlayerTurnController : MonoBehaviour
     {
+        private DiceBattleAdapter _diceBattleAdapter;
         private PlayerAttackController _playerAttackController;
 
-        private DiceManager_JCY DiceManager => DiceManager_JCY.Instance;
-        private ShledDice_JCY ShieldDice => DiceManager_JCY.Instance.shledDice;
-        
+        private void Awake()
+        {
+            _diceBattleAdapter = GetComponent<DiceBattleAdapter>();
+        }
+
         public void Initialize(PlayerAttackController playerAttackController)
         {
             _playerAttackController = playerAttackController;
         }
-        
-        // =========================
-        // 공격 주사위 Draw
-        // =========================
 
         public void DrawDice(Action onFinished)
         {
-            if (DiceManager.isRolling) return;
+            if (_diceBattleAdapter.IsRolling)
+                return;
 
-            DiceDeckManager_JCY.Instance.DrawDice();
+            _diceBattleAdapter.DrawDice();
 
-            StartCoroutine(WaitForDraw(onFinished));
+            StartCoroutine(WaitForDice(onFinished));
         }
-
-        private IEnumerator WaitForDraw(Action onFinished)
-        {
-            yield return new WaitUntil(() => !DiceManager.isRolling);
-            onFinished?.Invoke();
-        }
-
-
-        // =========================
-        // 공격
-        // =========================
 
         public bool TryAttack()
         {
-            if (DiceManager.isRolling) return false;
+            if (_diceBattleAdapter.IsRolling)
+                return false;
 
-            int score = DiceManager.diceTree.CurrentScore;
+            int score = _diceBattleAdapter.CurrentScore;
 
             if (score <= 0)
             {
+                Debug.Log("족보를 선택해주세요.");
                 return false;
             }
-            
+
             if (_playerAttackController == null)
             {
-                Debug.LogError("PlayerAttackController가 초기화되지 않았습니다.");
+                Debug.LogError("PlayerAttackController가 연결되지 않았습니다.");
                 return false;
             }
-            _playerAttackController.Attack(score);
 
-            return true;
+            return _playerAttackController.Attack(score);
         }
-
-
-        // =========================
-        // 방어 주사위
-        // =========================
 
         public void StartDefense(Action onFinished)
         {
             StartCoroutine(DefenseRoutine(onFinished));
         }
 
+        public void ClearDice()
+        {
+            _diceBattleAdapter.ClearDice();
+        }
+
+        private IEnumerator WaitForDice(Action onFinished)
+        {
+            yield return new WaitUntil(() => !_diceBattleAdapter.IsRolling);
+
+            onFinished?.Invoke();
+        }
+
         private IEnumerator DefenseRoutine(Action onFinished)
         {
-            ShieldDice.shideDraw();
-            
-            if (ShieldDice.shledDiceCount <= 0)
-            {
-                DiceManager.isShled = false;
+            _diceBattleAdapter.StartDefenseDice();
 
-                onFinished?.Invoke();
-                yield break;
-            }
+            yield return new WaitUntil(() => !_diceBattleAdapter.IsRolling);
 
-            yield return new WaitUntil(() => !DiceManager.isRolling);
-
-            DiceManager.isShled = false;
+            _diceBattleAdapter.SetShieldMode(false);
 
             onFinished?.Invoke();
         }
