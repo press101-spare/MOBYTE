@@ -29,8 +29,8 @@ namespace JJB.Script.Battle.Player
             int finalDamage = diceManager.diceEffect.CalculateFinalDamage(diceManager.ActiveDiceScripts, baseDamage);
 
             // 실제 적 피해
-            enemyJjbHealth.TakeDamage(finalDamage);
             
+            diceManager.PlayAttackAnimation(finalDamage);
             return true;
         }
     }

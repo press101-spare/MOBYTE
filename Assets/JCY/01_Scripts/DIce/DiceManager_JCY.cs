@@ -33,6 +33,12 @@ public class DiceManager_JCY : MonoBehaviour
     public bool isRolling;
     public bool isShled;
     
+    [Header("공격 연출")]
+    [SerializeField] private float attackDuration = 0.8f;
+    [SerializeField] private float attackStagger = 0.05f;
+    [SerializeField] private float attackHeight = 2f;
+    [SerializeField] private float attackSide = 1.5f;
+    
     [Header("관련 스크립트")] 
     public DiceTree_JCY diceTree;
     public DiceEffect_JCY diceEffect;
@@ -449,18 +455,97 @@ public class DiceManager_JCY : MonoBehaviour
     }
   
 
-    public void Attack()
+    public void PlayAttackAnimation(int finalDamage)
     {
-        if(diceTree.CurrentScore == 0)
-        {
-            Debug.Log("족보 선택 ㄱ");
-            return;
-        }
-        int finalDamage = diceEffect.CalculateFinalDamage(activeDiceScripts, diceTree.CurrentScore);
-
-        JJBGameManager.Instance.EnemyJjbHealth.TakeDamage(finalDamage);
-        Debug.Log($"{diceTree.CurrentScore} + {diceTree.CurrentTree} + 로 공격 시도!");
+        StartCoroutine(DiceAttackRoutine(finalDamage));
     }
+    
+    private IEnumerator DiceAttackRoutine(int finalDamage)
+    {  
+    Transform enemy = JJBGameManager.Instance.EnemyJjbHealth.transform;
+    
+    int diceCount = activeDiceObjects.Count;
+
+    for (int i = 0; i < diceCount; i++)
+    {
+        GameObject dice = activeDiceObjects[i];
+
+        if (dice == null)
+            continue;
+
+        Rigidbody rb = dice.GetComponent<Rigidbody>();
+
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+
+        Vector3 start = dice.transform.position;
+        Vector3 end = new Vector3(enemy.position.x, enemy.position.y , enemy.position.z);
+
+        // 가운데 주사위 기준으로 좌우 위치 차이
+        float side = (i - (diceCount - 1) * 0.5f) * attackSide;
+
+        // 주사위마다 조금씩 다른 곡선
+        Vector3 point1 =
+            start +
+            Vector3.up * attackHeight +
+            Vector3.right * side;
+
+        Vector3 point2 =
+            Vector3.Lerp(start, end, 0.6f) +
+            Vector3.up * attackHeight +
+            Vector3.right * side;
+
+        dice.transform.DOKill();
+
+        dice.transform
+            .DOPath(
+                new Vector3[]
+                {
+                    start,
+                    point1,
+                    point2,
+                    end
+                },
+                attackDuration,
+                PathType.CatmullRom
+            )
+            .SetEase(Ease.InOutSine)
+            .SetDelay(i * attackStagger)
+            .OnComplete(() =>
+            {
+                Destroy(dice);
+            });
+
+        // 날아가면서 회전
+        dice.transform
+            .DORotate(
+                dice.transform.eulerAngles +
+                new Vector3(360f, 360f, 360f),
+                attackDuration,
+                RotateMode.FastBeyond360
+            )
+            .SetEase(Ease.Linear)
+            .SetDelay(i * attackStagger);
+    }
+
+    // 마지막 주사위까지 도착할 때까지 기다림
+    yield return new WaitForSeconds(
+        attackDuration + attackStagger * Mathf.Max(0, diceCount - 1)
+    );
+
+    // 모든 주사위가 공격한 후 데미지 적용
+    JJBGameManager.Instance.EnemyJjbHealth.TakeDamage(finalDamage);
+
+    activeDiceObjects.Clear();
+    activeDiceScripts.Clear();
+    activeDicePhysicd.Clear();
+
+    currentDiceValue = new int[5];
+}
     
 }
 
