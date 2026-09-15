@@ -1,4 +1,5 @@
-﻿using JJB.Script.Battle.Enemy;
+﻿using System.Collections;
+using JJB.Script.Battle.Enemy;
 using JJB.Script.Battle.Player;
 using UnityEngine;
 
@@ -34,9 +35,11 @@ namespace JJB.Script.Battle
             FindUI();
         }
 
-        private void Start()
+        private IEnumerator Start()
         {
-            StartBattle();
+            yield return null;
+
+            InitializeBattle();
         }
 
         private void FindPlayer()
@@ -58,29 +61,28 @@ namespace JJB.Script.Battle
             _battleUIController = FindFirstObjectByType<BattleUIController>();
         }
 
-        private void StartBattle()
+        private void InitializeBattle()
         {
-            if (!CanStartBattle())
+            if (!CanInitialize())
                 return;
 
             _enemyHealthSetup.Initialize();
 
             _playerAttackController.Initialize(_enemyDamageReceiver);
-            _playerDamageReceiver.Initialize(_diceBattleAdapter);
 
+            _playerDamageReceiver.Initialize(_diceBattleAdapter);
             _enemyTurnController.Initialize(_playerDamageReceiver);
+
             _playerTurnController.Initialize(_playerAttackController);
+
+            if (_battleUIController != null)
+                _battleUIController.Initialize(_battleTurnManager);
 
             _battleTurnManager.Initialize(
                 _playerHealthSetup.Health,
                 _enemyHealthSetup.Health,
                 _enemyTurnController
             );
-
-            if (_battleUIController != null)
-                _battleUIController.Initialize(_battleTurnManager);
-
-            _battleTurnManager.StartBattle();
         }
 
         public void Attack()
@@ -93,41 +95,41 @@ namespace JJB.Script.Battle
             _battleTurnManager.TurnEnd();
         }
 
-        private bool CanStartBattle()
+        private bool CanInitialize()
         {
             if (_playerHealthSetup == null)
             {
-                Debug.LogError("PlayerHealthSetup을 찾을 수 없습니다.");
+                Debug.LogError("PlayerHealthSetup이 없습니다.");
                 return false;
             }
 
             if (_playerAttackController == null)
             {
-                Debug.LogError("PlayerAttackController를 찾을 수 없습니다.");
+                Debug.LogError("PlayerAttackController가 없습니다.");
                 return false;
             }
 
             if (_playerDamageReceiver == null)
             {
-                Debug.LogError("PlayerDamageReceiver를 찾을 수 없습니다.");
+                Debug.LogError("PlayerDamageReceiver가 없습니다.");
                 return false;
             }
 
             if (_enemyHealthSetup == null)
             {
-                Debug.LogError("EnemyHealthSetup을 찾을 수 없습니다.");
+                Debug.LogError("EnemyHealthSetup이 없습니다.");
                 return false;
             }
 
             if (_enemyDamageReceiver == null)
             {
-                Debug.LogError("EnemyDamageReceiver를 찾을 수 없습니다.");
+                Debug.LogError("EnemyDamageReceiver가 없습니다.");
                 return false;
             }
 
             if (_enemyTurnController == null)
             {
-                Debug.LogError("EnemyTurnController를 찾을 수 없습니다.");
+                Debug.LogError("EnemyTurnController가 없습니다.");
                 return false;
             }
 

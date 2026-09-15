@@ -58,14 +58,12 @@ namespace JJB.Script.Battle
                 EndBattle();
                 return;
             }
-
-            // 여기서 바로 Defense로 넘어가지 않음
+            
             StartCoroutine(WaitForAttackFinished());
         }
 
         private IEnumerator WaitForAttackFinished()
         {
-            // 일단 임시로 2초 기다림
             yield return new WaitForSeconds(2f);
 
             ChangePhase(BattlePhase.Defense);
@@ -75,13 +73,13 @@ namespace JJB.Script.Battle
 
         private void OnDefenseFinished()
         {
-            ChangePhase(BattlePhase.TurnEnd);
             StartCoroutine(DelayCoroutine());
         }
 
         private IEnumerator DelayCoroutine()
         {
             yield return new WaitForSeconds(2f);
+            ChangePhase(BattlePhase.TurnEnd);
         }
 
         public void TurnEnd()
@@ -116,8 +114,6 @@ namespace JJB.Script.Battle
         {
             CurrentPhase = phase;
             OnPhaseChanged?.Invoke(phase);
-
-            Debug.Log($"Battle Phase : {phase}");
         }
     }
 }
