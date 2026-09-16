@@ -401,6 +401,7 @@ public class DiceManager_JCY : MonoBehaviour
 
             // 위치 이동
             moveSequence.Join(diceTransform.DOMove(targetPos.position, 0.5f).SetEase(Ease.OutQuad));
+            //Debug
     
             // 💡 수정 포인트: DORotate 대신 DOLocalRotate를 사용하거나, 
             // 부모의 회전을 고려한 로컬 회전값으로 지정해 보세요.
@@ -455,7 +456,7 @@ public class DiceManager_JCY : MonoBehaviour
     }
   
 
-    public void PlayAttackAnimation(int finalDamage)
+    public void PlayAttackAnimation(int finalDamage, System.Action<int> onDiceHit)
     {
         StartCoroutine(DiceAttackRoutine(finalDamage));
     }
@@ -467,6 +468,13 @@ public class DiceManager_JCY : MonoBehaviour
 
             int diceCount = activeDiceObjects.Count;
             
+            if (diceCount <= 0)
+                yield break;
+
+            int baseDamage = finalDamage / diceCount;
+            int remainder = finalDamage % diceCount;
+
+            Debug.Log($"🔥 총 데미지 : {finalDamage}");
             Debug.Log($"🔥 공격 주사위 개수: {diceCount}");
 
             for (int i = 0; i < diceCount; i++)

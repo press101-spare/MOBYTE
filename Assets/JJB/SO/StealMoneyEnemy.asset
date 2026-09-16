@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: StealMoneyEnemy
   m_EditorClassIdentifier: 
   enemyName: StealMoneyEnemy
-  maxHealth: 0
-  attackPower: 0
-  attackPower2: 0
-  attackPower3: 0
+  maxHealth: 170
+  attackPower: 15
+  attackPower2: 17
+  attackPower3: 21
   ability: {fileID: 11400000, guid: 83d1c8d4fc841fd4d8fc21d454c56b2f, type: 2}

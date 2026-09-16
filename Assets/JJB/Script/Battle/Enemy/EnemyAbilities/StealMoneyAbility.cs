@@ -24,7 +24,7 @@ namespace JJB.Script.Battle.Enemy.EnemyAbilities
             }
 
             PlayerProfile profile = PlayerProfileManager.Instance.Profile;
-
+           
             int stolenMoney = Mathf.FloorToInt(profile.money * StealRate);
 
             profile.money -= stolenMoney;
