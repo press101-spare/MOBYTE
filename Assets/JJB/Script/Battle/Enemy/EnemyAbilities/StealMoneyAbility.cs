@@ -13,7 +13,6 @@ namespace JJB.Script.Battle.Enemy.EnemyAbilities
         {
             if (Random.value >= StealChance)
             {
-                Debug.Log("강탈 실패");
                 return;
             }
 

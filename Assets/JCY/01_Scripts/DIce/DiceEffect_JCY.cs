@@ -37,7 +37,6 @@ public class DiceEffect_JCY : MonoBehaviour
                 break;
             
             case DiceSO_JCY.DiceEffectType.ShieldTurn:
-                Debug.Log("쉴드 턴!");
                 break;
             
             case DiceSO_JCY.DiceEffectType.Debt:
