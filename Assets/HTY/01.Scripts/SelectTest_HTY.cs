@@ -7,6 +7,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SelectTest_HTY : MonoBehaviour
@@ -56,6 +57,11 @@ public class SelectTest_HTY : MonoBehaviour
             }
         }
         if (_currnetTable == null) return;
+
+        if (_currnetTable._myGamble._gambleName == "Shop")
+        {
+            SceneManager.LoadScene("ShopScene");//물루 나중에 샵으로 바꾸기
+        }
 
 
 
