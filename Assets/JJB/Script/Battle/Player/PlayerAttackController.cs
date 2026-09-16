@@ -38,7 +38,7 @@ namespace JJB.Script.Battle.Player
 
             int attackPower = PlayerProfileManager.Instance.Profile.stats.attackPower;
             
-            return damage + attackPower;
+            return DiceManager_JCY.Instance.diceTree.TreeEffect(damage + attackPower);
         }
 
         private void ApplyDiceHit(int damage)
