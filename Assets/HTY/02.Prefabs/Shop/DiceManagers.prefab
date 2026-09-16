@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4109818297127837979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4484422531005754553}
+  m_Layer: 0
+  m_Name: DiceManagers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4484422531005754553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4109818297127837979}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.4571356, y: 1.3760855, z: 146.43576}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1184754180969582581}
+  - {fileID: 3227758698160606259}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4516153973289142443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1184754180969582581}
+  - component: {fileID: 6665284880523745660}
+  m_Layer: 0
+  m_Name: DiceDeckManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1184754180969582581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4516153973289142443}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4484422531005754553}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6665284880523745660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4516153973289142443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe02f2d0cface148bf04ebc7445b3dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceCollection: []
+  defaultDice: {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
+  defaultDiceCount: 5
+  diceDeck: []
+  drawnDice: []
+  diceFile_JCy: []
+  drawCount: 5
+--- !u!1 &5058291359658303589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3227758698160606259}
+  - component: {fileID: 1378697638141008763}
+  - component: {fileID: 596166077738594060}
+  m_Layer: 0
+  m_Name: DiceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3227758698160606259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5058291359658303589}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4484422531005754553}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1378697638141008763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5058291359658303589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d19cb0e30691a504dbe35f9c85e90295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allDiceSo:
+  - {fileID: 11400000, guid: 13e9ace0de6d477498f4a73fe516634b, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 050444cd0548ecd4786e3ecd3595e53e, type: 2}
+  - {fileID: 11400000, guid: eb1e2a53ceebb4d48b0ed9a3dfc9f8e9, type: 2}
+  - {fileID: 11400000, guid: 7c523a41f465be04abaf139677a546c4, type: 2}
+  - {fileID: 11400000, guid: b8a7a84e4f923a64fa82c0ac6ab03975, type: 2}
+  - {fileID: 11400000, guid: f88304f66462f41498f4521e4333ad59, type: 2}
+  - {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
+  - {fileID: 11400000, guid: c434f24f11970f14385529eb31992fef, type: 2}
+  - {fileID: 11400000, guid: a85aeb3b95abedb4a9e9f18085500b7d, type: 2}
+  - {fileID: 11400000, guid: c184773a1a23d2d44a7c0569c90d850e, type: 2}
+  - {fileID: 11400000, guid: f315f62faeeea2a458c0b677a6113fe6, type: 2}
+  - {fileID: 11400000, guid: 7a06e82affe10f546b64209a586d761f, type: 2}
+  activeDiceObjects: []
+  activeDiceScripts:
+  - {fileID: 8108273077410394066, guid: b309c55f2b31b564ebf2dff4669c8ea7, type: 3}
+  activeDicePhysicd: []
+  currentDiceValue: 0000000000000000000000000000000000000000
+  reRollUp: 15
+  spawnPositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  dicePositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  sortTime: 0.5
+  sumUiTxt: 'sum:'
+  sumTxt: {fileID: 0}
+  backUiPannel: {fileID: 0}
+  isRolling: 0
+  isShled: 0
+  attackDuration: 0.8
+  attackStagger: 0.05
+  attackHeight: 2
+  attackSide: 1.5
+  diceTree: {fileID: 0}
+  diceEffect: {fileID: 0}
+  reRollUI: {fileID: 596166077738594060}
+  shledDice: {fileID: 0}
+  diceCamera: {fileID: 0}
+--- !u!114 &596166077738594060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5058291359658303589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc5046e2ab781084bbf2edf95e88407b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reRollCount: 2
+  reRollCountUI: {fileID: 0}
+  Debt: 0

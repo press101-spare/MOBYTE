@@ -23,6 +23,10 @@ public class SelectTest_HTY : MonoBehaviour
     [SerializeField] private Transform _gambleCC;
     [SerializeField] private GameObject _selectBT;
 
+
+    [SerializeField] private GameObject _selectPanel;
+
+
     private void Start()
     {
         _scripts = FindObjectsByType<GambleTable_HTY>(FindObjectsSortMode.None).ToList();
@@ -40,7 +44,7 @@ public class SelectTest_HTY : MonoBehaviour
         }
         _selectBT.SetActive(false);
     }
-    public void Select()
+    public void SelectBT()
     {
         _currnetMin = 10;
         _currnetTable = null;
@@ -60,7 +64,7 @@ public class SelectTest_HTY : MonoBehaviour
 
         if (_currnetTable._myGamble._gambleName == "Shop")
         {
-            SceneManager.LoadScene("ShopScene");//물루 나중에 샵으로 바꾸기
+            _selectPanel.SetActive(true);
         }
 
 

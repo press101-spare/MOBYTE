@@ -130,5 +130,11 @@ public class DiceDeckManager_JCY : MonoBehaviour
     {
         diceDeck.Add(AppendDice);
     }
-    
+
+    public void RemoveDice(DiceSO_JCY DeleteDice)
+    {
+        if (diceDeck.Count >= 15) return;
+        diceDeck.Remove(DeleteDice);
+    }
+
 }
