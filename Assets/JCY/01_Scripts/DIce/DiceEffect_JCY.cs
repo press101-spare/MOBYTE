@@ -25,11 +25,6 @@ public class DiceEffect_JCY : MonoBehaviour
         DiceSO_JCY.DiceEffectType _effect = diseSO.diceEffectType;
         switch (_effect)
         {
-            case DiceSO_JCY.DiceEffectType.Even:
-            case DiceSO_JCY.DiceEffectType.None:
-            case DiceSO_JCY.DiceEffectType.Odd:
-            case DiceSO_JCY.DiceEffectType.Joker:
-                break;
             
             case DiceSO_JCY.DiceEffectType.Blood:
                 break;
@@ -56,6 +51,12 @@ public class DiceEffect_JCY : MonoBehaviour
             case DiceSO_JCY.DiceEffectType.Reroll:
                 DiceManager_JCY.Instance.reRollUI.UpdateReRollCount(1);
                 break;
+            
+            case DiceSO_JCY.DiceEffectType.Glass:
+                
+            
+            default:
+                return;
         }
         
         
@@ -92,6 +93,12 @@ public class DiceEffect_JCY : MonoBehaviour
                 finalDamage += (float)JJBGameManager.Instance.BattleTurnManager.CurrentPhase / 2f;
                 growStack++;
                 Debug.Log(growStack);
+            }
+
+            if (effectType == DiceSO_JCY.DiceEffectType.Glass)
+            {
+                Debug.Log("유리 와자창");
+                finalDamage += 10;
             }
             
         }

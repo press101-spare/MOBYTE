@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "DiceSO_JCY", menuName = "Scriptable Objects/DiceSO_JCY")]
+[CreateAssetMenu(fileName = "DiceSO_JCY", menuName = "DiceSO/DiceSO_JCY")]
 public class DiceSO_JCY : ScriptableObject
 {
     [Header("주사위 정보")]
@@ -31,7 +31,7 @@ public class DiceSO_JCY : ScriptableObject
     
     public enum DiceEffectType
     {
-        None , Even , Odd , Blood , Shield ,ShieldTurn  , Allin , Vampire , Reroll , Joker , Debt , Gamble , Grow
+        None , Even , Odd , Blood , Shield ,ShieldTurn  , Allin , Vampire , Reroll , Joker , Debt , Gamble , Grow , Fraud , Health , Poison , Chip , Glass, ExecutionDice 
     }
 
 }
