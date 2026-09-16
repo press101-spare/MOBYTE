@@ -6,6 +6,7 @@ namespace JJB.Script.Battle.Enemy
     [CreateAssetMenu(fileName = "EnemyData", menuName = "Game/Enemy Data")]
     public class EnemyData : ScriptableObject
     {
+        
         [SerializeField] private string enemyName;
         [SerializeField] private int maxHealth;
         [SerializeField] private int attackPower;
