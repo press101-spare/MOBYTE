@@ -12,6 +12,7 @@ public class DiceType_HTY : MonoBehaviour
     public void BuyDice()
     {
         TotalManager.Instance.BuyItem(_myDice);
+        //DiceManager_JCY.Instance.
         //여기에 인벤토리 추가 구현
     }
 }

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: EnemyData
   m_EditorClassIdentifier: 
   enemyName: normal
-  maxHealth: 50
-  attackPower: 5
-  defense: 0
+  maxHealth: 100
+  attackPower: 10
+  attackPower2: 13
+  attackPower3: 16
+  ability: {fileID: 0}

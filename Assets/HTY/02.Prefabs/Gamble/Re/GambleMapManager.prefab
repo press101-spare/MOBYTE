@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1182446790239710959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2719938502766909387}
+  - component: {fileID: 2000516376534497290}
+  - component: {fileID: 5376789008512376202}
+  m_Layer: 0
+  m_Name: GambleMapManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2719938502766909387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182446790239710959}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 772.4999, y: 269.20517, z: -12.20985}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2000516376534497290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182446790239710959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584eddfeff2765b4b88b2dd73ad9b03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gambleList: {fileID: 11400000, guid: 1e155307cdefec149b975b17ce0add1a, type: 2}
+  _tableGroup: {fileID: 0}
+--- !u!114 &5376789008512376202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182446790239710959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a2ea7218acbf14bb7c76cf21103f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameList: {fileID: 11400000, guid: 1e155307cdefec149b975b17ce0add1a, type: 2}
+  _scripts: []
+  _gambleUICanvas: {fileID: 0}
+  _gambleCC: {fileID: 0}
+  _selectBT: {fileID: 0}

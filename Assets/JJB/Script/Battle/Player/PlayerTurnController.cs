@@ -27,14 +27,7 @@ namespace JJB.Script.Battle.Player
 
             _diceBattleAdapter.DrawDice();
 
-            StartCoroutine(WaitForDraw(onFinished));
-        }
-
-        private IEnumerator WaitForDraw(Action onFinished)
-        {
-            yield return new WaitUntil(() => !_diceBattleAdapter.IsRolling);
-
-            onFinished?.Invoke();
+            StartCoroutine(WaitForDice(onFinished));
         }
 
         public bool TryAttack()
@@ -46,7 +39,7 @@ namespace JJB.Script.Battle.Player
 
             if (score <= 0)
             {
-                Debug.Log("족보를 먼저 선택해주세요.");
+                Debug.Log("족보를 선택해주세요.");
                 return false;
             }
 
@@ -64,6 +57,18 @@ namespace JJB.Script.Battle.Player
             StartCoroutine(DefenseRoutine(onFinished));
         }
 
+        public void ClearDice()
+        {
+            _diceBattleAdapter.ClearDice();
+        }
+
+        private IEnumerator WaitForDice(Action onFinished)
+        {
+            yield return new WaitUntil(() => !_diceBattleAdapter.IsRolling);
+
+            onFinished?.Invoke();
+        }
+
         private IEnumerator DefenseRoutine(Action onFinished)
         {
             _diceBattleAdapter.StartDefenseDice();
@@ -72,14 +77,7 @@ namespace JJB.Script.Battle.Player
 
             _diceBattleAdapter.SetShieldMode(false);
 
-            Debug.Log($"방어 완료 / Shield : {_diceBattleAdapter.ShieldValue}");
-
             onFinished?.Invoke();
-        }
-
-        public void ClearDice()
-        {
-            _diceBattleAdapter.ClearDice();
         }
     }
 }
