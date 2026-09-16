@@ -14,5 +14,23 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LYW/01.Scene/Map.unity
     guid: de77bbbb7573d334ba9d123b9a672ee7
+  - enabled: 1
+    path: Assets/Sjm/03. Scene/Colllect Scene/Collection1.unity
+    guid: 2e700f6a33d2161479fff9fcb499d83c
+  - enabled: 1
+    path: Assets/Sjm/03. Scene/Colllect Scene/Collection2.unity
+    guid: 749fe1f7d22a42642863b38841c30872
+  - enabled: 1
+    path: Assets/Sjm/03. Scene/Colllect Scene/Collection3.unity
+    guid: ba0f739afa32c10428013af7206304e3
+  - enabled: 1
+    path: Assets/Sjm/03. Scene/Colllect Scene/Collection Boss.unity
+    guid: 4ec88d3f64df83e478377cb8ac124e6e
+  - enabled: 1
+    path: Assets/Sjm/03. Scene/Colllect Scene/Collection Boss2.unity
+    guid: 1af94f1a4293b1d469cf2a6fddc8b18f
+  - enabled: 1
+    path: Assets/Sjm/03. Scene/Colllect Scene/Collection Boss3.unity
+    guid: 014fe38d14b04d343a2bda44fe6ebfdd
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
