@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace JJB.Script.Battle
@@ -27,8 +28,28 @@ namespace JJB.Script.Battle
 
         private void UpdateUI(BattlePhase phase)
         {
-            attackButton.interactable = phase == BattlePhase.HandSelect;
-            turnEndButton.interactable = phase == BattlePhase.TurnEnd;
+            SetButtonState(attackButton, phase == BattlePhase.HandSelect, Color.red);
+            SetButtonState(turnEndButton, phase == BattlePhase.TurnEnd, Color.green);
+        }
+
+        private void SetButtonState(Button button, bool isActive, Color activeColor)
+        {
+            button.interactable = isActive;
+
+            TMP_Text text = button.GetComponentInChildren<TMP_Text>(true);
+            Outline outline = button.GetComponent<Outline>();
+
+            if (text != null)
+                text.color = isActive ? activeColor : Color.gray;
+
+            if (outline != null)
+            {
+                outline.enabled = true;
+                outline.effectColor = isActive ? activeColor : Color.gray;
+
+                if (isActive)
+                    outline.effectColor = activeColor;
+            }
         }
     }
 }

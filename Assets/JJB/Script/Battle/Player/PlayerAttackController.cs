@@ -24,9 +24,9 @@ namespace JJB.Script.Battle.Player
             if (damage <= 0)
                 return false;
 
-            int finalDamage = CalculateDamage(damage);
+            int attackDamage = CalculateDamage(damage);
 
-            _enemyDamageReceiver.TakeDamage(finalDamage);
+            DiceManager_JCY.Instance.PlayAttackAnimation(attackDamage, ApplyDiceHit);
 
             return true;
         }
@@ -39,6 +39,11 @@ namespace JJB.Script.Battle.Player
             int attackPower = PlayerProfileManager.Instance.Profile.stats.attackPower;
 
             return damage + attackPower;
+        }
+
+        private void ApplyDiceHit(int damage)
+        {
+            _enemyDamageReceiver.TakeDamage(damage);
         }
     }
 }

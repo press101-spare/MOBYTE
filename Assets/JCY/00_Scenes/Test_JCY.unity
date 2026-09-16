@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6870a6d849774ce480c709fc378b7db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 70
 --- !u!114 &58405323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5549807f23e5470bbb4e5f3b56f18d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: a7350f69327b2b545a397ffc4f34263e, type: 2}
+  data: {fileID: 11400000, guid: a7350f69327b2b545a397ffc4f34263e, type: 2}
 --- !u!114 &75804371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1253,8 +1254,8 @@ MonoBehaviour:
   isShled: 0
   attackDuration: 0.8
   attackStagger: 0.05
-  attackHeight: 2
-  attackSide: 1.5
+  attackHeight: 1
+  attackSide: 1.25
   diceTree: {fileID: 2123197321}
   diceEffect: {fileID: 981339967}
   reRollUI: {fileID: 1605801674}
@@ -2667,6 +2668,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4013913019847077797, guid: b15f0bfb919220d4e9cb23a2bc07a209,
         type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 58405320}
+    - target: {fileID: 4013913019847077797, guid: b15f0bfb919220d4e9cb23a2bc07a209,
+        type: 3}
       propertyPath: jjbHealth
       value: 
       objectReference: {fileID: 58405320}
@@ -3089,6 +3095,11 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8527718824704175407, guid: b15f0bfb919220d4e9cb23a2bc07a209,
+        type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 75804371}
     - target: {fileID: 8527718824704175407, guid: b15f0bfb919220d4e9cb23a2bc07a209,
         type: 3}
       propertyPath: jjbHealth

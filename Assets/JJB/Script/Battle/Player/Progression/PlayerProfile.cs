@@ -8,6 +8,7 @@ namespace JJB.Script.Battle.Player.Progression
     {
         public int level = 1;
         public int currentExp;
+        public int money = 10000;
 
         public PlayerStats stats = new();
 
