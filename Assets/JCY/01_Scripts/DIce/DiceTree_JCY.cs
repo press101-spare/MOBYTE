@@ -197,7 +197,6 @@ public class DiceTree_JCY : MonoBehaviour
 
     public void AttackTree()
     {
-        Debug.Log("ㅎㅇ");
         GameObject clickBtn = EventSystem.current.currentSelectedGameObject;
         
         TextMeshProUGUI scoreText = clickBtn.transform.Find("ScoreText")?.GetComponent<TextMeshProUGUI>();
@@ -207,7 +206,6 @@ public class DiceTree_JCY : MonoBehaviour
             // 3. 텍스트 문자열을 int 정수로 변환해서 반환
             if (int.TryParse(scoreText.text, out int score))
             {
-                Debug.Log($"선택한 버튼{clickBtn.name}의 점수: {score}");
                 CurrentTree = clickBtn.name;
                 CurrentScore = score;
             }

@@ -7,10 +7,8 @@ public class RandomGamble : MonoBehaviour
     [SerializeField] private Transform _tableGroup;
     private List<GambleSoData> _haveData = new List<GambleSoData>();
 
-    private void Start()
-    {
-        
-    }
+    private List<Transform> _spawnPoints;
+
     private void OnEnable()
     {
         RandomTable();
@@ -19,6 +17,8 @@ public class RandomGamble : MonoBehaviour
     public void RandomTable()
     {
         _haveData.Clear();
+        _spawnPoints.Clear();
+
         for(int i = 0; i<3;i++)
         {
             GambleSoData data = _gambleList._gambleList[Random.Range(0, _gambleList._gambleList.Count)];
@@ -26,7 +26,7 @@ public class RandomGamble : MonoBehaviour
             {
                 for(int j =0; j<_haveData.Count;j++)
                 {
-                    if (_haveData[j]==data)
+                    if (_haveData[j] == data)
                     {
                         data = _gambleList._gambleList[Random.Range(0, _gambleList._gambleList.Count)];
                         j = -1;
@@ -35,7 +35,9 @@ public class RandomGamble : MonoBehaviour
                 }
             }
             _haveData.Add(data);
-            GameObject table = Instantiate(data._gambleTable, _tableGroup);
+            Transform point = _spawnPoints[Random.Range(0,_spawnPoints.Count)];
+            GameObject table = Instantiate(data._gambleTable, point.position,Quaternion.identity);
+            _spawnPoints.Remove(point);
         }
         
         

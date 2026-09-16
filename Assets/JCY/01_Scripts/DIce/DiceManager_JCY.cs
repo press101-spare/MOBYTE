@@ -33,6 +33,12 @@ public class DiceManager_JCY : MonoBehaviour
     public bool isRolling;
     public bool isShled;
     
+    [Header("공격 연출")]
+    [SerializeField] private float attackDuration = 0.8f;
+    [SerializeField] private float attackStagger = 0.05f;
+    [SerializeField] private float attackHeight = 2f;
+    [SerializeField] private float attackSide = 1.5f;
+    
     [Header("관련 스크립트")] 
     public DiceTree_JCY diceTree;
     public DiceEffect_JCY diceEffect;
@@ -41,6 +47,7 @@ public class DiceManager_JCY : MonoBehaviour
     public DiceCamera_JCY diceCamera;
     
     public IReadOnlyList<DiceObject_JCY> ActiveDiceScripts => activeDiceScripts;
+    private bool isGlass;
 
 
     // 0~5번 인덱스 면이 정면을 볼 때의 회전 각도 배열 (제시해주신 각도 데이터 적용)
@@ -131,7 +138,6 @@ public class DiceManager_JCY : MonoBehaviour
 
         yield return new WaitUntil(() => completedCount >= activeDiceScripts.Count);
         StartCoroutine(FaceDiceCO());
-        Debug.Log($"총합: {totalScore}");
     }
 
 // 💡 매개변수 구조 맞추기
@@ -307,8 +313,7 @@ public class DiceManager_JCY : MonoBehaviour
 
         // 현재 결과 갱신
         UpdateCurrentDiceValues();
-
-        Debug.Log("선택한 주사위 다시 굴리기 완료!");
+        
         backUiPannel.SetActive(false);
         isRolling = false;
     }
@@ -340,6 +345,7 @@ public class DiceManager_JCY : MonoBehaviour
     {
         yield return new WaitForSeconds(sortTime);
         diceCamera.BattleCameraMove();
+        yield return new WaitForSeconds(0.15f);
        // yield return new WaitForSeconds(diceCamera.moveDuration);
         // 1. 현재 생성되어 있는 주사위들의 데이터를 수집합니다.
         List<DiceSortData> sortList = new List<DiceSortData>();
@@ -394,6 +400,7 @@ public class DiceManager_JCY : MonoBehaviour
 
             // 위치 이동
             moveSequence.Join(diceTransform.DOMove(targetPos.position, 0.5f).SetEase(Ease.OutQuad));
+            //Debug
     
             // 💡 수정 포인트: DORotate 대신 DOLocalRotate를 사용하거나, 
             // 부모의 회전을 고려한 로컬 회전값으로 지정해 보세요.
@@ -402,9 +409,6 @@ public class DiceManager_JCY : MonoBehaviour
 
         yield return moveSequence.WaitForCompletion();
 
-        Debug.Log("주사위 정렬 및 배치 완료!");
-        Debug.Log("패널 사라지기");
-        Debug.Log("던지기 종료");
         sumTxt.gameObject.SetActive(true);
         backUiPannel.SetActive(false);
         isRolling = false;
@@ -448,18 +452,117 @@ public class DiceManager_JCY : MonoBehaviour
     }
   
 
-    public void Attack()
+    public void PlayAttackAnimation(int baseDamage, System.Action<int> onDiceHit)
     {
-        if(diceTree.CurrentScore == 0)
-        {
-            Debug.Log("족보 선택 ㄱ");
-            return;
-        }
-        int finalDamage = diceEffect.CalculateFinalDamage(activeDiceScripts, diceTree.CurrentScore);
-
-        JJBGameManager.Instance.EnemyJjbHealth.TakeDamage(finalDamage);
-        Debug.Log($"{diceTree.CurrentScore} + {diceTree.CurrentTree} + 로 공격 시도!");
+        StartCoroutine(DiceAttackRoutine(baseDamage, onDiceHit));
     }
     
+    private IEnumerator DiceAttackRoutine(int baseDamage, System.Action<int> onDiceHit)
+    {
+        Transform enemy = JJBGameManager.Instance.EnemyJjbHealth.transform;
+
+        int diceCount = activeDiceObjects.Count;
+
+        if (diceCount <= 0)
+            yield break;
+
+        // 최종 데미지 계산
+        int finalDamage = diceEffect.CalculateFinalDamage(activeDiceScripts, baseDamage);
+
+        // 주사위 개수만큼 데미지 분배
+        int dividedDamage = finalDamage / diceCount;
+        int remainder = finalDamage % diceCount;
+            
+        for (int i = 0; i < diceCount; i++)
+        {
+            GameObject dice = activeDiceObjects[i];
+
+            if (dice == null)
+                continue;
+
+            Rigidbody rb = dice.GetComponent<Rigidbody>();
+
+            if (rb != null)
+            {
+                if (!rb.isKinematic)
+                {
+                    rb.linearVelocity = Vector3.zero;
+                    rb.angularVelocity = Vector3.zero;
+                }
+
+                rb.isKinematic = true;
+            }
+
+            Vector3 start = dice.transform.position;
+            Vector3 end = enemy.position;
+
+            float side = (i - (diceCount - 1) * 0.5f) * attackSide;
+
+            Vector3 point1 = start + Vector3.up * attackHeight + Vector3.right * side;
+
+            Vector3 point2 = Vector3.Lerp(start, end, 0.6f) + Vector3.up * attackHeight + Vector3.right * side;
+
+            dice.transform.DOKill();
+
+            Sequence attackSequence = DOTween.Sequence();
+
+            attackSequence.Append(
+                dice
+                    .transform
+                    .DOPath(
+                    new Vector3[]
+                    {
+                        start,
+                        point1,
+                        point2,
+                        end
+                    },
+                    attackDuration,
+                    PathType.CatmullRom
+                )
+                .SetEase(Ease.InOutSine)
+            );
+
+            attackSequence.Join(
+                dice.transform
+                    .DORotate(
+                        dice.transform.eulerAngles +
+                        new Vector3(360f, 360f, 360f),
+                        attackDuration,
+                        RotateMode.FastBeyond360
+                    )
+                    .SetEase(Ease.Linear)
+                );
+
+            attackSequence.SetDelay(i * attackStagger);
+
+            int hitDamage = dividedDamage;
+
+            if (i < remainder)
+                hitDamage++;
+
+            attackSequence.OnComplete(() =>
+            {
+                // 1. 적중 데미지
+                onDiceHit?.Invoke(hitDamage);
+
+                if (isGlass)
+                {
+                    onDiceHit?.Invoke(10);
+                }
+
+                // 2. 주사위 삭제
+                if (dice != null)
+                {
+                    Destroy(dice);
+                }
+            }); 
+        }
+
+        yield return new WaitForSeconds(
+            attackDuration +
+            attackStagger * Mathf.Max(0, diceCount - 1)
+        );
+    }
 }
 

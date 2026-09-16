@@ -35,20 +35,17 @@ public class DiceDeckManager_JCY : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject); // 씬이 넘어가도 파괴되지 않음
+            InitializeDeck();
         }
         else
         {
             Destroy(gameObject); // 중복 생성 방지
         }
     }
-    
-    private void Start()
-    {
-        InitializeDeck();
-    }
 
     private void InitializeDeck()
     {
+        diceDeck.Clear();
         for (int i = 0; i < defaultDiceCount; i++)
         {
             diceDeck.Add(defaultDice);
@@ -133,5 +130,11 @@ public class DiceDeckManager_JCY : MonoBehaviour
     {
         diceDeck.Add(AppendDice);
     }
-    
+
+    public void RemoveDice(DiceSO_JCY DeleteDice)
+    {
+        if (diceDeck.Count >= 15) return;
+        diceDeck.Remove(DeleteDice);
+    }
+
 }

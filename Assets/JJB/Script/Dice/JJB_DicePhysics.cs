@@ -14,6 +14,7 @@ namespace JJB.Script
         [SerializeField] private float liftForce = 4f;
         [SerializeField] private float liftForceMin = 4f;
         [SerializeField] private float torqueForce = 5f;
+        [SerializeField] private float forceMultiplier = 5f;
 
         private Rigidbody _rb;
 
@@ -26,7 +27,7 @@ namespace JJB.Script
             _rb.isKinematic = true; // 처음에는 가만히 있도록 설정
         }
 
-        public void Throw(float forceMultiplier = 1f)
+        public void Throw()
         {
             _rb.isKinematic = false;
             _rb.linearVelocity = Vector3.zero;
@@ -35,8 +36,8 @@ namespace JJB.Script
             Vector3 force = new Vector3(
                 Random.Range(xForceMin, xForce),
                 Random.Range(yForceMin, yForce),
-                Random.Range(liftForceMin, liftForceMin)
-            ) * forceMultiplier;
+                Random.Range(liftForceMin, liftForce)
+            );
 
             _rb.AddForce(force, ForceMode.Impulse);
 
@@ -63,19 +64,7 @@ namespace JJB.Script
                 ForceMode.Impulse
             );
         }
-
-        public void SmoothRotateToTarget(Vector3 targetEulerRotation, float duration, System.Action onComplete)
-        {
-            if (this == null || transform == null) return;
         
-            _rb.isKinematic = true;
-            _rb.linearVelocity = Vector3.zero;
-            _rb.angularVelocity = Vector3.zero;
-        
-            transform.DORotate(targetEulerRotation, duration, RotateMode.Fast)
-                .SetEase(Ease.OutSine)
-                .OnComplete(() => { onComplete?.Invoke(); });
-        }
 
         public Vector3 GetClosestRotation(Vector3[] rotations)
         {
