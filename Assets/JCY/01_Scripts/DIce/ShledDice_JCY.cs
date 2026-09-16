@@ -39,7 +39,7 @@ public class ShledDice_JCY : MonoBehaviour
 
     public void ShledeHP(int value)
     {
-        shledValue = value;
+        shledValue += value;
         Debug.Log(shledValue + "만큼 쉴드 생성");
     }
 

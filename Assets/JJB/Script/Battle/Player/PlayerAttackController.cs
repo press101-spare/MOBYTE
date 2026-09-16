@@ -37,7 +37,7 @@ namespace JJB.Script.Battle.Player
                 return damage;
 
             int attackPower = PlayerProfileManager.Instance.Profile.stats.attackPower;
-
+            
             return damage + attackPower;
         }
     }

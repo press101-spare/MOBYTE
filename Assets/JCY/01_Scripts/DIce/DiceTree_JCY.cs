@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using JJB.Script.Battle.Player.Progression;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -22,8 +23,11 @@ public class DiceTree_JCY : MonoBehaviour
     }
 
     public int CurrentScore { get; private set; }
+    public Trees CurrentTrees { get; private set; }
     public string CurrentTree { get; private set; }
     public DiceTree_JCY Instance { get; set; }
+
+    public bool isTree;
     
 
     [System.Serializable]
@@ -209,9 +213,47 @@ public class DiceTree_JCY : MonoBehaviour
             {
                 Debug.Log($"선택한 버튼{clickBtn.name}의 점수: {score}");
                 CurrentTree = clickBtn.name;
-                CurrentScore = score;
+                if (Enum.TryParse(clickBtn.name, out Trees parsedTree))
+                {
+                    CurrentTrees = parsedTree;
+                    Debug.Log($"변환된 Enum 값: {CurrentTrees}");
+                }
+                else
+                {
+                    Debug.LogWarning($"버튼 이름({clickBtn.name})과 일치하는 Trees Enum이 없습니다. 버튼 이름을 확인해주세요.");
+                }
             }
         }
+    }
+
+    public int TreeEffect(int damage)
+    {
+        switch (CurrentTrees)
+        {
+            case Trees.Choice:
+                    
+                break;
+            case Trees.OnePair:
+                DiceManager_JCY.Instance.shledDice.ShledeHP(PlayerProfileManager.Instance.Profile.stats.maxHealth * (15 / 100));
+                break;
+            case Trees.TwoPair:
+                DiceManager_JCY.Instance.shledDice.ShledeHP(PlayerProfileManager.Instance.Profile.stats.maxHealth * (30 / 100));
+                break;
+            case Trees.FullHouse:
+                break;
+            case Trees.SmallStraight:
+                break;
+            case Trees.LargeStraight:
+                break;
+            case Trees.Three_Of_AKind:
+                break;
+            case Trees.Four_Of_AKind:
+                break;
+            case Trees.Yahtzee:
+                break;
+            
+        } 
+        return 0;
     }
 
     public void Reset()
