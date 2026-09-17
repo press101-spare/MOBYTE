@@ -3376,7 +3376,7 @@ GameObject:
   - component: {fileID: 8583207848660734214}
   - component: {fileID: 997568515409898763}
   m_Layer: 5
-  m_Name: Full House
+  m_Name: FullHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5110,7 +5110,7 @@ GameObject:
   - component: {fileID: 3240414029289219448}
   - component: {fileID: 3791641827451949573}
   m_Layer: 5
-  m_Name: One Pair
+  m_Name: OnePair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8647,7 +8647,7 @@ GameObject:
   - component: {fileID: 987144866139754691}
   - component: {fileID: 427028463242690489}
   m_Layer: 5
-  m_Name: Large Straight
+  m_Name: LargeStraight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9082,7 +9082,7 @@ GameObject:
   - component: {fileID: 8944279623964237650}
   - component: {fileID: 7517987857311185840}
   m_Layer: 5
-  m_Name: Three of a Kind
+  m_Name: Three_Of_AKind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12373,7 +12373,7 @@ GameObject:
   - component: {fileID: 1996286030240181347}
   - component: {fileID: 3963582791544396999}
   m_Layer: 5
-  m_Name: Four of a Kind
+  m_Name: Four_Of_AKind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12879,7 +12879,7 @@ GameObject:
   - component: {fileID: 6715679773934758831}
   - component: {fileID: 3705722499101589914}
   m_Layer: 5
-  m_Name: Two Pair
+  m_Name: TwoPair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13378,7 +13378,7 @@ GameObject:
   - component: {fileID: 33886592884271442}
   - component: {fileID: 4718985185047053696}
   m_Layer: 5
-  m_Name: Small Straight
+  m_Name: SmallStraight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
