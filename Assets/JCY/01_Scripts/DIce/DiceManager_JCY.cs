@@ -47,7 +47,7 @@ public class DiceManager_JCY : MonoBehaviour
     public DiceCamera_JCY diceCamera;
     
     public IReadOnlyList<DiceObject_JCY> ActiveDiceScripts => activeDiceScripts;
-    private bool isGlass;
+    public int glassStack;
 
 
     // 0~5번 인덱스 면이 정면을 볼 때의 회전 각도 배열 (제시해주신 각도 데이터 적용)
@@ -546,10 +546,13 @@ public class DiceManager_JCY : MonoBehaviour
                 // 1. 적중 데미지
                 onDiceHit?.Invoke(hitDamage);
 
-                if (isGlass)
+                //글라스 스택만큼 데미지
+                for (int glass = 0; glass < glassStack; glass++)
                 {
                     onDiceHit?.Invoke(10);
                 }
+
+                glassStack = 0;
 
                 // 2. 주사위 삭제
                 if (dice != null)

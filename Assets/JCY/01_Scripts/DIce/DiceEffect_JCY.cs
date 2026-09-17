@@ -97,7 +97,8 @@ public class DiceEffect_JCY : MonoBehaviour
             if (effectType == DiceSO_JCY.DiceEffectType.Glass)
             {
                 Debug.Log("유리 와자창");
-                finalDamage += 10;
+                DiceDeckManager_JCY.Instance.RemoveDice(DiceSO_JCY.DiceEffectType.Glass);
+                DiceManager_JCY.Instance.glassStack++;
             }
             
         }

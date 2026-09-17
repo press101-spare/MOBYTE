@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: GamebleSoList
   m_EditorClassIdentifier: 
   _gambleList:
-  - {fileID: 11400000, guid: 24d20e6e419faee48af010a9ce60afff, type: 2}
-  - {fileID: 11400000, guid: bcdf86e1517bcb8479e48ca3cbf37fad, type: 2}
-  - {fileID: 11400000, guid: e0abdec79508c9e44897a54d86dcf87d, type: 2}
-  - {fileID: 11400000, guid: 07682b96e22ccfa47b0a971df67be37f, type: 2}
+  - {fileID: 11400000, guid: 1eebd3e2913bbf14690f4dbca157f1ad, type: 2}
+  - {fileID: 11400000, guid: b847fe0f48c362d4f8ea7e20611991d7, type: 2}
+  - {fileID: 11400000, guid: d959a896fc9f3364382d99fdd10129ce, type: 2}
+  - {fileID: 11400000, guid: 0e5100dc7b044c74c8560679b7735b80, type: 2}
+  - {fileID: 11400000, guid: ca627d0ff9a4b3940b682b49b5321e43, type: 2}
+  - {fileID: 11400000, guid: d3ab035cadb6bc94f9b05bb9893fa622, type: 2}
+  - {fileID: 11400000, guid: 55af359e7d17d6b4b848da678b589e14, type: 2}
