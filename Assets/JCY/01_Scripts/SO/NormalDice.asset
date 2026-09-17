@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NormalDice
   m_EditorClassIdentifier: 
   diceName: "\uAE30\uBCF8 \uC8FC\uC0AC\uC704"
-  diceIcon: {fileID: 0}
+  diceIcon: {fileID: 34949007336262702, guid: fda6f027c910e8749b54bc6d9aa64864, type: 3}
   cost: 50
   color: {r: 0.8867924, g: 0.12548937, b: 0.12548937, a: 1}
   dicePrefab: {fileID: 34949007336262702, guid: ba632a86679e3cf4fbea4eabfa14a5dc,

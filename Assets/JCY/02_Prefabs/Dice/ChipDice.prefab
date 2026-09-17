@@ -91,13 +91,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5181525cf424b0aa2e27af268bff8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xForce: -15
-  xForceMin: -50
+  xForce: -20
+  xForceMin: -60
   yForce: 10
   yForceMin: -10
   liftForce: 5
   liftForceMin: 0
-  torqueForce: 15
+  torqueForce: 50
   forceMultiplier: 5
 --- !u!1 &4864258240423658053
 GameObject:

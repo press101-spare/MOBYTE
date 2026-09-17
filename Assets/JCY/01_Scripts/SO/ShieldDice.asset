@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ShieldDice
   m_EditorClassIdentifier: 
   diceName: "\uBC29\uC5B4 \uC8FC\uC0AC\uC704"
-  diceIcon: {fileID: 0}
+  diceIcon: {fileID: 34949007336262702, guid: 31f8ed35b29cfbe40a17fbb9992a8a83, type: 3}
   cost: 50
   color: {r: 0.8867924, g: 0.12548937, b: 0.12548937, a: 1}
   dicePrefab: {fileID: 34949007336262702, guid: b32f19a31ff44274492eb67049646675,
