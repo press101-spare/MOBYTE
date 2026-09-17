@@ -52,6 +52,9 @@ public class DiceObject_JCY : MonoBehaviour
     
     private void AddOutline()
     {
+        if(currentDiceSO.diceEffectType == DiceSO_JCY.DiceEffectType.Rock ||
+           currentDiceSO.diceEffectType == DiceSO_JCY.DiceEffectType.ShieldTurn)
+            return;
         Material[] currentMaterials = MeshCompo.materials;
 
         Material[] newMaterials = new Material[currentMaterials.Length + 1];
