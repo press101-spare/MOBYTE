@@ -12,9 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956d3722d78af9c4288f2902a18baae1, type: 3}
   m_Name: Roulette
   m_EditorClassIdentifier: 
-  _gambleName: 
-  _icon: {fileID: -7941309517300754618, guid: 20a8d52ad071cd64eb5306051781741a, type: 3}
-  _gambleTable: {fileID: 6299962284582502254, guid: 5d1eb3ea088106644af674086213f4a2,
-    type: 3}
-  _gambleObject: {fileID: 6568139518206471912, guid: 28197a3b0e4c0be44a5118a77770489b,
-    type: 3}
+  _gambleName: "\uB8F0\uB81B"
+  _gambleTable: {fileID: 0}
+  _gambleObject: {fileID: 0}
