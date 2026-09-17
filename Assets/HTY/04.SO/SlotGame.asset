@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 956d3722d78af9c4288f2902a18baae1, type: 3}
-  m_Name: Shop
+  m_Name: SlotGame
   m_EditorClassIdentifier: 
-  _gambleName: Shop
-  _icon: {fileID: -4304889744150076825, guid: 1412f24f9866dd04fb7f964c2b45f9de, type: 3}
+  _gambleName: "\uC2AC\uB86F\uBA38\uC2E0"
   _gambleTable: {fileID: 0}
   _gambleObject: {fileID: 0}

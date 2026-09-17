@@ -28,7 +28,7 @@ public class DetectGamble_HTY : MonoBehaviour
         if (nearTable == null) return;
         if (a > 5) return;
 
-        if (nearTable._myGamble._gambleName == "Shop")
+        if (nearTable._myGamble._gambleName == GambleType.Shop)
         {
             _selectPanel.SetActive(true);
         }

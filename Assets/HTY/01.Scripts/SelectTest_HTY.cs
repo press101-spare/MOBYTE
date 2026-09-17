@@ -63,7 +63,7 @@ public class SelectTest_HTY : MonoBehaviour
         Debug.Log(11);
         if (_currnetTable == null) return;
         Debug.Log(11);
-        if (_currnetTable._myGamble._gambleName == "Shop")
+        if (_currnetTable._myGamble._gambleName == GambleType.Shop)
         {
             _selectPanel.SetActive(true);
             return;
