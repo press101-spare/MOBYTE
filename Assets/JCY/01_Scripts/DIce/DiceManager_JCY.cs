@@ -447,7 +447,7 @@ public class DiceManager_JCY : MonoBehaviour
         sumTxt.text = sumUiTxt + totalsum;
         if (isShled)
         {
-            shledDice.ShledeHP(totalsum);
+            shledDice.ShledHP(totalsum);
         }
     }
   

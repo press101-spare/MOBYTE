@@ -39,6 +39,17 @@ namespace JJB.Script.Battle
                 return DiceManager.shledDice.shledValue;
             }
         }
+        
+        public int ReRollCount
+        {
+            get
+            {
+                if (DiceManager_JCY.Instance == null || DiceManager_JCY.Instance.reRollUI == null)
+                    return 0;
+
+                return DiceManager_JCY.Instance.reRollUI.reRollCount;
+            }
+        }
 
         public void DrawDice()
         {

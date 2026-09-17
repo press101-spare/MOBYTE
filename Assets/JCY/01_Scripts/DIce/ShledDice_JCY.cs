@@ -37,7 +37,7 @@ public class ShledDice_JCY : MonoBehaviour
         DiceManager_JCY.Instance.StartTurn(shideDiceList);
     }
 
-    public void ShledeHP(int value)
+    public void ShledHP(int value)
     {
         if(shledValue >= 999) return;
         shledValue += value;

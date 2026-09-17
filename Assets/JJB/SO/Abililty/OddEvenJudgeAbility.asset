@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d509a5ae3add4bb6b07bf984df566292, type: 3}
-  m_Name: StealMoneyEnemy
+  m_Script: {fileID: 11500000, guid: 62db7f30357b418192bb7989347b7248, type: 3}
+  m_Name: OddEvenJudgeAbility
   m_EditorClassIdentifier: 
-  enemyName: StealMoney
-  maxHealth: 170
-  attackPower: 14
-  attackPower2: 16
-  attackPower3: 18
-  ability: {fileID: 11400000, guid: 83d1c8d4fc841fd4d8fc21d454c56b2f, type: 2}
+  oddDamage: 5
+  evenDamage: 24
