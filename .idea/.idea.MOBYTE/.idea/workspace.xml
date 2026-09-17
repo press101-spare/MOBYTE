@@ -13,13 +13,9 @@
     <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LYW/01.Scene/Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LYW/01.Scene/Map.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LYW/Fantasy RPG Interior pack (by Franuka)/Codex 이미지 2026년 9월 14일 오후 10_24_19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LYW/Fantasy RPG Interior pack (by Franuka)/Codex 이미지 2026년 9월 14일 오후 10_24_19.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LYW/Fantasy RPG Interior pack (by Franuka)/Codex 이미지 2026년 9월 14일 오후 10_24_30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LYW/Fantasy RPG Interior pack (by Franuka)/Codex 이미지 2026년 9월 14일 오후 10_24_30.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LYW/Fantasy RPG Interior pack (by Franuka)/Codex 이미지 2026년 9월 14일 오후 10_24_36.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LYW/Fantasy RPG Interior pack (by Franuka)/Codex 이미지 2026년 9월 14일 오후 10_24_36.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LYW/Fantasy RPG Interior pack (by Franuka)/Codex 이미지 2026년 9월 14일 오후 10_24_50.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LYW/Fantasy RPG Interior pack (by Franuka)/Codex 이미지 2026년 9월 14일 오후 10_24_50.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LYW/Fantasy RPG Interior pack (by Franuka)/Codex 이미지 2026년 9월 14일 오후 10_24_57.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LYW/Fantasy RPG Interior pack (by Franuka)/Codex 이미지 2026년 9월 14일 오후 10_24_57.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/Talk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Talk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/01.Scene/Enevnt.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LYW/01.Scene/Enevnt.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +32,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e07a8438207b407f87d60eb34d7db5121e1000/f3/1a294ffe/Time.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/PanelController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@81172dccd143/Editor/GridBrushEditorBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@81172dccd143/Editor/GridEditorUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@81172dccd143/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@bff931d63a7a/Editor/Drawing/Controllers/BlackboardController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@7537063fea2b/Runtime/TMP/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@7537063fea2b/Runtime/TMP/TextMeshProUGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Core/Utilities/LinqUtility.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
@@ -50,65 +49,65 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000000000326" />
-      <entry key="S2" value="1.000447791129285" />
-      <entry key="S5" value="1.0691225032310117" />
-      <entry key="S10" value="1.4774112074785808" />
-      <entry key="S30" value="2.945174216716226" />
-      <entry key="S60" value="4.323988615427263" />
-      <entry key="M2" value="9.40098687929697" />
-      <entry key="M5" value="38.93157939768595" />
-      <entry key="M10" value="84.41595521144843" />
-      <entry key="M15" value="115.11339697424721" />
-      <entry key="M30" value="170.6143338583549" />
-      <entry key="H1" value="238.72359641608912" />
-      <entry key="H2" value="312.2737520774696" />
-      <entry key="H4" value="371.29295535152914" />
-      <entry key="D1" value="438.881597275615" />
-      <entry key="W1" value="452.637119817289" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="2.6547826934375167E-103" />
+      <entry key="S2" value="2.2817025981203062E-26" />
+      <entry key="S5" value="6.460554604604479E-11" />
+      <entry key="S10" value="1.4251315303359935E-5" />
+      <entry key="S30" value="0.09490496448408982" />
+      <entry key="S60" value="1.1338354947966838" />
+      <entry key="M2" value="5.819318846417971" />
+      <entry key="M5" value="27.0099782807329" />
+      <entry key="M10" value="58.30685219039628" />
+      <entry key="M15" value="80.98351016199068" />
+      <entry key="M30" value="124.38557596262079" />
+      <entry key="H1" value="189.82970873259953" />
+      <entry key="H2" value="301.52574187217965" />
+      <entry key="H4" value="432.58530889797026" />
+      <entry key="D1" value="634.2558451989513" />
+      <entry key="W1" value="682.4670641249531" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="6.1032333814810554E-145" />
-      <entry key="MS500" value="1.4358596637498536E-29" />
-      <entry key="S2" value="6.155707833527449E-8" />
-      <entry key="S5" value="0.0013053025893992828" />
-      <entry key="S10" value="0.03612906509243807" />
-      <entry key="S30" value="0.33965604054387794" />
-      <entry key="S60" value="0.7760804263433791" />
-      <entry key="M2" value="1.9279622667496539" />
-      <entry key="M5" value="5.763757938638222" />
-      <entry key="M10" value="10.442517143381288" />
-      <entry key="M15" value="13.48419105474375" />
-      <entry key="M30" value="19.0111367104827" />
-      <entry key="H1" value="25.751466721893216" />
-      <entry key="H2" value="32.97732733449749" />
-      <entry key="H4" value="38.770636014735594" />
-      <entry key="D1" value="45.413765835063394" />
-      <entry key="W1" value="46.76741300869785" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000000018316" />
+      <entry key="S10" value="1.0000013533819359" />
+      <entry key="S30" value="1.011203825404482" />
+      <entry key="S60" value="1.1277847971681374" />
+      <entry key="M2" value="1.6848416838190747" />
+      <entry key="M5" value="4.346096740164271" />
+      <entry key="M10" value="8.417266776733149" />
+      <entry key="M15" value="11.723612847015952" />
+      <entry key="M30" value="19.013160191657306" />
+      <entry key="H1" value="30.81262773518639" />
+      <entry key="H2" value="49.03403792286454" />
+      <entry key="H4" value="68.4694116473376" />
+      <entry key="D1" value="96.40540654491042" />
+      <entry key="W1" value="102.8637413540337" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.1135093202376162E-5" />
-      <entry key="MS500" value="0.11614508428136414" />
-      <entry key="S2" value="0.5838205075777593" />
-      <entry key="S5" value="0.843956470156716" />
-      <entry key="S10" value="1.307280760952471" />
-      <entry key="S30" value="3.121629212643524" />
-      <entry key="S60" value="4.966937912015225" />
-      <entry key="M2" value="11.165778072351808" />
-      <entry key="M5" value="44.46280499694999" />
-      <entry key="M10" value="94.62343977798899" />
-      <entry key="M15" value="128.37689275763404" />
-      <entry key="M30" value="189.44515500114707" />
-      <entry key="H1" value="264.3442652306063" />
-      <entry key="H2" value="345.1669652790856" />
-      <entry key="H4" value="410.01473544188156" />
-      <entry key="D1" value="484.28600112566545" />
-      <entry key="W1" value="499.40316103435816" />
+      <entry key="MS100" value="4.7417669520075184E-8" />
+      <entry key="MS500" value="0.034291623049351336" />
+      <entry key="S2" value="0.43032542889369196" />
+      <entry key="S5" value="0.7137051065323051" />
+      <entry key="S10" value="0.8448223096197927" />
+      <entry key="S30" value="1.0452766501983732" />
+      <entry key="S60" value="2.2039130432280696" />
+      <entry key="M2" value="7.421716053882438" />
+      <entry key="M5" value="31.22662045371699" />
+      <entry key="M10" value="66.59091548543145" />
+      <entry key="M15" value="92.58580408122286" />
+      <entry key="M30" value="143.30553541774407" />
+      <entry key="H1" value="220.5656063178606" />
+      <entry key="H2" value="350.49306644018225" />
+      <entry key="H4" value="501.0048012683329" />
+      <entry key="D1" value="730.6487896562325" />
+      <entry key="W1" value="785.328886153624" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7,
@@ -201,6 +200,7 @@
       <workItem from="1789482081891" duration="1061000" />
       <workItem from="1789483326210" duration="599000" />
       <workItem from="1789515944639" duration="2310000" />
+      <workItem from="1789632697678" duration="7482000" />
     </task>
     <servers />
   </component>
