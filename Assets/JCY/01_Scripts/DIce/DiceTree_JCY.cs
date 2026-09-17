@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using JJB.Script.Battle;
+using JJB.Script.Battle.Player.Progression;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class DiceTree_JCY : MonoBehaviour
 {
@@ -22,10 +23,11 @@ public class DiceTree_JCY : MonoBehaviour
     }
 
     public int CurrentScore { get; private set; }
+    public Trees CurrentTrees { get; private set; }
     public string CurrentTree { get; private set; }
     public DiceTree_JCY Instance { get; set; }
-    
 
+    private int threeStack = 0;
     [System.Serializable]
     public struct TreeUI
     {
@@ -207,9 +209,62 @@ public class DiceTree_JCY : MonoBehaviour
             if (int.TryParse(scoreText.text, out int score))
             {
                 CurrentTree = clickBtn.name;
-                CurrentScore = score;
+                if (Enum.TryParse(clickBtn.name, out Trees parsedTree))
+                {
+                    CurrentTrees = parsedTree;
+                    Debug.Log($"변환된 Enum 값: {CurrentTrees} , 데미지: {score}");
+                }
+                else
+                {
+                    Debug.LogWarning($"버튼 이름({clickBtn.name})과 일치하는 Trees Enum이 없습니다. 버튼 이름을 확인해주세요.");
+                }
             }
         }
+    }
+
+    public int TreeEffect(int damage)
+    {
+        int finalDamage = damage;
+        switch (CurrentTrees)
+        {
+            case Trees.Choice:
+                finalDamage += 4;
+                break;
+            case Trees.OnePair:
+                DiceManager_JCY.Instance.shledDice.ShledeHP((PlayerProfileManager.Instance.Profile.stats.maxHealth 
+                                                            * 15) / 100);
+                break;
+            case Trees.TwoPair:
+                DiceManager_JCY.Instance.shledDice.ShledeHP((PlayerProfileManager.Instance.Profile.stats.maxHealth
+                                                            * 30) / 100);
+                break;
+            case Trees.FullHouse:
+                JJBGameManager.Instance.PlayerJjbHealth.Heal((PlayerProfileManager.Instance.Profile.stats.maxHealth
+                                                             * 20) / 100);
+                break;
+            case Trees.SmallStraight:
+                finalDamage += (JJBGameManager.Instance.EnemyJjbHealth.MaxHealth * 10) / 100;
+                break;
+            case Trees.LargeStraight:
+                finalDamage += (JJBGameManager.Instance.EnemyJjbHealth.CurrentHealth * 20) / 100;
+                break;
+            case Trees.Three_Of_AKind:
+                threeStack++;
+                if (threeStack == 3)
+                {
+                    threeStack = 0;
+                    finalDamage += 20;
+                }
+                break;
+            case Trees.Four_Of_AKind:
+                //칩 획득
+                break;
+            case Trees.Yahtzee:
+                DiceManager_JCY.Instance.shledDice.ShledeHP(999);
+                break;
+            
+        } 
+        return finalDamage;
     }
 
     public void Reset()

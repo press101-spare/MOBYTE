@@ -28,10 +28,16 @@ namespace JJB.Script.Battle
 
         private void UpdateUI(BattlePhase phase)
         {
-            SetButtonState(attackButton, phase == BattlePhase.HandSelect, Color.red);
+            SetButtonState(attackButton, phase == BattlePhase.HandSelect, HexColor("#0089FF"));
             SetButtonState(turnEndButton, phase == BattlePhase.TurnEnd, Color.green);
         }
-
+        
+        private Color HexColor(string hex)
+        {
+            ColorUtility.TryParseHtmlString(hex, out Color color);
+            return color;
+        }
+        
         private void SetButtonState(Button button, bool isActive, Color activeColor)
         {
             button.interactable = isActive;
