@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: AliiinDIce
   m_EditorClassIdentifier: 
   diceName: "\uC62C\uC778 \uC8FC\uC0AC\uC704"
-  diceIcon: {fileID: 3084373858569167587, guid: 521538992aafd7244a014093f911eaea,
-    type: 3}
+  diceIcon: {fileID: 34949007336262702, guid: ff45be0865387ae45a09e8b4943ac555, type: 3}
   cost: 50
   color: {r: 0.8867924, g: 0.12548937, b: 0.12548937, a: 1}
   dicePrefab: {fileID: 34949007336262702, guid: e49884710e4720944bcea376f7483b35,

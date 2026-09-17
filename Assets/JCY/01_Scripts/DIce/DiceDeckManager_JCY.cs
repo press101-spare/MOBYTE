@@ -45,10 +45,11 @@ public class DiceDeckManager_JCY : MonoBehaviour
 
     private void InitializeDeck()
     {
-        diceDeck.Clear();
+        diceDeck = diceCollection;
         for (int i = 0; i < defaultDiceCount; i++)
         {
             diceDeck.Add(defaultDice);
+            diceCollection.Add(defaultDice);
         }
 
         ShuffleDeck();
@@ -129,12 +130,39 @@ public class DiceDeckManager_JCY : MonoBehaviour
     public void AddDice(DiceSO_JCY AppendDice)
     {
         diceDeck.Add(AppendDice);
+        diceCollection.Add(AppendDice);
     }
 
-    public void RemoveDice(DiceSO_JCY DeleteDice)
+    public void RemoveDice(DiceSO_JCY.DiceEffectType DeleteDice)
     {
-        if (diceDeck.Count >= 15) return;
-        diceDeck.Remove(DeleteDice);
+        if (diceCollection.Count <= 15) return;
+        if (DeleteDice == DiceSO_JCY.DiceEffectType.Potion || DeleteDice == DiceSO_JCY.DiceEffectType.Glass && diceCollection.Count <= 10)
+        {
+            return;
+        }
+        
+        var targetInCollection = diceCollection.Find(dice => dice.diceEffectType == DeleteDice);
+        if (targetInCollection != null)
+        {
+            Debug.Log("삭제 완");
+            diceCollection.Remove(targetInCollection);
+        }
+        
+        var targetInFile = diceFile_JCy.Find(dice => dice.diceEffectType == DeleteDice);
+        if (targetInCollection != null)
+        {
+            Debug.Log("삭제 완");
+            diceCollection.Remove(targetInFile);
+            return;
+        }
+        var targetInDeck = diceDeck.Find(dice => dice.diceEffectType == DeleteDice);
+        if (targetInDeck != null)
+        {
+            Debug.Log("삭제 완");
+            diceDeck.Remove(targetInDeck);
+        }
+
+      
     }
 
 }

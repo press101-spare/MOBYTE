@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ReRollDice
   m_EditorClassIdentifier: 
   diceName: "\uB9AC\uB864 \uC8FC\uC0AC\uC704"
-  diceIcon: {fileID: 0}
+  diceIcon: {fileID: 34949007336262702, guid: 15ec05ce0e3aa924a9e8d372de77749a, type: 3}
   cost: 50
   color: {r: 0.8867924, g: 0.12548937, b: 0.12548937, a: 1}
   dicePrefab: {fileID: 34949007336262702, guid: 2d4a25d9d93230942908348c7e3acebc,

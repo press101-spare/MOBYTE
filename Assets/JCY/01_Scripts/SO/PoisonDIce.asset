@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PoisonDIce
   m_EditorClassIdentifier: 
   diceName: "\uC911\uB3C5 \uC8FC\uC0AC\uC704"
-  diceIcon: {fileID: 0}
+  diceIcon: {fileID: 34949007336262702, guid: febf1678e888d3f449888964d6a33554, type: 3}
   cost: 50
   color: {r: 0.8867924, g: 0.12548937, b: 0.12548937, a: 1}
   dicePrefab: {fileID: 34949007336262702, guid: aa5eee213fba458499dc8d4b981322fe,

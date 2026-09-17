@@ -9,11 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8912713906246462906}
-  - component: {fileID: 2293247918814271932}
-  - component: {fileID: 508322639934586137}
-  - component: {fileID: 8486688524588890306}
   m_Layer: 0
-  m_Name: ChipDice
+  m_Name: ChipDiceIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,70 +32,6 @@ Transform:
   - {fileID: 5119690916502289608}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2293247918814271932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34949007336262702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50c024f222935324f896b4d6e771be70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentDiceSO: {fileID: 0}
-  currentIndex: 0
-  <OutLine>k__BackingField: {fileID: 2100000, guid: c6f288c5f5c442d498ba189ddcc568ec,
-    type: 2}
-  <IsSelected>k__BackingField: 0
---- !u!54 &508322639934586137
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34949007336262702}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 1.5
-  m_AngularDrag: 1.5
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 2
-  m_Constraints: 0
-  m_CollisionDetection: 2
---- !u!114 &8486688524588890306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34949007336262702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5181525cf424b0aa2e27af268bff8c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xForce: -20
-  xForceMin: -60
-  yForce: 10
-  yForceMin: -10
-  liftForce: 5
-  liftForceMin: 0
-  torqueForce: 50
-  forceMultiplier: 5
 --- !u!1 &4864258240423658053
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +43,6 @@ GameObject:
   - component: {fileID: 5119690916502289608}
   - component: {fileID: 3182110850110928159}
   - component: {fileID: 5275044575769219845}
-  - component: {fileID: 349285545318697747}
   m_Layer: 0
   m_Name: CHip
   m_TagString: Untagged
@@ -187,24 +119,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &349285545318697747
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4864258240423658053}
-  m_Material: {fileID: 13400000, guid: 23676e0450620c04d9098e4621f05aa1, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.02, y: 0.02, z: 0.02}
-  m_Center: {x: 0.00025679916, y: -0.00017187046, z: 0.00017023692}
