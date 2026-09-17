@@ -9,12 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d509a5ae3add4bb6b07bf984df566292, type: 3}
-  m_Name: StealMoneyEnemy
+  m_Script: {fileID: 11500000, guid: e695ad58ed584c1493d6521f4cd293cf, type: 3}
+  m_Name: JackpotAbility
   m_EditorClassIdentifier: 
-  enemyName: StealMoneyEnemy
-  maxHealth: 170
-  attackPower: 15
-  attackPower2: 17
-  attackPower3: 21
-  ability: {fileID: 11400000, guid: 83d1c8d4fc841fd4d8fc21d454c56b2f, type: 2}

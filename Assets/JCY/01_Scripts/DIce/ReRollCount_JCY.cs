@@ -16,7 +16,7 @@ public class ReRollCount_JCY : MonoBehaviour
             value -= 1;
         }
         reRollCount = value;
-        reRollCountUI.text = "Count " + reRollCount.ToString();
+        reRollCountUI.text = reRollCount.ToString();
     }
 
 
@@ -25,7 +25,7 @@ public class ReRollCount_JCY : MonoBehaviour
         if(reRollCount >= 4 && value >= 1)
             return;
         reRollCount += value;
-        reRollCountUI.text = "Count " + reRollCount.ToString();
+        reRollCountUI.text = reRollCount.ToString();
     }
     
 }

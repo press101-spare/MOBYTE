@@ -11,8 +11,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/JackpotAbility.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/JackpotAbility.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleUIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/ReRollCount_JCY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/ReRollCount_JCY.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/StealMoneyAbility.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/StealMoneyAbility.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/StealMoneyEnemy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/StealMoneyEnemy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Scene/JJBBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Scene/JJBBattle.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyBattleActor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyBattleActor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sjm/03. Scene/Collection.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/03. Scene/Collection.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sjm/03. Scene/Colllect Scene/Collection1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/03. Scene/Colllect Scene/Collection1.unity.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +44,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/BloodDice.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/JackpotAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/StealMoneyAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/ExitConfirmUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/PanelController.cs" root0="FORCE_HIGHLIGHTING" />
