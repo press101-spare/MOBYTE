@@ -17,10 +17,6 @@ public class GambleTable_HTY : MonoBehaviour
         _myImage = GetComponent<SpriteRenderer>();
         _playerTrans = FindAnyObjectByType<PlayerMovement_HTY>().transform;//나중에 사용하는 이동스크립트로 바꾸기
     }
-    private void Start()
-    {
-        _myImage.sprite = _myGamble._icon;
-    }
     private void Update()
     {
         _rangeToPlayer = Vector2.Distance(transform.position, _playerTrans.position);

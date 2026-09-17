@@ -1,37 +1,49 @@
-﻿using UnityEngine;
+﻿using JJB.Script.Battle.Enemy;
+using JJB.Script.Battle.Player.Progression;
+using UnityEngine;
 
 namespace JJB.Script.Battle.Player
 {
     public class PlayerAttackController : MonoBehaviour
     {
-        [SerializeField] private JJBHealth enemyJjbHealth;
+        private EnemyDamageReceiver _enemyDamageReceiver;
 
-        public bool Attack(int baseDamage)
+        public void Initialize(EnemyDamageReceiver enemyDamageReceiver)
         {
-            if (enemyJjbHealth == null)
+            _enemyDamageReceiver = enemyDamageReceiver;
+        }
+
+        public bool Attack(int damage)
+        {
+            if (_enemyDamageReceiver == null)
             {
-                Debug.LogError("Enemy Health가 연결되지 않았습니다.");
+                Debug.LogError("EnemyDamageReceiver가 연결되지 않았습니다.");
                 return false;
             }
 
-            if (enemyJjbHealth.IsDead) return false;
-
-            if (baseDamage <= 0) return false;
-
-            DiceManager_JCY diceManager = DiceManager_JCY.Instance;
-
-            if (diceManager == null)
-            {
-                Debug.LogError("DiceManager_JCY가 없습니다.");
+            if (damage <= 0)
                 return false;
-            }
-            
-            int finalDamage = diceManager.diceEffect.CalculateFinalDamage(diceManager.ActiveDiceScripts, baseDamage);
 
-            // 실제 적 피해
-            enemyJjbHealth.TakeDamage(finalDamage);
-            
+            int attackDamage = CalculateDamage(damage);
+
+            DiceManager_JCY.Instance.PlayAttackAnimation(attackDamage, ApplyDiceHit);
+
             return true;
+        }
+
+        private int CalculateDamage(int damage)
+        {
+            if (PlayerProfileManager.Instance == null)
+                return damage;
+
+            int attackPower = PlayerProfileManager.Instance.Profile.stats.attackPower;
+            
+            return DiceManager_JCY.Instance.diceTree.TreeEffect(damage + attackPower);
+        }
+
+        private void ApplyDiceHit(int damage)
+        {
+            _enemyDamageReceiver.TakeDamage(damage);
         }
     }
 }

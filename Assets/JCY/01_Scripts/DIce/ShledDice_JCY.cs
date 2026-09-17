@@ -39,8 +39,8 @@ public class ShledDice_JCY : MonoBehaviour
 
     public void ShledeHP(int value)
     {
-        shledValue = value;
-        Debug.Log(shledValue + "만큼 쉴드 생성");
+        if(shledValue >= 999) return;
+        shledValue += value;
     }
 
     public void ShledeReset()

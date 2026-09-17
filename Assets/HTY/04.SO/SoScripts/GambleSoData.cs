@@ -1,11 +1,22 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum GambleType
+{
+    Baccarat,
+    BlackJack,
+    Loto,
+    PinBall,
+    Roulette,
+    SellGame,
+    SlotGame,
+    Shop
+}
+
 [CreateAssetMenu(fileName = "GamebleSoData", menuName = "Gameble/GamebleSoData")]
 public class GambleSoData : ScriptableObject
 {
-    public string _gambleName;//이름
-    public Sprite _icon;//테이블 이미지
-    public GameObject _gambleTable;//테이블
+    public GambleType _gambleName;//이름
+    public GameObject _gambleTable;//테이블맵
     public GameObject _gambleObject;//화면 녹화용
 }
