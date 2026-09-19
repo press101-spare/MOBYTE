@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -23,7 +21,7 @@ public class DiceDeckManager_JCY : MonoBehaviour
     [SerializeField] private List<DiceSO_JCY> drawnDice;
     
     //버려진 주사위들
-    [SerializeField] private List<DiceSO_JCY> diceFile_JCy;
+    [SerializeField] private List<DiceSO_JCY> diceFile_Jcy;
 
     // 한 턴에 뽑을 주사위 개수
     [SerializeField] private int drawCount = 6;
@@ -45,13 +43,12 @@ public class DiceDeckManager_JCY : MonoBehaviour
 
     private void InitializeDeck()
     {
-        diceDeck = diceCollection;
-        for (int i = 0; i < defaultDiceCount; i++)
+        for (int i = 0; i < diceCollection.Count; i++)
         {
-            diceDeck.Add(defaultDice);
-            diceCollection.Add(defaultDice);
+            diceDeck.Add(diceCollection[i]);
         }
-
+         
+        Debug.Log(diceCollection.Count); 
         ShuffleDeck();
     }
 
@@ -71,20 +68,21 @@ public class DiceDeckManager_JCY : MonoBehaviour
     //덱에서 주사위 뽑아서 전달
     public void DrawDice()
     {
-        DiscardDice(); 
+        Debug.Log(diceCollection.Count); 
         DiceManager_JCY.Instance.reRollUI.ResetReRollCount(2);
         for (int i = 0; i < drawCount; i++)
         {
             int randomIndex = Random.Range(0, diceDeck.Count);
-
+        
             // 2. 뽑은 주사위를 drawnDice에 넣기
             DiceSO_JCY selectedDice = diceDeck[randomIndex];
-
+        
             drawnDice.Add(selectedDice);
-            
+            Debug.Log(diceCollection.Count); 
             diceDeck.RemoveAt(randomIndex);
+            Debug.Log(diceCollection.Count); 
         }
-     
+        
 
         // 3. DiceManager에게 전달
         DiceManager_JCY.Instance.StartTurn(drawnDice);
@@ -94,26 +92,26 @@ public class DiceDeckManager_JCY : MonoBehaviour
         }
         else
         {
-          DiscardDice();
+             DiscardDice();
         }
     }
 
     //다이스 버린거 버리는 덱에 넣고 드로우한 다이스 초기화
     public void DiscardDice()
     {
-        diceFile_JCy.AddRange(drawnDice);
+        diceFile_Jcy.AddRange(drawnDice);
         drawnDice.Clear();
     }
     
     //덱에 있는 다이스가 6개 이하면 보충해주는 함수
-    public void ReshuffleDeck()
+    private void ReshuffleDeck()
     {
-        diceFile_JCy.AddRange(drawnDice);
+        diceFile_Jcy.AddRange(drawnDice);
         drawnDice.Clear();
         // Debug.Log(drawnDice.Count);
         // Debug.Log("현재" + diceFile_JCy.Count);
-        diceDeck.AddRange(diceFile_JCy);
-        diceFile_JCy.Clear();
+        diceDeck.AddRange(diceFile_Jcy);
+        diceFile_Jcy.Clear();
 
         // 여기서 랜덤하게 섞기
         for (int i = 0; i < diceDeck.Count; i++)
@@ -133,36 +131,49 @@ public class DiceDeckManager_JCY : MonoBehaviour
         diceCollection.Add(AppendDice);
     }
 
-    public void RemoveDice(DiceSO_JCY.DiceEffectType DeleteDice)
+    public void RemoveDice(DiceSO_JCY.DiceEffectType deleteDice)
     {
+        Debug.Log("삭제 호출 댐");
         if (diceCollection.Count <= 15) return;
-        if (DeleteDice == DiceSO_JCY.DiceEffectType.Potion || DeleteDice == DiceSO_JCY.DiceEffectType.Glass && diceCollection.Count <= 10)
+        if (diceDeck.Count + diceFile_Jcy.Count <= 10)
+            return;
+        if (deleteDice == DiceSO_JCY.DiceEffectType.Potion || deleteDice == DiceSO_JCY.DiceEffectType.Glass)
         {
+            var targetInFile = diceFile_Jcy.Find(dice => dice.diceEffectType == deleteDice);
+            if (targetInFile != null)
+            {
+                Debug.Log("삭제 완");
+                Debug.Log(targetInFile.name);
+                diceDeck.Remove(targetInFile);
+                return;
+            }
+          
+            var targetInDeck = diceDeck.Find(dice => dice.diceEffectType == deleteDice);
+            if (targetInDeck != null)
+            {
+                Debug.Log("삭제 완");
+                Debug.Log(targetInDeck.name);
+                diceDeck.Remove(targetInDeck);
+                return;
+            }
+            Debug.Log("유리랑 포션 삭제안댐");
             return;
         }
         
-        var targetInCollection = diceCollection.Find(dice => dice.diceEffectType == DeleteDice);
+        var targetInCollection = diceCollection.Find(dice => dice.diceEffectType == deleteDice);
         if (targetInCollection != null)
         {
             Debug.Log("삭제 완");
+            Debug.Log(targetInCollection.name);
             diceCollection.Remove(targetInCollection);
         }
         
-        var targetInFile = diceFile_JCy.Find(dice => dice.diceEffectType == DeleteDice);
-        if (targetInCollection != null)
-        {
-            Debug.Log("삭제 완");
-            diceCollection.Remove(targetInFile);
-            return;
-        }
-        var targetInDeck = diceDeck.Find(dice => dice.diceEffectType == DeleteDice);
-        if (targetInDeck != null)
-        {
-            Debug.Log("삭제 완");
-            diceDeck.Remove(targetInDeck);
-        }
-
-      
     }
 
+    public void ClealDice()
+    {
+        diceDeck.Clear();
+        diceFile_Jcy.Clear();
+        drawnDice.Clear();
+    }
 }

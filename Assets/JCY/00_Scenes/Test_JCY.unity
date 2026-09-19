@@ -4050,15 +4050,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diceCollection:
   - {fileID: 11400000, guid: 16fe2d4d57f81a44b92b0cec42ccbe5f, type: 2}
+  - {fileID: 11400000, guid: 13e9ace0de6d477498f4a73fe516634b, type: 2}
+  - {fileID: 11400000, guid: 050444cd0548ecd4786e3ecd3595e53e, type: 2}
   - {fileID: 11400000, guid: 16fe2d4d57f81a44b92b0cec42ccbe5f, type: 2}
   - {fileID: 11400000, guid: 16fe2d4d57f81a44b92b0cec42ccbe5f, type: 2}
-  defaultDice: {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
+  - {fileID: 11400000, guid: 16fe2d4d57f81a44b92b0cec42ccbe5f, type: 2}
+  - {fileID: 11400000, guid: eb1e2a53ceebb4d48b0ed9a3dfc9f8e9, type: 2}
+  - {fileID: 11400000, guid: 16fe2d4d57f81a44b92b0cec42ccbe5f, type: 2}
+  - {fileID: 11400000, guid: 16fe2d4d57f81a44b92b0cec42ccbe5f, type: 2}
+  - {fileID: 11400000, guid: 16fe2d4d57f81a44b92b0cec42ccbe5f, type: 2}
+  - {fileID: 11400000, guid: 7c523a41f465be04abaf139677a546c4, type: 2}
+  - {fileID: 11400000, guid: eb1e2a53ceebb4d48b0ed9a3dfc9f8e9, type: 2}
+  - {fileID: 11400000, guid: a85aeb3b95abedb4a9e9f18085500b7d, type: 2}
+  - {fileID: 11400000, guid: f88304f66462f41498f4521e4333ad59, type: 2}
+  - {fileID: 11400000, guid: b8a7a84e4f923a64fa82c0ac6ab03975, type: 2}
+  - {fileID: 11400000, guid: 16fe2d4d57f81a44b92b0cec42ccbe5f, type: 2}
+  - {fileID: 11400000, guid: d579a2b77abbb5f4a8081fda848804a1, type: 2}
+  - {fileID: 11400000, guid: c184773a1a23d2d44a7c0569c90d850e, type: 2}
+  - {fileID: 11400000, guid: 16fe2d4d57f81a44b92b0cec42ccbe5f, type: 2}
+  - {fileID: 11400000, guid: 7ea73d268fd702d48ac572ba9a46de3a, type: 2}
+  defaultDice: {fileID: 11400000, guid: 16fe2d4d57f81a44b92b0cec42ccbe5f, type: 2}
   defaultDiceCount: 10
-  diceDeck:
-  - {fileID: 11400000, guid: 16fe2d4d57f81a44b92b0cec42ccbe5f, type: 2}
-  - {fileID: 11400000, guid: 16fe2d4d57f81a44b92b0cec42ccbe5f, type: 2}
+  diceDeck: []
   drawnDice: []
-  diceFile_JCy: []
+  diceFile_Jcy: []
   drawCount: 5
 --- !u!1 &506850339
 GameObject:
