@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956d3722d78af9c4288f2902a18baae1, type: 3}
   m_Name: SellGame
   m_EditorClassIdentifier: 
-  _gambleName: "\uC57C\uBC14\uC704"
-  _gambleTable: {fileID: 0}
-  _gambleObject: {fileID: 0}
+  _gambleName: 5
+  _gambleTable: {fileID: 6228289292709810840, guid: a88ec1fa2df469147b68980bd9c417e0,
+    type: 3}
+  _gambleObject: {fileID: 6264563830362450536, guid: bb191e800cf0be94182f9dd332d02c5e,
+    type: 3}

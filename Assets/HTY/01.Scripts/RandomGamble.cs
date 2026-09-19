@@ -38,7 +38,6 @@ public class RandomGamble : MonoBehaviour
                 }
             }
             _haveData.Add(data);
-            Debug.Log(_spawnPoints.Count);
             Transform point = _spawnPoints[Random.Range(0,_spawnPoints.Count)];
             GameObject table = Instantiate(data._gambleTable, point.position,Quaternion.identity);
             _spawnPoints.Remove(point);

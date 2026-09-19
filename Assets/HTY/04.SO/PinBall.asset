@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956d3722d78af9c4288f2902a18baae1, type: 3}
   m_Name: PinBall
   m_EditorClassIdentifier: 
-  _gambleName: "\uD540\uBCFC"
-  _gambleTable: {fileID: 0}
-  _gambleObject: {fileID: 0}
+  _gambleName: 3
+  _gambleTable: {fileID: 3595119739288547442, guid: 1b98ee64812b5244ebb0e70a57c6d4af,
+    type: 3}
+  _gambleObject: {fileID: 5269947178053645637, guid: e5122359c54f82540ac996a53e26503a,
+    type: 3}
