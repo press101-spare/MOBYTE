@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Jackpot
   maxHealth: 230
-  attackPower: 5
-  attackPower2: 15
-  attackPower3: 20
+  attackPower: 10
+  attackPower2: 25
+  attackPower3: 30
   ability: {fileID: 11400000, guid: 1314aa4b6cff34a4fb0f8c9442550f9e, type: 2}

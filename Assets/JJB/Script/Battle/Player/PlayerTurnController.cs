@@ -79,5 +79,10 @@ namespace JJB.Script.Battle.Player
 
             onFinished?.Invoke();
         }
+        
+        public bool HasDefenseDice()
+        {
+            return _diceBattleAdapter.ReRollCount > 0;
+        }
     }
 }
