@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GrowDIce
   m_EditorClassIdentifier: 
   diceName: "\uC131\uC7A5 \uC8FC\uC0AC\uC704"
-  diceIcon: {fileID: 34949007336262702, guid: 2447db02a1df94e4d91b820d895f3750, type: 3}
+  diceIcon: {fileID: -714184754405095627, guid: 07aca2eb7ed6b844a9636d138c363cb3,
+    type: 3}
   cost: 50
   color: {r: 0.8867924, g: 0.12548937, b: 0.12548937, a: 1}
   dicePrefab: {fileID: 34949007336262702, guid: c957d9a07e77a4447a758f23931ef3a0,

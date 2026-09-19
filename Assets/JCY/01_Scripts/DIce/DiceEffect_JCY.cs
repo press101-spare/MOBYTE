@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using JJB.Script.Battle;
+using JJB.Script.Battle.Player.Progression;
 using UnityEngine;
 
 public class DiceEffect_JCY : MonoBehaviour
@@ -29,8 +30,6 @@ public class DiceEffect_JCY : MonoBehaviour
             case DiceSO_JCY.DiceEffectType.Blood:
                 break;
             
-            case DiceSO_JCY.DiceEffectType.Gamble:
-                break;
             
             case DiceSO_JCY.DiceEffectType.Shield: 
                 DiceManager_JCY.Instance.shledDice.ShledAdd(1);
@@ -51,7 +50,6 @@ public class DiceEffect_JCY : MonoBehaviour
                 DiceManager_JCY.Instance.reRollUI.UpdateReRollCount(1);
                 break;
             
-            case DiceSO_JCY.DiceEffectType.Glass:
                 
             
             default:
@@ -85,6 +83,11 @@ public class DiceEffect_JCY : MonoBehaviour
                 }
             }
             
+            if (effectType == DiceSO_JCY.DiceEffectType.Health)
+            {
+                JJBGameManager.Instance.PlayerJjbHealth.Heal(10);
+            }
+            
 
             if (effectType == DiceSO_JCY.DiceEffectType.Grow && growStack < 2)
             {
@@ -99,6 +102,12 @@ public class DiceEffect_JCY : MonoBehaviour
                 Debug.Log("유리 와자창");
                 DiceDeckManager_JCY.Instance.RemoveDice(DiceSO_JCY.DiceEffectType.Glass);
                 DiceManager_JCY.Instance.glassStack++;
+            }
+            
+            if (effectType == DiceSO_JCY.DiceEffectType.Potion)
+            {
+                DiceDeckManager_JCY.Instance.RemoveDice(DiceSO_JCY.DiceEffectType.Potion);
+                JJBGameManager.Instance.PlayerJjbHealth.Heal(30);
             }
             
         }

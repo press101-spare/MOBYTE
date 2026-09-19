@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: FraudDice
   m_EditorClassIdentifier: 
   diceName: "\uC0AC\uAE30 \uC8FC\uC0AC\uC704"
-  diceIcon: {fileID: 34949007336262702, guid: c179fc9b31257af41bed95c2a4282dac, type: 3}
+  diceIcon: {fileID: -2257447663898869884, guid: 1a1da1e7ed60338408b0601258095241,
+    type: 3}
   cost: 50
   color: {r: 0.8867924, g: 0.12548937, b: 0.12548937, a: 1}
   dicePrefab: {fileID: 34949007336262702, guid: a009e545d2feca2438a6dbd71b7fce42,
