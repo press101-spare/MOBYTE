@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956d3722d78af9c4288f2902a18baae1, type: 3}
   m_Name: LotoGame
   m_EditorClassIdentifier: 
-  _gambleName: "\uC989\uC11D \uBCF5\uAD8C"
-  _gambleTable: {fileID: 0}
+  _gambleName: 0
+  _gambleTable: {fileID: 2572681450968834293, guid: 19164c16e9bdc4748bb93ae46e67cf42,
+    type: 3}
   _gambleObject: {fileID: 0}
