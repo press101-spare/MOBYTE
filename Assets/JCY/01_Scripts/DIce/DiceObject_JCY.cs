@@ -8,6 +8,7 @@ public class DiceObject_JCY : MonoBehaviour
     [Header("주사위 정보")]
     public DiceSO_JCY currentDiceSO;
     public int currentIndex;
+    public TrailRenderer trailRenderer;
     
     [Header("셀렉트 설정")]
     public MeshRenderer MeshCompo { get; private set; }
@@ -19,6 +20,8 @@ public class DiceObject_JCY : MonoBehaviour
     {
         IsSelected = false;
         MeshCompo = GetComponentInChildren<MeshRenderer>();
+        trailRenderer = GetComponent<TrailRenderer>();
+        trailRenderer.enabled = false;
     }
 
     public void Setup(DiceSO_JCY diceSO)

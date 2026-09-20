@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2293247918814271932}
   - component: {fileID: 508322639934586137}
   - component: {fileID: 8486688524588890306}
-  - component: {fileID: -5774124282511721520}
+  - component: {fileID: -254111880281386329}
   m_Layer: 0
-  m_Name: NomarlDIce
+  m_Name: HackDIce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   liftForceMin: 0
   torqueForce: 15
   forceMultiplier: 5
---- !u!96 &-5774124282511721520
+--- !u!96 &-254111880281386329
 TrailRenderer:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7805965318761107941, guid: 8da868e20e1a8e64ba2d6f21c3b25e08, type: 3}
+  - {fileID: 3112961330819457637, guid: cd867057ad8079746a4d37cc6905f8c6, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 5275044575769219845}
   - component: {fileID: 349285545318697747}
   m_Layer: 0
-  m_Name: normal
+  m_Name: Allin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -258,7 +258,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4864258240423658053}
-  m_Mesh: {fileID: -4071384045605639172, guid: b0ccfbff94463614d9ad113d5c2f932f, type: 3}
+  m_Mesh: {fileID: 8822323389883394376, guid: e48f72a9408e92840891f5039a52489a, type: 3}
 --- !u!23 &5275044575769219845
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -282,8 +282,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1580535799172915004, guid: b0ccfbff94463614d9ad113d5c2f932f, type: 3}
-  - {fileID: -7805965318761107941, guid: b0ccfbff94463614d9ad113d5c2f932f, type: 3}
+  - {fileID: 2100000, guid: 0c565972041456544b0bb404037dfd01, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
