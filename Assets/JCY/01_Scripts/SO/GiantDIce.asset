@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a326c7ca9c5a0e489ab8a0314c65030, type: 3}
   m_Name: GiantDIce
   m_EditorClassIdentifier: 
-  diceName: "\uC62C\uC778 \uC8FC\uC0AC\uC704"
+  diceName: "\uAC70\uB300 \uC8FC\uC0AC\uC704"
   diceIcon: {fileID: 8927890629014514271, guid: 48ff8dc51f1ccd445b2485f6d61d7841,
     type: 3}
   cost: 50
-  color: {r: 0.8867924, g: 0.12548937, b: 0.12548937, a: 1}
-  dicePrefab: {fileID: 34949007336262702, guid: e49884710e4720944bcea376f7483b35,
+  color: {r: 0.8805031, g: 0.5294769, b: 0.05814631, a: 1}
+  dicePrefab: {fileID: 34949007336262702, guid: 2bdd9bd46001ea949b18ee18ea78138a,
     type: 3}
-  diceEffectType: 6
-  diceDescription: "[1,1,1,1,1,6]\n\uD604\uC7AC \uB208\uC774 6\uC774\uBA74 \uCD5C\uC885\uD53C\uD574\uB97C
-    \uC99D\uAC00\uC2DC\uD0A4\uB294 \uC8FC\uC0AC\uC704\uB2E4."
-  faceValues: 010000000100000001000000010000000100000006000000
+  diceEffectType: 23
+  diceDescription: "[1,2,3,4,5,6]\n\uD50C\uB808\uC774\uC5B4\uC758 \uCD5C\uB300\uCCB4\uB825\uC774
+    \uC601\uAD6C\uC801\uC73C\uB85C 2\uC99D\uAC00\uD569\uB2C8\uB2E4."
+  faceValues: 010000000200000003000000040000000500000006000000
