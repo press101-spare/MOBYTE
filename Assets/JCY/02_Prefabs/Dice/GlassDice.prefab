@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xForce: -15
-  xForceMin: -70
+  xForceMin: -75
   yForce: 0
   yForceMin: -10
   liftForce: 5
@@ -125,7 +125,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8556262120643298411, guid: c8c02be84fffc134a807ad68fe8bfccc, type: 3}
+  - {fileID: -7805965318761107941, guid: 8da868e20e1a8e64ba2d6f21c3b25e08, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
