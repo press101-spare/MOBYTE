@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d509a5ae3add4bb6b07bf984df566292, type: 3}
   m_Name: JackpotEnemy
   m_EditorClassIdentifier: 
-  enemyName: Jackpot
+  enemyName: "\uD55C\uD0D5\uC8FC\uC758\uC790"
   maxHealth: 230
   attackPower: 10
   attackPower2: 25
