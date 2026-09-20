@@ -175,11 +175,6 @@ public class BaccaratGame : MonoBehaviour
             _dealerSum = (_dealerSum + a) % 10;
         }
     }
-    public void OpenCard()
-    {
-
-    }
-    
 
     public void BattingChip()
     {

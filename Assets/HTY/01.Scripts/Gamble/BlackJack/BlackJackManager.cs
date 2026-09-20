@@ -47,14 +47,7 @@ public class BlackJackManager : MonoBehaviour
 
     private void Start()
     {
-        _endingText = transform.parent.GetChild(0).GetComponent<TextMeshProUGUI>();
 
-        _checkButton = transform.parent.GetChild(1).gameObject;
-        _moreButton = transform.parent.GetChild(2).gameObject;
-        _standButton = transform.parent.GetChild(3).gameObject;
-
-        _titleText = transform.parent.GetChild(5).GetComponent<TextMeshProUGUI>();
-        _timer = transform.parent.GetChild(6).GetComponent<Slider>();
     }
 
     private void Update()

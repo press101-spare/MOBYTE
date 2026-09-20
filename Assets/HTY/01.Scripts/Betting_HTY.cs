@@ -11,6 +11,7 @@ public class Betting_HTY : MonoBehaviour
 
     private void Start()
     {
+        _currentBettingChip =0;
         coinBetting.text = "0";//이것도 나중에 자신의 최소금액으로
     }
 

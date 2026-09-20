@@ -1,4 +1,5 @@
 
+using JJB.Script.Battle.Player.Progression;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,11 @@ public class SelectTest_HTY : MonoBehaviour
     [SerializeField] private GameObject _selectPanel;
 
 
+
+    [SerializeField] private GameObject _bacara;
+    [SerializeField] private GameObject _loto;
+
+
     private void Start()
     {
         _scripts = FindObjectsByType<GambleTable_HTY>(FindObjectsSortMode.None).ToList();
@@ -52,7 +58,6 @@ public class SelectTest_HTY : MonoBehaviour
         {
             if (script._rangeToPlayer < script._range)
             {
-                Debug.Log(script._rangeToPlayer);
                 if (script._rangeToPlayer<_currnetMin)
                 {
                     _currnetMin= script._rangeToPlayer;
@@ -72,12 +77,12 @@ public class SelectTest_HTY : MonoBehaviour
             case GambleType.BlackJack:
             case GambleType.Roulette:
             case GambleType.SellGame:
+            case GambleType.Baccarat:
                 _bettingUI.SetActive(true);
                 _bettingUI.GetComponent<Betting_HTY>()._currentGamble = _currnetTable._myGamble;
                 break;
-            case GambleType.Baccarat:
-                break;
             case GambleType.Loto:
+                _loto.gameObject.SetActive(true);
                 break;
         }
         
