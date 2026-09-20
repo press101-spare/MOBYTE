@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class PinballRewardZone : MonoBehaviour
 {
-    [SerializeField] private float _multiplier = 1f;
+    [SerializeField] private int _multiplier = 1;
+    [SerializeField] private PinBall _pinBall;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("PinballBall")) return;
-        PinballManager.Instance.FinishGame(_multiplier);
+        _pinBall.GetScore(_multiplier);
     }
 }

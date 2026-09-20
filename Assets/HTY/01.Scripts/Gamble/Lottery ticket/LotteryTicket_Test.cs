@@ -9,6 +9,7 @@ public class LotteryTicket_Test : MonoBehaviour
     public GameObject lotteryButton;
     [SerializeField]private Button[] buttons;
     private List<int> nums = new List<int>();
+    private List<int> ranNums = new List<int>();
     private Dictionary<Button,int> buttonDic = new Dictionary<Button,int>();
     private Dictionary<int,bool> clickDic = new Dictionary<int,bool>();
 
@@ -36,6 +37,16 @@ public class LotteryTicket_Test : MonoBehaviour
             
         }
     }
+
+    private void OnEnable()
+    {
+        ranNums.Clear();
+        for(int i = 0; i<3;i++)
+        {
+            ranNums[i]=Random.Range(1,25);
+        }
+    }
+
     public void Lottery(int a)
     {
         if (clickDic[a]==false)//눌린적 없으면
@@ -58,6 +69,50 @@ public class LotteryTicket_Test : MonoBehaviour
             clickDic[a] = false;
             Debug.Log($"{a} {clickDic[a]}");
             Debug.Log($"현재 숫자수 {nums.Count}");
+        }
+    }
+
+    public void BuyLoto()
+    {
+        //조건 문 걸기
+        //돈에서 -500하기
+    }
+
+    public void EndLoto()
+    {
+        if(nums.Count < 3) 
+        {
+            //메세지 있음 좋을듯
+            return;
+        }
+        int count = 0;
+        foreach(var v in nums)
+        {
+            foreach(int i in ranNums)
+            {
+                if (v==i)
+                {
+                    count++;
+                    continue;
+                }
+            }
+        }
+        Debug.Log(count);
+        if (count==0)
+        {
+            
+        }
+        else if (count == 1)
+        {
+
+        }
+        else if(count ==2)
+        {
+
+        }
+        else if(count== 3)
+        {
+
         }
     }
 }
