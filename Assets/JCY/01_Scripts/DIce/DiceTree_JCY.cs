@@ -90,8 +90,9 @@ public class DiceTree_JCY : MonoBehaviour
         foreach (int val in diceValues)
         {
             if (val >= 1 && val <= 6) counts[val]++;
-            else if (val == 7)
-            {
+            else if (val == 7 || val == 0)
+
+        {
                 for (int i = 1; i <= 6; i++)
                 {
                     counts[i]++;

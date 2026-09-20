@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xForce: -15
-  xForceMin: -70
+  xForceMin: -75
   yForce: 0
   yForceMin: -10
   liftForce: 5
