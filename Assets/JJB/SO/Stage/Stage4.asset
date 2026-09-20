@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d509a5ae3add4bb6b07bf984df566292, type: 3}
-  m_Name: EnemyData
+  m_Script: {fileID: 11500000, guid: 97ccd0ffc6f34732911ae3ad496358e9, type: 3}
+  m_Name: Stage4
   m_EditorClassIdentifier: 
-  enemyName: normal
-  maxHealth: 100
-  attackPower: 10
-  attackPower2: 13
-  attackPower3: 16
-  ability: {fileID: 0}
+  enemies:
+  - {fileID: 11400000, guid: 996c67d8a263d564fb9870524a21e481, type: 2}

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace JJB.Script.Battle.Stage
 {
-    [CreateAssetMenu(fileName = "StageData", menuName = "Game/Stage Data")]
+    [CreateAssetMenu(fileName = "StageData", menuName = "JJB/Stage Data")]
     public class StageData : ScriptableObject
     {
         [SerializeField] private EnemyData[] enemies;

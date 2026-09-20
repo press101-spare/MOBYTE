@@ -214,7 +214,6 @@ public class DiceTree_JCY : MonoBehaviour
                 {
                     CurrentTrees = parsedTree;
                     CurrentScore = score;
-                    Debug.Log($"변환된 Enum 값: {CurrentTrees} , 데미지: {score}");
                 }
                 else
                 {

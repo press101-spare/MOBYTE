@@ -2,7 +2,7 @@
 
 namespace JJB.Script.Battle.Enemy.EnemyAbilities
 {
-    [CreateAssetMenu(fileName = "JackpotAbility", menuName = "Game/Enemy Ability/Jackpot")]
+    [CreateAssetMenu(fileName = "JackpotAbility", menuName = "JJB/Enemy Ability/Jackpot")]
     public class JackpotAbility : EnemyAbility
     {
         private int _attackCount;

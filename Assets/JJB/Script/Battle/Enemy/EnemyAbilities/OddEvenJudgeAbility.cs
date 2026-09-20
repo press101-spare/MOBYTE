@@ -2,7 +2,7 @@
 
 namespace JJB.Script.Battle.Enemy.EnemyAbilities
 {
-    [CreateAssetMenu(fileName = "OddEvenJudgeAbility", menuName = "Game/Enemy Ability/Odd Even Judge")]
+    [CreateAssetMenu(fileName = "OddEvenJudgeAbility", menuName = "JJB/Enemy Ability/Odd Even Judge")]
     public class OddEvenJudgeAbility : EnemyAbility
     {
         [SerializeField] private int oddDamage = 10;

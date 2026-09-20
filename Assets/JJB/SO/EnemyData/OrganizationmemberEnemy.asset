@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d509a5ae3add4bb6b07bf984df566292, type: 3}
-  m_Name: StealMoneyEnemy
+  m_Name: OrganizationmemberEnemy
   m_EditorClassIdentifier: 
-  enemyName: "\uBE5A\uC7C1\uC774"
-  maxHealth: 170
-  attackPower: 14
-  attackPower2: 16
-  attackPower3: 18
-  ability: {fileID: 11400000, guid: 83d1c8d4fc841fd4d8fc21d454c56b2f, type: 2}
+  enemyName: "\uC870\uC9C1\uC6D0"
+  maxHealth: 200
+  attackPower: 19
+  attackPower2: 23
+  attackPower3: 26
+  ability: {fileID: 0}

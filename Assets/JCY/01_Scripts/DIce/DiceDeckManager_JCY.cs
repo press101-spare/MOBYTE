@@ -86,7 +86,7 @@ public class DiceDeckManager_JCY : MonoBehaviour
      
 
         // 3. DiceManager에게 전달
-        DiceManager_JCY.Instance.StartTurn(DiceTypeRandomizer.Randomize(drawnDice));
+        DiceManager_JCY.Instance.StartTurn(drawnDice);
         if (diceDeck.Count < drawCount)
         {
             ReshuffleDeck();
