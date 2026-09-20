@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d509a5ae3add4bb6b07bf984df566292, type: 3}
   m_Name: OddEvenJudgeEnemy
   m_EditorClassIdentifier: 
-  enemyName: OddEvenJudge
+  enemyName: "\uD640\uC9DD\uD310\uBCC4\uC0AC"
   maxHealth: 210
   attackPower: 0
   attackPower2: 0

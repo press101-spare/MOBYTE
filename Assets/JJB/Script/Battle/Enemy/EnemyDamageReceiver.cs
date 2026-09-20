@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using JJB.Script.Battle.Enemy.EnemyAbilities;
+using UnityEngine;
 
 namespace JJB.Script.Battle.Enemy
 {
@@ -18,6 +19,8 @@ namespace JJB.Script.Battle.Enemy
         {
             if (_enemy.Health.IsDead)
                 return;
+            
+            RecordPlayerTree();
 
             if (_enemy.Ability != null)
                 damage = _enemy.Ability.ModifyIncomingDamage(damage, _enemy.Health);
@@ -25,6 +28,19 @@ namespace JJB.Script.Battle.Enemy
             _enemy.Health.TakeDamage(damage);
             
             _hitFlash?.Play();
+        }
+        
+        private void RecordPlayerTree()
+        {
+            if (_enemy.Ability is not PaybackAbility paybackAbility)
+                return;
+
+            if (DiceManager_JCY.Instance == null || DiceManager_JCY.Instance.diceTree == null)
+                return;
+
+            string currentTree = DiceManager_JCY.Instance.diceTree.CurrentTree;
+
+            paybackAbility.RecordTree(currentTree);
         }
     }
 }
