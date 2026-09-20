@@ -17,7 +17,7 @@ public class SelectTest_HTY : MonoBehaviour
     private float _currnetMin;
     private GambleTable_HTY _currnetTable;
 
-    [SerializeField] private GameObject _gambleUICanvas;
+    [SerializeField] private GameObject _bettingUI;
     private GambleUI_HTY[] _uiList;
 
     [SerializeField] private Transform _gambleCC;
@@ -30,7 +30,7 @@ public class SelectTest_HTY : MonoBehaviour
     private void Start()
     {
         _scripts = FindObjectsByType<GambleTable_HTY>(FindObjectsSortMode.None).ToList();
-        _uiList = _gambleUICanvas.transform.GetComponentsInChildren<GambleUI_HTY>(true);
+        _uiList = _bettingUI.transform.GetComponentsInChildren<GambleUI_HTY>(true);
     }
     private void Update()
     {
@@ -60,26 +60,26 @@ public class SelectTest_HTY : MonoBehaviour
                 }
             }
         }
-        Debug.Log(11);
         if (_currnetTable == null) return;
-        Debug.Log(11);
-        if (_currnetTable._myGamble._gambleName == GambleType.Shop)
-        {
-            _selectPanel.SetActive(true);
-            return;
-        }
 
-        _gambleUICanvas.SetActive(true);
-
-        foreach (var v in _uiList)
+        switch (_currnetTable._myGamble._gambleName)
         {
-            if(v._myGamble==_currnetTable._myGamble)
-            {
-                v.gameObject.SetActive(true);
-                GameObject a = Instantiate(v._myGamble._gambleObject);
-                a.SetActive(true);
-                a.transform.position = _gambleCC.position;
-            }
+            case GambleType.Shop:
+                _selectPanel.SetActive(true);
+                break;
+            case GambleType.PinBall:
+            case GambleType.SlotGame:
+            case GambleType.BlackJack:
+            case GambleType.Roulette:
+            case GambleType.SellGame:
+                _bettingUI.SetActive(true);
+                _bettingUI.GetComponent<Betting_HTY>()._currentGamble = _currnetTable._myGamble;
+                break;
+            case GambleType.Baccarat:
+                break;
+            case GambleType.Loto:
+                break;
         }
+        
     }
 }

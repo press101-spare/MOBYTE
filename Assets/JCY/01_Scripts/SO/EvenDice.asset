@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EvenDice
   m_EditorClassIdentifier: 
   diceName: "\uC9DD\uC218 \uC8FC\uC0AC\uC704"
-  diceIcon: {fileID: 6469343119374776249, guid: 2af18ebbabd4e464c810420a23544627,
+  diceIcon: {fileID: -6619111317931664985, guid: 713b31693ded2574d8f166a4a85177ea,
     type: 3}
   cost: 50
   color: {r: 0.8867924, g: 0.12548937, b: 0.12548937, a: 1}

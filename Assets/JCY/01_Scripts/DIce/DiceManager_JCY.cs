@@ -345,7 +345,6 @@ public class DiceManager_JCY : MonoBehaviour
     {
         yield return new WaitForSeconds(sortTime);
         diceCamera.BattleCameraMove();
-        yield return new WaitForSeconds(0.15f);
        // yield return new WaitForSeconds(diceCamera.moveDuration);
         // 1. 현재 생성되어 있는 주사위들의 데이터를 수집합니다.
         List<DiceSortData> sortList = new List<DiceSortData>();
@@ -472,7 +471,9 @@ public class DiceManager_JCY : MonoBehaviour
         // 주사위 개수만큼 데미지 분배
         int dividedDamage = finalDamage / diceCount;
         int remainder = finalDamage % diceCount;
-            
+        
+        //애니메이션 시작 및 트레일 켜기
+        TrialOn(true);
         for (int i = 0; i < diceCount; i++)
         {
             GameObject dice = activeDiceObjects[i];
@@ -505,7 +506,7 @@ public class DiceManager_JCY : MonoBehaviour
             dice.transform.DOKill();
 
             Sequence attackSequence = DOTween.Sequence();
-
+            
             attackSequence.Append(
                 dice
                     .transform
@@ -566,6 +567,14 @@ public class DiceManager_JCY : MonoBehaviour
             attackDuration +
             attackStagger * Mathf.Max(0, diceCount - 1)
         );
+    }
+
+    private void TrialOn(bool on)
+    {
+        foreach (var diceScript in ActiveDiceScripts)
+        {
+            diceScript.trailRenderer.enabled = on;
+        }
     }
 }
 

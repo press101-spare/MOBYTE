@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: ReRollDice
   m_EditorClassIdentifier: 
   diceName: "\uB9AC\uB864 \uC8FC\uC0AC\uC704"
-  diceIcon: {fileID: 34949007336262702, guid: 15ec05ce0e3aa924a9e8d372de77749a, type: 3}
+  diceIcon: {fileID: -7675016864516331882, guid: 61c1bfbd070520a4bbc60b7881235283,
+    type: 3}
   cost: 50
   color: {r: 0.8867924, g: 0.12548937, b: 0.12548937, a: 1}
   dicePrefab: {fileID: 34949007336262702, guid: 2d4a25d9d93230942908348c7e3acebc,
     type: 3}
-  diceEffectType: 7
+  diceEffectType: 8
   diceDescription: "[1,2,3,4,5,6]\n\uB2E4\uC2DC \uAD74\uB9AC\uAE30 \uD69F\uC218\uAC00
     \uD558\uB098 \uCD94\uAC00\uB41C\uB2E4."
   faceValues: 010000000200000003000000040000000500000006000000
