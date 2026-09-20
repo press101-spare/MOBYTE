@@ -27,7 +27,7 @@ namespace JJB.Script.Battle.Player
                 return;
 
             _lastShield = currentShield;
-            _shieldText.text = currentShield.ToString();
+            _shieldText.text = "+" + currentShield.ToString();
         }
     }
 }

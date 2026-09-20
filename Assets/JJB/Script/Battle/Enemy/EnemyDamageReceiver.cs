@@ -6,10 +6,12 @@ namespace JJB.Script.Battle.Enemy
     public class EnemyDamageReceiver : MonoBehaviour
     {
         private EnemyHealthSetup _enemy;
+        private EnemyHitFlash _hitFlash;
 
         private void Awake()
         {
             _enemy = GetComponent<EnemyHealthSetup>();
+            _hitFlash = GetComponent<EnemyHitFlash>();
         }
 
         public void TakeDamage(int damage)
@@ -21,6 +23,8 @@ namespace JJB.Script.Battle.Enemy
                 damage = _enemy.Ability.ModifyIncomingDamage(damage, _enemy.Health);
 
             _enemy.Health.TakeDamage(damage);
+            
+            _hitFlash?.Play();
         }
     }
 }
