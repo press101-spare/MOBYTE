@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using JJB.Script.Battle;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -62,9 +63,7 @@ public class DiceDeckManager_JCY : MonoBehaviour
         {
             int randomIndex = Random.Range(i, diceDeck.Count);
 
-            DiceSO_JCY temp = diceDeck[i];
-            diceDeck[i] = diceDeck[randomIndex];
-            diceDeck[randomIndex] = temp;
+            (diceDeck[i], diceDeck[randomIndex]) = (diceDeck[randomIndex], diceDeck[i]);
         }
     }
 
@@ -87,14 +86,14 @@ public class DiceDeckManager_JCY : MonoBehaviour
      
 
         // 3. DiceManager에게 전달
-        DiceManager_JCY.Instance.StartTurn(drawnDice);
+        DiceManager_JCY.Instance.StartTurn(DiceTypeRandomizer.Randomize(drawnDice));
         if (diceDeck.Count < drawCount)
         {
             ReshuffleDeck();
         }
         else
         {
-          DiscardDice();
+            DiscardDice();
         }
     }
 
@@ -120,9 +119,7 @@ public class DiceDeckManager_JCY : MonoBehaviour
         {
             int randomIndex = Random.Range(i, diceDeck.Count);
 
-            DiceSO_JCY temp = diceDeck[i];
-            diceDeck[i] = diceDeck[randomIndex];
-            diceDeck[randomIndex] = temp;
+            (diceDeck[i], diceDeck[randomIndex]) = (diceDeck[randomIndex], diceDeck[i]);
         }
         // Debug.Log("이후" + diceFile_JCy.Count);
     }
