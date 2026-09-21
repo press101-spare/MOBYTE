@@ -11,26 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/PaybackAbility.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/PaybackAbility.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceTree_JCY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceTree_JCY.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/EnemyData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/EnemyData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/JackpotEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/JackpotEnemy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/OddEvenJudgeEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/OddEvenJudgeEnemy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/StealMoneyEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/StealMoneyEnemy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Scene/JJBBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Scene/JJBBattle.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/JackpotAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/JackpotAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/OddEvenJudgeAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/OddEvenJudgeAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/StealMoneyAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/StealMoneyAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyDamageReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyDamageReceiver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyHealthSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyHealthSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Stage/StageData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Stage/StageData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sjm/03. Scene/JJBBattle 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/03. Scene/JJBBattle 1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +139,7 @@
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "JJB",
+    "git-widget-placeholder": "SJM",
     "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
