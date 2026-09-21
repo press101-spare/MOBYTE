@@ -429,7 +429,7 @@ public class EventDice : MonoBehaviour
         sumTxt.text = sumUiTxt + totalsum;
         if (isShled)
         {
-            shledDice.ShledeHP(totalsum);
+            //shledDice.ShledeHP(totalsum);
         }
     }
   
