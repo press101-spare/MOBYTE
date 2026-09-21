@@ -32,8 +32,9 @@ public class DiceManager_JCY : MonoBehaviour
     [SerializeField] GameObject backUiPannel;
     public bool isRolling;
     public bool isShled;
-    
+
     [Header("공격 연출")]
+    [SerializeField] private Transform endTrf;
     [SerializeField] private float attackDuration = 0.8f;
     [SerializeField] private float attackStagger = 0.05f;
     [SerializeField] private float attackHeight = 2f;
@@ -145,8 +146,6 @@ public class DiceManager_JCY : MonoBehaviour
     {
         if (physics == null) yield break;
         Rigidbody rb = physics.GetComponent<Rigidbody>();
-        if (rb == null) yield break;
-
         yield return new WaitForSeconds(0.5f);
         yield return new WaitUntil(() => physics == null || rb == null || (rb.linearVelocity.magnitude < 0.05f && rb.angularVelocity.magnitude < 0.05f));
 
@@ -224,6 +223,7 @@ public class DiceManager_JCY : MonoBehaviour
         backUiPannel.SetActive(true);
         isRolling = true;
         reRollUI.UpdateReRollCount(-1);
+        diceCamera.DiceCameraMove();
 
         int completedCount = 0;
 
@@ -240,8 +240,37 @@ public class DiceManager_JCY : MonoBehaviour
                 continue;
             }
 
-            // 현재 위치에서 살짝 튕겨내기
-            physics.RerollThrow(reRollUp);
+            int diceIndex = activeDiceScripts.IndexOf(dice);
+
+            Rigidbody rb = dice.GetComponent<Rigidbody>();
+
+            if (rb != null)
+            {
+                rb.isKinematic = true;
+                rb.linearVelocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+            }
+
+            if (diceIndex >= 0 && diceIndex < spawnPositions.Length)
+            {
+                Vector3 spawnPosition = spawnPositions[diceIndex].position;
+
+                dice.transform.position = spawnPosition;
+
+                if (rb != null)
+                {
+                    rb.position = spawnPosition;
+                }
+
+                Debug.Log($"스폰 위치: {spawnPosition}");
+            }
+
+            if (rb != null)
+            {
+                rb.isKinematic = false;
+            }
+
+            physics.Throw();
 
             StartCoroutine(
                 RollSingleDiceRoutine(
@@ -262,6 +291,7 @@ public class DiceManager_JCY : MonoBehaviour
 
         // 재굴린 주사위만 원래 자리로 이동
         Sequence sequence = DOTween.Sequence();
+        diceCamera.BattleCameraMove();
 
         foreach (DiceObject_JCY dice in selectedDice)
         {
@@ -345,7 +375,6 @@ public class DiceManager_JCY : MonoBehaviour
     {
         yield return new WaitForSeconds(sortTime);
         diceCamera.BattleCameraMove();
-        yield return new WaitForSeconds(0.15f);
        // yield return new WaitForSeconds(diceCamera.moveDuration);
         // 1. 현재 생성되어 있는 주사위들의 데이터를 수집합니다.
         List<DiceSortData> sortList = new List<DiceSortData>();
@@ -459,8 +488,6 @@ public class DiceManager_JCY : MonoBehaviour
     
     private IEnumerator DiceAttackRoutine(int baseDamage, System.Action<int> onDiceHit)
     {
-        Transform enemy = JJBGameManager.Instance.EnemyJjbHealth.transform;
-
         int diceCount = activeDiceObjects.Count;
 
         if (diceCount <= 0)
@@ -472,7 +499,9 @@ public class DiceManager_JCY : MonoBehaviour
         // 주사위 개수만큼 데미지 분배
         int dividedDamage = finalDamage / diceCount;
         int remainder = finalDamage % diceCount;
-            
+        
+        //애니메이션 시작 및 트레일 켜기
+        TrialOn(true);
         for (int i = 0; i < diceCount; i++)
         {
             GameObject dice = activeDiceObjects[i];
@@ -494,7 +523,7 @@ public class DiceManager_JCY : MonoBehaviour
             }
 
             Vector3 start = dice.transform.position;
-            Vector3 end = enemy.position;
+            Vector3 end = endTrf.position;
 
             float side = (i - (diceCount - 1) * 0.5f) * attackSide;
 
@@ -505,7 +534,7 @@ public class DiceManager_JCY : MonoBehaviour
             dice.transform.DOKill();
 
             Sequence attackSequence = DOTween.Sequence();
-
+            
             attackSequence.Append(
                 dice
                     .transform
@@ -566,6 +595,14 @@ public class DiceManager_JCY : MonoBehaviour
             attackDuration +
             attackStagger * Mathf.Max(0, diceCount - 1)
         );
+    }
+
+    private void TrialOn(bool on)
+    {
+        foreach (var diceScript in ActiveDiceScripts)
+        {
+            diceScript.trailRenderer.enabled = on;
+        }
     }
 }
 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace JJB.Script.Battle.Enemy.EnemyAbilities
 {
-    [CreateAssetMenu(fileName = "StealMoneyAbility", menuName = "Game/Enemy Ability/Steal Money")]
+    [CreateAssetMenu(fileName = "StealMoneyAbility", menuName = "JJB/Enemy Ability/Steal Money")]
     public class StealMoneyAbility : EnemyAbility
     {
         private const float StealChance = 0.4f;

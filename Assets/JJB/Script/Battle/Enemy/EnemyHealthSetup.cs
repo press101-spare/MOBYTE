@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 
 namespace JJB.Script.Battle.Enemy
 {
@@ -6,6 +7,7 @@ namespace JJB.Script.Battle.Enemy
     public class EnemyHealthSetup : MonoBehaviour
     {
         [SerializeField] private EnemyData data;
+        [SerializeField] private TMP_Text enemyNameText;
 
         private JJBHealth _health;
 
@@ -16,6 +18,11 @@ namespace JJB.Script.Battle.Enemy
         private void Awake()
         {
             _health = GetComponent<JJBHealth>();
+        }
+        
+        public void SetData(EnemyData enemyData)
+        {
+            data = enemyData;
         }
 
         public void Initialize()
@@ -30,6 +37,14 @@ namespace JJB.Script.Battle.Enemy
 
             if (data.Ability != null)
                 Ability = Instantiate(data.Ability);
+        }
+        
+        private void OnValidate()
+        {
+            if (data == null || enemyNameText == null)
+                return;
+
+            enemyNameText.text = data.EnemyName;
         }
     }
 }

@@ -4073,7 +4073,7 @@ MonoBehaviour:
   defaultDiceCount: 10
   diceDeck: []
   drawnDice: []
-  diceFile_Jcy: []
+  diceFile_JCy: []
   drawCount: 5
 --- !u!1 &506850339
 GameObject:
@@ -5559,12 +5559,13 @@ MonoBehaviour:
   - {fileID: 1634852328}
   - {fileID: 1752922658}
   - {fileID: 188555948}
-  sortTime: 0.5
+  sortTime: 0.25
   sumUiTxt: 'sum:'
   sumTxt: {fileID: 2124179440}
   backUiPannel: {fileID: 319761126}
   isRolling: 0
   isShled: 0
+  endTrf: {fileID: 666822632}
   attackDuration: 0.8
   attackStagger: 0.05
   attackHeight: 2

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,7 +13,7 @@ public class DiceSO_JCY : ScriptableObject
     public Color color;
     public GameObject dicePrefab; // 각 주사위 전용 3D 프리팹 등록
     public DiceEffectType diceEffectType;
-    
+
     [TextArea(3, 5)]
     public string diceDescription;   // 주사위 설명
 
@@ -32,7 +33,7 @@ public class DiceSO_JCY : ScriptableObject
     public enum DiceEffectType
     {
         None , Even , Odd , Blood , Shield ,ShieldTurn  , Allin , Vampire , Reroll , Joker , Debt  , Grow , Fraud , Health , Poison , Chip , Glass, ExecutionDice
-        , Rock , Potion , Mirror
+        , Rock , Potion , Mirror , Hack , Phoenix , Giant , Counter
     }
 
 }
