@@ -28,8 +28,8 @@ namespace JJB.Script.Battle
 
             damage = Mathf.Max(0, damage);
 
-            CurrentHealth = Mathf.Max(0, CurrentHealth - damage);
-
+            CurrentHealth -= damage;
+            
             OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
 
             if (IsDead)

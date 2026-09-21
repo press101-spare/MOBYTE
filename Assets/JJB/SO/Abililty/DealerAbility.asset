@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d509a5ae3add4bb6b07bf984df566292, type: 3}
-  m_Name: DealerEnemy
+  m_Script: {fileID: 11500000, guid: c9f5cf86d638482c92df8c8577709ff5, type: 3}
+  m_Name: DealerAbility
   m_EditorClassIdentifier: 
-  enemyName: "\uB51C\uB7EC"
-  maxHealth: 300
-  attackPower: 23
-  attackPower2: 27
-  attackPower3: 31
-  ability: {fileID: 11400000, guid: 27fbe9a7d2cceac42a0b980da2051d4b, type: 2}
+  experienceChance: 0.2
+  experienceMultiplier: 1.5
+  insuranceThreshold: 30
+  insuranceMultiplier: 0.5
