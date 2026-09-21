@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8486688524588890306}
   - component: {fileID: -5774124282511721520}
   m_Layer: 0
-  m_Name: HackDice
+  m_Name: HackDIce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xForce: -15
-  xForceMin: -75
+  xForceMin: -65
   yForce: 0
   yForceMin: -10
   liftForce: 5

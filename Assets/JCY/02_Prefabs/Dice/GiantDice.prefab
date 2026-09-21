@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2293247918814271932}
   - component: {fileID: 508322639934586137}
   - component: {fileID: 8486688524588890306}
-  - component: {fileID: -4968293117891130547}
+  - component: {fileID: -5774124282511721520}
   m_Layer: 0
-  m_Name: OddDice
+  m_Name: GiantDice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   liftForceMin: 0
   torqueForce: 15
   forceMultiplier: 5
---- !u!96 &-4968293117891130547
+--- !u!96 &-5774124282511721520
 TrailRenderer:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1631246770413250682, guid: b0ccfbff94463614d9ad113d5c2f932f, type: 3}
+  - {fileID: -7805965318761107941, guid: 8da868e20e1a8e64ba2d6f21c3b25e08, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 5275044575769219845}
   - component: {fileID: 349285545318697747}
   m_Layer: 0
-  m_Name: Odd
+  m_Name: Giant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -258,7 +258,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4864258240423658053}
-  m_Mesh: {fileID: 5003046781506331376, guid: b0ccfbff94463614d9ad113d5c2f932f, type: 3}
+  m_Mesh: {fileID: 2769136063075320362, guid: 49845bb1427cb5a4b83bfde4dc93061b, type: 3}
 --- !u!23 &5275044575769219845
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -282,8 +282,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1580535799172915004, guid: b0ccfbff94463614d9ad113d5c2f932f, type: 3}
-  - {fileID: 1631246770413250682, guid: b0ccfbff94463614d9ad113d5c2f932f, type: 3}
+  - {fileID: 4874126678125670354, guid: 49845bb1427cb5a4b83bfde4dc93061b, type: 3}
+  - {fileID: 4161478389485760170, guid: 49845bb1427cb5a4b83bfde4dc93061b, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
