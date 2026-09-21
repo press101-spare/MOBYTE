@@ -52,6 +52,9 @@ public class GambleManager : MonoBehaviour
         _endPanel.SetActive(true);
         _endPanel.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text
             = $"{_gambleData._gambleName}의 게임 결과: \n 획득배수:{x}x \n 얻은 칩:{x*_bettingChip}칩 \n 현재 보유 칩:{PlayerProfileManager.Instance.Profile.money} 칩";
+
+        _bettingChip = 0;
+        _gambleData = null;
     }
 
 
