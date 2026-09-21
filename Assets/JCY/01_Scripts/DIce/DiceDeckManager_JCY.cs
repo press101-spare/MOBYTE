@@ -127,8 +127,49 @@ public class DiceDeckManager_JCY : MonoBehaviour
 
     public void AddDice(DiceSO_JCY AppendDice)
     {
+        if (AppendDice == null)
+        {
+            return;
+        }
+
         diceDeck.Add(AppendDice);
         diceCollection.Add(AppendDice);
+    }
+
+    public bool TryRemoveRandomOwnedDice(int minimumOwnedDice, out DiceSO_JCY removedDice)
+    {
+        removedDice = null;
+        int minimumCount = Mathf.Max(drawCount, minimumOwnedDice);
+
+        if (diceCollection == null || diceCollection.Count <= minimumCount)
+        {
+            return false;
+        }
+
+        List<DiceSO_JCY> removableDice = new List<DiceSO_JCY>();
+        foreach (DiceSO_JCY dice in diceCollection)
+        {
+            if (dice != null &&
+                (diceDeck.Contains(dice) || diceFile_Jcy.Contains(dice)))
+            {
+                removableDice.Add(dice);
+            }
+        }
+
+        if (removableDice.Count == 0)
+        {
+            return false;
+        }
+
+        removedDice = removableDice[Random.Range(0, removableDice.Count)];
+        diceCollection.Remove(removedDice);
+
+        if (!diceDeck.Remove(removedDice))
+        {
+            diceFile_Jcy.Remove(removedDice);
+        }
+
+        return true;
     }
 
     public void RemoveDice(DiceSO_JCY.DiceEffectType deleteDice)

@@ -11,8 +11,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/ThreeChoice.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleUIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceDeckManager_JCY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceDeckManager_JCY.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/EventDice.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/EventDice.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/EventDiceCamera.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/EventDiceCamera.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/EventReRoll.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/EventReRoll.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/GiftDiceEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/GiftDiceEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/Talk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Talk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/01.Scene/Enevnt.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LYW/01.Scene/Enevnt.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/01.Scene/test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LYW/01.Scene/test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +37,7 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="10" />
+    <option name="cachedIndexableFilesCount" value="38" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,13 +49,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/StealMoneyAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/ExitConfirmUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/PanelController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LYW/00.Event/EventMoneyLoss.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@81172dccd143/Editor/GridBrushEditorBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@81172dccd143/Editor/GridEditorUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@81172dccd143/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@bff931d63a7a/Editor/Drawing/Controllers/BlackboardController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@7537063fea2b/Runtime/TMP/TextMeshProUGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@7537063fea2b/Runtime/UGUI/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Core/Utilities/LinqUtility.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/00/6c18beff/List`1.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -50,62 +65,65 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.00000000000348" />
-      <entry key="S5" value="1.0000529597856922" />
-      <entry key="S10" value="1.0168087957263034" />
-      <entry key="S30" value="1.8387646292898634" />
-      <entry key="S60" value="3.284145925077971" />
-      <entry key="M2" value="4.8785750392554235" />
-      <entry key="M5" value="6.46612303413895" />
-      <entry key="M10" value="7.171656547024109" />
-      <entry key="M15" value="7.439237652153493" />
-      <entry key="M30" value="8.162558600518704" />
-      <entry key="H1" value="12.599390030956176" />
-      <entry key="H2" value="37.07207139623772" />
-      <entry key="H4" value="115.56953012862171" />
-      <entry key="D1" value="385.84562811680763" />
-      <entry key="W1" value="481.6908087091657" />
+      <entry key="MS100" value="1.0625266425790174E-62" />
+      <entry key="MS500" value="8.181081776583388E-13" />
+      <entry key="S2" value="0.0021589478721903994" />
+      <entry key="S5" value="0.1843103840164155" />
+      <entry key="S10" value="1.0072591088662757" />
+      <entry key="S30" value="5.420864481649393" />
+      <entry key="S60" value="10.84221085853038" />
+      <entry key="M2" value="17.25054847194042" />
+      <entry key="M5" value="24.1697285399217" />
+      <entry key="M10" value="27.620796786698083" />
+      <entry key="M15" value="29.147194682003846" />
+      <entry key="M30" value="31.12446550531288" />
+      <entry key="H1" value="32.42356205492744" />
+      <entry key="H2" value="34.37270601389133" />
+      <entry key="H4" value="44.18384459495159" />
+      <entry key="D1" value="260.2733255036466" />
+      <entry key="W1" value="603.1707852695382" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.3641226017350056E-56" />
-      <entry key="MS500" value="6.713835265354988E-12" />
-      <entry key="S2" value="0.0016096915731926857" />
-      <entry key="S5" value="0.07634949261272966" />
-      <entry key="S10" value="0.2820861740127827" />
-      <entry key="S30" value="0.9320261123654118" />
-      <entry key="S60" value="1.5547640587279525" />
-      <entry key="M2" value="2.120598849276534" />
-      <entry key="M5" value="2.600231836063455" />
-      <entry key="M10" value="2.7910761949511826" />
-      <entry key="M15" value="2.8606558524575263" />
-      <entry key="M30" value="3.0769833683416796" />
-      <entry key="H1" value="4.355998277499967" />
-      <entry key="H2" value="8.763537544523901" />
-      <entry key="H4" value="19.092270707053846" />
-      <entry key="D1" value="50.312271555472655" />
-      <entry key="W1" value="60.97505966894907" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000047160158574" />
+      <entry key="S2" value="1.0466008474120976" />
+      <entry key="S5" value="1.2933307047621214" />
+      <entry key="S10" value="1.541604865737132" />
+      <entry key="S30" value="1.8556703489955084" />
+      <entry key="S60" value="2.3033239760734174" />
+      <entry key="M2" value="3.2140968194254236" />
+      <entry key="M5" value="4.501961732906725" />
+      <entry key="M10" value="5.165939587323597" />
+      <entry key="M15" value="5.423083429987279" />
+      <entry key="M30" value="5.70056036448152" />
+      <entry key="H1" value="5.849540876469513" />
+      <entry key="H2" value="6.0684588588593025" />
+      <entry key="H4" value="7.235146332630285" />
+      <entry key="D1" value="35.087618239683934" />
+      <entry key="W1" value="78.40291635842433" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.7737824967711949" />
-      <entry key="MS500" value="0.9500003828756015" />
-      <entry key="S2" value="0.9881783756387262" />
-      <entry key="S5" value="1.055961888854649" />
-      <entry key="S10" value="1.2653340990715538" />
-      <entry key="S30" value="2.720545131604131" />
-      <entry key="S60" value="4.789612950921858" />
-      <entry key="M2" value="6.961820835854286" />
-      <entry key="M5" value="9.04632259601032" />
-      <entry key="M10" value="9.951569181938293" />
-      <entry key="M15" value="10.292155980094725" />
-      <entry key="M30" value="11.235134221194336" />
-      <entry key="H1" value="16.951185310293575" />
-      <entry key="H2" value="45.827378965038804" />
-      <entry key="H4" value="134.64766853113116" />
-      <entry key="D1" value="436.1498941447273" />
-      <entry key="W1" value="542.6644422683074" />
+      <entry key="MS100" value="2.3582429905391744E-4" />
+      <entry key="MS500" value="0.18815588194197067" />
+      <entry key="S2" value="0.6741136541127026" />
+      <entry key="S5" value="1.1768117216381215" />
+      <entry key="S10" value="2.2506563371070576" />
+      <entry key="S30" value="7.046236277305189" />
+      <entry key="S60" value="12.961207289026403" />
+      <entry key="M2" value="20.32453496492156" />
+      <entry key="M5" value="28.592425046461866" />
+      <entry key="M10" value="32.74132206173863" />
+      <entry key="M15" value="34.538461111734485" />
+      <entry key="M30" value="36.80823878439533" />
+      <entry key="H1" value="38.26445576698782" />
+      <entry key="H2" value="40.43663873488499" />
+      <entry key="H4" value="51.41616519656884" />
+      <entry key="D1" value="295.3567787980728" />
+      <entry key="W1" value="681.5721668133382" />
     </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7,
@@ -132,7 +150,7 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;JCY&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Base&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -196,6 +214,8 @@
       <workItem from="1788338161865" duration="6569000" />
       <workItem from="1788606975348" duration="2322000" />
       <workItem from="1789528257041" duration="4319000" />
+      <workItem from="1789783430319" duration="13311000" />
+      <workItem from="1789998073966" duration="2512000" />
     </task>
     <servers />
   </component>
