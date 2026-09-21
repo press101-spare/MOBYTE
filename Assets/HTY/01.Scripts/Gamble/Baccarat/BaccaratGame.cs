@@ -32,7 +32,6 @@ public class BaccaratGame : MonoBehaviour
 
 
     [Header("UI오브젝트")]
-    public Slider _timer;
     public TextMeshProUGUI _endingText;
 
     [Header("카드덱")]

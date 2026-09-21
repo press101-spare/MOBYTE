@@ -12,10 +12,10 @@ public class Betting_HTY : MonoBehaviour
 
     private PlayerProfile profile;
 
-    private void Start()
+    private void OnEnable()
     {
-        _currentBettingChip =0;
-        coinBetting.text = "0";//이것도 나중에 자신의 최소금액으로(게임의)
+        _currentBettingChip = 0;
+        coinBetting.text = "0";
     }
 
     private void Update()

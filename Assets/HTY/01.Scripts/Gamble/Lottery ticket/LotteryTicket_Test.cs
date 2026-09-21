@@ -109,11 +109,9 @@ public class LotteryTicket_Test : MonoBehaviour
         Debug.Log(count);
         if (count==0)
         {
-            return;
         }
         else if (count == 1)
         {
-            gameObject.transform.parent.parent.gameObject.SetActive(false);
             PlayerProfileManager.Instance.Profile.money += 400;
         }
         else if(count ==2)
@@ -124,5 +122,6 @@ public class LotteryTicket_Test : MonoBehaviour
         {
             PlayerProfileManager.Instance.Profile.money += 1500;
         }
+        gameObject.transform.parent.parent.gameObject.SetActive(false);
     }
 }

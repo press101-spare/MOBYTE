@@ -27,14 +27,14 @@ public class RouletteGame_HTY : MonoBehaviour
             yield return null;
             gameObject.transform.Rotate(0, 0, _speed);
             _speed -= _disSpeed;
-            _disSpeed += 0.005f;
+            _disSpeed += 0.001f;
             if(_speed<0)
             {
                 _isSpin=false;
             }
             yield return null;
         }
-
+        gameObject.transform.parent.parent.gameObject.SetActive(false);
         GambleManager.instance.GambleEnd(2);
 
     }

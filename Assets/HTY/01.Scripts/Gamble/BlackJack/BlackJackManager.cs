@@ -30,6 +30,7 @@ public class BlackJackManager : MonoBehaviour
     public GameObject _standButton;
     public TextMeshProUGUI _endingText;
     public TextMeshProUGUI _titleText;
+    public TextMeshProUGUI _playerSumText;
 
     [Header("카드덱")]
     public List<Sprite> _originCard = new List<Sprite>();
@@ -167,6 +168,8 @@ public class BlackJackManager : MonoBehaviour
         }
 
         _checkCard = true;
+
+        _playerSumText.text = "당신의 합 :"+_playerSum.ToString();
 
         if (_playerSum > _blackJackNumber)
         {
