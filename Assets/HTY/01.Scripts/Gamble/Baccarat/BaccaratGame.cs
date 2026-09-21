@@ -12,6 +12,7 @@ public class BaccaratGame : MonoBehaviour
 {
     public enum Batting {Player,Backer,Tie}
     public Batting _whoBatting;
+    public Batting _winer;
     public void BattingBT(int a)
     {
         if (a == 0) _whoBatting = Batting.Player;
@@ -32,8 +33,6 @@ public class BaccaratGame : MonoBehaviour
 
     [Header("UI오브젝트")]
     public Slider _timer;
-    
-    public GameObject _checkButton;
     public TextMeshProUGUI _endingText;
 
     [Header("카드덱")]
@@ -152,14 +151,31 @@ public class BaccaratGame : MonoBehaviour
         if (_playerSum > _dealerSum)
         {
             _endingText.text = "플레이어의 승";
+            _winer = Batting.Player;
         }
         else if (_playerSum < _dealerSum)
         {
             _endingText.text = "밴커의 승";
+            _winer = Batting.Backer;
         }
         else
         {
             _endingText.text = "타이 판정 무승부";
+            _winer = Batting.Tie;
+        }
+
+
+        if(_whoBatting==_winer)
+        {
+            GambleManager.instance.GambleEnd(2);
+            gameObject.transform.parent.gameObject.SetActive(false);
+            
+        }
+        else
+        {
+            GambleManager.instance.GambleEnd(0);
+            gameObject.transform.parent.gameObject.SetActive(false);
+            
         }
     }
 
@@ -176,10 +192,6 @@ public class BaccaratGame : MonoBehaviour
         }
     }
 
-    public void BattingChip()
-    {
-        //연동할때 만들어진 스크립트 쓰기
-    }
     public bool CheckNature()
     {
         if(_playerSum >=8)

@@ -83,6 +83,8 @@ public class SelectTest_HTY : MonoBehaviour
                 break;
             case GambleType.Loto:
                 _loto.gameObject.SetActive(true);
+                _loto.transform.GetChild(0).gameObject.SetActive(true);
+                _loto.transform.GetChild(1).gameObject.SetActive(false);
                 break;
         }
         

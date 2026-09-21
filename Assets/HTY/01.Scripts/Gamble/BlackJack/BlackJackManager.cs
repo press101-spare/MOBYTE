@@ -320,22 +320,37 @@ public class BlackJackManager : MonoBehaviour
         if (_playerSum > _blackJackNumber)
         {
             result = "플레이어 버스트!\n딜러 승리";
+            GambleManager.instance.GambleEnd(0);
+            gameObject.transform.parent.gameObject.SetActive(false);
+            
         }
         else if (_dealerSum > _blackJackNumber)
         {
             result = "딜러 버스트!\n플레이어 승리";
+            GambleManager.instance.GambleEnd(2);
+            gameObject.transform.parent.gameObject.SetActive(false);
+            
         }
         else if (_playerSum > _dealerSum)
         {
             result = "플레이어 승리!";
+            GambleManager.instance.GambleEnd(2);
+            gameObject.transform.parent.gameObject.SetActive(false);
+           
         }
         else if (_playerSum < _dealerSum)
         {
             result = "딜러 승리!";
+            GambleManager.instance.GambleEnd(0);
+            gameObject.transform.parent.gameObject.SetActive(false);
+            
         }
         else
         {
             result = "무승부!";
+            GambleManager.instance.GambleEnd(1);
+            gameObject.transform.parent.gameObject.SetActive(false);
+            
         }
 
         _titleText.text = "게임 종료";

@@ -1,3 +1,4 @@
+using JJB.Script.Battle.Player.Progression;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -12,6 +13,11 @@ public class LotteryTicket_Test : MonoBehaviour
     private List<int> ranNums = new List<int>();
     private Dictionary<Button,int> buttonDic = new Dictionary<Button,int>();
     private Dictionary<int,bool> clickDic = new Dictionary<int,bool>();
+
+    [SerializeField] private int _buyChip=500;
+
+    private PlayerProfile profile;
+
 
 
     private void Awake()
@@ -47,6 +53,11 @@ public class LotteryTicket_Test : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        profile = PlayerProfileManager.Instance.Profile;
+    }
+
     public void Lottery(int a)
     {
         if (clickDic[a]==false)//눌린적 없으면
@@ -55,8 +66,6 @@ public class LotteryTicket_Test : MonoBehaviour
             {
                 nums.Add(a);
                 clickDic[a] = true;
-                Debug.Log($"{a} {clickDic[a]}");
-                Debug.Log($"현재 숫자수 {nums.Count}");
             }
             else
             {
@@ -67,15 +76,15 @@ public class LotteryTicket_Test : MonoBehaviour
         {
             nums.Remove(a);
             clickDic[a] = false;
-            Debug.Log($"{a} {clickDic[a]}");
-            Debug.Log($"현재 숫자수 {nums.Count}");
         }
     }
 
     public void BuyLoto()
     {
-        //조건 문 걸기
-        //돈에서 -500하기
+        if (profile.money >= _buyChip)
+        {
+            PlayerProfileManager.Instance.Profile.money -= _buyChip;
+        }
     }
 
     public void EndLoto()
@@ -100,19 +109,20 @@ public class LotteryTicket_Test : MonoBehaviour
         Debug.Log(count);
         if (count==0)
         {
-            
+            return;
         }
         else if (count == 1)
         {
-
+            gameObject.transform.parent.parent.gameObject.SetActive(false);
+            PlayerProfileManager.Instance.Profile.money += 400;
         }
         else if(count ==2)
         {
-
+            PlayerProfileManager.Instance.Profile.money += 600;
         }
         else if(count== 3)
         {
-
+            PlayerProfileManager.Instance.Profile.money += 1500;
         }
     }
 }

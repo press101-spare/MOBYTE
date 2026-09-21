@@ -18,5 +18,6 @@ public class GambleSoData : ScriptableObject
 {
     public GambleType _gambleName;//이름
     public GameObject _gambleTable;//테이블맵
-    public GameObject _gambleObject;//화면 녹화용
+    [TextArea] public string _chipXtext;
+    public int _canBettingChip;
 }

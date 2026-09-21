@@ -21,17 +21,21 @@ public class RouletteGame_HTY : MonoBehaviour
     }
     private IEnumerator Spin()
     {
+        float _disSpeed = 0.01f;
         while(_isSpin)
         {
             yield return null;
             gameObject.transform.Rotate(0, 0, _speed);
-            _speed -= 0.01f;
+            _speed -= _disSpeed;
+            _disSpeed += 0.005f;
             if(_speed<0)
             {
                 _isSpin=false;
             }
             yield return null;
         }
-        
+
+        GambleManager.instance.GambleEnd(2);
+
     }
 }
