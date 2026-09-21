@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: OddDice
   m_EditorClassIdentifier: 
   diceName: "\uD640\uC218 \uC8FC\uC0AC\uC704"
-  diceIcon: {fileID: 34949007336262702, guid: 48ac5d9d15283634cb32fc369a57e23d, type: 3}
+  diceIcon: {fileID: 6331403572281768256, guid: 32f0ee06d13e69945af49550ec34a244,
+    type: 3}
   cost: 50
   color: {r: 0.8867924, g: 0.12548937, b: 0.12548937, a: 1}
   dicePrefab: {fileID: 34949007336262702, guid: 185ada6a311823f4eaf28effc2a07aec,

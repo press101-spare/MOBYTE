@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956d3722d78af9c4288f2902a18baae1, type: 3}
   m_Name: BlackJack
   m_EditorClassIdentifier: 
-  _gambleName: 
-  _gambleTable: {fileID: 0}
-  _gambleObject: {fileID: 0}
+  _gambleName: 1
+  _gambleTable: {fileID: 4486434321866275335, guid: c361336abfdac4a48ba2eb0e68ee3ceb,
+    type: 3}
+  _gambleObject: {fileID: 6608251316496830872, guid: 07e8ae86c762eb94299a6d40508dc5c5,
+    type: 3}

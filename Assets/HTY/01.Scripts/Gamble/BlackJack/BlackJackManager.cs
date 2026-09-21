@@ -30,6 +30,7 @@ public class BlackJackManager : MonoBehaviour
     public GameObject _standButton;
     public TextMeshProUGUI _endingText;
     public TextMeshProUGUI _titleText;
+    public TextMeshProUGUI _playerSumText;
 
     [Header("카드덱")]
     public List<Sprite> _originCard = new List<Sprite>();
@@ -44,6 +45,11 @@ public class BlackJackManager : MonoBehaviour
     public GameObject _thisCard;
 
     private List<GameObject> _spawnedCards = new List<GameObject>();
+
+    private void Start()
+    {
+
+    }
 
     private void Update()
     {
@@ -162,6 +168,8 @@ public class BlackJackManager : MonoBehaviour
         }
 
         _checkCard = true;
+
+        _playerSumText.text = "당신의 합 :"+_playerSum.ToString();
 
         if (_playerSum > _blackJackNumber)
         {
@@ -315,22 +323,37 @@ public class BlackJackManager : MonoBehaviour
         if (_playerSum > _blackJackNumber)
         {
             result = "플레이어 버스트!\n딜러 승리";
+            GambleManager.instance.GambleEnd(0);
+            gameObject.transform.parent.gameObject.SetActive(false);
+            
         }
         else if (_dealerSum > _blackJackNumber)
         {
             result = "딜러 버스트!\n플레이어 승리";
+            GambleManager.instance.GambleEnd(2);
+            gameObject.transform.parent.gameObject.SetActive(false);
+            
         }
         else if (_playerSum > _dealerSum)
         {
             result = "플레이어 승리!";
+            GambleManager.instance.GambleEnd(2);
+            gameObject.transform.parent.gameObject.SetActive(false);
+           
         }
         else if (_playerSum < _dealerSum)
         {
             result = "딜러 승리!";
+            GambleManager.instance.GambleEnd(0);
+            gameObject.transform.parent.gameObject.SetActive(false);
+            
         }
         else
         {
             result = "무승부!";
+            GambleManager.instance.GambleEnd(1);
+            gameObject.transform.parent.gameObject.SetActive(false);
+            
         }
 
         _titleText.text = "게임 종료";

@@ -53,12 +53,8 @@ namespace JJB.Script.Battle
             if (!_playerTurnController.TryAttack())
                 return;
 
-            if (_enemyHealth.IsDead)
-            {
-                EndBattle();
-                return;
-            }
-            
+            ChangePhase(BattlePhase.Attack);
+
             StartCoroutine(WaitForAttackFinished());
         }
 
@@ -66,19 +62,25 @@ namespace JJB.Script.Battle
         {
             yield return new WaitForSeconds(2f);
 
+            if (_enemyHealth.IsDead)
+            {
+                EndBattle();
+                yield break;
+            }
+
+            if (!_playerTurnController.HasDefenseDice())
+            {
+                StartEnemyTurn();
+                yield break;
+            }
+
             ChangePhase(BattlePhase.Defense);
 
-            _playerTurnController.StartDefense(OnDefenseFinished);
+            _playerTurnController.StartDefense(OnDefenseFinished);        
         }
 
         private void OnDefenseFinished()
         {
-            StartCoroutine(DelayCoroutine());
-        }
-
-        private IEnumerator DelayCoroutine()
-        {
-            yield return new WaitForSeconds(2f);
             ChangePhase(BattlePhase.TurnEnd);
         }
 
@@ -87,6 +89,11 @@ namespace JJB.Script.Battle
             if (CurrentPhase != BattlePhase.TurnEnd)
                 return;
 
+            StartEnemyTurn();
+        }
+        
+        private void StartEnemyTurn()
+        {
             ChangePhase(BattlePhase.Enemy);
 
             _enemyTurnController.ExecuteTurn(OnEnemyTurnFinished);

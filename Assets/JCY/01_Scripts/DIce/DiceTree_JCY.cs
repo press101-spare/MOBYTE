@@ -90,8 +90,9 @@ public class DiceTree_JCY : MonoBehaviour
         foreach (int val in diceValues)
         {
             if (val >= 1 && val <= 6) counts[val]++;
-            else if (val == 7)
-            {
+            else if (val == 7 || val == 0)
+
+        {
                 for (int i = 1; i <= 6; i++)
                 {
                     counts[i]++;
@@ -213,7 +214,6 @@ public class DiceTree_JCY : MonoBehaviour
                 {
                     CurrentTrees = parsedTree;
                     CurrentScore = score;
-                    Debug.Log($"변환된 Enum 값: {CurrentTrees} , 데미지: {score}");
                 }
                 else
                 {
@@ -232,11 +232,11 @@ public class DiceTree_JCY : MonoBehaviour
                 finalDamage += 4;
                 break;
             case Trees.OnePair:
-                DiceManager_JCY.Instance.shledDice.ShledeHP((PlayerProfileManager.Instance.Profile.stats.maxHealth 
+                DiceManager_JCY.Instance.shledDice.ShledHP((PlayerProfileManager.Instance.Profile.stats.maxHealth 
                                                             * 15) / 100);
                 break;
             case Trees.TwoPair:
-                DiceManager_JCY.Instance.shledDice.ShledeHP((PlayerProfileManager.Instance.Profile.stats.maxHealth
+                DiceManager_JCY.Instance.shledDice.ShledHP((PlayerProfileManager.Instance.Profile.stats.maxHealth
                                                             * 30) / 100);
                 break;
             case Trees.FullHouse:
@@ -261,7 +261,7 @@ public class DiceTree_JCY : MonoBehaviour
                 //칩 획득
                 break;
             case Trees.Yahtzee:
-                DiceManager_JCY.Instance.shledDice.ShledeHP(999);
+                DiceManager_JCY.Instance.shledDice.ShledHP(999);
                 break;
             
         } 

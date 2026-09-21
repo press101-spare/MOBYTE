@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,12 +8,12 @@ public class DiceSO_JCY : ScriptableObject
 {
     [Header("주사위 정보")]
     public string diceName;          // 주사위 이름
-    public GameObject diceIcon;          // 대표 아이콘
+    public Sprite diceIcon;          // 대표 아이콘
     public int cost;          // 주사위 상점 가격
     public Color color;
     public GameObject dicePrefab; // 각 주사위 전용 3D 프리팹 등록
     public DiceEffectType diceEffectType;
-    
+
     [TextArea(3, 5)]
     public string diceDescription;   // 주사위 설명
 
@@ -31,8 +32,8 @@ public class DiceSO_JCY : ScriptableObject
     
     public enum DiceEffectType
     {
-        None , Even , Odd , Blood , Shield ,ShieldTurn  , Allin , Vampire , Reroll , Joker , Debt , Gamble , Grow , Fraud , Health , Poison , Chip , Glass, ExecutionDice
-        , Rock , Potion , Mirror
+        None , Even , Odd , Blood , Shield ,ShieldTurn  , Allin , Vampire , Reroll , Joker , Debt  , Grow , Fraud , Health , Poison , Chip , Glass, ExecutionDice
+        , Rock , Potion , Mirror , Hack , Phoenix , Giant , Counter
     }
 
 }

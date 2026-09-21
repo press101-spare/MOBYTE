@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956d3722d78af9c4288f2902a18baae1, type: 3}
   m_Name: Baccarat
   m_EditorClassIdentifier: 
-  _gambleName: 
-  _gambleTable: {fileID: 0}
+  _gambleName: 0
+  _gambleTable: {fileID: 5365407653592210827, guid: e20cc96c8bdf730429f94c156d6044d8,
+    type: 3}
   _gambleObject: {fileID: 0}

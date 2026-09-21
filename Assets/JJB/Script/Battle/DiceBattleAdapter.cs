@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace JJB.Script.Battle
 {
@@ -28,7 +30,7 @@ namespace JJB.Script.Battle
                 return DiceManager.diceTree.CurrentScore;
             }
         }
-        
+
         public int ShieldValue
         {
             get
@@ -37,6 +39,17 @@ namespace JJB.Script.Battle
                     return 0;
 
                 return DiceManager.shledDice.shledValue;
+            }
+        }
+
+        public int ReRollCount
+        {
+            get
+            {
+                if (DiceManager == null || DiceManager.reRollUI == null)
+                    return 0;
+
+                return DiceManager.reRollUI.reRollCount;
             }
         }
 
@@ -54,10 +67,7 @@ namespace JJB.Script.Battle
         public void StartDefenseDice()
         {
             if (DiceManager == null || DiceManager.shledDice == null)
-            {
-                Debug.LogError("ShledDice_JCY를 찾을 수 없습니다.");
                 return;
-            }
 
             DiceManager.shledDice.shideDraw();
         }
@@ -77,23 +87,20 @@ namespace JJB.Script.Battle
 
             DiceManager.isShled = value;
         }
-        
+
         public int DamageWithShield(int damage)
         {
-            if (DiceManager_JCY.Instance == null)
+            if (DiceManager == null || DiceManager.shledDice == null)
                 return damage;
 
-            ShledDice_JCY shledDice = DiceManager_JCY.Instance.shledDice;
-
-            if (shledDice == null || shledDice.shledValue <= 0)
+            if (DiceManager.shledDice.shledValue <= 0)
                 return damage;
 
-            int absorbedDamage = Mathf.Min(shledDice.shledValue, damage);
+            int absorbed = Mathf.Min(DiceManager.shledDice.shledValue, damage);
 
-            shledDice.shledValue -= absorbedDamage;
-            damage -= absorbedDamage;
+            DiceManager.shledDice.shledValue -= absorbed;
 
-            return damage;
+            return damage - absorbed;
         }
     }
 }
