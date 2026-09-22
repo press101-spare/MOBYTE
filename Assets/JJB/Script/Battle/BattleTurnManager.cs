@@ -36,6 +36,9 @@ namespace JJB.Script.Battle
             _enemyHealth = enemyHealth;
             _enemyTurnController = enemyTurnController;
             _enemyDamageReceiver = enemyDamageReceiver;
+            
+            if (JJBGameManager.Instance != null)
+                JJBGameManager.Instance.isFighting = true;
 
             StartPlayerTurn();
         }
@@ -128,6 +131,9 @@ namespace JJB.Script.Battle
 
         private void EndBattle()
         {
+            if (JJBGameManager.Instance != null)
+                JJBGameManager.Instance.isFighting = false;
+            
             ChangePhase(BattlePhase.BattleEnd);
         }
 
