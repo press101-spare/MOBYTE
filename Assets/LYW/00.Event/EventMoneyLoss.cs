@@ -1,15 +1,21 @@
-using System;
 using JJB.Script.Battle.Player.Progression;
 using UnityEngine;
 
-public class EventMoneyLoss : MonoBehaviour
+public sealed class EventMoneyLoss : EventEffect
 {
-    private PlayerProfile _playerProfile;
-    private float _stolenMoney = 0.7f;
+    [SerializeField, Range(0f, 1f)]
+    private float lossRate = 0.3f;
 
-    private void Update()
+    public override void Apply()
     {
-        _playerProfile = PlayerProfileManager.Instance.Profile;
-        int lostmoney = Mathf.FloorToInt(_playerProfile.money * _stolenMoney);
+        PlayerProfile profile =
+            PlayerProfileManager.Instance.Profile;
+
+        int lostMoney =
+            Mathf.FloorToInt(
+                profile.money * lossRate
+            );
+
+        profile.money -= lostMoney;
     }
 }
