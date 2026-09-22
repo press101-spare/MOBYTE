@@ -36,7 +36,7 @@ public class DiceManager_JCY : MonoBehaviour
     [Header("공격 연출")]
     [SerializeField] private Transform endTrf;
     [SerializeField] private float attackDuration = 0.8f;
-    [SerializeField] private float attackStagger = 0.05f;
+    [SerializeField] private float attackStagger = 0.2f;
     [SerializeField] private float attackHeight = 2f;
     [SerializeField] private float attackSide = 1.5f;
     
@@ -48,7 +48,11 @@ public class DiceManager_JCY : MonoBehaviour
     public DiceCamera_JCY diceCamera;
     
     public IReadOnlyList<DiceObject_JCY> ActiveDiceScripts => activeDiceScripts;
+    
+    [Header("주사위 효과")] 
     public int glassStack;
+    public int _xecution;
+    public int _vamfire;
 
 
     // 0~5번 인덱스 면이 정면을 볼 때의 회전 각도 배열 (제시해주신 각도 데이터 적용)
@@ -246,9 +250,13 @@ public class DiceManager_JCY : MonoBehaviour
 
             if (rb != null)
             {
+                if (!rb.isKinematic)
+                {
+                    rb.linearVelocity = Vector3.zero;
+                    rb.angularVelocity = Vector3.zero;
+                }
+
                 rb.isKinematic = true;
-                rb.linearVelocity = Vector3.zero;
-                rb.angularVelocity = Vector3.zero;
             }
 
             if (diceIndex >= 0 && diceIndex < spawnPositions.Length)
@@ -261,8 +269,6 @@ public class DiceManager_JCY : MonoBehaviour
                 {
                     rb.position = spawnPosition;
                 }
-
-                Debug.Log($"스폰 위치: {spawnPosition}");
             }
 
             if (rb != null)
@@ -371,7 +377,7 @@ public class DiceManager_JCY : MonoBehaviour
     }
 
     
-     public IEnumerator FaceDiceCO()
+    public IEnumerator FaceDiceCO()
     {
         yield return new WaitForSeconds(sortTime);
         diceCamera.BattleCameraMove();
@@ -575,13 +581,30 @@ public class DiceManager_JCY : MonoBehaviour
                 // 1. 적중 데미지
                 onDiceHit?.Invoke(hitDamage);
 
+                if (_vamfire > 0)
+                {
+                    JJBGameManager.Instance.PlayerJjbHealth.Heal(hitDamage * ((_vamfire * 20) / 100));
+                }
+
                 //글라스 스택만큼 데미지
                 for (int glass = 0; glass < glassStack; glass++)
                 {
                     onDiceHit?.Invoke(10);
                 }
 
-                glassStack = 0;
+                if (glassStack > 0)
+                {
+                    glassStack = 0;
+                }
+
+                if (_xecution > 0)
+                {
+                    if(JJBGameManager.Instance.EnemyJjbHealth.CurrentHealth < (JJBGameManager.Instance.EnemyJjbHealth.MaxHealth *((_xecution * 10) / 100)))
+                    {
+                        onDiceHit?.Invoke(999);
+                    }
+                }
+
 
                 // 2. 주사위 삭제
                 if (dice != null)
@@ -591,6 +614,9 @@ public class DiceManager_JCY : MonoBehaviour
             }); 
         }
 
+        _xecution = 0;
+        _vamfire = 0;
+        
         yield return new WaitForSeconds(
             attackDuration +
             attackStagger * Mathf.Max(0, diceCount - 1)

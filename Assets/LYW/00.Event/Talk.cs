@@ -1,133 +1,303 @@
-using TMPro;                  // TextMeshPro UI를 사용하기 위해 불러옴
-using UnityEngine;            // Unity 기본 기능을 사용하기 위해 불러옴
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
 
-public class Talk : MonoBehaviour   // Talk라는 스크립트 생성
+public sealed class Talk : MonoBehaviour
 {
-    public TextMeshProUGUI nameText;   // 캐릭터 이름을 표시할 텍스트
+    [SerializeField] private EventDialogueData dialogueData;
+    [SerializeField] private DialogueView view;
 
-    public TextMeshProUGUI talkText;   // 캐릭터 대사를 표시할 텍스트
+    [SerializeField, Min(0f)]
+    private float typingSpeed = 0.05f;
 
-    public string[] names;             // 캐릭터 이름들을 저장하는 배열
+    [SerializeField]
+    private UnityEvent onDialogueEnded;
 
-    [TextArea]                         // Inspector에서 대사를 여러 줄로 입력 가능하게 함
-    public string[] talks;             // 대사들을 저장하는 배열
+    private int index;
 
-    public float speed = 0.05f;        // 글자 하나가 출력되는 속도
+    private bool running;
+    private bool typing;
+    private bool choosing;
 
-    int talkIndex = 0;                 // 현재 몇 번째 대사인지 저장
+    private Coroutine typingCoroutine;
 
-    int charIndex = 0;                 // 현재 몇 번째 글자까지 출력했는지 저장
-
-    float timer = 0f;                  // 글자 출력 시간을 계산하는 변수
-
-
-    void Start()
+    private void OnEnable()
     {
-        ShowTalk();                    // 게임 시작 시 첫 번째 대사를 준비
+        view.NextClicked += Next;
+        view.SkipClicked += Skip;
     }
 
-
-    void Update()
+    private void OnDisable()
     {
-        // 모든 대사가 끝났으면 아래 코드를 실행하지 않음
-        if (talkIndex >= talks.Length)
-            return;
-
-
-        // 현재 대사의 모든 글자가 출력됐으면 실행하지 않음
-        if (charIndex >= talks[talkIndex].Length)
-            return;
-
-
-        // 프레임마다 시간을 계속 더함
-        timer += Time.deltaTime;
-
-
-        // timer가 speed보다 커졌을 때
-        if (timer >= speed)
-        {
-            // 현재 대사의 글자를 하나씩 추가해서 출력
-            talkText.text += talks[talkIndex][charIndex];
-
-
-            // 다음 글자로 이동
-            charIndex++;
-
-
-            // 타이머를 다시 0으로 초기화
-            timer = 0f;
-        }
+        view.NextClicked -= Next;
+        view.SkipClicked -= Skip;
     }
 
-
-    void ShowTalk()
+    private void Start()
     {
-        // 대사 배열 범위를 넘어갔다면 실행하지 않음
-        if (talkIndex >= talks.Length)
-            return;
-
-
-        // 이전에 출력된 대사를 지움
-        talkText.text = "";
-
-
-        // 글자 순서를 처음부터 시작
-        charIndex = 0;
-
-
-        // 글자 출력 시간도 초기화
-        timer = 0f;
-
-
-        // 이름 배열 안에 현재 번호가 존재하는지 확인
-        if (talkIndex < names.Length)
-        {
-            // 현재 대사의 캐릭터 이름을 표시
-            nameText.text = names[talkIndex];
-        }
+        StartDialogue();
     }
 
-
-    // 버튼 OnClick에 연결할 함수
-    public void Skip()
+    public void StartDialogue()
     {
-        // 모든 대사가 끝났다면 버튼을 눌러도 실행하지 않음
-        if (talkIndex >= talks.Length)
+        if (dialogueData == null || view == null)
+        {
+            Debug.LogError("대화 데이터를 연결해주세요.");
+            return;
+        }
+
+        index = 0;
+        running = true;
+        choosing = false;
+
+        Show();
+    }
+
+    private void Next()
+    {
+        if (!running || choosing)
             return;
 
-
-        // 현재 대사가 아직 출력 중이라면
-        if (charIndex < talks[talkIndex].Length)
+        if (typing)
         {
-            // 현재 문장을 한 번에 전부 출력
-            talkText.text = talks[talkIndex];
-
-
-            // 글자가 모두 출력된 상태로 변경
-            charIndex = talks[talkIndex].Length;
+            FinishTyping();
+            return;
         }
-        else
+
+        if (!GetNode(out var node))
         {
-            // 현재 대사가 이미 전부 출력됐다면
-            // 다음 대사 번호로 이동
-            talkIndex++;
+            EndDialogue();
+            return;
+        }
 
+        Move(node.nextIndex);
+    }
 
-            // 아직 다음 대사가 존재한다면
-            if (talkIndex < talks.Length)
+    private void Skip()
+    {
+        if (!running || choosing)
+            return;
+
+        if (typing)
+            FinishTyping();
+
+        if (choosing)
+            return;
+
+        HashSet<int> visited = new();
+
+        while (visited.Add(index))
+        {
+            if (!GetNode(out var node))
             {
-                // 다음 대사를 준비
-                ShowTalk();
+                EndDialogue();
+                return;
             }
-            else
+
+            int next = GetNext(node.nextIndex);
+
+            if (next == -2 ||
+                !dialogueData.TryGetNode(next, out var nextNode))
             {
-                // 모든 대사가 끝났으면 대화창의 글자를 지움
-                talkText.text = "";
-
-
-                // 캐릭터 이름도 지움
-                nameText.text = "";
+                EndDialogue();
+                return;
             }
+
+            index = next;
+
+            if (!HasChoices(nextNode))
+                continue;
+
+            Show();
+            FinishTyping();
+
+            return;
         }
+
+        EndDialogue();
+    }
+
+    private void Show()
+    {
+        StopTyping();
+
+        choosing = false;
+        view.ClearChoices();
+
+        if (!GetNode(out var node))
+        {
+            EndDialogue();
+            return;
+        }
+
+        Sprite image = node.background != null
+            ? node.background
+            : dialogueData.DefaultBackground;
+
+        view.ShowDialogue(
+            node.speaker,
+            node.text,
+            image
+        );
+
+        int length = view.CharacterCount;
+
+        if (typingSpeed <= 0f || length == 0)
+        {
+            typing = true;
+            FinishTyping();
+            return;
+        }
+
+        typing = true;
+
+        typingCoroutine =
+            StartCoroutine(TypeText(length));
+    }
+
+    private IEnumerator TypeText(int length)
+    {
+        for (int i = 1; i <= length; i++)
+        {
+            yield return new WaitForSecondsRealtime(
+                typingSpeed
+            );
+
+            if (!typing)
+                yield break;
+
+            view.ShowCharacters(i);
+        }
+
+        typing = false;
+        typingCoroutine = null;
+
+        ShowChoices();
+    }
+
+    private void FinishTyping()
+    {
+        if (!typing)
+            return;
+
+        StopTyping();
+
+        view.ShowAllText();
+
+        ShowChoices();
+    }
+
+    private void ShowChoices()
+    {
+        if (!GetNode(out var node) ||
+            !HasChoices(node))
+            return;
+
+        choosing = true;
+
+        view.ShowChoices(
+            node.choices,
+            i => SelectChoice(node.choices[i])
+        );
+    }
+
+    private void SelectChoice(
+        EventDialogueData.ChoiceData choice)
+    {
+        if (!choosing || choice == null)
+            return;
+
+        choosing = false;
+
+        view.ClearChoices();
+
+        if (choice.effects != null)
+        {
+            Array.ForEach(
+                choice.effects,
+                effect => effect?.Apply()
+            );
+        }
+
+        Move(choice.nextIndex);
+    }
+
+    private void Move(int target)
+    {
+        int next = GetNext(target);
+
+        if (next == -2 ||
+            !dialogueData.TryGetNode(next, out _))
+        {
+            EndDialogue();
+            return;
+        }
+
+        index = next;
+
+        Show();
+    }
+
+    private int GetNext(int target)
+    {
+        return target == -1
+            ? index + 1
+            : target;
+    }
+
+    private bool GetNode(
+        out EventDialogueData.DialogueNode node)
+    {
+        return dialogueData.TryGetNode(
+            index,
+            out node
+        );
+    }
+
+    private static bool HasChoices(
+        EventDialogueData.DialogueNode node)
+    {
+        return node?.choices != null &&
+               Array.Exists(
+                   node.choices,
+                   choice => choice != null
+               );
+    }
+
+    private void StopTyping()
+    {
+        typing = false;
+
+        if (typingCoroutine == null)
+            return;
+
+        StopCoroutine(typingCoroutine);
+
+        typingCoroutine = null;
+    }
+
+    private void EndDialogue()
+    {
+        if (!running)
+            return;
+
+        running = false;
+        choosing = false;
+
+        StopTyping();
+
+        view.Clear();
+
+        if (dialogueData.EndEffects != null)
+        {
+            Array.ForEach(
+                dialogueData.EndEffects,
+                effect => effect?.Apply()
+            );
+        }
+
+        onDialogueEnded?.Invoke();
     }
 }
