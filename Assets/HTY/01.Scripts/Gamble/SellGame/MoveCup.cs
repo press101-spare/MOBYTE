@@ -156,7 +156,7 @@ public class MoveCup : MonoBehaviour
         yield return new WaitForSeconds(_openWaitTime);
         yield return StartCoroutine(RaiseAllCups());
 
-        EndGame();
+        EndGame(0);
     }
 
     public void SelectCup(int index)
@@ -194,7 +194,7 @@ public class MoveCup : MonoBehaviour
 
         yield return new WaitForSeconds(_during);
 
-        EndGame();
+        EndGame(selectedCup == _winCup ? 2 : 0);
     }
 
     private IEnumerator RaiseAllCups()
@@ -208,11 +208,14 @@ public class MoveCup : MonoBehaviour
         for (int i = 0; i < _cupButtons.Length; i++) _cupButtons[i].interactable = value;
     }
 
-    private void EndGame()
+    private void EndGame(int x)
     {
         _canSelect = false;
         _isPlaying = false;
         SetCupButtons(false);
         Debug.Log("야바위 게임 종료");
+        GambleManager.instance.GambleEnd(x);
+        gameObject.transform.parent.gameObject.SetActive(false);
+        
     }
 }

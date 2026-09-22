@@ -32,6 +32,15 @@ namespace JJB.Script.Battle.Stage
 
             return _currentEnemy;
         }
+        
+        public void SetStageIndex(int index)
+        {
+            if (index < 0 || index >= stages.Length)
+                return;
+
+            currentStageIndex = index;
+            _currentEnemy = null;
+        }
 
         public void NextStage()
         {
