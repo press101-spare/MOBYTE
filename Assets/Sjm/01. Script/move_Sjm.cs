@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class move_Sjm : MonoBehaviour
+public class Move_Sjm : MonoBehaviour
 {
     private readonly int MoveY = Animator.StringToHash("MoveY");
     private readonly int MoveX = Animator.StringToHash("MoveX");

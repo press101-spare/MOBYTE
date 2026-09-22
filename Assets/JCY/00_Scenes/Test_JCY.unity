@@ -4073,7 +4073,7 @@ MonoBehaviour:
   defaultDiceCount: 10
   diceDeck: []
   drawnDice: []
-  diceFile_Jcy: []
+  diceFile_JCy: []
   drawCount: 5
 --- !u!1 &506850339
 GameObject:
@@ -5565,6 +5565,7 @@ MonoBehaviour:
   backUiPannel: {fileID: 319761126}
   isRolling: 0
   isShled: 0
+  endTrf: {fileID: 666822632}
   attackDuration: 0.8
   attackStagger: 0.05
   attackHeight: 2

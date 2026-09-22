@@ -1,4 +1,5 @@
 
+using JJB.Script.Battle.Player.Progression;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,13 @@ public class SelectTest_HTY : MonoBehaviour
     [SerializeField] private GameObject _selectPanel;
 
 
+
+    [SerializeField] private GameObject _bacara;
+    [SerializeField] private GameObject _loto;
+
+    private bool _canSelect =true;
+
+
     private void Start()
     {
         _scripts = FindObjectsByType<GambleTable_HTY>(FindObjectsSortMode.None).ToList();
@@ -34,6 +42,12 @@ public class SelectTest_HTY : MonoBehaviour
     }
     private void Update()
     {
+        if (!_canSelect)
+        { 
+            _selectBT.SetActive(false);
+            return; 
+        }
+
         foreach (var script in _scripts)
         {
             if (script._rangeToPlayer < script._range)
@@ -46,13 +60,13 @@ public class SelectTest_HTY : MonoBehaviour
     }
     public void SelectBT()
     {
+        if (!_canSelect) return;
         _currnetMin = 10;
         _currnetTable = null;
         foreach (var script in _scripts)
         {
             if (script._rangeToPlayer < script._range)
             {
-                Debug.Log(script._rangeToPlayer);
                 if (script._rangeToPlayer<_currnetMin)
                 {
                     _currnetMin= script._rangeToPlayer;
@@ -66,18 +80,23 @@ public class SelectTest_HTY : MonoBehaviour
         {
             case GambleType.Shop:
                 _selectPanel.SetActive(true);
+                _canSelect = false;
                 break;
             case GambleType.PinBall:
             case GambleType.SlotGame:
             case GambleType.BlackJack:
             case GambleType.Roulette:
             case GambleType.SellGame:
+            case GambleType.Baccarat:
                 _bettingUI.SetActive(true);
                 _bettingUI.GetComponent<Betting_HTY>()._currentGamble = _currnetTable._myGamble;
-                break;
-            case GambleType.Baccarat:
+                _canSelect = false;
                 break;
             case GambleType.Loto:
+                _loto.gameObject.SetActive(true);
+                _loto.transform.GetChild(0).gameObject.SetActive(true);
+                _loto.transform.GetChild(1).gameObject.SetActive(false);
+                _canSelect = false;
                 break;
         }
         
