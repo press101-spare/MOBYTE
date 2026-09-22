@@ -36,7 +36,7 @@ public class DiceManager_JCY : MonoBehaviour
     [Header("공격 연출")]
     [SerializeField] private Transform endTrf;
     [SerializeField] private float attackDuration = 0.8f;
-    [SerializeField] private float attackStagger = 0.05f;
+    [SerializeField] private float attackStagger = 0.2f;
     [SerializeField] private float attackHeight = 2f;
     [SerializeField] private float attackSide = 1.5f;
     
@@ -246,9 +246,13 @@ public class DiceManager_JCY : MonoBehaviour
 
             if (rb != null)
             {
+                if (!rb.isKinematic)
+                {
+                    rb.linearVelocity = Vector3.zero;
+                    rb.angularVelocity = Vector3.zero;
+                }
+
                 rb.isKinematic = true;
-                rb.linearVelocity = Vector3.zero;
-                rb.angularVelocity = Vector3.zero;
             }
 
             if (diceIndex >= 0 && diceIndex < spawnPositions.Length)
@@ -261,8 +265,6 @@ public class DiceManager_JCY : MonoBehaviour
                 {
                     rb.position = spawnPosition;
                 }
-
-                Debug.Log($"스폰 위치: {spawnPosition}");
             }
 
             if (rb != null)
@@ -371,7 +373,7 @@ public class DiceManager_JCY : MonoBehaviour
     }
 
     
-     public IEnumerator FaceDiceCO()
+    public IEnumerator FaceDiceCO()
     {
         yield return new WaitForSeconds(sortTime);
         diceCamera.BattleCameraMove();
