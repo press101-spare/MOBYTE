@@ -90,8 +90,9 @@ public class DiceTree_JCY : MonoBehaviour
         foreach (int val in diceValues)
         {
             if (val >= 1 && val <= 6) counts[val]++;
-            else if (val == 7)
-            {
+            else if (val == 7 || val == 0)
+
+        {
                 for (int i = 1; i <= 6; i++)
                 {
                     counts[i]++;
@@ -213,7 +214,6 @@ public class DiceTree_JCY : MonoBehaviour
                 {
                     CurrentTrees = parsedTree;
                     CurrentScore = score;
-                    Debug.Log($"변환된 Enum 값: {CurrentTrees} , 데미지: {score}");
                 }
                 else
                 {
@@ -226,6 +226,7 @@ public class DiceTree_JCY : MonoBehaviour
     public int TreeEffect(int damage)
     {
         int finalDamage = damage;
+        Debug.Log(CurrentTree);
         switch (CurrentTrees)
         {
             case Trees.Choice:

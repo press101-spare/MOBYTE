@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: VampireDice
   m_EditorClassIdentifier: 
   diceName: "\uD761\uD608 \uC8FC\uC0AC\uC704"
-  diceIcon: {fileID: 0}
+  diceIcon: {fileID: -7274759578867535494, guid: 180c03dbd0fd0df478e05bd373948d3b,
+    type: 3}
   cost: 50
   color: {r: 0.8867924, g: 0.12548937, b: 0.12548937, a: 1}
-  dicePrefab: {fileID: 34949007336262702, guid: ba632a86679e3cf4fbea4eabfa14a5dc,
+  dicePrefab: {fileID: 34949007336262702, guid: ca44240e60c31374b84bf876ff45d4ff,
     type: 3}
   diceEffectType: 7
-  diceDescription: "[1,2,3,4,5,6]\n\uACF5\uACA9\uC2DC \uD53C\uD574 \uC77C\uBD80\uB97C
-    \uCE58\uD658\uD574 HP\uB97C \uD68C\uBCF5\uD55C\uB2E4."
+  diceDescription: "[1,2,3,4,5,6]\n\uCCB4\uB825\uC774 \uC785\uD78C \uB370\uBBF8\uC9C0\uC758
+    20%\uB97C \uD68C\uBCF5\uD55C\uB2E4. \uD574\uB2F9 \uC8FC\uC0AC\uC704\uAC00 \uB9CE\uC744\uC218\uB85D
+    \uD6A8\uACFC\uAC00 \uC99D\uAC00\uD55C\uB2E4."
   faceValues: 010000000200000003000000040000000500000006000000

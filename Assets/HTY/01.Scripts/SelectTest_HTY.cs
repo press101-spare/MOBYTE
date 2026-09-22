@@ -1,4 +1,5 @@
 
+using JJB.Script.Battle.Player.Progression;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ public class SelectTest_HTY : MonoBehaviour
     private float _currnetMin;
     private GambleTable_HTY _currnetTable;
 
-    [SerializeField] private GameObject _gambleUICanvas;
+    [SerializeField] private GameObject _bettingUI;
     private GambleUI_HTY[] _uiList;
 
     [SerializeField] private Transform _gambleCC;
@@ -27,13 +28,26 @@ public class SelectTest_HTY : MonoBehaviour
     [SerializeField] private GameObject _selectPanel;
 
 
+
+    [SerializeField] private GameObject _bacara;
+    [SerializeField] private GameObject _loto;
+
+    private bool _canSelect =true;
+
+
     private void Start()
     {
         _scripts = FindObjectsByType<GambleTable_HTY>(FindObjectsSortMode.None).ToList();
-        _uiList = _gambleUICanvas.transform.GetComponentsInChildren<GambleUI_HTY>(true);
+        _uiList = _bettingUI.transform.GetComponentsInChildren<GambleUI_HTY>(true);
     }
     private void Update()
     {
+        if (!_canSelect)
+        { 
+            _selectBT.SetActive(false);
+            return; 
+        }
+
         foreach (var script in _scripts)
         {
             if (script._rangeToPlayer < script._range)
@@ -46,13 +60,13 @@ public class SelectTest_HTY : MonoBehaviour
     }
     public void SelectBT()
     {
+        if (!_canSelect) return;
         _currnetMin = 10;
         _currnetTable = null;
         foreach (var script in _scripts)
         {
             if (script._rangeToPlayer < script._range)
             {
-                Debug.Log(script._rangeToPlayer);
                 if (script._rangeToPlayer<_currnetMin)
                 {
                     _currnetMin= script._rangeToPlayer;
@@ -60,26 +74,31 @@ public class SelectTest_HTY : MonoBehaviour
                 }
             }
         }
-        Debug.Log(11);
         if (_currnetTable == null) return;
-        Debug.Log(11);
-        if (_currnetTable._myGamble._gambleName == GambleType.Shop)
-        {
-            _selectPanel.SetActive(true);
-            return;
-        }
 
-        _gambleUICanvas.SetActive(true);
-
-        foreach (var v in _uiList)
+        switch (_currnetTable._myGamble._gambleName)
         {
-            if(v._myGamble==_currnetTable._myGamble)
-            {
-                v.gameObject.SetActive(true);
-                GameObject a = Instantiate(v._myGamble._gambleObject);
-                a.SetActive(true);
-                a.transform.position = _gambleCC.position;
-            }
+            case GambleType.Shop:
+                _selectPanel.SetActive(true);
+                _canSelect = false;
+                break;
+            case GambleType.PinBall:
+            case GambleType.SlotGame:
+            case GambleType.BlackJack:
+            case GambleType.Roulette:
+            case GambleType.SellGame:
+            case GambleType.Baccarat:
+                _bettingUI.SetActive(true);
+                _bettingUI.GetComponent<Betting_HTY>()._currentGamble = _currnetTable._myGamble;
+                _canSelect = false;
+                break;
+            case GambleType.Loto:
+                _loto.gameObject.SetActive(true);
+                _loto.transform.GetChild(0).gameObject.SetActive(true);
+                _loto.transform.GetChild(1).gameObject.SetActive(false);
+                _canSelect = false;
+                break;
         }
+        
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d509a5ae3add4bb6b07bf984df566292, type: 3}
   m_Name: StealMoneyEnemy
   m_EditorClassIdentifier: 
-  enemyName: StealMoney
+  enemyName: "\uBE5A\uC7C1\uC774"
   maxHealth: 170
   attackPower: 14
   attackPower2: 16

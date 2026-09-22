@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using JJB.Script.Battle.Enemy;
 using JJB.Script.Battle.Player;
+using JJB.Script.Battle.Stage;
 using UnityEngine;
 
 namespace JJB.Script.Battle
@@ -23,7 +24,8 @@ namespace JJB.Script.Battle
         private EnemyTurnController _enemyTurnController;
 
         private BattleUIController _battleUIController;
-
+        private StageManager _stageManager;
+        
         private void Awake()
         {
             _battleTurnManager = GetComponent<BattleTurnManager>();
@@ -33,6 +35,8 @@ namespace JJB.Script.Battle
             FindPlayer();
             FindEnemy();
             FindUI();
+            
+            _stageManager = FindFirstObjectByType<StageManager>();
         }
 
         private IEnumerator Start()
@@ -65,7 +69,16 @@ namespace JJB.Script.Battle
         {
             if (!CanInitialize())
                 return;
+            
+            EnemyData enemyData = _stageManager.PrepareCurrentStage();
 
+            if (enemyData == null)
+            {
+                Debug.LogError("현재 스테이지의 EnemyData를 가져오지 못했습니다.");
+                return;
+            }
+
+            _enemyHealthSetup.SetData(enemyData);
             _enemyHealthSetup.Initialize();
 
             _playerAttackController.Initialize(_enemyDamageReceiver);
@@ -78,11 +91,7 @@ namespace JJB.Script.Battle
             if (_battleUIController != null)
                 _battleUIController.Initialize(_battleTurnManager);
 
-            _battleTurnManager.Initialize(
-                _playerHealthSetup.Health,
-                _enemyHealthSetup.Health,
-                _enemyTurnController
-            );
+            _battleTurnManager.Initialize(_playerHealthSetup.Health, _enemyHealthSetup.Health, _enemyTurnController, _enemyDamageReceiver);
         }
 
         public void Attack()

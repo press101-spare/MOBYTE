@@ -14,6 +14,8 @@ namespace JJB.Script.Battle
         private EnemyTurnController _enemyTurnController;
         private JJBHealth _playerHealth;
         private JJBHealth _enemyHealth;
+        
+        private EnemyDamageReceiver _enemyDamageReceiver;
 
         public BattlePhase CurrentPhase { get; private set; }
 
@@ -24,11 +26,19 @@ namespace JJB.Script.Battle
             _playerTurnController = GetComponent<PlayerTurnController>();
         }
 
-        public void Initialize(JJBHealth playerHealth, JJBHealth enemyHealth, EnemyTurnController enemyTurnController)
+        public void Initialize(
+            JJBHealth playerHealth,
+            JJBHealth enemyHealth,
+            EnemyTurnController enemyTurnController,
+            EnemyDamageReceiver enemyDamageReceiver)
         {
             _playerHealth = playerHealth;
             _enemyHealth = enemyHealth;
             _enemyTurnController = enemyTurnController;
+            _enemyDamageReceiver = enemyDamageReceiver;
+            
+            if (JJBGameManager.Instance != null)
+                JJBGameManager.Instance.isFighting = true;
 
             StartPlayerTurn();
         }
@@ -94,8 +104,15 @@ namespace JJB.Script.Battle
         
         private void StartEnemyTurn()
         {
-            ChangePhase(BattlePhase.Enemy);
+            _enemyDamageReceiver?.TickPoison();
 
+            if (_enemyHealth.IsDead)
+            {
+                EndBattle();
+                return;
+            }
+
+            ChangePhase(BattlePhase.Enemy);
             _enemyTurnController.ExecuteTurn(OnEnemyTurnFinished);
         }
 
@@ -114,6 +131,9 @@ namespace JJB.Script.Battle
 
         private void EndBattle()
         {
+            if (JJBGameManager.Instance != null)
+                JJBGameManager.Instance.isFighting = false;
+            
             ChangePhase(BattlePhase.BattleEnd);
         }
 

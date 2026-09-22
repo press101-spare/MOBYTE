@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956d3722d78af9c4288f2902a18baae1, type: 3}
   m_Name: Roulette
   m_EditorClassIdentifier: 
-  _gambleName: "\uB8F0\uB81B"
-  _gambleTable: {fileID: 0}
-  _gambleObject: {fileID: 0}
+  _gambleName: 4
+  _gambleTable: {fileID: 6674597299070232964, guid: ddd885959329e9844879dc06c701810a,
+    type: 3}
+  _gambleObject: {fileID: 4472978765834490924, guid: 933dd7f2fe2f4aa4083183228d19a3e2,
+    type: 3}

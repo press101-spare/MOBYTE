@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956d3722d78af9c4288f2902a18baae1, type: 3}
   m_Name: SlotGame
   m_EditorClassIdentifier: 
-  _gambleName: 0
+  _gambleName: 6
   _gambleTable: {fileID: 7326233024908577395, guid: 5b25b809fb2fb0a4295fde02c896042e,
     type: 3}
   _gambleObject: {fileID: 0}
