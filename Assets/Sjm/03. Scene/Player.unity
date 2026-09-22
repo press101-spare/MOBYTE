@@ -893,7 +893,7 @@ SpriteRenderer:
   m_Size: {x: 0.875, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1751038322
@@ -919,7 +919,7 @@ Animator:
   m_GameObject: {fileID: 1751038319}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ce5293ee9c6bf4347837172af61fdd23, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6821adf6bfd1950459c28a12f49a8723, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
