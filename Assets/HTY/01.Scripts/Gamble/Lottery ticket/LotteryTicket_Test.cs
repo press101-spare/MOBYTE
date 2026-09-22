@@ -37,7 +37,7 @@ public class LotteryTicket_Test : MonoBehaviour
             a++;
             button.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = $"{a}";
             buttonDic[button] = a;
-            button.onClick.AddListener(() => Lottery(buttonDic[button]));
+            button.onClick.AddListener(() => Lottery(buttonDic[button],button.gameObject));
             clickDic[a] = false;
             Debug.Log(a);
             
@@ -47,7 +47,7 @@ public class LotteryTicket_Test : MonoBehaviour
     private void OnEnable()
     {
         ranNums.Clear();
-        for(int i = 0; i<3;i++)
+        for(int i = 0; i<5;i++)
         {
             ranNums[i]=Random.Range(1,25);
         }
@@ -58,24 +58,27 @@ public class LotteryTicket_Test : MonoBehaviour
         profile = PlayerProfileManager.Instance.Profile;
     }
 
-    public void Lottery(int a)
+    public void Lottery(int a,GameObject bt)
     {
-        if (clickDic[a]==false)//눌린적 없으면
+        if (clickDic[a]==false)
         {
-            if (nums.Count < 3)
+            if (nums.Count < 5)
             {
                 nums.Add(a);
                 clickDic[a] = true;
+                bt.GetComponent<Outline>().enabled = true;
             }
             else
             {
                 Debug.Log("실패");
+                bt.GetComponent<Outline>().enabled = false;
             }
         }
         else if(clickDic[a]) 
         {
             nums.Remove(a);
             clickDic[a] = false;
+            bt.GetComponent<Outline>().enabled = false;
         }
     }
 
@@ -85,11 +88,12 @@ public class LotteryTicket_Test : MonoBehaviour
         {
             PlayerProfileManager.Instance.Profile.money -= _buyChip;
         }
-    }
 
+    }
     public void EndLoto()
     {
-        if(nums.Count < 3) 
+        
+        if(nums.Count < 5) 
         {
             //메세지 있음 좋을듯
             return;
@@ -120,8 +124,18 @@ public class LotteryTicket_Test : MonoBehaviour
         }
         else if(count== 3)
         {
+            PlayerProfileManager.Instance.Profile.money += 900;
+        }
+        else if(count == 4)
+        {
             PlayerProfileManager.Instance.Profile.money += 1500;
         }
+        else if(count == 5)
+        {
+            PlayerProfileManager.Instance.Profile.money += 3000;
+        }
+
+
         gameObject.transform.parent.parent.gameObject.SetActive(false);
     }
 }
