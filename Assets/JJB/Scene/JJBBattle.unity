@@ -1519,6 +1519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46f1e8daab768045ab7c09d81a7723f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerDamageReceiver: {fileID: 6332546598086949698}
 --- !u!1 &983367037
 GameObject:
   m_ObjectHideFlags: 0
@@ -2986,6 +2987,7 @@ MonoBehaviour:
   backUiPannel: {fileID: 1831026611887605585}
   isRolling: 0
   isShled: 0
+  endTrf: {fileID: 0}
   attackDuration: 0.8
   attackStagger: 0.05
   attackHeight: 2
@@ -2996,6 +2998,8 @@ MonoBehaviour:
   shledDice: {fileID: 511187799}
   diceCamera: {fileID: 1157293314021360243}
   glassStack: 0
+  _xecution: 0
+  _vamfire: 0
 --- !u!114 &1605801674
 MonoBehaviour:
   m_ObjectHideFlags: 0

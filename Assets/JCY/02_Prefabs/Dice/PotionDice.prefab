@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2293247918814271932}
   - component: {fileID: 508322639934586137}
   - component: {fileID: 8486688524588890306}
-  - component: {fileID: -254111880281386329}
+  - component: {fileID: 887241119821586253}
   m_Layer: 0
-  m_Name: AliiinDIce
+  m_Name: PotionDice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,9 +51,11 @@ MonoBehaviour:
   currentDiceSO: {fileID: 0}
   currentIndex: 0
   trailRenderer: {fileID: 0}
-  <OutLine>k__BackingField: {fileID: 2100000, guid: c6f288c5f5c442d498ba189ddcc568ec,
+  <OutLine>k__BackingField: {fileID: 2100000, guid: bbea12ee33f41604a86a48f0e39b7fa4,
     type: 2}
   <IsSelected>k__BackingField: 0
+  glassSelectMaterial: {fileID: -7914976781284674461, guid: 4cfcff055c565fa429575d89d0d70ad5,
+    type: 3}
 --- !u!54 &508322639934586137
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -93,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5181525cf424b0aa2e27af268bff8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xForce: -15
+  xForce: -20
   xForceMin: -65
   yForce: 0
   yForceMin: -10
@@ -101,7 +103,7 @@ MonoBehaviour:
   liftForceMin: 0
   torqueForce: 15
   forceMultiplier: 5
---- !u!96 &-254111880281386329
+--- !u!96 &887241119821586253
 TrailRenderer:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -125,7 +127,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3112961330819457637, guid: cd867057ad8079746a4d37cc6905f8c6, type: 3}
+  - {fileID: 2100000, guid: 09da80ff85809b946a88799cad99b0ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -230,7 +232,7 @@ GameObject:
   - component: {fileID: 5275044575769219845}
   - component: {fileID: 349285545318697747}
   m_Layer: 0
-  m_Name: Allin
+  m_Name: Potion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -258,7 +260,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4864258240423658053}
-  m_Mesh: {fileID: 4111267197319836950, guid: eb82e669a382ba044ba274bfed78d00e, type: 3}
+  m_Mesh: {fileID: 4376173816424490508, guid: 2040e7294ef65df41b8ab81f4ef9a6fc, type: 3}
 --- !u!23 &5275044575769219845
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -282,8 +284,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1459630551807184411, guid: cd867057ad8079746a4d37cc6905f8c6, type: 3}
-  - {fileID: 3112961330819457637, guid: cd867057ad8079746a4d37cc6905f8c6, type: 3}
+  - {fileID: 8556262120643298411, guid: c8c02be84fffc134a807ad68fe8bfccc, type: 3}
+  - {fileID: 7372942263073986894, guid: 2040e7294ef65df41b8ab81f4ef9a6fc, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
