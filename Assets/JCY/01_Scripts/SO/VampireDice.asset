@@ -16,7 +16,7 @@ MonoBehaviour:
   diceIcon: {fileID: -7274759578867535494, guid: 180c03dbd0fd0df478e05bd373948d3b,
     type: 3}
   cost: 50
-  color: {r: 0.8867924, g: 0.12548937, b: 0.12548937, a: 1}
+  color: {r: 1, g: 0.60062885, b: 0.60062885, a: 1}
   dicePrefab: {fileID: 34949007336262702, guid: ca44240e60c31374b84bf876ff45d4ff,
     type: 3}
   diceEffectType: 7

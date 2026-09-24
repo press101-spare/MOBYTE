@@ -203,6 +203,8 @@ public class DiceTree_JCY : MonoBehaviour
         GameObject clickBtn = EventSystem.current.currentSelectedGameObject;
         
         TextMeshProUGUI scoreText = clickBtn.transform.Find("ScoreText")?.GetComponent<TextMeshProUGUI>();
+        AudioManager.Instance.PlayClipSFX("SFX_CHOICE");
+        
         
         if (scoreText != null)
         {
@@ -210,6 +212,7 @@ public class DiceTree_JCY : MonoBehaviour
             if (int.TryParse(scoreText.text, out int score))
             {
                 CurrentTree = clickBtn.name;
+                Debug.Log(CurrentTree);
                 if (Enum.TryParse(clickBtn.name, out Trees parsedTree))
                 {
                     CurrentTrees = parsedTree;

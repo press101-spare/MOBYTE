@@ -29734,6 +29734,8 @@ MonoBehaviour:
   shledDice: {fileID: 0}
   diceCamera: {fileID: 0}
   glassStack: 0
+  _xecution: 0
+  _vamfire: 0
 --- !u!1 &1402180185887888715
 GameObject:
   m_ObjectHideFlags: 0
@@ -38901,6 +38903,7 @@ MonoBehaviour:
   drawnDice: []
   diceFile_JCy: []
   drawCount: 5
+  diceEffectUIUpdate: {fileID: 0}
 --- !u!114 &6685034851209829456
 MonoBehaviour:
   m_ObjectHideFlags: 0
