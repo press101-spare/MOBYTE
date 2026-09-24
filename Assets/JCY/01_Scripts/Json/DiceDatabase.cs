@@ -4,7 +4,7 @@ using UnityEngine;
 public class DiceDatabase : MonoBehaviour
 {
     [Header("게임에 존재하는 모든 주사위 SO를 여기에 등록하세요")]
-    public DiceSO_JCY[] allDiceArray;
+    public DiceSO_JCY[] allDiceArray; // => 구문 및 [SerializeField] 제거
 
     // 빠른 검색을 위한 사전 (Key: diceName, Value: DiceSO)
     private Dictionary<string, DiceSO_JCY> diceDictionary = new Dictionary<string, DiceSO_JCY>();

@@ -234,11 +234,11 @@ public class DiceTree_JCY : MonoBehaviour
                 break;
             case Trees.OnePair:
                 DiceManager_JCY.Instance.shledDice.ShledHP((PlayerProfileManager.Instance.Profile.stats.maxHealth 
-                                                            * 15) / 100);
+                                                            * 5) / 100);
                 break;
             case Trees.TwoPair:
                 DiceManager_JCY.Instance.shledDice.ShledHP((PlayerProfileManager.Instance.Profile.stats.maxHealth
-                                                            * 30) / 100);
+                                                            * 10) / 100);
                 break;
             case Trees.FullHouse:
                 JJBGameManager.Instance.PlayerJjbHealth.Heal((PlayerProfileManager.Instance.Profile.stats.maxHealth
@@ -262,7 +262,7 @@ public class DiceTree_JCY : MonoBehaviour
                 //칩 획득
                 break;
             case Trees.Yahtzee:
-                DiceManager_JCY.Instance.shledDice.ShledHP(999);
+                DiceManager_JCY.Instance.shledDice.ShledHP(25);
                 break;
             
         } 
@@ -273,7 +273,11 @@ public class DiceTree_JCY : MonoBehaviour
     {
         foreach (var ui in treeUIList)
         {
-            ui.checkMarkUI.SetActive(false);
+            // 🟢 UI 오브젝트가 살아있는지(null이 아닌지) 먼저 확인 후 SetActive 실행
+            if (ui.checkMarkUI != null)
+            {
+                ui.checkMarkUI.SetActive(false);
+            }
         }
 
         CurrentTree = "";

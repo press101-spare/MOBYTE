@@ -73,7 +73,7 @@ public class DiceManager_JCY : MonoBehaviour
             Instance = this;
             if(backUiPannel != null)
                  backUiPannel.SetActive(false);
-            DontDestroyOnLoad(gameObject); // 씬이 넘어가도 파괴되지 않음
+      //      DontDestroyOnLoad(gameObject); // 씬이 넘어가도 파괴되지 않음
         }
         else
         {
