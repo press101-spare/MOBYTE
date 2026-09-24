@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 public class DiceDeckManager_JCY : MonoBehaviour
 {
     // 내가 보유한 전체 주사위
-    [SerializeField] private List<DiceSO_JCY> diceCollection;
+    public List<DiceSO_JCY> diceCollection;
     
     // 기본 덱에 들어가는 주사위
     [SerializeField] private DiceSO_JCY defaultDice;
@@ -27,7 +27,13 @@ public class DiceDeckManager_JCY : MonoBehaviour
     [SerializeField] private List<DiceSO_JCY> diceFile_JCy;
 
     // 한 턴에 뽑을 주사위 개수
-    [SerializeField] private int drawCount = 6;
+    [SerializeField] private int drawCount = 5;
+    
+    // 다이스 디펙트 UI 스크립트
+    public DiceEffectUIUpdate diceEffectUIUpdate;
+    
+
+    public bool IsFight => false;
 
     public static DiceDeckManager_JCY Instance { get; private set; }
     private void Awake()
@@ -95,6 +101,7 @@ public class DiceDeckManager_JCY : MonoBehaviour
         {
             DiscardDice();
         }
+        diceEffectUIUpdate.UpdateUI(drawnDice);
     }
 
     //다이스 버린거 버리는 덱에 넣고 드로우한 다이스 초기화
@@ -133,20 +140,26 @@ public class DiceDeckManager_JCY : MonoBehaviour
     public void RemoveDice(DiceSO_JCY.DiceEffectType DeleteDice)
     {
         if (diceCollection.Count <= 15) return;
-        if (DeleteDice == DiceSO_JCY.DiceEffectType.Potion || DeleteDice == DiceSO_JCY.DiceEffectType.Glass && diceCollection.Count <= 10)
+            
+        if (DeleteDice == DiceSO_JCY.DiceEffectType.Potion || DeleteDice == DiceSO_JCY.DiceEffectType.Glass && diceCollection.Count <= 10 && IsFight)
         {
             return;
         }
-        
-        var targetInCollection = diceCollection.Find(dice => dice.diceEffectType == DeleteDice);
-        if (targetInCollection != null)
+
+        if (!IsFight)
         {
-            Debug.Log("삭제 완");
-            diceCollection.Remove(targetInCollection);
+            var targetInCollection = diceCollection.Find(dice => dice.diceEffectType == DeleteDice);
+            if (targetInCollection != null)
+            {
+                Debug.Log("삭제 완");
+                diceCollection.Remove(targetInCollection);
+                return;
+            }
         }
         
+        
         var targetInFile = diceFile_JCy.Find(dice => dice.diceEffectType == DeleteDice);
-        if (targetInCollection != null)
+        if (targetInFile != null)
         {
             Debug.Log("삭제 완");
             diceCollection.Remove(targetInFile);
