@@ -27,7 +27,11 @@ public class DiceDeckManager_JCY : MonoBehaviour
     [SerializeField] private List<DiceSO_JCY> diceFile_JCy;
 
     // 한 턴에 뽑을 주사위 개수
-    [SerializeField] private int drawCount = 6;
+    [SerializeField] private int drawCount = 5;
+    
+    // 다이스 디펙트 UI 스크립트
+    public DiceEffectUIUpdate diceEffectUIUpdate;
+    
 
     public bool IsFight => false;
 
@@ -97,6 +101,7 @@ public class DiceDeckManager_JCY : MonoBehaviour
         {
             DiscardDice();
         }
+        diceEffectUIUpdate.UpdateUI(drawnDice);
     }
 
     //다이스 버린거 버리는 덱에 넣고 드로우한 다이스 초기화
