@@ -22,5 +22,12 @@ namespace JJB.Script.Battle.Player.Progression
 
             Profile = new PlayerProfile();
         }
+        public void AddMoney(int amount)
+        {
+            if (amount <= 0)
+                return;
+
+            Profile.money += amount;
+        }
     }
 }
