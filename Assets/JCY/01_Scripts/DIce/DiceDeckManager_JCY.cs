@@ -93,6 +93,7 @@ public class DiceDeckManager_JCY : MonoBehaviour
 
         // 3. DiceManager에게 전달
         DiceManager_JCY.Instance.StartTurn(drawnDice);
+        diceEffectUIUpdate.UpdateUI(drawnDice);
         if (diceDeck.Count < drawCount)
         {
             ReshuffleDeck();
@@ -101,7 +102,7 @@ public class DiceDeckManager_JCY : MonoBehaviour
         {
             DiscardDice();
         }
-        diceEffectUIUpdate.UpdateUI(drawnDice);
+        
     }
 
     //다이스 버린거 버리는 덱에 넣고 드로우한 다이스 초기화

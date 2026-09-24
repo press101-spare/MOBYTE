@@ -29,6 +29,7 @@ namespace JJB.Script
 
         public void Throw()
         {
+            AudioManager.Instance.PlayClipSFX("SFX_ROLLING");
             _rb.isKinematic = false;
             _rb.linearVelocity = Vector3.zero;
             _rb.angularVelocity = Vector3.zero;

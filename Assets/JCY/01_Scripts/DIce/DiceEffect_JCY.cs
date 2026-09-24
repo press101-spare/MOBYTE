@@ -44,8 +44,6 @@ public class DiceEffect_JCY : MonoBehaviour
     public int CalculateFinalDamage(IReadOnlyList<DiceObject_JCY> activeDice, int baseDamage)
     {
         float finalDamage = baseDamage;
-        int allinStack = 0;
-        int growStack = 0;
 
         foreach (DiceObject_JCY dice in activeDice)
         {
@@ -56,13 +54,12 @@ public class DiceEffect_JCY : MonoBehaviour
             int rolledValue = dice.currentIndex;
 
             // 3. Allin 주사위 판별 예시
-            if (effectType == DiceSO_JCY.DiceEffectType.Allin && allinStack < 10)
+            if (effectType == DiceSO_JCY.DiceEffectType.Allin)
             {
                 if (rolledValue == 6)
                 {
                     Debug.Log("올인 터짐");
                     finalDamage *= 1.5f ; // 6이 나왔을 때 대폭 증가
-                    allinStack++;
                 }
                 continue;
             }
@@ -77,7 +74,7 @@ public class DiceEffect_JCY : MonoBehaviour
             //흡혈
             if (effectType == DiceSO_JCY.DiceEffectType.Vampire)
             {
-                
+                DiceManager_JCY.Instance._vamfire++;
                 continue;
             }
                 
@@ -122,13 +119,28 @@ public class DiceEffect_JCY : MonoBehaviour
             }
         
             //성장
-            if (effectType == DiceSO_JCY.DiceEffectType.Grow && growStack < 2)
+            if (effectType == DiceSO_JCY.DiceEffectType.Grow)
             {
                 Debug.Log($"성장 {(float)JJBGameManager.Instance.BattleTurnManager.CurrentPhase / 2f}만큼");
                 finalDamage += (float)JJBGameManager.Instance.BattleTurnManager.CurrentPhase / 2f;
-                growStack++;
-                Debug.Log(growStack);
                 continue;
+            }
+            
+            if (effectType == DiceSO_JCY.DiceEffectType.Phoenix)
+            {
+                JJBGameManager.Instance.PlayerJjbHealth.EnableOneHpRevive();
+                continue;
+            }
+            
+            if (effectType == DiceSO_JCY.DiceEffectType.Phoenix)
+            {
+                JJBGameManager.Instance.PlayerJjbHealth.EnableOneHpRevive();
+                continue;
+            }
+
+            if (effectType == DiceSO_JCY.DiceEffectType.Mirror)
+            {
+                //playerDamageReceiver.ri
             }
         }
 
