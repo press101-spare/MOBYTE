@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using JJB.Script.Battle;
+using JJB.Script.Battle.Enemy;
 using JJB.Script.Battle.Player;
 using JJB.Script.Battle.Player.Progression;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class DiceEffect_JCY : MonoBehaviour
 {
     public DiceEffect_JCY Instance { get; set; }
     [SerializeField] private PlayerDamageReceiver playerDamageReceiver;
+    [SerializeField] private EnemyDamageReceiver enemyDamageReceiver;
     
     private void Awake()
     {
@@ -81,8 +83,7 @@ public class DiceEffect_JCY : MonoBehaviour
             //핵폭탄
             if (effectType == DiceSO_JCY.DiceEffectType.Hack)
             {
-              //  playerDamageReceiver.TakeDamage((JJBGameManager.Instance.PlayerJjbHealth.MaxHealth * 15) / 100);
-                playerDamageReceiver.TakeDamage(10);
+                playerDamageReceiver.TakeDamage((JJBGameManager.Instance.PlayerJjbHealth.CurrentHealth * 20) / 100);
                 finalDamage *= 1.5f;
                 continue;
             }
@@ -140,7 +141,12 @@ public class DiceEffect_JCY : MonoBehaviour
 
             if (effectType == DiceSO_JCY.DiceEffectType.Mirror)
             {
-                //playerDamageReceiver.ri
+                playerDamageReceiver.EnableReflection(0.34f);
+            }
+
+            if (effectType == DiceSO_JCY.DiceEffectType.Poison)
+            {
+                enemyDamageReceiver.ApplyPoison(5);
             }
         }
 
