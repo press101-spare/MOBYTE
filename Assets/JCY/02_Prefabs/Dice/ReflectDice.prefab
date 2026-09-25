@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2293247918814271932}
   - component: {fileID: 508322639934586137}
   - component: {fileID: 8486688524588890306}
-  - component: {fileID: -1293592792235964073}
+  - component: {fileID: 887241119821586253}
   m_Layer: 0
-  m_Name: ExecutionDice
+  m_Name: ReflectDice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,10 +51,12 @@ MonoBehaviour:
   currentDiceSO: {fileID: 0}
   currentIndex: 0
   trailRenderer: {fileID: 0}
-  <OutLine>k__BackingField: {fileID: 2100000, guid: c6f288c5f5c442d498ba189ddcc568ec,
+  <OutLine>k__BackingField: {fileID: 2100000, guid: bbea12ee33f41604a86a48f0e39b7fa4,
     type: 2}
   <IsSelected>k__BackingField: 0
-  glassSelectMaterial: {fileID: 0}
+  glassSelectMaterial: {fileID: -7914976781284674461, guid: 4cfcff055c565fa429575d89d0d70ad5,
+    type: 3}
+  fraudDiceMaterial: {fileID: 0}
 --- !u!54 &508322639934586137
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -102,7 +104,7 @@ MonoBehaviour:
   liftForceMin: 0
   torqueForce: 15
   forceMultiplier: 5
---- !u!96 &-1293592792235964073
+--- !u!96 &887241119821586253
 TrailRenderer:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -126,7 +128,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2358361186107964638, guid: c8c02be84fffc134a807ad68fe8bfccc, type: 3}
+  - {fileID: -7805965318761107941, guid: 8da868e20e1a8e64ba2d6f21c3b25e08, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -231,7 +233,7 @@ GameObject:
   - component: {fileID: 5275044575769219845}
   - component: {fileID: 349285545318697747}
   m_Layer: 0
-  m_Name: Execution
+  m_Name: Reflect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,7 +261,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4864258240423658053}
-  m_Mesh: {fileID: 3007672577585035202, guid: bdfb8a3c3eee0ce47854ea0daff6c8be, type: 3}
+  m_Mesh: {fileID: -7980434691162617461, guid: 80d4f495904b2a14985b7287ed911fa2, type: 3}
 --- !u!23 &5275044575769219845
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -283,8 +285,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6756669322105621606, guid: bdfb8a3c3eee0ce47854ea0daff6c8be, type: 3}
-  - {fileID: -2358361186107964638, guid: bdfb8a3c3eee0ce47854ea0daff6c8be, type: 3}
+  - {fileID: 5046226728603767883, guid: 80d4f495904b2a14985b7287ed911fa2, type: 3}
+  - {fileID: 193384353357180888, guid: 80d4f495904b2a14985b7287ed911fa2, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

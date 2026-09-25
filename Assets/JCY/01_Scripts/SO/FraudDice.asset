@@ -19,7 +19,7 @@ MonoBehaviour:
   color: {r: 0.61006284, g: 0.5600299, b: 0.18608826, a: 1}
   dicePrefab: {fileID: 34949007336262702, guid: a009e545d2feca2438a6dbd71b7fce42,
     type: 3}
-  diceEffectType: 0
+  diceEffectType: 12
   diceDescription: "[6,6,6,6,6,6]\n\uBB34\uC870\uAC74 6\uC774 \uB098\uC624\uB294
     \uC0AC\uAE30\uC801\uC778 \uC8FC\uC0AC\uC704\uB2E4."
   faceValues: 060000000600000006000000060000000600000006000000

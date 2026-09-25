@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: MirorDice
   m_EditorClassIdentifier: 
   diceName: "\uBC18\uC0AC \uC8FC\uC0AC\uC704"
-  diceIcon: {fileID: 3310002292416464744, guid: c65a1101f08fc7e4e9a39f018ea95575,
+  diceIcon: {fileID: -8584545245949922774, guid: fdaec6cd3ceca2142b836eb251fa5695,
     type: 3}
   cost: 50
-  color: {r: 0, g: 0, b: 0, a: 1}
-  dicePrefab: {fileID: 34949007336262702, guid: f3fd63190fb198b469ddbf6620b23e3a,
+  color: {r: 0.38679236, g: 1, b: 0.40221882, a: 1}
+  dicePrefab: {fileID: 34949007336262702, guid: bb325aaa466eec94cab273b87a4066af,
     type: 3}
   diceEffectType: 20
   diceDescription: "[1,2,3,4,5,7]\n\uC774\uBC88\uD134 \uD50C\uB808\uC774\uC5B4\uAC00

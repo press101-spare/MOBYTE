@@ -51,9 +51,10 @@ MonoBehaviour:
   currentDiceSO: {fileID: 0}
   currentIndex: 0
   trailRenderer: {fileID: 0}
-  <OutLine>k__BackingField: {fileID: 2100000, guid: c6f288c5f5c442d498ba189ddcc568ec,
+  <OutLine>k__BackingField: {fileID: 2100000, guid: 029b947bfb638a740be07c5a25933ff2,
     type: 2}
   <IsSelected>k__BackingField: 0
+  glassSelectMaterial: {fileID: 0}
 --- !u!54 &508322639934586137
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -282,7 +283,6 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 19ed7134bf1f5f7448ff901886be5ee1, type: 2}
   - {fileID: -6744124317006364375, guid: c8c02be84fffc134a807ad68fe8bfccc, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
