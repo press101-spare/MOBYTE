@@ -53,15 +53,9 @@ public class BaccaratGame : MonoBehaviour
 
 
 
-
-
-
-    private void Update()
+    public void StartGamble()
     {
-        if(Keyboard.current.yKey.wasPressedThisFrame)
-        {
-            StartCoroutine(BlackjackGame());
-        }
+        StartCoroutine(BlackjackGame());
     }
 
     private IEnumerator BlackjackGame()

@@ -11,7 +11,7 @@ public class RandomGamble : MonoBehaviour
     [SerializeField] private List<Transform> _spawnPoints;
     [SerializeField] private Transform[] _originPoints;
 
-    private void OnEnable()
+    private void Start()
     {
         RandomTable();
     }

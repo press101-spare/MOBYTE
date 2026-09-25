@@ -5,24 +5,18 @@ using UnityEngine.InputSystem;
 public class RouletteGame_HTY : MonoBehaviour
 {
     [SerializeField] private float _speed;
-    [SerializeField] private bool _isSpin = false;
+    [SerializeField] private bool _canSpin = false;
 
-    private void Update()
+    public void StartGamble()
     {
-        if(Keyboard.current.aKey.wasPressedThisFrame)
-        {
-            _isSpin = !_isSpin;
-            _speed = Random.Range(8,14);
-            if(_isSpin)
-            {
-                StartCoroutine(Spin());
-            }
-        }
+        _canSpin = false;
+        _speed = Random.Range(8, 14);
+        StartCoroutine(Spin());
     }
     private IEnumerator Spin()
     {
         float _disSpeed = 0.01f;
-        while(_isSpin)
+        while(_canSpin)
         {
             yield return null;
             gameObject.transform.Rotate(0, 0, _speed);
@@ -30,12 +24,11 @@ public class RouletteGame_HTY : MonoBehaviour
             _disSpeed += 0.001f;
             if(_speed<0)
             {
-                _isSpin=false;
+                _canSpin=false;
             }
             yield return null;
         }
         gameObject.transform.parent.parent.gameObject.SetActive(false);
         GambleManager.instance.GambleEnd(2);
-
     }
 }

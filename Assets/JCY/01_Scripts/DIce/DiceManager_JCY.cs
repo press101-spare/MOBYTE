@@ -630,5 +630,20 @@ public class DiceManager_JCY : MonoBehaviour
             diceScript.trailRenderer.enabled = on;
         }
     }
+
+    public void DiceSet()
+    {
+        foreach (var activeDiceObject in activeDiceObjects)
+        {
+            if (activeDiceObject.activeInHierarchy)
+            {
+                activeDiceObject.SetActive(false);
+            }
+            else
+            {
+                activeDiceObject.SetActive(true);
+            }
+        }
+    }
 }
 

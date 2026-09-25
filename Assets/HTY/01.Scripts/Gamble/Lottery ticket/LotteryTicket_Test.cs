@@ -1,4 +1,6 @@
+using DG.Tweening;
 using JJB.Script.Battle.Player.Progression;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -16,7 +18,9 @@ public class LotteryTicket_Test : MonoBehaviour
 
     [SerializeField] private int _buyChip=500;
 
-    private PlayerProfile profile;
+
+    [SerializeField] private TextMeshProUGUI _textLoto;
+
 
 
 
@@ -49,13 +53,8 @@ public class LotteryTicket_Test : MonoBehaviour
         ranNums.Clear();
         for(int i = 0; i<5;i++)
         {
-            ranNums[i]=Random.Range(1,25);
+            ranNums.Add(Random.Range(1, 25)); 
         }
-    }
-
-    private void Update()
-    {
-        profile = PlayerProfileManager.Instance.Profile;
     }
 
     public void Lottery(int a,GameObject bt)
@@ -84,7 +83,7 @@ public class LotteryTicket_Test : MonoBehaviour
 
     public void BuyLoto()
     {
-        if (profile.money >= _buyChip)
+        if (PlayerProfileManager.Instance.Profile.money >= _buyChip)
         {
             PlayerProfileManager.Instance.Profile.money -= _buyChip;
         }
@@ -110,6 +109,7 @@ public class LotteryTicket_Test : MonoBehaviour
                 }
             }
         }
+
         Debug.Log(count);
         if (count==0)
         {
@@ -135,7 +135,17 @@ public class LotteryTicket_Test : MonoBehaviour
             PlayerProfileManager.Instance.Profile.money += 3000;
         }
 
+        StartCoroutine(Coll(count));
+    }
 
+
+    private IEnumerator Coll(int count)
+    {
+        _textLoto.gameObject.SetActive(true);
+        _textLoto.text = $"{ranNums[0]},{ranNums[1]},{ranNums[2]},{ranNums[3]},{ranNums[4]}\n 맞은 개수 {count}";
+        yield return new WaitForSeconds(4);
+        _textLoto.DOFade(0,1.2f);
+        _textLoto.gameObject.SetActive(false);
         gameObject.transform.parent.parent.gameObject.SetActive(false);
     }
 }
