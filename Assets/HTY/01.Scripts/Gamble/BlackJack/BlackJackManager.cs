@@ -46,17 +46,9 @@ public class BlackJackManager : MonoBehaviour
 
     private List<GameObject> _spawnedCards = new List<GameObject>();
 
-    private void Start()
+    public void GambleStart()
     {
-
-    }
-
-    private void Update()
-    {
-        if (Keyboard.current != null && Keyboard.current.yKey.wasPressedThisFrame)
-        {
-            StartCoroutine(BlackjackGame());
-        }
+        StartCoroutine(BlackjackGame());
     }
 
     private IEnumerator BlackjackGame()
