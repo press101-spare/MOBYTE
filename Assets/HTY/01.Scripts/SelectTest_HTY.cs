@@ -101,6 +101,8 @@ public class SelectTest_HTY : MonoBehaviour
                 _canSelect = false;
                 break;
             case GambleType.SlotGame:
+                _slot.SetActive(true);
+                _canSelect = false;
                 break;
         }
         

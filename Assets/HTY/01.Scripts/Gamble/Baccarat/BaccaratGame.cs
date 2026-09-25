@@ -51,6 +51,10 @@ public class BaccaratGame : MonoBehaviour
 
     public int _thardCard;
 
+    private void OnEnable()
+    {
+        
+    }
 
 
     public void StartGamble()
