@@ -16,6 +16,7 @@ public class DiceManager_JCY : MonoBehaviour
     [SerializeField] private List<GameObject> activeDiceObjects = new List<GameObject>();
     [SerializeField] private List<DiceObject_JCY> activeDiceScripts = new List<DiceObject_JCY>();
     [SerializeField] private List<JJB_DicePhysics> activeDicePhysicd = new List<JJB_DicePhysics>();
+    public List<DiceSO_JCY> activeDiceSo = new List<DiceSO_JCY>();
 
     [Header("기타 수치")] [field: SerializeField]
     public int[] currentDiceValue = new int[5]; 
@@ -30,6 +31,7 @@ public class DiceManager_JCY : MonoBehaviour
     [SerializeField] string sumUiTxt;
     [SerializeField] TextMeshProUGUI sumTxt;
     [SerializeField] GameObject backUiPannel;
+    [SerializeField] private GameObject[] canvas;
     public bool isRolling;
     public bool isShled;
 
@@ -85,6 +87,7 @@ public class DiceManager_JCY : MonoBehaviour
     {
         ClearDice();
         diceCamera.DiceCameraMove();
+        activeDiceSo = drawnDiceSoList;
         for (int i = 0; i < drawnDiceSoList.Count; i++)
         {
             if (i >= spawnPositions.Length) break;
@@ -631,19 +634,34 @@ public class DiceManager_JCY : MonoBehaviour
         }
     }
 
-    public void DiceSet()
+    public void DiceSet(bool amount)
     {
-        foreach (var activeDiceObject in activeDiceObjects)
+        // 1. 현재 켜져 있는 UI Canvas의 개수를 세어봅니다.
+        int activeCanvasCount = 0;
+        foreach (var canva in canvas)
         {
-            if (activeDiceObject.activeInHierarchy)
+            if (canva != null && canva.activeInHierarchy)
             {
-                activeDiceObject.SetActive(false);
-            }
-            else
-            {
-                activeDiceObject.SetActive(true);
+                activeCanvasCount++;
             }
         }
+
+        // 2. 켜진 UI가 0개면 주사위 활성화(true), 1개 이상이면 비활성화(false)
+        bool shouldShowDice = (activeCanvasCount == 0);
+
+        // 3. 주사위 상태 적용
+        foreach (var activeDiceObject in activeDiceObjects)
+        {
+            if (activeDiceObject != null)
+            {
+                activeDiceObject.SetActive(shouldShowDice);
+            }
+        }
+    }
+
+    public void DiceSlotSet()
+    {
+        DiceDeckManager_JCY.Instance.diceEffectUIUpdate.UpdateUI(activeDiceSo);
     }
 }
 
