@@ -35,7 +35,7 @@ public class SelectTest_HTY : MonoBehaviour
 
     
 
-    private bool _canSelect =true;
+    public bool _canSelect =true;
 
 
     private void Start()
@@ -101,9 +101,10 @@ public class SelectTest_HTY : MonoBehaviour
                 _canSelect = false;
                 break;
             case GambleType.SlotGame:
+                _slot.SetActive(true);
+                _canSelect = false;
                 break;
         }
-        
     }
 
     public void ExitGame()
