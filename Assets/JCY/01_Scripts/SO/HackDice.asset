@@ -18,7 +18,7 @@ MonoBehaviour:
   color: {r: 0.12893075, g: 1, b: 0.19364563, a: 1}
   dicePrefab: {fileID: 34949007336262702, guid: 2ab02a6a96f26004c865b44a60072f28,
     type: 3}
-  diceEffectType: 9
+  diceEffectType: 21
   diceDescription: "[7,7,7,7,7,7]\n\uBAA8\uB4E0 \uB208\uAE08\uC774 \uC871\uBCF4\uC5D0\uC11C
     \uBAA8\uB4E0 \uB208\uC73C\uB85C \uCDE8\uAE09\uB418\uB294  7\uB85C \uD310\uC815\uB418\uACE0
     \uCD5C\uC885 \uD53C\uD574\uB97C 50% \uC99D\uAC00\uC2DC\uD0A4\uC9C0\uB9CC \uD50C\uB808\uC774\uC5B4\uAC00

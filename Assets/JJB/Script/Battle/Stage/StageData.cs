@@ -7,6 +7,7 @@ namespace JJB.Script.Battle.Stage
     public class StageData : ScriptableObject
     {
         [SerializeField] private EnemyData[] enemies;
+        public int stageId;
 
         public EnemyData GetRandomEnemy()
         {

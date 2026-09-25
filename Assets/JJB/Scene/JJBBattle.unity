@@ -4172,7 +4172,7 @@ GameObject:
   - component: {fileID: 1989956199}
   - component: {fileID: 1989956198}
   m_Layer: 5
-  m_Name: PlayerText
+  m_Name: EnemyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4194,7 +4194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 47.7, y: 0.4}
+  m_AnchoredPosition: {x: 58, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1989956198
@@ -4217,9 +4217,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Enemy
-
-'
+  m_text: "\uBE5A\uC7C1\uC774"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e8818f8cbfd25c94db770b4339751d00, type: 2}
   m_sharedMaterial: {fileID: 3152988014464106541, guid: e8818f8cbfd25c94db770b4339751d00,
@@ -4406,6 +4404,8 @@ MonoBehaviour:
   <BattleTurnManager>k__BackingField: {fileID: 3564548708749431063}
   <PlayerDamageReceiver>k__BackingField: {fileID: 0}
   <EnemyDamageReceiver>k__BackingField: {fileID: 0}
+  <StageManager>k__BackingField: {fileID: 0}
+  isFighting: 0
 --- !u!1 &2073359296
 GameObject:
   m_ObjectHideFlags: 0
@@ -6349,7 +6349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 8b05783af2eddf841a273b22f4b94319, type: 2}
-  enemyNameText: {fileID: 0}
+  enemyNameText: {fileID: 1989956198}
 --- !u!222 &1187357708258100334
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17034,6 +17034,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 116554398}
   - {fileID: 867768423}
+  - {fileID: 2473524876525991887}
   - {fileID: 2342864251954462913}
   - {fileID: 1662092057}
   - {fileID: 1605801672}
@@ -17046,4 +17047,3 @@ SceneRoots:
   - {fileID: 1788522888}
   - {fileID: 1282694295}
   - {fileID: 413755388}
-  - {fileID: 2473524876525991887}

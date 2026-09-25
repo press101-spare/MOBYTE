@@ -11,7 +11,344 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/JJBGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/JJBGameManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/BGM Boss.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/BGM Boss.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/BGM Event.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/BGM Event.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/BGM Fight.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/BGM Fight.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/BGM Main.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/BGM Main.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX BUY1.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX BUY1.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX BUY2.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX BUY2.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX BUY3.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX BUY3.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Book.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Book.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Card.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Card.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Cheer.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Cheer.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Choice.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Choice.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Enemy Hit.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Enemy Hit.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Glass.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Glass.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Player Hit.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Player Hit.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Rolling.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Rolling.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Slot.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SO/SFX Slot.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/BookOpening.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/BookOpening.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/CardSound.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/CardSound.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/Dice Boss BGM.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/Dice Boss BGM.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/Dice Event BGM.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/Dice Event BGM.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/Dice Fight BGM.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/Dice Fight BGM.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/Dice Main BGM.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/Dice Main BGM.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/DiceRolling.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/DiceRolling.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/DobakCheer.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/DobakCheer.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/EnemyHit.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/EnemyHit.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/GlassDiceBreak.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/GlassDiceBreak.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/JockboChoice.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/JockboChoice.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/PlayerHit.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/PlayerHit.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/ShopBuy1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/ShopBuy1.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/ShopBuy2.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/ShopBuy2.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/ShopBuy3.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/ShopBuy3.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/SlotMachine.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds/SlotMachine.mp3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceEffectSlotUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceEffectSlotUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceEffectUIUpdate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceEffectUIUpdate.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/GlasSelectMaterial.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/GlasSelectMaterial.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/DataManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/DataManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/DiceDatabase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/DiceDatabase.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/SaveData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/SaveData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/SaveManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/SaveManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/ExecutionDice.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/ExecutionDice.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/PotionDice.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/PotionDice.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/AllInDice.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/PotionDice.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/PotionDice.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/VamfireDIce.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/03_SOund/MainAudioMixer.mixer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/03_SOund/MainAudioMixer.mixer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Blood.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Blood.psd.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/BlueBack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/BlueBack.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/DarkRed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Green.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Green.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/BlueTex.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/BlueTex.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/DarkRed.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/DarkRed.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/Poison 1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/Poison 1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/WhiteGreen.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/WhiteGreen.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/WhiteRed.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/WhiteRed.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/WhiteGreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/WhiteGreen.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/rightRed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/rightRed.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/AllinDice.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/DIceIcon/AllinDIc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/DIceIcon/AllinDIc.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/DIceIcon/image-Photoroom (16).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/DIceIcon/image-Photoroom (16).png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/GlassDiceSelec.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/GlassDiceSelec.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/PotionDice.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/PotionDice.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/VamfireDice.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/VamfireDice.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-dice-gift.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-dice-gift.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-discount-shop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-discount-shop.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-double-triple-dice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-double-triple-dice.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-flax-overplay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-flax-overplay.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-lost-wallet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-lost-wallet.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-lucky-potion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-lucky-potion.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-missing-belongings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-missing-belongings.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-roulette-gamble.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Backgrounds/event-roulette-gamble.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/DialougueView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/DialougueView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/EventDialogueData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/EventDialogueData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/EventEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/EventEffect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/EventMoneyLoss.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/EventMoneyLoss.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/EventRandom.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/EventRandom.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/EventSelectorSO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/EventSelectorSO.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/EventSo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/EventSo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Eventmanager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Eventmanager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/ThreeChoice.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/ThreeChoice/NewMonoBehaviourScript.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/ThreeChoice/NewMonoBehaviourScript.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/WeightedRandomEventSelect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/WeightedRandomEventSelect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/02.Prefab/Button.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LYW/02.Prefab/Button.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SoundTestScripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SoundTestScripts/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SoundTestScripts/SoundStringContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SoundTestScripts/SoundStringContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/03. Scenes/SoundTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/03. Scenes/SoundTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/chip.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/chip.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/chip.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/chip.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/공격력 포션 임시 이미지.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/공격력 포션 임시 이미지.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/공격력 포션 임시 이미지.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/공격력 포션 임시 이미지.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/공격력포션 배경.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/공격력포션 배경.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/공격력포션 배경.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/공격력포션 배경.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/방어력 포션 임시 이미지.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/방어력 포션 임시 이미지.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/방어력 포션 임시 이미지.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/방어력 포션 임시 이미지.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/방어력포션 배경.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/방어력포션 배경.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/방어력포션 배경.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/방어력포션 배경.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/임시 상점 배경.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/임시 상점 배경.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/임시 상점 배경.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/임시 상점 배경.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/회복포션 배경.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/회복포션 배경.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/회복포션 배경.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/회복포션 배경.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/회복포션 에셋.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/회복포션 에셋.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/회복포션 에셋.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/회복포션 에셋.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/흡혈 주사위 배경.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/흡혈 주사위 배경.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/흡혈 주사위 배경.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/흡혈 주사위 배경.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/흡혈 주사위 임시 이미지.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/흡혈 주사위 임시 이미지.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/05. Images/흡혈 주사위 임시 이미지.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/07. Images/흡혈 주사위 임시 이미지.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation8.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation8.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation9.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Death/RogueDeathAnimation9.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/DownSideWalk.gif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/DownSideWalk.gif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/DownSideWalk1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/DownSideWalk1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/DownSideWalk2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/DownSideWalk2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/DownSideWalk3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/DownSideWalk3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/DownSideWalk4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/DownSideWalk4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/DownSideWalk5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/DownSideWalk5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/DownSideWalk6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/DownSideWalk6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/Downright.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/DownRightWalk/Downright.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/DownWalk.gif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/DownWalk.gif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/DownWalk1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/DownWalk1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/DownWalk2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/DownWalk2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/DownWalk3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/DownWalk3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/DownWalk4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/DownWalk4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/DownWalk5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/DownWalk5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/DownWalk6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/DownWalk6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/walk down.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/DownWalk/walk down.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/Idle.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/Idle.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation.gif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation.gif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation8.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation8.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation9.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation9.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation_0.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/Idle/IdleAnimation_0.controller.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/Side.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/Side.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/SideWalk.gif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/SideWalk.gif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/SideWalk1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/SideWalk1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/SideWalk2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/SideWalk2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/SideWalk3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/SideWalk3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/SideWalk4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/SideWalk4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/SideWalk5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/SideWalk5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/SideWalk6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/SideWalk6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/sidewalk.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/SideWalk/sidewalk.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpLeft.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpLeft.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpSideWalk.gif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpSideWalk.gif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpSideWalk1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpSideWalk1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpSideWalk2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpSideWalk2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpSideWalk3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpSideWalk3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpSideWalk4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpSideWalk4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpSideWalk5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpSideWalk5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpSideWalk6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpSideWalk/UpSideWalk6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/UpWalk.gif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/UpWalk.gif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/UpWalk1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/UpWalk1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/UpWalk2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/UpWalk2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/UpWalk3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/UpWalk3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/UpWalk4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/UpWalk4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/UpWalk5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/UpWalk5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/UpWalk6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/UpWalk6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/Visual.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/Visual.controller.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/walk up.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Sprites/Rogue Animationset v.1.3/Rogue Animationset/UpWalk/walk up.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/00_Scenes/Test_JCY.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/00_Scenes/Test_JCY.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceDeckManager_JCY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceDeckManager_JCY.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceEffect_JCY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceEffect_JCY.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceManager_JCY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceManager_JCY.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceObject_JCY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceObject_JCY.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceTree_JCY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceTree_JCY.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/AliiinDIce.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/AliiinDIce.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/GlassDIce.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/GlassDIce.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/HackDice.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/HackDice.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/PoisonDIce.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/PoisonDIce.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/ShieldTurnDice.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/ShieldTurnDice.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/VampireDice.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/VampireDice.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/AliiinDIce.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/VamfireDIce.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/AliiinDIce.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/AllInDice.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/BloodDice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/BloodDice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/ChipDice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/ChipDice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/DebtDice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/DebtDice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/EvenDice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/EvenDice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/ExecutionDice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/ExecutionDice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/FraudDIce.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/FraudDIce.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/GiantDice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/GiantDice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/GlassDice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/GlassDice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/GrowDIce.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/GrowDIce.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/HackDIce.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/HackDIce.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/HealthDice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/HealthDice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/JokerDIce.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/JokerDIce.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/NomarlDIce.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/NomarlDIce.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/OddDice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/OddDice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/PhoenixDIce.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/PhoenixDIce.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/PoisonDice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/PoisonDice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/ReRollDice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/ReRollDice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/ShledDice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/ShledDice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/ShledTurnDice.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/02_Prefabs/Dice/ShledTurnDice.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/03_Sprites.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/03_SOund.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/6.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/6.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/6.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Dangu 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/Dangu 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Dangu 1.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/Dangu 1.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Dangu.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/Dangu.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Dangu.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/Dangu.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/JuPa.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/JuPa.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/JuPa.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/JuPa.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Poison.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/Poison.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Poison.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/Meterial/Poison.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/AllinDice3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/AllinDice3.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/AllinDice.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/DIceIcon/AllInIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/DIceIcon/AllInIcon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/Texture/DarkRed.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/EvenDice.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/04.Art/_Dice/EvenDice.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage10.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage10.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage7.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage8.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage8.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage9.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/Stage/Stage9.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/Stage/StageLast.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/Stage/StageLast.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Stage/StageData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Stage/StageData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/EventDice.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/EventDice.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/EventDiceCamera.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/EventDiceCamera.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/EventReRoll.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/EventReRoll.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/GiftDiceEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/GiftDiceEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/00.Event/Talk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LYW/00.Event/Talk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LYW/01.Scene/Enevnt.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LYW/01.Scene/Enevnt.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Marge.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/05. Sounds.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Marge/BattleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Marge/BattleScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/Idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +365,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceEffectUIUpdate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/DataManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/DiceDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/SaveData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/SaveManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/BloodDice.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/DebtDice.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/NormalDice.asset" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/DiceTypeRandomizer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/OddEvenJudgeAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/PaybackAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/StealMoneyAbility.cs" root0="FORCE_HIGHLIGHTING" />
@@ -55,23 +396,23 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.1592061376352461E-12" />
-      <entry key="MS500" value="0.004100455795402608" />
-      <entry key="S2" value="0.25305098584978897" />
-      <entry key="S5" value="0.5771427087584191" />
-      <entry key="S10" value="0.7596990909290462" />
-      <entry key="S30" value="0.9124630574694218" />
-      <entry key="S60" value="0.9575985563837136" />
-      <entry key="M2" value="1.0456662035083963" />
-      <entry key="M5" value="1.507962762347133" />
-      <entry key="M10" value="2.013841753852634" />
-      <entry key="M15" value="2.3046295310512845" />
-      <entry key="M30" value="3.2568599349705925" />
-      <entry key="H1" value="6.657993014008978" />
-      <entry key="H2" value="22.720406136292087" />
-      <entry key="H4" value="86.02146190602397" />
-      <entry key="D1" value="369.8793224401707" />
-      <entry key="W1" value="484.49654548644673" />
+      <entry key="MS100" value="8.8390300567801E-85" />
+      <entry key="MS500" value="1.546254306288475E-17" />
+      <entry key="S2" value="6.270760738396991E-5" />
+      <entry key="S5" value="0.020841457746003645" />
+      <entry key="S10" value="0.14436570834517334" />
+      <entry key="S30" value="0.5246048664234568" />
+      <entry key="S60" value="0.7398458948667049" />
+      <entry key="M2" value="1.3922647139218831" />
+      <entry key="M5" value="5.545887887285527" />
+      <entry key="M10" value="10.600472524599887" />
+      <entry key="M15" value="13.461900597442378" />
+      <entry key="M30" value="17.725040079116177" />
+      <entry key="H1" value="22.751285331224462" />
+      <entry key="H2" value="38.36216407209869" />
+      <entry key="H4" value="99.05392348516553" />
+      <entry key="D1" value="385.04190126882395" />
+      <entry key="W1" value="503.59055764952274" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="1.0" />
@@ -80,36 +421,36 @@
       <entry key="S5" value="1.0" />
       <entry key="S10" value="1.0" />
       <entry key="S30" value="1.0" />
-      <entry key="S60" value="1.0" />
-      <entry key="M2" value="1.0" />
-      <entry key="M5" value="1.0000000666162905" />
-      <entry key="M10" value="1.0004467410694124" />
-      <entry key="M15" value="1.0084331224216074" />
-      <entry key="M30" value="1.1670654113734873" />
-      <entry key="H1" value="2.0150055037186494" />
-      <entry key="H2" value="5.230286686408316" />
-      <entry key="H4" value="14.26486266607293" />
-      <entry key="D1" value="48.34943359045553" />
-      <entry key="W1" value="61.44865510666281" />
+      <entry key="S60" value="1.0000000084740572" />
+      <entry key="M2" value="1.000092054642055" />
+      <entry key="M5" value="1.0243006732776225" />
+      <entry key="M10" value="1.155956368016057" />
+      <entry key="M15" value="1.2920921335546864" />
+      <entry key="M30" value="1.6281040265586084" />
+      <entry key="H1" value="2.4782382188704295" />
+      <entry key="H2" value="5.479809942452503" />
+      <entry key="H4" value="14.201845390117873" />
+      <entry key="D1" value="48.72939161362131" />
+      <entry key="W1" value="62.33545588406785" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.1592061379431366E-12" />
-      <entry key="MS500" value="0.004150307418395163" />
-      <entry key="S2" value="0.3370781729843281" />
-      <entry key="S5" value="0.9484794571512267" />
-      <entry key="S10" value="1.3690731537121679" />
-      <entry key="S30" value="1.7602654827593842" />
-      <entry key="S60" value="1.8783601140592467" />
-      <entry key="M2" value="2.005225139076353" />
-      <entry key="M5" value="2.491574354392195" />
-      <entry key="M10" value="3.0060522311971156" />
-      <entry key="M15" value="3.307539353470592" />
-      <entry key="M30" value="4.4209202574609" />
-      <entry key="H1" value="8.67061686079047" />
-      <entry key="H2" value="27.9460059766422" />
-      <entry key="H4" value="100.27614327325887" />
-      <entry key="D1" value="418.221160473409" />
-      <entry key="W1" value="545.943777983544" />
+      <entry key="MS100" value="3.136772608537439E-10" />
+      <entry key="MS500" value="0.012568880795967434" />
+      <entry key="S2" value="0.33487143895910254" />
+      <entry key="S5" value="0.6632362592570867" />
+      <entry key="S10" value="0.9364520063382615" />
+      <entry key="S30" value="1.4401028804601175" />
+      <entry key="S60" value="1.694056373991346" />
+      <entry key="M2" value="2.366132991786099" />
+      <entry key="M5" value="6.552049857505236" />
+      <entry key="M10" value="11.742126365058434" />
+      <entry key="M15" value="14.742265693276627" />
+      <entry key="M30" value="19.345546584931583" />
+      <entry key="H1" value="25.22451316280405" />
+      <entry key="H2" value="43.83625352655448" />
+      <entry key="H4" value="113.24547373348096" />
+      <entry key="D1" value="433.76364652640626" />
+      <entry key="W1" value="565.9245723034162" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -124,31 +465,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Unity 에디터에 연결.Unity 에디터에 연결.executor&quot;: &quot;Debug&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;JJB&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Unity 에디터에 연결.Unity 에디터에 연결.executor": "Debug",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "JJB 병합 중",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CodeLensConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.75f1\Editor\Unity.exe" />
@@ -202,7 +543,8 @@
       <workItem from="1788606975348" duration="2322000" />
       <workItem from="1789528257041" duration="4319000" />
       <workItem from="1790064659324" duration="1094000" />
-      <workItem from="1790082908502" duration="2293000" />
+      <workItem from="1790082908502" duration="4245000" />
+      <workItem from="1790233630075" duration="1829000" />
     </task>
     <servers />
   </component>

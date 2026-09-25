@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: AliiinDIce
   m_EditorClassIdentifier: 
   diceName: "\uC62C\uC778 \uC8FC\uC0AC\uC704"
-  diceIcon: {fileID: 4854080263083761072, guid: 050e929bea1b05e458dbc6d4573410be,
+  diceIcon: {fileID: 2494040554345681213, guid: daad666327fe93343bd1b4195e394f37,
     type: 3}
   cost: 50
-  color: {r: 0.8867924, g: 0.12548937, b: 0.12548937, a: 1}
-  dicePrefab: {fileID: 34949007336262702, guid: e49884710e4720944bcea376f7483b35,
+  color: {r: 1, g: 0.8823396, b: 0, a: 1}
+  dicePrefab: {fileID: 34949007336262702, guid: f0f097efcc923754f9f948cfe6472ab6,
     type: 3}
   diceEffectType: 6
   diceDescription: "[1,1,1,1,1,6]\n\uD604\uC7AC \uB208\uC774 6\uC774\uBA74 \uCD5C\uC885\uD53C\uD574\uB97C
-    \uC99D\uAC00\uC2DC\uD0A4\uB294 \uC8FC\uC0AC\uC704\uB2E4."
+    \uB9E4\uC6B0 \uD06C\uAC8C \uC99D\uAC00\uC2DC\uD0A4\uB294 \uC8FC\uC0AC\uC704\uB2E4."
   faceValues: 010000000100000001000000010000000100000006000000

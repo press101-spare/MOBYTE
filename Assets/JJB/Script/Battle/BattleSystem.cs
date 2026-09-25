@@ -83,7 +83,7 @@ namespace JJB.Script.Battle
 
             _playerAttackController.Initialize(_enemyDamageReceiver);
 
-            _playerDamageReceiver.Initialize(_diceBattleAdapter);
+            _playerDamageReceiver.Initialize(_diceBattleAdapter, _enemyDamageReceiver);
             _enemyTurnController.Initialize(_playerDamageReceiver);
 
             _playerTurnController.Initialize(_playerAttackController);

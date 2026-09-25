@@ -17,7 +17,8 @@ namespace JJB.Script.Battle
         [field: SerializeField] public EnemyDamageReceiver EnemyDamageReceiver { get; private set; }
 
         [field: SerializeField] public StageManager StageManager { get; private set; }
-
+        public bool isFighting;
+        
         public int PlayerCurrentHealth => PlayerJjbHealth != null ? PlayerJjbHealth.CurrentHealth : 0;
         public int PlayerMaxHealth => PlayerJjbHealth != null ? PlayerJjbHealth.MaxHealth : 0;
 
@@ -25,7 +26,7 @@ namespace JJB.Script.Battle
         public int EnemyMaxHealth => EnemyJjbHealth != null ? EnemyJjbHealth.MaxHealth : 0;
 
         public int CurrentStageIndex => StageManager != null ? StageManager.CurrentStageIndex : 0;
-
+        public bool IsFighting => isFighting;
         public EnemyData CurrentEnemy
         {
             get

@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5181525cf424b0aa2e27af268bff8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xForce: -15
+  xForce: -20
   xForceMin: -65
   yForce: 0
   yForceMin: -10
@@ -125,7 +125,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3622683069018003958, guid: 761a45cc6c6392341bbb872dc3a647f9, type: 3}
+  - {fileID: 2100000, guid: 541c27f8ebe8a7649a1ec46febb5e52e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
