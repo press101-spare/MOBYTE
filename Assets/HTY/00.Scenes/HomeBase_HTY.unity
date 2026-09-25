@@ -4714,6 +4714,41 @@ Transform:
   - {fileID: 1118564750}
   m_Father: {fileID: 9106048888089971132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &675631582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 675631583}
+  m_Layer: 5
+  m_Name: DeCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &675631583
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675631582}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3186528913398930513}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &697269271
 GameObject:
   m_ObjectHideFlags: 0
@@ -9576,7 +9611,6 @@ RectTransform:
   - {fileID: 752310207}
   - {fileID: 168284205}
   - {fileID: 4395012152950694982}
-  - {fileID: 4420846557822432635}
   - {fileID: 2016771495}
   - {fileID: 1356903175}
   m_Father: {fileID: 7813861370439515229}
@@ -27662,7 +27696,7 @@ Transform:
   m_GameObject: {fileID: 6568139519107983858}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1532.9, y: -719, z: 0.02908802}
+  m_LocalPosition: {x: -1533, y: -719.9, z: 0.02908802}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30079,6 +30113,8 @@ MonoBehaviour:
   shledDice: {fileID: 0}
   diceCamera: {fileID: 0}
   glassStack: 0
+  _xecution: 0
+  _vamfire: 0
 --- !u!224 &1398367372258066324
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30329,7 +30365,7 @@ Transform:
   m_GameObject: {fileID: 2014732452444506562}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -52.9, y: 1.54, z: 10.066107}
+  m_LocalPosition: {x: 0, y: 0, z: 10.066107}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32641,7 +32677,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -1496642684519901557, guid: 59cb981b273d9a047a26f5864c3bad03,
+  m_Sprite: {fileID: 5146248337490097641, guid: e6fb5a97d2443c94c9d8877164d5b3ae,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -33358,7 +33394,7 @@ Animator:
   m_GameObject: {fileID: 2632772074117656748}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ce5293ee9c6bf4347837172af61fdd23, type: 2}
+  m_Controller: {fileID: 9100000, guid: 87fdd465d90f2f441a67b44906c17b39, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -35861,6 +35897,7 @@ RectTransform:
   - {fileID: 3442428647757312997}
   - {fileID: 7071508138199713392}
   - {fileID: 1452261964}
+  - {fileID: 675631583}
   m_Father: {fileID: 3705197807132663739}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -38238,7 +38275,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -40074,7 +40111,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1477793754}
+  m_Father: {fileID: 7813861370439515229}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -46808,6 +46845,7 @@ MonoBehaviour:
   drawnDice: []
   diceFile_JCy: []
   drawCount: 5
+  diceEffectUIUpdate: {fileID: 0}
 --- !u!222 &6672304015491175137
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48299,7 +48337,7 @@ Transform:
   m_GameObject: {fileID: 660031090886910382}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1013.2, y: -539.5, z: 12.008108}
+  m_LocalPosition: {x: -1532.88, y: -719.91, z: 12.008108}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50671,6 +50709,7 @@ RectTransform:
   m_Children:
   - {fileID: 848352563}
   - {fileID: 1477793754}
+  - {fileID: 4420846557822432635}
   m_Father: {fileID: 3705197807132663739}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -54168,6 +54207,8 @@ MonoBehaviour:
   _during: 2
   _thisCard: {fileID: 1544272197617635124, guid: 6a4f4dfca6a1ca844aa6c3fe5cd9f6dd,
     type: 3}
+  _delerCard: {fileID: 675631582}
+  _startBT: {fileID: 1452261963}
 --- !u!4 &8787859856396346784
 Transform:
   m_ObjectHideFlags: 0
