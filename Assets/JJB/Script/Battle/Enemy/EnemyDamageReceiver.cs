@@ -69,7 +69,7 @@ namespace JJB.Script.Battle.Enemy
 
             _enemy.Health.TakeDamage(damage);
 
-            _hitFlash?.Play();
+            _hitFlash?.Play(new Color(0.6f, 0f, 1f));
 
             _poison--;
         }

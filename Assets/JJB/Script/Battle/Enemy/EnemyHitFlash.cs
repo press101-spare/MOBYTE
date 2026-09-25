@@ -20,28 +20,28 @@ namespace JJB.Script.Battle.Enemy
 
         public void Play()
         {
+            Play(Color.red);
+        }
+
+        public void Play(Color flashColor)
+        {
             if (visualImage == null)
                 return;
 
             if (_coroutine != null)
                 StopCoroutine(_coroutine);
 
-            _coroutine = StartCoroutine(FlashRoutine());
+            _coroutine = StartCoroutine(FlashRoutine(flashColor));
         }
 
-        private IEnumerator FlashRoutine()
+        private IEnumerator FlashRoutine(Color flashColor)
         {
-            visualImage.color = new Color(
-                1f,
-                0f,
-                0f,
-                _originalColor.a
-            );
+            flashColor.a = _originalColor.a;
+            visualImage.color = flashColor;
 
             yield return new WaitForSeconds(duration);
 
             visualImage.color = _originalColor;
-
             _coroutine = null;
         }
     }

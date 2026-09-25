@@ -12,7 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/JJBHealthBarUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/JJBHealthBarUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +246,7 @@
           <line>103</line>
           <properties documentPath="C:\Users\const\GitHub\MOBYTE\Assets\JCY\01_Scripts\DIce\DiceDeckManager_JCY.cs" containingFunctionPresentation="메서드 'DrawDice'">
             <startOffsets>
-              <option value="2482" />
+              <option value="2520" />
             </startOffsets>
             <endOffsets>
               <option value="2521" />
