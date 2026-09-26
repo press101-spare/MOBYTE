@@ -14,6 +14,7 @@ public class ShopManager_JCY : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] costText;
     [SerializeField] private TextMeshProUGUI[] description;
     [SerializeField] private DiceType_HTY[] _btType;
+    [SerializeField] private Image[] _diceImage;
     [SerializeField] private TextMeshProUGUI _reRollText;
 
     [SerializeField] private TextMeshProUGUI _notReRoll;
@@ -56,6 +57,7 @@ public class ShopManager_JCY : MonoBehaviour
             description[i].text = currentDiceSO[i].diceDescription;
             _btType[i].SetDice(currentDiceSO[i]);
             _btType[i].SetRe();
+            _diceImage[i].sprite = currentDiceSO[i].diceIcon;
         }
 
         _reRoll--;
