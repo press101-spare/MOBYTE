@@ -77,14 +77,18 @@ namespace JJB.Script.Battle
             manager.reRollUI.UpdateReRollCount(-1);
 
             foreach (DiceObject_JCY dice in selectedDice)
-                StartCoroutine(ChangeDiceRoutine(dice, manager.allDiceSo));
+            {
+                StartCoroutine(ChangeDiceRoutine(dice, DiceDeckManager_JCY.Instance.diceCollection));
+               
+            }
 
             yield return new WaitForSeconds(rollDuration);
-
+            
+            DiceManager_JCY.Instance.DiceSlotSet();
             manager.isRolling = false;
         }
 
-        private IEnumerator ChangeDiceRoutine(DiceObject_JCY dice, DiceSO_JCY[] allDiceSo)
+        private IEnumerator ChangeDiceRoutine(DiceObject_JCY dice, List<DiceSO_JCY> allDiceSo)
         {
             List<DiceSO_JCY> candidates = new List<DiceSO_JCY>();
 
@@ -117,6 +121,16 @@ namespace JJB.Script.Battle
             ApplyDiceVisual(dice, randomSO);
             dice.Setup(randomSO);
             dice.currentIndex = currentValue;
+            
+            // activeDiceSo 리스트에서 기존 currentDiceSO의 위치를 찾습니다.
+            var list = DiceManager_JCY.Instance.activeDiceSo;
+            int index = list.IndexOf(dice.currentDiceSO);
+
+            // 리스트에 존재하면(-1이 아니면) 해당 위치의 SO를 randomSO로 교체합니다.
+            if (index != -1)
+            {
+                list[index] = randomSO;
+            }
 
             Debug.Log($"주사위 종류 변경 : {randomSO.name}");
 

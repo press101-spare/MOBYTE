@@ -22,28 +22,18 @@ public class RandomGamble : MonoBehaviour
         _spawnPoints.Clear();
         _spawnPoints = _originPoints.ToList();
 
+        List<GambleSoData> randomList = new List<GambleSoData>(_gambleList._gambleList);
+
         for (int i = 0; i<3;i++)
         {
-            GambleSoData data = _gambleList._gambleList[Random.Range(0, _gambleList._gambleList.Count)];
-            if (_haveData.Count != 0)
-            {
-                for(int j =0; j<_haveData.Count;j++)
-                {
-                    if (_haveData[j] == data)
-                    {
-                        data = _gambleList._gambleList[Random.Range(0, _gambleList._gambleList.Count)];
-                        j = -1;
-                        continue;
-                    }
-                }
-            }
+            int randomIndex = Random.Range(0, randomList.Count);
+            GambleSoData data = randomList[randomIndex];
+            randomList.RemoveAt(randomIndex);
             _haveData.Add(data);
             Transform point = _spawnPoints[Random.Range(0,_spawnPoints.Count)];
             GameObject table = Instantiate(data._gambleTable, point.position,Quaternion.identity);
             table.transform.parent = _tableGroup;
             _spawnPoints.Remove(point);
         }
-        
-        
     }
 }

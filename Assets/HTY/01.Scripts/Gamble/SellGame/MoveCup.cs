@@ -37,6 +37,20 @@ public class MoveCup : MonoBehaviour
     private bool _isPlaying;
     private Coroutine _timerCoroutine;
 
+
+
+    private void OnEnable()
+    {
+        StartCoroutine(Col());
+    }
+
+
+    private IEnumerator Col()
+    {
+        yield return new WaitForSeconds(0.5f);
+        ResetGame();
+    }
+
     private void Start()
     {
         SellGame();
