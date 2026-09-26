@@ -5,6 +5,8 @@ namespace JJB.Script.Battle.Stage
 {
     public class StageManager : MonoBehaviour
     {
+        public static StageManager Instance { get; private set; }
+
         [SerializeField] private StageData[] stages;
         [SerializeField] private int currentStageIndex;
 
@@ -12,6 +14,45 @@ namespace JJB.Script.Battle.Stage
 
         public int CurrentStageIndex => currentStageIndex;
         public EnemyData CurrentEnemy => _currentEnemy;
+        
+        public string CurrentStageName
+        {
+            get
+            {
+                if (stages == null || stages.Length == 0)
+                    return "";
+
+                if (currentStageIndex < 0 || currentStageIndex >= stages.Length)
+                    return "";
+
+                return stages[currentStageIndex].name;
+            }
+        }
+
+        private void Awake()
+        {
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        public void SetStageIndex(int index)
+        {
+            if (stages == null || stages.Length == 0)
+                return;
+
+            if (index < 0 || index >= stages.Length)
+                return;
+
+            currentStageIndex = index;
+
+            RefreshEnemy();
+        }
 
         public EnemyData PrepareCurrentStage()
         {
@@ -23,7 +64,7 @@ namespace JJB.Script.Battle.Stage
 
             if (currentStageIndex < 0 || currentStageIndex >= stages.Length)
             {
-                Debug.LogError("스테이지 인덱스가 범위를 벗어났습니다.");
+                Debug.LogError($"잘못된 Stage Index : {currentStageIndex}");
                 return null;
             }
 
@@ -32,20 +73,49 @@ namespace JJB.Script.Battle.Stage
 
             return _currentEnemy;
         }
-        
-        public void SetStageIndex(int index)
-        {
-            if (index < 0 || index >= stages.Length)
-                return;
-
-            currentStageIndex = index;
-            _currentEnemy = null;
-        }
 
         public void NextStage()
         {
-            currentStageIndex++;
-            _currentEnemy = null;
+            SetStageIndex(currentStageIndex + 1);
         }
+
+        private void RefreshEnemy()
+        {
+            _currentEnemy = null;
+
+            EnemyData enemyData = PrepareCurrentStage();
+
+            if (enemyData == null)
+                return;
+
+            EnemyHealthSetup enemyHealthSetup =
+                FindFirstObjectByType<EnemyHealthSetup>();
+
+            if (enemyHealthSetup == null)
+                return;
+
+            enemyHealthSetup.SetData(enemyData);
+        }
+
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            if (stages == null || stages.Length == 0)
+                return;
+
+            currentStageIndex = Mathf.Clamp(
+                currentStageIndex,
+                0,
+                stages.Length - 1
+            );
+
+            _currentEnemy = null;
+
+            if (!Application.isPlaying)
+                return;
+
+            RefreshEnemy();
+        }
+#endif
     }
 }
