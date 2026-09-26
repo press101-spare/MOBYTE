@@ -4,6 +4,7 @@ using JJB.Script.Battle;
 using JJB.Script.Battle.Enemy;
 using JJB.Script.Battle.Player;
 using JJB.Script.Battle.Player.Progression;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -137,7 +138,7 @@ public class DiceEffect_JCY : MonoBehaviour
             //칩
             if (effectType == DiceSO_JCY.DiceEffectType.Chip)
             {
-                PlayerProfileManager.Instance.AddMoney(Random.Range(10, 50));
+                PlayerProfileManager.Instance.AddMoney(Random.Range(100, 500));
                 continue;
             }
 
@@ -149,6 +150,16 @@ public class DiceEffect_JCY : MonoBehaviour
             if (effectType == DiceSO_JCY.DiceEffectType.Poison)
             {
                 enemyDamageReceiver.ApplyPoison(5);
+            }
+            
+            //거대
+            if (effectType == DiceSO_JCY.DiceEffectType.Giant)
+            {
+                if (effectType == DiceSO_JCY.DiceEffectType.Giant)
+                {
+                    int value = Mathf.RoundToInt(JJBGameManager.Instance.PlayerJjbHealth.CurrentHealth * 0.1f);
+                    finalDamage += value;
+                }
             }
         }
 
