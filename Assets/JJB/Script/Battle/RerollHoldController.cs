@@ -184,11 +184,16 @@ namespace JJB.Script.Battle
             }
 
             ApplyDiceVisual(dice, randomSO);
+            
+            // 기존 눈 값 유지
+            int valueIndex = System.Array.IndexOf(dice.currentDiceSO.faceValues, dice.currentIndex);
+            if (valueIndex == -1)
+            {
+                Debug.Log("인덱스 없다는데");
+            }
 
             dice.Setup(randomSO);
-
-            // 기존 눈 값 유지
-            dice.currentIndex = currentValue;
+            dice.currentIndex = randomSO.faceValues[valueIndex];
 
             Debug.Log($"주사위 종류 변경 : {randomSO.name}");
 
