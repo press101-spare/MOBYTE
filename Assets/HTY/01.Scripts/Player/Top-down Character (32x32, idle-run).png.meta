@@ -1,0 +1,2639 @@
+fileFormatVersion: 2
+guid: b996ec638c97f3e4d86d7e020540ef81
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8729912292723654872
+    second: Top-down Character (32x32, idle-run)_0
+  - first:
+      213: 4428498591859490115
+    second: Top-down Character (32x32, idle-run)_1
+  - first:
+      213: -2663188362233873705
+    second: Top-down Character (32x32, idle-run)_2
+  - first:
+      213: -413701155454532054
+    second: Top-down Character (32x32, idle-run)_3
+  - first:
+      213: -4889162884252893828
+    second: Top-down Character (32x32, idle-run)_4
+  - first:
+      213: 5213003569879481333
+    second: Top-down Character (32x32, idle-run)_5
+  - first:
+      213: 2464155334914689788
+    second: Top-down Character (32x32, idle-run)_6
+  - first:
+      213: 4605818133795413555
+    second: Top-down Character (32x32, idle-run)_7
+  - first:
+      213: 2841318046709422342
+    second: Top-down Character (32x32, idle-run)_8
+  - first:
+      213: -5355663558674930804
+    second: Top-down Character (32x32, idle-run)_9
+  - first:
+      213: 7697467350226099346
+    second: Top-down Character (32x32, idle-run)_10
+  - first:
+      213: 1089771577888242152
+    second: Top-down Character (32x32, idle-run)_11
+  - first:
+      213: 8956500008343940429
+    second: Top-down Character (32x32, idle-run)_12
+  - first:
+      213: 7609318933537502999
+    second: Top-down Character (32x32, idle-run)_13
+  - first:
+      213: 8183095298841268670
+    second: Top-down Character (32x32, idle-run)_14
+  - first:
+      213: 7056233858388864920
+    second: Top-down Character (32x32, idle-run)_15
+  - first:
+      213: 4983248374034496641
+    second: Top-down Character (32x32, idle-run)_16
+  - first:
+      213: -851865241128852501
+    second: Top-down Character (32x32, idle-run)_17
+  - first:
+      213: -7636689142227599361
+    second: Top-down Character (32x32, idle-run)_18
+  - first:
+      213: -7057139337425275084
+    second: Top-down Character (32x32, idle-run)_19
+  - first:
+      213: 1753061349261015694
+    second: Top-down Character (32x32, idle-run)_20
+  - first:
+      213: 7886279068747725430
+    second: Top-down Character (32x32, idle-run)_21
+  - first:
+      213: 4837728974982245071
+    second: Top-down Character (32x32, idle-run)_22
+  - first:
+      213: -8067333984377923247
+    second: Top-down Character (32x32, idle-run)_23
+  - first:
+      213: -5765211273227537355
+    second: Top-down Character (32x32, idle-run)_24
+  - first:
+      213: -7013132605723363539
+    second: Top-down Character (32x32, idle-run)_25
+  - first:
+      213: -7844077809943900890
+    second: Top-down Character (32x32, idle-run)_26
+  - first:
+      213: 3624344925653661262
+    second: Top-down Character (32x32, idle-run)_27
+  - first:
+      213: 7219788776219579500
+    second: Top-down Character (32x32, idle-run)_28
+  - first:
+      213: 471187857139365948
+    second: Top-down Character (32x32, idle-run)_29
+  - first:
+      213: -1312392782346495293
+    second: Top-down Character (32x32, idle-run)_30
+  - first:
+      213: 1983010042941616689
+    second: Top-down Character (32x32, idle-run)_31
+  - first:
+      213: -7988085151949100778
+    second: Top-down Character (32x32, idle-run)_32
+  - first:
+      213: 4856778708656742363
+    second: Top-down Character (32x32, idle-run)_33
+  - first:
+      213: -7016777102085501708
+    second: Top-down Character (32x32, idle-run)_34
+  - first:
+      213: 7980572305853053180
+    second: Top-down Character (32x32, idle-run)_35
+  - first:
+      213: 8859379968210632076
+    second: Top-down Character (32x32, idle-run)_36
+  - first:
+      213: 4217062443118166274
+    second: Top-down Character (32x32, idle-run)_37
+  - first:
+      213: -6397444213499567683
+    second: Top-down Character (32x32, idle-run)_38
+  - first:
+      213: -2397867177857885528
+    second: Top-down Character (32x32, idle-run)_39
+  - first:
+      213: -1888268360012411891
+    second: Top-down Character (32x32, idle-run)_40
+  - first:
+      213: 2026060938104063251
+    second: Top-down Character (32x32, idle-run)_41
+  - first:
+      213: 2688817163333019321
+    second: Top-down Character (32x32, idle-run)_42
+  - first:
+      213: 7118088697820705379
+    second: Top-down Character (32x32, idle-run)_43
+  - first:
+      213: -8010902811291855767
+    second: Top-down Character (32x32, idle-run)_44
+  - first:
+      213: 1392075859639491728
+    second: Top-down Character (32x32, idle-run)_45
+  - first:
+      213: 9093568745313742280
+    second: Top-down Character (32x32, idle-run)_46
+  - first:
+      213: -2296361754662114034
+    second: Top-down Character (32x32, idle-run)_47
+  - first:
+      213: 1674755840109109420
+    second: Top-down Character (32x32, idle-run)_48
+  - first:
+      213: -2774284912191118806
+    second: Top-down Character (32x32, idle-run)_49
+  - first:
+      213: -1583555795959052167
+    second: Top-down Character (32x32, idle-run)_50
+  - first:
+      213: 1743062992019787778
+    second: Top-down Character (32x32, idle-run)_51
+  - first:
+      213: -7086837499322551980
+    second: Top-down Character (32x32, idle-run)_52
+  - first:
+      213: -1467990641821672445
+    second: Top-down Character (32x32, idle-run)_53
+  - first:
+      213: -6685448097262989505
+    second: Top-down Character (32x32, idle-run)_54
+  - first:
+      213: 5095415472929805233
+    second: Top-down Character (32x32, idle-run)_55
+  - first:
+      213: -7970593174251655598
+    second: Top-down Character (32x32, idle-run)_56
+  - first:
+      213: 7881332766245501627
+    second: Top-down Character (32x32, idle-run)_57
+  - first:
+      213: 5570836321261822009
+    second: Top-down Character (32x32, idle-run)_58
+  - first:
+      213: 5254143436356746457
+    second: Top-down Character (32x32, idle-run)_59
+  - first:
+      213: -2977294062893658563
+    second: Top-down Character (32x32, idle-run)_60
+  - first:
+      213: 8379219604111076055
+    second: Top-down Character (32x32, idle-run)_61
+  - first:
+      213: 1883228232690842907
+    second: Top-down Character (32x32, idle-run)_62
+  - first:
+      213: -5673869474820541558
+    second: Top-down Character (32x32, idle-run)_63
+  - first:
+      213: 8419797193302951813
+    second: Top-down Character (32x32, idle-run)_64
+  - first:
+      213: 2410339710696814596
+    second: Top-down Character (32x32, idle-run)_65
+  - first:
+      213: 57639922152296215
+    second: Top-down Character (32x32, idle-run)_66
+  - first:
+      213: 1682802622524178820
+    second: Top-down Character (32x32, idle-run)_67
+  - first:
+      213: 4603109203980626952
+    second: Top-down Character (32x32, idle-run)_68
+  - first:
+      213: 2153525346297676784
+    second: Top-down Character (32x32, idle-run)_69
+  - first:
+      213: 5588394728547497052
+    second: Top-down Character (32x32, idle-run)_70
+  - first:
+      213: -7919600193793596257
+    second: Top-down Character (32x32, idle-run)_71
+  - first:
+      213: -2310220257181538712
+    second: Top-down Character (32x32, idle-run)_72
+  - first:
+      213: -6811454477154755537
+    second: Top-down Character (32x32, idle-run)_73
+  - first:
+      213: 46841858243041710
+    second: Top-down Character (32x32, idle-run)_74
+  - first:
+      213: -4009570970551052773
+    second: Top-down Character (32x32, idle-run)_75
+  - first:
+      213: 8817924440782834314
+    second: Top-down Character (32x32, idle-run)_76
+  - first:
+      213: -6168741164183334392
+    second: Top-down Character (32x32, idle-run)_77
+  - first:
+      213: -4922879154062394098
+    second: Top-down Character (32x32, idle-run)_78
+  - first:
+      213: -8950924675855519001
+    second: Top-down Character (32x32, idle-run)_79
+  - first:
+      213: -6790603857534770651
+    second: Top-down Character (32x32, idle-run)_80
+  - first:
+      213: -3312945390597763565
+    second: Top-down Character (32x32, idle-run)_81
+  - first:
+      213: 5860986988646824181
+    second: Top-down Character (32x32, idle-run)_82
+  - first:
+      213: -3396440559900004890
+    second: Top-down Character (32x32, idle-run)_83
+  - first:
+      213: 4965643007189440969
+    second: Top-down Character (32x32, idle-run)_84
+  - first:
+      213: 5705170351516013239
+    second: Top-down Character (32x32, idle-run)_85
+  - first:
+      213: 7311965179622109032
+    second: Top-down Character (32x32, idle-run)_86
+  - first:
+      213: -5214381696361620745
+    second: Top-down Character (32x32, idle-run)_87
+  - first:
+      213: 2770686163946249182
+    second: Top-down Character (32x32, idle-run)_88
+  - first:
+      213: -6406495299394378147
+    second: Top-down Character (32x32, idle-run)_89
+  - first:
+      213: -1069252407728247071
+    second: Top-down Character (32x32, idle-run)_90
+  - first:
+      213: -8592384724454485156
+    second: Top-down Character (32x32, idle-run)_91
+  - first:
+      213: 8078133387115867053
+    second: Top-down Character (32x32, idle-run)_92
+  - first:
+      213: 7067757089704119257
+    second: Top-down Character (32x32, idle-run)_93
+  - first:
+      213: 8811243639186329151
+    second: Top-down Character (32x32, idle-run)_94
+  - first:
+      213: -8874863469586872033
+    second: Top-down Character (32x32, idle-run)_95
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 479
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d00c182af0e62970800000000000000
+      internalID: 8729912292723654872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 479
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34d3a109100357d30800000000000000
+      internalID: 4428498591859490115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 479
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7da78137b447a0bd0800000000000000
+      internalID: -2663188362233873705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 479
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a26c6f1bdfc324af0800000000000000
+      internalID: -413701155454532054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_4
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 479
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7df41bb244362cb0800000000000000
+      internalID: -4889162884252893828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_5
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 479
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fb728b802f485840800000000000000
+      internalID: 5213003569879481333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_6
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 447
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa49f0b830723220800000000000000
+      internalID: 2464155334914689788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_7
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 447
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33e9de4a0372bef30800000000000000
+      internalID: 4605818133795413555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_8
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 447
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6099504a5b36e6720800000000000000
+      internalID: 2841318046709422342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_9
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 447
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c832da07e5cdca5b0800000000000000
+      internalID: -5355663558674930804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_10
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 447
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29cd468a5c5e2da60800000000000000
+      internalID: 7697467350226099346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_11
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 447
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e9785ae975af1f00800000000000000
+      internalID: 1089771577888242152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_12
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 415
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4daf14dd41eb4c70800000000000000
+      internalID: 8956500008343940429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_13
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 415
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7173820114bb99960800000000000000
+      internalID: 7609318933537502999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_14
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 415
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb15a9281d1309170800000000000000
+      internalID: 8183095298841268670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_15
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 415
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89f2a550f47cce160800000000000000
+      internalID: 7056233858388864920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_16
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 415
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c7ed96efd082540800000000000000
+      internalID: 4983248374034496641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_17
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 415
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3230a93119d24f0800000000000000
+      internalID: -851865241128852501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_18
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 383
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffff071afa7050690800000000000000
+      internalID: -7636689142227599361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_19
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 383
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 437b456b921001e90800000000000000
+      internalID: -7057139337425275084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_20
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 383
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a7b205200245810800000000000000
+      internalID: 1753061349261015694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_21
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 383
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67a7e4c9701b17d60800000000000000
+      internalID: 7886279068747725430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_22
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 383
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fca6e611fd0132340800000000000000
+      internalID: 4837728974982245071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_23
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 383
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15997b8db721b0090800000000000000
+      internalID: -8067333984377923247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_24
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 351
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 534f13474eaddffa0800000000000000
+      internalID: -5765211273227537355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_25
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 351
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2736216d095cae90800000000000000
+      internalID: -7013132605723363539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_26
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 351
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62d05c3aacc342390800000000000000
+      internalID: -7844077809943900890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_27
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 351
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e46731dd1824c4230800000000000000
+      internalID: 3624344925653661262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_28
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 351
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c649befc3a7d13460800000000000000
+      internalID: 7219788776219579500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_29
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 351
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c38f44f0cdef98600800000000000000
+      internalID: 471187857139365948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_30
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 319
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ca5372c7b179cde0800000000000000
+      internalID: -1312392782346495293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_31
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 319
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132319ba021158b10800000000000000
+      internalID: 1983010042941616689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_32
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 319
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 619608280ee942190800000000000000
+      internalID: -7988085151949100778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_33
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 319
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf5a22d08eb66340800000000000000
+      internalID: 4856778708656742363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_34
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 319
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fc4912f6666f9e90800000000000000
+      internalID: -7016777102085501708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_35
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 319
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf8f0b2ba30b0ce60800000000000000
+      internalID: 7980572305853053180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_36
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 287
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8df76f5427d2fa70800000000000000
+      internalID: 8859379968210632076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_37
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 287
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20103b5f2f3068a30800000000000000
+      internalID: 4217062443118166274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_38
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 287
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db1eaf70266b737a0800000000000000
+      internalID: -6397444213499567683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_39
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 287
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aa5635918019bed0800000000000000
+      internalID: -2397867177857885528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_40
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 287
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0cc9d85ee58bc5e0800000000000000
+      internalID: -1888268360012411891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_41
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 287
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 315ccfc40b30e1c10800000000000000
+      internalID: 2026060938104063251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_42
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 255
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b6207ec6f8905520800000000000000
+      internalID: 2688817163333019321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_43
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 255
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362735915f788c260800000000000000
+      internalID: 7118088697820705379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_44
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 255
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96455c2365e83d090800000000000000
+      internalID: -8010902811291855767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_45
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 255
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09c553a6e95a15310800000000000000
+      internalID: 1392075859639491728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_46
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 255
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd25051898d23e70800000000000000
+      internalID: 9093568745313742280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_47
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 255
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0d6299962fa120e0800000000000000
+      internalID: -2296361754662114034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_48
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 223
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca0e637309ded3710800000000000000
+      internalID: 1674755840109109420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_49
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 223
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a226f173292cf79d0800000000000000
+      internalID: -2774284912191118806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_50
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 224
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97889d3c464160ae0800000000000000
+      internalID: -1583555795959052167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_51
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 223
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 200187c5e8a903810800000000000000
+      internalID: 1743062992019787778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_52
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 223
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45136ff87de76ad90800000000000000
+      internalID: -7086837499322551980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_53
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 224
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c1f9cf946a0abe0800000000000000
+      internalID: -1467990641821672445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_54
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 191
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f045660648833a0800000000000000
+      internalID: -6685448097262989505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_55
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 191
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b3920f306d86b640800000000000000
+      internalID: 5095415472929805233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_56
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 192
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ea39fecb3c26190800000000000000
+      internalID: -7970593174251655598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_57
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 191
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbab5b0d46e106d60800000000000000
+      internalID: 7881332766245501627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_58
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 191
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 930a7ae5e169f4d40800000000000000
+      internalID: 5570836321261822009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_59
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 191
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc7ef22e977ae840800000000000000
+      internalID: 5254143436356746457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_60
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 159
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e085df2d68ea6d0800000000000000
+      internalID: -2977294062893658563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_61
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 159
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7daa70eb5d7f84470800000000000000
+      internalID: 8379219604111076055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_62
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 160
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d36809912922a10800000000000000
+      internalID: 1883228232690842907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_63
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 159
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a83b36b26cd5241b0800000000000000
+      internalID: -5673869474820541558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_64
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 159
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58747a3ffe029d470800000000000000
+      internalID: 8419797193302951813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_65
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 160
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 408f914423f337120800000000000000
+      internalID: 2410339710696814596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_66
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 128
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71fc4cc2437ccc000800000000000000
+      internalID: 57639922152296215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_67
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 128
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48146aeb1148a5710800000000000000
+      internalID: 1682802622524178820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_68
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 128
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80ca895ce6781ef30800000000000000
+      internalID: 4603109203980626952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_69
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 128
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f38fd084ebd2ed10800000000000000
+      internalID: 2153525346297676784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_70
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 128
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c543db3a567fd8d40800000000000000
+      internalID: 5588394728547497052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_71
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 128
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9461d5659de71290800000000000000
+      internalID: -7919600193793596257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_72
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 95
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86668c98ae270ffd0800000000000000
+      internalID: -2310220257181538712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_73
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 95
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c527ddd3ad871a0800000000000000
+      internalID: -6811454477154755537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_74
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 96
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea912310c6a66a000800000000000000
+      internalID: 46841858243041710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_75
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 95
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b16169622742b58c0800000000000000
+      internalID: -4009570970551052773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_76
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 95
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a881d3f8f8f5a70800000000000000
+      internalID: 8817924440782834314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_77
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 96
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 802d585389a346aa0800000000000000
+      internalID: -6168741164183334392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_78
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 64
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0d7feded7b6eabb0800000000000000
+      internalID: -4922879154062394098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_79
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 64
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e27a5c6e6de7c380800000000000000
+      internalID: -8950924675855519001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_80
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 64
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5222e3d05cde2c1a0800000000000000
+      internalID: -6790603857534770651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_81
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 64
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e072158bd0602d0800000000000000
+      internalID: -3312945390597763565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_82
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 64
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f8fa730d98665150800000000000000
+      internalID: 5860986988646824181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_83
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 64
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ed6e6e4e4b6dd0d0800000000000000
+      internalID: -3396440559900004890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_84
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 31
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9dde4810289e440800000000000000
+      internalID: 4965643007189440969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_85
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 31
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b2d3391536dc2f40800000000000000
+      internalID: 5705170351516013239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_86
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 32
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86fa6652791597560800000000000000
+      internalID: 7311965179622109032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_87
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 31
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fa1111697bc2a7b0800000000000000
+      internalID: -5214381696361620745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_88
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 31
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edb1b1ae264737620800000000000000
+      internalID: 2770686163946249182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_89
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 32
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d566360e77e8717a0800000000000000
+      internalID: -6406495299394378147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_90
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ee602ea9904921f0800000000000000
+      internalID: -1069252407728247071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_91
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c53d5651e97b1c880800000000000000
+      internalID: -8592384724454485156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_92
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daba34b048b4b1070800000000000000
+      internalID: 8078133387115867053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_93
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9db009260a7b51260800000000000000
+      internalID: 7067757089704119257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_94
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3e0f17e763d74a70800000000000000
+      internalID: 8811243639186329151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Top-down Character (32x32, idle-run)_95
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f190f2902b626d480800000000000000
+      internalID: -8874863469586872033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Top-down Character (32x32, idle-run)_0: 8729912292723654872
+      Top-down Character (32x32, idle-run)_1: 4428498591859490115
+      Top-down Character (32x32, idle-run)_10: 7697467350226099346
+      Top-down Character (32x32, idle-run)_11: 1089771577888242152
+      Top-down Character (32x32, idle-run)_12: 8956500008343940429
+      Top-down Character (32x32, idle-run)_13: 7609318933537502999
+      Top-down Character (32x32, idle-run)_14: 8183095298841268670
+      Top-down Character (32x32, idle-run)_15: 7056233858388864920
+      Top-down Character (32x32, idle-run)_16: 4983248374034496641
+      Top-down Character (32x32, idle-run)_17: -851865241128852501
+      Top-down Character (32x32, idle-run)_18: -7636689142227599361
+      Top-down Character (32x32, idle-run)_19: -7057139337425275084
+      Top-down Character (32x32, idle-run)_2: -2663188362233873705
+      Top-down Character (32x32, idle-run)_20: 1753061349261015694
+      Top-down Character (32x32, idle-run)_21: 7886279068747725430
+      Top-down Character (32x32, idle-run)_22: 4837728974982245071
+      Top-down Character (32x32, idle-run)_23: -8067333984377923247
+      Top-down Character (32x32, idle-run)_24: -5765211273227537355
+      Top-down Character (32x32, idle-run)_25: -7013132605723363539
+      Top-down Character (32x32, idle-run)_26: -7844077809943900890
+      Top-down Character (32x32, idle-run)_27: 3624344925653661262
+      Top-down Character (32x32, idle-run)_28: 7219788776219579500
+      Top-down Character (32x32, idle-run)_29: 471187857139365948
+      Top-down Character (32x32, idle-run)_3: -413701155454532054
+      Top-down Character (32x32, idle-run)_30: -1312392782346495293
+      Top-down Character (32x32, idle-run)_31: 1983010042941616689
+      Top-down Character (32x32, idle-run)_32: -7988085151949100778
+      Top-down Character (32x32, idle-run)_33: 4856778708656742363
+      Top-down Character (32x32, idle-run)_34: -7016777102085501708
+      Top-down Character (32x32, idle-run)_35: 7980572305853053180
+      Top-down Character (32x32, idle-run)_36: 8859379968210632076
+      Top-down Character (32x32, idle-run)_37: 4217062443118166274
+      Top-down Character (32x32, idle-run)_38: -6397444213499567683
+      Top-down Character (32x32, idle-run)_39: -2397867177857885528
+      Top-down Character (32x32, idle-run)_4: -4889162884252893828
+      Top-down Character (32x32, idle-run)_40: -1888268360012411891
+      Top-down Character (32x32, idle-run)_41: 2026060938104063251
+      Top-down Character (32x32, idle-run)_42: 2688817163333019321
+      Top-down Character (32x32, idle-run)_43: 7118088697820705379
+      Top-down Character (32x32, idle-run)_44: -8010902811291855767
+      Top-down Character (32x32, idle-run)_45: 1392075859639491728
+      Top-down Character (32x32, idle-run)_46: 9093568745313742280
+      Top-down Character (32x32, idle-run)_47: -2296361754662114034
+      Top-down Character (32x32, idle-run)_48: 1674755840109109420
+      Top-down Character (32x32, idle-run)_49: -2774284912191118806
+      Top-down Character (32x32, idle-run)_5: 5213003569879481333
+      Top-down Character (32x32, idle-run)_50: -1583555795959052167
+      Top-down Character (32x32, idle-run)_51: 1743062992019787778
+      Top-down Character (32x32, idle-run)_52: -7086837499322551980
+      Top-down Character (32x32, idle-run)_53: -1467990641821672445
+      Top-down Character (32x32, idle-run)_54: -6685448097262989505
+      Top-down Character (32x32, idle-run)_55: 5095415472929805233
+      Top-down Character (32x32, idle-run)_56: -7970593174251655598
+      Top-down Character (32x32, idle-run)_57: 7881332766245501627
+      Top-down Character (32x32, idle-run)_58: 5570836321261822009
+      Top-down Character (32x32, idle-run)_59: 5254143436356746457
+      Top-down Character (32x32, idle-run)_6: 2464155334914689788
+      Top-down Character (32x32, idle-run)_60: -2977294062893658563
+      Top-down Character (32x32, idle-run)_61: 8379219604111076055
+      Top-down Character (32x32, idle-run)_62: 1883228232690842907
+      Top-down Character (32x32, idle-run)_63: -5673869474820541558
+      Top-down Character (32x32, idle-run)_64: 8419797193302951813
+      Top-down Character (32x32, idle-run)_65: 2410339710696814596
+      Top-down Character (32x32, idle-run)_66: 57639922152296215
+      Top-down Character (32x32, idle-run)_67: 1682802622524178820
+      Top-down Character (32x32, idle-run)_68: 4603109203980626952
+      Top-down Character (32x32, idle-run)_69: 2153525346297676784
+      Top-down Character (32x32, idle-run)_7: 4605818133795413555
+      Top-down Character (32x32, idle-run)_70: 5588394728547497052
+      Top-down Character (32x32, idle-run)_71: -7919600193793596257
+      Top-down Character (32x32, idle-run)_72: -2310220257181538712
+      Top-down Character (32x32, idle-run)_73: -6811454477154755537
+      Top-down Character (32x32, idle-run)_74: 46841858243041710
+      Top-down Character (32x32, idle-run)_75: -4009570970551052773
+      Top-down Character (32x32, idle-run)_76: 8817924440782834314
+      Top-down Character (32x32, idle-run)_77: -6168741164183334392
+      Top-down Character (32x32, idle-run)_78: -4922879154062394098
+      Top-down Character (32x32, idle-run)_79: -8950924675855519001
+      Top-down Character (32x32, idle-run)_8: 2841318046709422342
+      Top-down Character (32x32, idle-run)_80: -6790603857534770651
+      Top-down Character (32x32, idle-run)_81: -3312945390597763565
+      Top-down Character (32x32, idle-run)_82: 5860986988646824181
+      Top-down Character (32x32, idle-run)_83: -3396440559900004890
+      Top-down Character (32x32, idle-run)_84: 4965643007189440969
+      Top-down Character (32x32, idle-run)_85: 5705170351516013239
+      Top-down Character (32x32, idle-run)_86: 7311965179622109032
+      Top-down Character (32x32, idle-run)_87: -5214381696361620745
+      Top-down Character (32x32, idle-run)_88: 2770686163946249182
+      Top-down Character (32x32, idle-run)_89: -6406495299394378147
+      Top-down Character (32x32, idle-run)_9: -5355663558674930804
+      Top-down Character (32x32, idle-run)_90: -1069252407728247071
+      Top-down Character (32x32, idle-run)_91: -8592384724454485156
+      Top-down Character (32x32, idle-run)_92: 8078133387115867053
+      Top-down Character (32x32, idle-run)_93: 7067757089704119257
+      Top-down Character (32x32, idle-run)_94: 8811243639186329151
+      Top-down Character (32x32, idle-run)_95: -8874863469586872033
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
