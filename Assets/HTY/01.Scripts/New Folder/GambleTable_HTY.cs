@@ -5,7 +5,7 @@ public class GambleTable_HTY : MonoBehaviour
 {
     public GambleSoData _myGamble;
     [Header("OutLine")]
-    public Material _material;
+    public Material _materialO;
     public Material _material2;
     private Transform _playerTrans;
     public float _range = 3f;
@@ -22,7 +22,7 @@ public class GambleTable_HTY : MonoBehaviour
         _rangeToPlayer = Vector2.Distance(transform.position, _playerTrans.position);
         if (_rangeToPlayer < _range)
         {
-            _myImage.material = _material;
+            _myImage.material = _materialO;
         }
         else
         {
