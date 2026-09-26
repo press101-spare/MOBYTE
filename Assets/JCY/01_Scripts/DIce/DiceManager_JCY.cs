@@ -662,6 +662,7 @@ public class DiceManager_JCY : MonoBehaviour
     public void DiceSlotSet()
     {
         DiceDeckManager_JCY.Instance.diceEffectUIUpdate.UpdateUI(activeDiceSo);
+        UpdateCurrentDiceValues();
     }
 }
 

@@ -5,6 +5,7 @@ using JJB.Script.Battle.Enemy;
 using JJB.Script.Battle.Player;
 using JJB.Script.Battle.Player.Progression;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class DiceEffect_JCY : MonoBehaviour
 {
@@ -133,9 +134,10 @@ public class DiceEffect_JCY : MonoBehaviour
                 continue;
             }
             
-            if (effectType == DiceSO_JCY.DiceEffectType.Phoenix)
+            //칩
+            if (effectType == DiceSO_JCY.DiceEffectType.Chip)
             {
-                JJBGameManager.Instance.PlayerJjbHealth.EnableOneHpRevive();
+                PlayerProfileManager.Instance.AddMoney(Random.Range(10, 50));
                 continue;
             }
 
