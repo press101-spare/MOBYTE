@@ -15,7 +15,7 @@ public class GambleTable_HTY : MonoBehaviour
     private void Awake()
     {
         _myImage = GetComponent<SpriteRenderer>();
-        _playerTrans = FindAnyObjectByType<PlayerMovement>().transform;
+        _playerTrans = FindAnyObjectByType<PlayerMovement_H>().transform;
     }
     private void Update()
     {
