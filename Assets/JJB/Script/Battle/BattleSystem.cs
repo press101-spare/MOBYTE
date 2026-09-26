@@ -42,6 +42,13 @@ namespace JJB.Script.Battle
         private IEnumerator Start()
         {
             yield return null;
+            
+            if (_battleUIController != null && StageManager.Instance != null)
+            {
+                yield return _battleUIController.PlayStageIntro(
+                    StageManager.Instance.CurrentStageName
+                );
+            }
 
             InitializeBattle();
         }
@@ -70,8 +77,8 @@ namespace JJB.Script.Battle
             if (!CanInitialize())
                 return;
             
-            EnemyData enemyData = _stageManager.PrepareCurrentStage();
-
+            EnemyData enemyData = StageManager.Instance.PrepareCurrentStage();
+            
             if (enemyData == null)
             {
                 Debug.LogError("현재 스테이지의 EnemyData를 가져오지 못했습니다.");
