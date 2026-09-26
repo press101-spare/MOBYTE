@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97ccd0ffc6f34732911ae3ad496358e9, type: 3}
-  m_Name: Stage10
+  m_Name: Boss1
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 11400000, guid: 996c67d8a263d564fb9870524a21e481, type: 2}
-  - {fileID: 11400000, guid: 63ae8e5381a5b944b958bf988b554a45, type: 2}
-  stageId: 9
+  stageId: 3
