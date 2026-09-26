@@ -17,8 +17,6 @@ public class DiceEffectUIUpdate : MonoBehaviour
         for (int i = 0; i < slots.Length; i++)
         {
             slots[i].gameObject.SetActive(false);
-            Debug.Log("되는데 비활성화");
-            
         }
 
         // 중복 주사위와 개수 정리
@@ -44,7 +42,6 @@ public class DiceEffectUIUpdate : MonoBehaviour
             slots[slotIndex].gameObject.SetActive(true);
 
             slotIndex++;
-            Debug.Log("되는데 활성화");
         }
     }
     

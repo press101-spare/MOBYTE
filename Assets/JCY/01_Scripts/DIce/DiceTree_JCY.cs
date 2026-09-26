@@ -262,7 +262,7 @@ public class DiceTree_JCY : MonoBehaviour
                 }
                 break;
             case Trees.Four_Of_AKind:
-                //칩 획득
+                PlayerProfileManager.Instance.AddMoney(20);
                 break;
             case Trees.Yahtzee:
                 DiceManager_JCY.Instance.shledDice.ShledHP(25);
