@@ -35,6 +35,7 @@ public class ShopManager_JCY : MonoBehaviour
         _reRollText.text = $"남은 새로고침 수:{_reRoll}";
         _reRoll++;
         OnDisplay();
+
     }
 
     public void OnDisplay()
@@ -54,6 +55,7 @@ public class ShopManager_JCY : MonoBehaviour
             costText[i].text = $"{currentDiceSO[i].cost.ToString()} 칩";
             description[i].text = currentDiceSO[i].diceDescription;
             _btType[i].SetDice(currentDiceSO[i]);
+            _btType[i].SetRe();
         }
 
         _reRoll--;

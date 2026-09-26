@@ -11,6 +11,7 @@ public class GambleManager : MonoBehaviour
     private int _bettingChip;
     private GambleSoData _gambleData;
     [SerializeField] private Transform point;
+    public TextMeshProUGUI _shopChipText;
 
     public static GambleManager instance;
 
