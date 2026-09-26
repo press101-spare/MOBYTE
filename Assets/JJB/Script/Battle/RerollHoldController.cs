@@ -190,10 +190,12 @@ namespace JJB.Script.Battle
             if (valueIndex == -1)
             {
                 Debug.Log("인덱스 없다는데");
+                Debug.Log(dice.currentIndex);
+                Debug.Log(dice.currentDiceSO.diceName);
             }
 
             dice.Setup(randomSO);
-            dice.currentIndex = randomSO.faceValues[valueIndex];
+            dice.currentIndex = dice.currentDiceSO.faceValues[valueIndex];
 
             Debug.Log($"주사위 종류 변경 : {randomSO.name}");
 
