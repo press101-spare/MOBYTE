@@ -1,0 +1,1053 @@
+fileFormatVersion: 2
+guid: 1ec0af19bb4ce324b86bb068a1c1cd1d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6522568425488782158
+    second: mafia guy 1_0
+  - first:
+      213: 4227298536036871849
+    second: mafia guy 1_1
+  - first:
+      213: -3357315407178869746
+    second: mafia guy 1_2
+  - first:
+      213: -3788428330984703403
+    second: mafia guy 1_3
+  - first:
+      213: 7205462923965313559
+    second: mafia guy 1_4
+  - first:
+      213: -8907636438552059870
+    second: mafia guy 1_5
+  - first:
+      213: 4750659713316257083
+    second: mafia guy 1_6
+  - first:
+      213: 4300344026550752954
+    second: mafia guy 1_7
+  - first:
+      213: -299393697512520429
+    second: mafia guy 1_8
+  - first:
+      213: 6324810474346822381
+    second: mafia guy 1_9
+  - first:
+      213: -6384639738364341822
+    second: mafia guy 1_10
+  - first:
+      213: 5304044416848702175
+    second: mafia guy 1_11
+  - first:
+      213: -6889017295711044714
+    second: mafia guy 1_12
+  - first:
+      213: -3702729543150987660
+    second: mafia guy 1_13
+  - first:
+      213: 7819627028148210908
+    second: mafia guy 1_14
+  - first:
+      213: -4118352020940317219
+    second: mafia guy 1_15
+  - first:
+      213: -5553342053107378021
+    second: mafia guy 1_16
+  - first:
+      213: 5093389571779231346
+    second: mafia guy 1_17
+  - first:
+      213: -2800672188484829822
+    second: mafia guy 1_18
+  - first:
+      213: -80948225739036475
+    second: mafia guy 1_19
+  - first:
+      213: -4435018870189411899
+    second: mafia guy 1_20
+  - first:
+      213: -2901617816814575320
+    second: mafia guy 1_21
+  - first:
+      213: -8480639391420180535
+    second: mafia guy 1_22
+  - first:
+      213: -7638940017126385704
+    second: mafia guy 1_23
+  - first:
+      213: -4190091079111650916
+    second: mafia guy 1_24
+  - first:
+      213: -3412233549876476495
+    second: mafia guy 1_25
+  - first:
+      213: -9191268951752197266
+    second: mafia guy 1_26
+  - first:
+      213: -2902104812496669717
+    second: mafia guy 1_27
+  - first:
+      213: 570369924803290727
+    second: mafia guy 1_28
+  - first:
+      213: -384623396580778636
+    second: mafia guy 1_29
+  - first:
+      213: -7137494799122549043
+    second: mafia guy 1_30
+  - first:
+      213: -6213178988824585056
+    second: mafia guy 1_31
+  - first:
+      213: 5044961807883955599
+    second: mafia guy 1_32
+  - first:
+      213: 4595176977296537650
+    second: mafia guy 1_33
+  - first:
+      213: -3246131125342987538
+    second: mafia guy 1_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mafia guy 1_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 335
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e431078cc61d48a50800000000000000
+      internalID: 6522568425488782158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 271
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aea1001f916aaa30800000000000000
+      internalID: 4227298536036871849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_2
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 271
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04582ccc6b6861d0800000000000000
+      internalID: -3357315407178869746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_3
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 271
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55a71a2418ccc6bc0800000000000000
+      internalID: -3788428330984703403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_4
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 271
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71233396a52fef360800000000000000
+      internalID: 7205462923965313559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 271
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22067c39ad7b16480800000000000000
+      internalID: -8907636438552059870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_6
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 271
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3d79f4d6dbbde140800000000000000
+      internalID: 4750659713316257083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_7
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 271
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab6d782ab14edab30800000000000000
+      internalID: 4300344026550752954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_8
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 271
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31586c3b40758dbf0800000000000000
+      internalID: -299393697512520429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_9
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 207
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deabc1bbd9d36c750800000000000000
+      internalID: 6324810474346822381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_10
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 143
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c153f73cf33567a0800000000000000
+      internalID: -6384639738364341822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_11
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 143
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fda292b8b40cb9940800000000000000
+      internalID: 5304044416848702175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_12
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 143
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69bfe95e44b4560a0800000000000000
+      internalID: -6889017295711044714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_13
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 143
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 476142139134d9cc0800000000000000
+      internalID: -3702729543150987660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_14
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 143
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc41d81a55e48c60800000000000000
+      internalID: 7819627028148210908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_15
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 143
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddd17db28aca8d6c0800000000000000
+      internalID: -4118352020940317219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_16
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 143
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b98db4853d09ee2b0800000000000000
+      internalID: -5553342053107378021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_17
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 143
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e749064da5fa640800000000000000
+      internalID: 5093389571779231346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_18
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 143
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28dbb01bb730229d0800000000000000
+      internalID: -2800672188484829822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_19
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 143
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c860af740a60eef0800000000000000
+      internalID: -80948225739036475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_20
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 143
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c1b436d5d5a372c0800000000000000
+      internalID: -4435018870189411899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_21
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 79
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 821a2d218f16bb7d0800000000000000
+      internalID: -2901617816814575320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_22
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 79
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c71736e767be4a80800000000000000
+      internalID: -8480639391420180535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_23
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 79
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d75aaaf6880df590800000000000000
+      internalID: -7638940017126385704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_24
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 79
+        width: 16
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9154051d5ec9d5c0800000000000000
+      internalID: -4190091079111650916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_25
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 79
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b541f84aaf45a0d0800000000000000
+      internalID: -3412233549876476495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_26
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 79
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6bbbb7f59d027080800000000000000
+      internalID: -9191268951752197266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_27
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 79
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be33f2e8c07a9b7d0800000000000000
+      internalID: -2902104812496669717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_28
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 79
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7666776bc6c5ae700800000000000000
+      internalID: 570369924803290727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_29
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 79
+        width: 16
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d9f720f0b89aaf0800000000000000
+      internalID: -384623396580778636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_30
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 79
+        width: 17
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc63a18db4682fc90800000000000000
+      internalID: -7137494799122549043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_31
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 79
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ac9035e0aa56c9a0800000000000000
+      internalID: -6213178988824585056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_32
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 15
+        width: 16
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8de550f80e430640800000000000000
+      internalID: 5044961807883955599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_33
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 15
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23830d35d1955cf30800000000000000
+      internalID: 4595176977296537650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mafia guy 1_34
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 15
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eea9793b0fc63f2d0800000000000000
+      internalID: -3246131125342987538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mafia guy 1_0: 6522568425488782158
+      mafia guy 1_1: 4227298536036871849
+      mafia guy 1_10: -6384639738364341822
+      mafia guy 1_11: 5304044416848702175
+      mafia guy 1_12: -6889017295711044714
+      mafia guy 1_13: -3702729543150987660
+      mafia guy 1_14: 7819627028148210908
+      mafia guy 1_15: -4118352020940317219
+      mafia guy 1_16: -5553342053107378021
+      mafia guy 1_17: 5093389571779231346
+      mafia guy 1_18: -2800672188484829822
+      mafia guy 1_19: -80948225739036475
+      mafia guy 1_2: -3357315407178869746
+      mafia guy 1_20: -4435018870189411899
+      mafia guy 1_21: -2901617816814575320
+      mafia guy 1_22: -8480639391420180535
+      mafia guy 1_23: -7638940017126385704
+      mafia guy 1_24: -4190091079111650916
+      mafia guy 1_25: -3412233549876476495
+      mafia guy 1_26: -9191268951752197266
+      mafia guy 1_27: -2902104812496669717
+      mafia guy 1_28: 570369924803290727
+      mafia guy 1_29: -384623396580778636
+      mafia guy 1_3: -3788428330984703403
+      mafia guy 1_30: -7137494799122549043
+      mafia guy 1_31: -6213178988824585056
+      mafia guy 1_32: 5044961807883955599
+      mafia guy 1_33: 4595176977296537650
+      mafia guy 1_34: -3246131125342987538
+      mafia guy 1_4: 7205462923965313559
+      mafia guy 1_5: -8907636438552059870
+      mafia guy 1_6: 4750659713316257083
+      mafia guy 1_7: 4300344026550752954
+      mafia guy 1_8: -299393697512520429
+      mafia guy 1_9: 6324810474346822381
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
