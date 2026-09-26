@@ -87,7 +87,6 @@ public class DiceManager_JCY : MonoBehaviour
     {
         ClearDice();
         diceCamera.DiceCameraMove();
-        activeDiceSo = drawnDiceSoList;
         for (int i = 0; i < drawnDiceSoList.Count; i++)
         {
             if (i >= spawnPositions.Length) break;
@@ -101,7 +100,8 @@ public class DiceManager_JCY : MonoBehaviour
             // 스크립트에 SO 데이터 전달
             diceScript.Setup(currentSO);
             diceEffect.Effect(currentSO);
-
+            
+            activeDiceSo.Add(currentSO);
             activeDiceObjects.Add(newDice);
             activeDiceScripts.Add(diceScript);
             activeDicePhysicd.Add(jjbDicePhysicdScript);

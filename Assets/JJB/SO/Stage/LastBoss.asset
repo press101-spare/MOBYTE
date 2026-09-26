@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97ccd0ffc6f34732911ae3ad496358e9, type: 3}
-  m_Name: StageLast
+  m_Name: LastBoss
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 1808fdd78eaa0224486b650fcd638938, type: 2}
   stageId: 10

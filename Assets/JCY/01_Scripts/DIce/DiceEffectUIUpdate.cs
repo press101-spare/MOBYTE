@@ -13,7 +13,6 @@ public class DiceEffectUIUpdate : MonoBehaviour
 
     public void UpdateUI(List<DiceSO_JCY> drawnDiceSO)
     {
-        
         // 모든 슬롯 비활성화
         for (int i = 0; i < slots.Length; i++)
         {
