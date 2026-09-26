@@ -40,8 +40,11 @@ namespace JJB.Script.Battle.Player
             if (score <= 0)
             {
                 Debug.Log("족보를 선택해주세요.");
+                DiceManager_JCY.Instance.diceTree.treeNotice.SetActive(true);
                 return false;
             }
+
+            
 
             if (_playerAttackController == null)
             {

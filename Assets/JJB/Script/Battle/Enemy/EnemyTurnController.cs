@@ -37,7 +37,14 @@ namespace JJB.Script.Battle.Enemy
 
             if (_enemy.Ability != null)
                 damage = _enemy.Ability.ModifyAttackDamage(damage);
-
+            
+            int bloodStack = DiceManager_JCY.Instance.diceEffect.bloodStack;
+            
+            if (bloodStack > 0)
+            {
+                damage -= damage * (10 * bloodStack / 100);
+            }
+            
             _playerDamageReceiver.TakeDamage(damage);
 
             _enemy.Ability?.AfterAttack();

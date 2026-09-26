@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class DiceEffectUIUpdate : MonoBehaviour
@@ -47,14 +48,13 @@ public class DiceEffectUIUpdate : MonoBehaviour
     
     public void ShowUi()
     { 
-        if (gameObject.activeInHierarchy) 
+        if (gameObject.activeInHierarchy)
         {
-                gameObject.SetActive(false); 
+            gameObject.SetActive(false);
         }
         else
         {
-                gameObject.SetActive(true);
-            
+            gameObject.SetActive(true);
         }
     }
 }

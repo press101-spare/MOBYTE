@@ -15,7 +15,7 @@ MonoBehaviour:
   diceName: "\uBD88\uC0AC\uC870 \uC8FC\uC0AC\uC704"
   diceIcon: {fileID: -4453784588268070965, guid: 43e2c65b795a6444b8f10595cf04113f,
     type: 3}
-  cost: 50
+  cost: 1750
   color: {r: 0.8805031, g: 0.5294769, b: 0.05814631, a: 1}
   dicePrefab: {fileID: 34949007336262702, guid: ffec24b68069ad8428eae91c63f3a3b7,
     type: 3}
