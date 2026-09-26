@@ -83,7 +83,7 @@ namespace JJB.Script.Battle
 
             _playerAttackController.Initialize(_enemyDamageReceiver);
 
-            _playerDamageReceiver.Initialize(_diceBattleAdapter);
+            _playerDamageReceiver.Initialize(_diceBattleAdapter, _enemyDamageReceiver);
             _enemyTurnController.Initialize(_playerDamageReceiver);
 
             _playerTurnController.Initialize(_playerAttackController);
@@ -91,7 +91,7 @@ namespace JJB.Script.Battle
             if (_battleUIController != null)
                 _battleUIController.Initialize(_battleTurnManager);
 
-            _battleTurnManager.Initialize(_playerHealthSetup.Health, _enemyHealthSetup.Health, _enemyTurnController);
+            _battleTurnManager.Initialize(_playerHealthSetup.Health, _enemyHealthSetup.Health, _enemyTurnController, _enemyDamageReceiver);
         }
 
         public void Attack()

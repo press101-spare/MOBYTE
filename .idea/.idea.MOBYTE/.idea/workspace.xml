@@ -11,9 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sjm/03. Scene/JJBBattle 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/03. Scene/JJBBattle 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +28,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceEffectUIUpdate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/DataManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/DiceDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/SaveData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/SaveManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/BloodDice.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/DebtDice.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/NormalDice.asset" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/DiceTypeRandomizer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/OddEvenJudgeAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/PaybackAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/StealMoneyAbility.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,60 +60,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0000032730593165" />
-      <entry key="S60" value="1.0024819187804312" />
-      <entry key="M2" value="1.069891172866935" />
-      <entry key="M5" value="1.5218408248919413" />
-      <entry key="M10" value="2.023087410822105" />
-      <entry key="M15" value="2.3116779309573756" />
-      <entry key="M30" value="3.261836467216925" />
-      <entry key="H1" value="6.663077830372694" />
-      <entry key="H2" value="22.729080450250613" />
-      <entry key="H4" value="86.03788119793755" />
-      <entry key="D1" value="369.89108825125555" />
-      <entry key="W1" value="484.4987471377759" />
+      <entry key="MS500" value="1.000000000000368" />
+      <entry key="S2" value="1.000778778419525" />
+      <entry key="S5" value="1.057245474010907" />
+      <entry key="S10" value="1.2529464486353765" />
+      <entry key="S30" value="1.970503300959987" />
+      <entry key="S60" value="2.6206965275870466" />
+      <entry key="M2" value="3.541612173238575" />
+      <entry key="M5" value="7.5982825047361455" />
+      <entry key="M10" value="12.748321683476636" />
+      <entry key="M15" value="15.748871389345675" />
+      <entry key="M30" value="20.260061263313936" />
+      <entry key="H1" value="25.455614260499594" />
+      <entry key="H2" value="41.117667106330885" />
+      <entry key="H4" value="101.74417837864462" />
+      <entry key="D1" value="387.8429170442512" />
+      <entry key="W1" value="506.55340075434356" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="6.711064349961458E-229" />
-      <entry key="S30" value="1.2442222047301483E-76" />
-      <entry key="S60" value="1.7963850261641272E-38" />
-      <entry key="M2" value="2.279428574953505E-19" />
-      <entry key="M5" value="6.722937255514031E-8" />
-      <entry key="M10" value="4.487920819481501E-4" />
-      <entry key="M15" value="0.008458913993955009" />
-      <entry key="M30" value="0.1673206899005186" />
-      <entry key="H1" value="1.0157806797489806" />
-      <entry key="H2" value="4.2319017471001175" />
-      <entry key="H4" value="13.267394588310495" />
-      <entry key="D1" value="47.35093976951665" />
-      <entry key="W1" value="60.448929797706754" />
+      <entry key="MS100" value="1.7053074610658146E-83" />
+      <entry key="MS500" value="2.8028306476286266E-17" />
+      <entry key="S2" value="9.259179298952845E-5" />
+      <entry key="S5" value="0.04214971487739417" />
+      <entry key="S10" value="0.4014752340753761" />
+      <entry key="S30" value="2.2528145067791385" />
+      <entry key="S60" value="3.6348599907747174" />
+      <entry key="M2" value="4.656429281027714" />
+      <entry key="M5" value="5.438475253930791" />
+      <entry key="M10" value="5.845456446346417" />
+      <entry key="M15" value="6.076580888750489" />
+      <entry key="M30" value="6.511116484899818" />
+      <entry key="H1" value="7.409013878931019" />
+      <entry key="H2" value="10.42661170718723" />
+      <entry key="H4" value="19.148291810999382" />
+      <entry key="D1" value="53.702672315787844" />
+      <entry key="W1" value="67.33063670955785" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.6560475022262455E-10" />
-      <entry key="MS500" value="0.012157580883678415" />
-      <entry key="S2" value="0.3320563516176841" />
-      <entry key="S5" value="0.6434054225369105" />
-      <entry key="S10" value="0.8021255653181181" />
-      <entry key="S30" value="0.929142478485176" />
-      <entry key="S60" value="0.9664002611008624" />
-      <entry key="M2" value="1.051680229035379" />
-      <entry key="M5" value="1.514504777867291" />
-      <entry key="M10" value="2.0198531804071473" />
-      <entry key="M15" value="2.317655018376509" />
-      <entry key="M30" value="3.427675491845862" />
-      <entry key="H1" value="7.67723875036057" />
-      <entry key="H2" value="26.95667534708717" />
-      <entry key="H4" value="99.29528341842601" />
-      <entry key="D1" value="417.23446403180566" />
-      <entry key="W1" value="544.9462588636569" />
+      <entry key="MS100" value="3.080441501379129E-12" />
+      <entry key="MS500" value="0.0049856592532382515" />
+      <entry key="S2" value="0.2658845476000642" />
+      <entry key="S5" value="0.6461390543315914" />
+      <entry key="S10" value="1.2774150600971506" />
+      <entry key="S30" value="3.8921814836270223" />
+      <entry key="S60" value="6.01094303530006" />
+      <entry key="M2" value="8.043972868898704" />
+      <entry key="M5" value="12.95941860333495" />
+      <entry key="M10" value="18.548287876073143" />
+      <entry key="M15" value="21.792504049751706" />
+      <entry key="M30" value="26.752712584363202" />
+      <entry key="H1" value="32.85411223284317" />
+      <entry key="H2" value="51.53579984626084" />
+      <entry key="H4" value="120.88080739721767" />
+      <entry key="D1" value="441.5377133489835" />
+      <entry key="W1" value="573.8825629606157" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -126,31 +128,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Unity 에디터에 연결.Unity 에디터에 연결.executor": "Debug",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "SJM",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CodeLensConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Unity 에디터에 연결.Unity 에디터에 연결.executor&quot;: &quot;Debug&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;JJB&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.75f1\Editor\Unity.exe" />
@@ -203,6 +205,10 @@
       <workItem from="1788338161865" duration="6569000" />
       <workItem from="1788606975348" duration="2322000" />
       <workItem from="1789528257041" duration="4319000" />
+      <workItem from="1790064659324" duration="1094000" />
+      <workItem from="1790082908502" duration="4245000" />
+      <workItem from="1790233630075" duration="1829000" />
+      <workItem from="1790314406784" duration="709000" />
     </task>
     <servers />
   </component>
@@ -235,6 +241,19 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceDeckManager_JCY.cs</url>
+          <line>103</line>
+          <properties documentPath="C:\Users\const\GitHub\MOBYTE\Assets\JCY\01_Scripts\DIce\DiceDeckManager_JCY.cs" containingFunctionPresentation="메서드 'DrawDice'">
+            <startOffsets>
+              <option value="2520" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2521" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

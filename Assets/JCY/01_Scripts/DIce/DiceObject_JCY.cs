@@ -16,6 +16,9 @@ public class DiceObject_JCY : MonoBehaviour
     [field: SerializeField] public bool IsSelected { get; private set; }
     private Transform myDicePosition;
 
+    [SerializeField] private Material glassSelectMaterial;
+    [SerializeField] private Material fraudDiceMaterial;
+
     private void OnEnable()
     {
         IsSelected = false;
@@ -43,6 +46,15 @@ public class DiceObject_JCY : MonoBehaviour
 
         IsSelected = value;
 
+        if (currentDiceSO.diceEffectType == DiceSO_JCY.DiceEffectType.Allin ||
+         currentDiceSO.diceEffectType == DiceSO_JCY.DiceEffectType.Glass ||
+         currentDiceSO.diceEffectType == DiceSO_JCY.DiceEffectType.Potion ||
+         currentDiceSO.diceEffectType == DiceSO_JCY.DiceEffectType.Mirror ||
+         currentDiceSO.diceEffectType == DiceSO_JCY.DiceEffectType.Fraud)
+        {
+            ChageMeterial(currentDiceSO);
+            return;
+        }
         if (IsSelected)
         {
             AddOutline();
@@ -98,5 +110,64 @@ public class DiceObject_JCY : MonoBehaviour
     {
         return myDicePosition;
     }
+
+    public void ChageMeterial(DiceSO_JCY So)
+    {
+        if (So.diceEffectType == DiceSO_JCY.DiceEffectType.Allin)
+        {
+            Material[] mats = MeshCompo.materials;
+
+            Material temp = mats[0];
+            mats[0] = mats[1];
+            mats[1] = temp;
+
+            // 변경된 배열을 다시 할당
+            MeshCompo.materials = mats;
+            return;
+        }
+
+        if (So.diceEffectType == DiceSO_JCY.DiceEffectType.Glass ||
+            So.diceEffectType == DiceSO_JCY.DiceEffectType.Mirror)
+        {
+            Material[] mats = MeshCompo.materials;
+
+            Material temp = mats[1];
+            mats[1] = glassSelectMaterial;
+            glassSelectMaterial = temp;
+
+            // 변경된 배열을 다시 할당
+            MeshCompo.materials = mats;
+            return;
+        }
+
+        if (So.diceEffectType == DiceSO_JCY.DiceEffectType.Potion)
+        {
+            Material[] mats = MeshCompo.materials;
+
+            Material temp = mats[0];
+            mats[0] = glassSelectMaterial;
+            glassSelectMaterial = temp;
+
+            // 변경된 배열을 다시 할당
+            MeshCompo.materials = mats;
+            return;
+        }
+        
+        if (So.diceEffectType == DiceSO_JCY.DiceEffectType.Fraud)
+        {
+            Material[] mats = MeshCompo.materials;
+
+            Material temp = mats[0];
+            mats[0] = fraudDiceMaterial;
+            fraudDiceMaterial = temp;
+
+            // 변경된 배열을 다시 할당
+            MeshCompo.materials = mats;
+            return;
+        }
+
+
+
+}
     
 }

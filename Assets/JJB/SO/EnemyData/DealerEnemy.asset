@@ -17,4 +17,4 @@ MonoBehaviour:
   attackPower: 23
   attackPower2: 27
   attackPower3: 31
-  ability: {fileID: 0}
+  ability: {fileID: 11400000, guid: 27fbe9a7d2cceac42a0b980da2051d4b, type: 2}

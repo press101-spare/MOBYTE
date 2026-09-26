@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: PhnioxDice
   m_EditorClassIdentifier: 
   diceName: "\uBD88\uC0AC\uC870 \uC8FC\uC0AC\uC704"
-  diceIcon: {fileID: 80519971964005936, guid: 0028eadc2cab6ab4b9e4b4500fb9dad0, type: 3}
+  diceIcon: {fileID: -4453784588268070965, guid: 43e2c65b795a6444b8f10595cf04113f,
+    type: 3}
   cost: 50
   color: {r: 0.8805031, g: 0.5294769, b: 0.05814631, a: 1}
-  dicePrefab: {fileID: 34949007336262702, guid: 2ab02a6a96f26004c865b44a60072f28,
+  dicePrefab: {fileID: 34949007336262702, guid: ffec24b68069ad8428eae91c63f3a3b7,
     type: 3}
-  diceEffectType: 9
+  diceEffectType: 22
   diceDescription: "[0,0,0,0,0,0]\n\uBAA8\uB4E0 \uB208\uAE08\uC774 \uC871\uBCF4\uC5D0\uC11C
     \uBAA8\uB4E0 \uB208\uC73C\uB85C \uCDE8\uAE09\uB418\uB294  0\uC73C\uB85C \uD310\uC815\uB418\uBA70,
     \uD574\uB2F9 \uC8FC\uC0AC\uC704\uB85C \uACF5\uACA9 \uC2DC \uC804\uD22C\uC5D0\uC11C

@@ -15,3 +15,4 @@ MonoBehaviour:
   enemies:
   - {fileID: 11400000, guid: 996c67d8a263d564fb9870524a21e481, type: 2}
   - {fileID: 11400000, guid: 63ae8e5381a5b944b958bf988b554a45, type: 2}
+  stageId: 9

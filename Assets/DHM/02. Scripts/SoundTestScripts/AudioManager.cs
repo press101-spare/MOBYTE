@@ -27,21 +27,7 @@ public class AudioManager : MonoBehaviour
 
         switch (currentSceneIndex)
         {
-            case 0:
-                PlayBGM(SoundStringContainer.BGM_MAP_1);
-                break;
 
-            case 1:
-                PlayBGM(SoundStringContainer.BGM_MAP_2);
-                break;
-
-            case 2:
-                PlayBGM(SoundStringContainer.BGM_MAP_3);
-                break;
-
-            case 3:
-                PlayBGM(SoundStringContainer.BGM_MAP_2);
-                break;
         }
     }
 
@@ -72,7 +58,6 @@ public class AudioManager : MonoBehaviour
                 bgmSource.Play();
                 return;
             }
-
         }
     }
 

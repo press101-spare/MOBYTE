@@ -54,6 +54,7 @@ MonoBehaviour:
   <OutLine>k__BackingField: {fileID: 2100000, guid: c6f288c5f5c442d498ba189ddcc568ec,
     type: 2}
   <IsSelected>k__BackingField: 0
+  glassSelectMaterial: {fileID: 0}
 --- !u!54 &508322639934586137
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -93,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5181525cf424b0aa2e27af268bff8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xForce: -15
+  xForce: -20
   xForceMin: -65
   yForce: 0
   yForceMin: -10
@@ -125,7 +126,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7805965318761107941, guid: 8da868e20e1a8e64ba2d6f21c3b25e08, type: 3}
+  - {fileID: 2100000, guid: 09da80ff85809b946a88799cad99b0ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -258,7 +259,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4864258240423658053}
-  m_Mesh: {fileID: 8770176760051943396, guid: 74dde235b0c4c31428b945c34f837dec, type: 3}
+  m_Mesh: {fileID: -3354637424056564581, guid: 732ce5b57055eb14da1fde6be79f7dce, type: 3}
 --- !u!23 &5275044575769219845
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -282,7 +283,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7288879029378546519, guid: 74dde235b0c4c31428b945c34f837dec, type: 3}
+  - {fileID: -5238953971125454028, guid: 732ce5b57055eb14da1fde6be79f7dce, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

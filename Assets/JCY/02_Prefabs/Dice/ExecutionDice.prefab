@@ -54,6 +54,7 @@ MonoBehaviour:
   <OutLine>k__BackingField: {fileID: 2100000, guid: c6f288c5f5c442d498ba189ddcc568ec,
     type: 2}
   <IsSelected>k__BackingField: 0
+  glassSelectMaterial: {fileID: 0}
 --- !u!54 &508322639934586137
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -93,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5181525cf424b0aa2e27af268bff8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xForce: -15
+  xForce: -20
   xForceMin: -65
   yForce: 0
   yForceMin: -10

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 11400000, guid: 63ae8e5381a5b944b958bf988b554a45, type: 2}
+  stageId: 6

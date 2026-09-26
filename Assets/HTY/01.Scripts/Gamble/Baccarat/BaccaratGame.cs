@@ -1,26 +1,20 @@
 using DG.Tweening;
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class BaccaratGame : MonoBehaviour
 {
-    public enum Batting {Player,Backer,Tie}
+    public enum Batting { Player, Backer, Tie }
+
     public Batting _whoBatting;
     public Batting _winer;
-    public void BattingBT(int a)
-    {
-        if (a == 0) _whoBatting = Batting.Player;
-        else if (a == 1) _whoBatting = Batting.Backer;
-        else if (a == 2) _whoBatting = Batting.Tie;
-    }
-    public Transform[] _settingPoint;
 
+    [SerializeField] private Outline[] _battingOutlines;
+
+    public Transform[] _settingPoint;
 
     [Header("게임진행")]
     public int _playerSum;
@@ -29,7 +23,6 @@ public class BaccaratGame : MonoBehaviour
     public bool _notMorePlayer;
     public bool _notMoreDealer;
     public bool _checkCard;
-
 
     [Header("UI오브젝트")]
     public TextMeshProUGUI _endingText;
@@ -46,27 +39,47 @@ public class BaccaratGame : MonoBehaviour
     public float _during = 2f;
     public GameObject _thisCard;
 
-
-
-
     public int _thardCard;
 
+    private int _playerCardCount;
+    private bool _isPlaying;
+
+    private List<GameObject> _spawnCards = new List<GameObject>();
 
 
+    public GameObject _btBetting;
 
-
-
-    private void Update()
+    private void OnEnable()
     {
-        if(Keyboard.current.yKey.wasPressedThisFrame)
+        _btBetting.SetActive(true);
+        ResetGame();
+    }
+
+    public void BattingBT(int a)
+    {
+        if (_isPlaying) return;
+
+        if (a == 0) _whoBatting = Batting.Player;
+        else if (a == 1) _whoBatting = Batting.Backer;
+        else if (a == 2) _whoBatting = Batting.Tie;
+        else return;
+
+        for (int i = 0; i < _battingOutlines.Length; i++)
         {
-            StartCoroutine(BlackjackGame());
+            _battingOutlines[i].enabled = i == a;
         }
+    }
+
+    public void StartGamble()
+    {
+        if (_isPlaying) return;
+
+        _isPlaying = true;
+        StartCoroutine(BlackjackGame());
     }
 
     private IEnumerator BlackjackGame()
     {
-        //리셋 만들기
         NewCard(0);
         yield return new WaitForSeconds(1.2f);
 
@@ -83,7 +96,6 @@ public class BaccaratGame : MonoBehaviour
 
         if (CheckNature())
         {
-            
             EndingGame();
         }
         else
@@ -97,15 +109,16 @@ public class BaccaratGame : MonoBehaviour
             {
                 _notMorePlayer = true;
             }
-            yield return new WaitForSeconds(5);
+
+            yield return new WaitForSeconds(5f);
+
             BankerMore();
-            yield return new WaitForSeconds(5);
+
+            yield return new WaitForSeconds(5f);
 
             EndingGame();
-
         }
     }
-
 
     public void BankerMore()
     {
@@ -127,17 +140,23 @@ public class BaccaratGame : MonoBehaviour
                 switch (_dealerSum)
                 {
                     case 3:
-                        if(_thardCard!=8) NewCard(1); break;
+                        if (_thardCard != 8) NewCard(1);
+                        break;
+
                     case 4:
-                        if(_thardCard>=2&&_thardCard<=7) NewCard(1); break;
+                        if (_thardCard >= 2 && _thardCard <= 7) NewCard(1);
+                        break;
+
                     case 5:
-                        if (_thardCard >= 4 && _thardCard <= 7) NewCard(1); break;
+                        if (_thardCard >= 4 && _thardCard <= 7) NewCard(1);
+                        break;
+
                     case 6:
-                        if (_thardCard >= 6 && _thardCard <= 7) NewCard(1); break;
+                        if (_thardCard >= 6 && _thardCard <= 7) NewCard(1);
+                        break;
+
                     case 7:
                         break;
-                        
-
                 }
             }
         }
@@ -163,29 +182,28 @@ public class BaccaratGame : MonoBehaviour
             _winer = Batting.Tie;
         }
 
-
-        if(_whoBatting==_winer)
+        if (_whoBatting == _winer)
         {
             GambleManager.instance.GambleEnd(2);
-            gameObject.transform.parent.gameObject.SetActive(false);
-            
         }
         else
         {
             GambleManager.instance.GambleEnd(0);
-            gameObject.transform.parent.gameObject.SetActive(false);
-            
         }
+
+        _isPlaying = false;
+        gameObject.transform.parent.gameObject.SetActive(false);
     }
 
-    public void Sum(int id,int a)
+    public void Sum(int id, int a)
     {
         Debug.Log($"{id} {a}");
-        if(id==0)
+
+        if (id == 0)
         {
             _playerSum = (_playerSum + a) % 10;
         }
-        else if(id==1)
+        else if (id == 1)
         {
             _dealerSum = (_dealerSum + a) % 10;
         }
@@ -193,16 +211,57 @@ public class BaccaratGame : MonoBehaviour
 
     public bool CheckNature()
     {
-        if(_playerSum >=8)
+        if (_playerSum >= 8)
         {
             return true;
         }
-        if(_dealerSum >=8)
+
+        if (_dealerSum >= 8)
         {
             return true;
         }
+
         return false;
     }
+
+    public void ResetGame()
+    {
+        _playerSum = 0;
+        _dealerSum = 0;
+
+        _morePlay = false;
+        _notMorePlayer = false;
+        _notMoreDealer = false;
+        _checkCard = false;
+
+        _thardCard = 0;
+        _playerCardCount = 0;
+        _isPlaying = false;
+
+        _whoBatting = Batting.Player;
+        _winer = Batting.Player;
+
+        _endingText.text = "";
+
+        _copyCard.Clear();
+        _copyCard.AddRange(_originCard);
+
+        for (int i = 0; i < _spawnCards.Count; i++)
+        {
+            if (_spawnCards[i] != null)
+            {
+                Destroy(_spawnCards[i]);
+            }
+        }
+
+        _spawnCards.Clear();
+
+        for (int i = 0; i < _battingOutlines.Length; i++)
+        {
+            _battingOutlines[i].enabled = i == 0;
+        }
+    }
+
     #region 카드전용
 
     public void NewCard(int id)
@@ -218,14 +277,32 @@ public class BaccaratGame : MonoBehaviour
             endVec = _endVecDealer;
         }
 
-        GameObject moveCard = Instantiate(_thisCard, _fristVec.position, Quaternion.identity);
+        GameObject moveCard = Instantiate(
+            _thisCard,
+            _fristVec.position,
+            Quaternion.identity
+        );
 
-        _endRotate = new Vector3(0, 0, UnityEngine.Random.Range(90, 210));
+        _spawnCards.Add(moveCard);
 
-        moveCard.transform.DOMove(endVec.position, _during);
-        moveCard.transform.DORotate(_endRotate, _during - 1f);
+        _endRotate = new Vector3(
+            0,
+            0,
+            UnityEngine.Random.Range(90, 210)
+        );
 
-        BlackJackCard cardCompo = moveCard.GetComponent<BlackJackCard>();
+        moveCard.transform.DOMove(
+            endVec.position,
+            _during
+        );
+
+        moveCard.transform.DORotate(
+            _endRotate,
+            _during - 1f
+        );
+
+        BlackJackCard cardCompo =
+            moveCard.GetComponent<BlackJackCard>();
 
         CardInfo(cardCompo, id);
     }
@@ -239,17 +316,25 @@ public class BaccaratGame : MonoBehaviour
         compo._myImage = sprite;
         compo._myNumber = CheckNum(sprite.name);
 
-        Sum(id,compo._myNumber);
-        if(id==0)
-        {
-            _thardCard = compo._myNumber;
-        }
+        Sum(id, compo._myNumber);
 
+        if (id == 0)
+        {
+            _playerCardCount++;
+
+            if (_playerCardCount == 3)
+            {
+                _thardCard = compo._myNumber;
+            }
+        }
     }
 
     public Sprite CheckSprite()
     {
-        int ran = UnityEngine.Random.Range(0, _copyCard.Count);
+        int ran = UnityEngine.Random.Range(
+            0,
+            _copyCard.Count
+        );
 
         Sprite sprite = _copyCard[ran];
 

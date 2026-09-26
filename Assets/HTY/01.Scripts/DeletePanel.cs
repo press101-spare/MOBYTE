@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class DeletePanel : MonoBehaviour
 {
     [SerializeField] private GameObject _diceGroup;
-    [SerializeField] private GameObject _diceBTTem;//
+    [SerializeField] private Button _diceBTTem;
 
     private void Start()
     {
@@ -15,8 +15,10 @@ public class DeletePanel : MonoBehaviour
     {
         for (int i = 0; i < DiceManager_JCY.Instance.allDiceSo.Length; i++)
         {
-            GameObject a = Instantiate(_diceBTTem, _diceGroup.transform);
-            //a.GetComponent<Button>().onClick.AddListener(()=>);
+            /*DiceDeckManager_JCY
+            GameObject a = Instantiate(_diceBTTem.gameObject, _diceGroup.transform);
+            a.gameObject.GetComponent<Image>().sprite=
+                \a.GetComponent<Button>().onClick.AddListener(()=>);*/
         }
     }
 }

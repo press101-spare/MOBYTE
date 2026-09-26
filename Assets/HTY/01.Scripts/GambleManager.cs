@@ -2,6 +2,7 @@ using JJB.Script.Battle.Player.Progression;
 using System.Drawing;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GambleManager : MonoBehaviour
 {
@@ -13,17 +14,40 @@ public class GambleManager : MonoBehaviour
 
     public static GambleManager instance;
 
+    public bool _isFirst = true;
+
+    public GameObject _title;
+    public GameObject _casino;
+
+    public SelectTest_HTY selectCompo;
+
     
 
     private void Awake()
     {
+        
         if(instance==null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        if (_isFirst)
+        {
+            _title.SetActive(true);
+            _casino.SetActive(false);
+        }
+        else
+        {
+            _title.SetActive(false);
+            _casino.SetActive(true);
         }
     }
 
@@ -46,15 +70,30 @@ public class GambleManager : MonoBehaviour
             }
         }
     }
-    
-    public void GambleEnd(float x)
+
+    public void GambleEnd(float coin)
     {
         _endPanel.SetActive(true);
-        _endPanel.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text
-            = $"{_gambleData._gambleName}의 게임 결과: \n 획득배수:{x}x \n 얻은 칩:{x*_bettingChip}칩 \n 현재 보유 칩:{PlayerProfileManager.Instance.Profile.money} 칩";
 
+        TextMeshProUGUI resultText =
+            _endPanel.GetComponentInChildren<TextMeshProUGUI>();
+        resultText.text =
+            $"{_gambleData._gambleName}의 게임 결과: \n" +
+            $"획득배수: {coin}x \n" +
+            $"얻은 칩: {coin * _bettingChip}칩 \n" +
+            $"현재 보유 칩: {PlayerProfileManager.Instance.Profile.money + coin * _bettingChip}칩";
+
+        PlayerProfileManager.Instance.Profile.money
+            += Mathf.CeilToInt(coin * _bettingChip);
+
+        ResetGamble();
+    }
+
+    public void ResetGamble()
+    {
         _bettingChip = 0;
         _gambleData = null;
+        selectCompo._canSelect = true;
     }
 
 

@@ -5,6 +5,7 @@ namespace JJB.Script.Battle
 {
     public class JJBHealth : MonoBehaviour
     {
+        private bool _oneHpReviveEnabled;
         public int CurrentHealth { get; private set; }
         public int MaxHealth { get; private set; }
 
@@ -28,8 +29,18 @@ namespace JJB.Script.Battle
 
             damage = Mathf.Max(0, damage);
 
-            CurrentHealth = Mathf.Max(0, CurrentHealth - damage);
+            CurrentHealth -= damage;
+            
+            if (CurrentHealth <= 0 && _oneHpReviveEnabled)
+            {
+                _oneHpReviveEnabled = false;
+                CurrentHealth = 1;
 
+                OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
+
+                return;
+            }
+            
             OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
 
             if (IsDead)
@@ -46,6 +57,22 @@ namespace JJB.Script.Battle
             CurrentHealth = Mathf.Min(MaxHealth, CurrentHealth + amount);
 
             OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
+        }
+        
+        public void IncreaseMaxHealth(int amount)
+        {
+            if (amount <= 0 || IsDead)
+                return;
+
+            MaxHealth += amount;
+            CurrentHealth += amount;
+
+            OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
+        }
+        
+        public void EnableOneHpRevive()
+        {
+            _oneHpReviveEnabled = true;
         }
     }
 }

@@ -31,8 +31,11 @@ public class SelectTest_HTY : MonoBehaviour
 
     [SerializeField] private GameObject _bacara;
     [SerializeField] private GameObject _loto;
+    [SerializeField] private GameObject _slot;
 
-    private bool _canSelect =true;
+    
+
+    public bool _canSelect =true;
 
 
     private void Start()
@@ -83,7 +86,6 @@ public class SelectTest_HTY : MonoBehaviour
                 _canSelect = false;
                 break;
             case GambleType.PinBall:
-            case GambleType.SlotGame:
             case GambleType.BlackJack:
             case GambleType.Roulette:
             case GambleType.SellGame:
@@ -98,7 +100,15 @@ public class SelectTest_HTY : MonoBehaviour
                 _loto.transform.GetChild(1).gameObject.SetActive(false);
                 _canSelect = false;
                 break;
+            case GambleType.SlotGame:
+                _slot.SetActive(true);
+                _canSelect = false;
+                break;
         }
-        
+    }
+
+    public void ExitGame()
+    {
+        _canSelect = true;
     }
 }
