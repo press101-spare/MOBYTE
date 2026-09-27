@@ -1,7 +1,7 @@
-using System.Collections.Generic;
+﻿using UnityEngine;
 
 [System.Serializable]
-public class ShopSaveData
+public class ShopSaveData : MonoBehaviour
 {
-    public List<string> shopItemIDs = new List<string>();
+        
 }

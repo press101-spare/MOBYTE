@@ -69,10 +69,30 @@ public class DataManager : MonoBehaviour
         SaveData data = new SaveData();
 
         data.currentSceneNum = currentSceneIndex;
-        data.currentStage = currentStage;
-        data.playerCurrentHp = playerCurrentHp;
-        data.gambleProgressData = gambleProgressData;
+        
+        switch (data.currentSceneNum)
+        {
+            
+            case 0:
+                data.ShopSaveData = new ShopSaveData();
+            //    data.shopItemIDs = 
 
+                // 상점 데이터 저장
+                break;
+
+            
+            case 2:
+                data.BattleSaveData = new BattleSaveData();
+
+                data.BattleSaveData.playerHp = playerCurrentHp;
+                data.BattleSaveData.currentStage = currentStage;
+                break;
+
+            
+            case 3:
+                break;
+        }
+        
         // 주사위 SO 덱 저장
         if (playerDeck != null)
         {
@@ -125,8 +145,7 @@ public class DataManager : MonoBehaviour
     private void ApplyLoadedData(SaveData data)
     {
         // 1. 기본 상태 데이터 복원
-        playerCurrentHp = data.playerCurrentHp;
-        gambleProgressData = data.gambleProgressData;
+        playerCurrentHp = data.BattleSaveData.playerHp;
 
         // 2. 주사위 덱 복원
         if (playerDeck != null)
