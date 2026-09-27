@@ -6,14 +6,15 @@ using UnityEngine.Events;
 
 public sealed class Talk : MonoBehaviour
 {
+    [Header("대화")]
     [SerializeField] private EventDialogueData dialogueData;
     [SerializeField] private DialogueView view;
 
-    [SerializeField, Min(0f)]
-    private float typingSpeed = 0.05f;
+    [Header("설정")]
+    [SerializeField, Min(0f)] private float typingSpeed = 0.05f;
 
-    [SerializeField]
-    private UnityEvent onDialogueEnded;
+    [Header("종료")]
+    [SerializeField] private UnityEvent onDialogueEnded;
 
     private int index;
 
@@ -25,12 +26,18 @@ public sealed class Talk : MonoBehaviour
 
     private void OnEnable()
     {
+        if (view == null)
+            return;
+
         view.NextClicked += Next;
         view.SkipClicked += Skip;
     }
 
     private void OnDisable()
     {
+        if (view == null)
+            return;
+
         view.NextClicked -= Next;
         view.SkipClicked -= Skip;
     }
@@ -44,13 +51,20 @@ public sealed class Talk : MonoBehaviour
     {
         if (dialogueData == null || view == null)
         {
-            Debug.LogError("대화 데이터를 연결해주세요.");
+            Debug.LogError(
+                "DialogueData 또는 DialogueView를 연결해주세요.",
+                this
+            );
+
             return;
         }
 
         index = 0;
+
         running = true;
         choosing = false;
+
+        dialogueData.SelectRandomDialogue();
 
         Show();
     }
@@ -124,6 +138,7 @@ public sealed class Talk : MonoBehaviour
         StopTyping();
 
         choosing = false;
+
         view.ClearChoices();
 
         if (!GetNode(out var node))
@@ -144,7 +159,7 @@ public sealed class Talk : MonoBehaviour
 
         int length = view.CharacterCount;
 
-        if (typingSpeed <= 0f || length == 0)
+        if (typingSpeed <= 0f || length <= 0)
         {
             typing = true;
             FinishTyping();
@@ -195,12 +210,18 @@ public sealed class Talk : MonoBehaviour
             !HasChoices(node))
             return;
 
-        choosing = true;
-
-        view.ShowChoices(
+        choosing = view.ShowChoices(
             node.choices,
             i => SelectChoice(node.choices[i])
         );
+
+        if (!choosing)
+        {
+            Debug.LogError(
+                $"대사 {index}의 선택지를 표시하지 못했습니다.",
+                this
+            );
+        }
     }
 
     private void SelectChoice(
@@ -220,6 +241,9 @@ public sealed class Talk : MonoBehaviour
                 effect => effect?.Apply()
             );
         }
+
+        if (this == null || !isActiveAndEnabled)
+            return;
 
         Move(choice.nextIndex);
     }

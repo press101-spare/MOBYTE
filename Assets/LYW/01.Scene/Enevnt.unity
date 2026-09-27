@@ -331,6 +331,207 @@ MonoBehaviour:
       effects:
       - {fileID: 2026090837}
   endEffects: []
+  randomDialogueList:
+  - eventName: 주사위 증정!
+    background: {fileID: 8806969880016095725, guid: d2147dcacced83c4bb4bef5068d8b403,
+      type: 3}
+    dialogues:
+    - speaker: 해설
+      text: 길가에 놓인 작은 선물 상자에서 희미한 빛이 새어 나온다.
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: Player
+      text: 상자 안에 주사위가 들어 있잖아?
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: 해설
+      text: 누군가 남겨 둔 특별한 주사위인 것 같다.
+      background: {fileID: 0}
+      nextIndex: -1
+      choices:
+      - choiceText: 주사위를 챙긴다
+        nextIndex: -2
+        effects:
+        - {fileID: 2026090842}
+    endEffects: []
+  - eventName: 삼지선다 선택지
+    background: {fileID: 5233048643400102705, guid: cadc97535446cd34db59dc23d05711e4,
+      type: 3}
+    dialogues:
+    - speaker: 상인
+      text: 오늘 하루만 특별 할인입니다!
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: Player
+      text: 정말 이 가격에 파는 건가요?
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: 상인
+      text: 세 개 중 하나만 고르세요. 상점보다 20% 싸게 드리죠.
+      background: {fileID: 0}
+      nextIndex: -1
+      choices:
+      - choiceText: 짝수 주사위 - 40칩
+        nextIndex: -2
+        effects:
+        - {fileID: 2026090839}
+      - choiceText: 홀수 주사위 - 40칩
+        nextIndex: -2
+        effects:
+        - {fileID: 2026090840}
+      - choiceText: 방어 주사위 - 40칩
+        nextIndex: -2
+        effects:
+        - {fileID: 2026090841}
+    endEffects: []
+  - eventName: 좋아 더블로가@
+    background: {fileID: -2784226545802003085, guid: 490414c90d55e334ab02c726d9112d02,
+      type: 3}
+    dialogues:
+    - speaker: 해설
+      text: 두 개의 수상한 주사위가 테이블 위에서 빛나고 있다.
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: 도박사
+      text: 운이 좋다면 두 배, 아주 좋다면 세 배가 되지.
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: Player
+      text: 위험해 보이지만 시험해 볼 가치는 있겠어.
+      background: {fileID: 0}
+      nextIndex: -1
+      choices:
+      - choiceText: 주사위를 굴린다
+        nextIndex: -2
+        effects:
+        - {fileID: 2026090844}
+    endEffects: []
+  - eventName: Flax~!
+    background: {fileID: -54778319253412893, guid: b7da1a0b9d326504b98c173dc8297c28,
+      type: 3}
+    dialogues:
+    - speaker: 해설
+      text: 너무 신나게 놀아버렸다. 계산서가 불안하게 흔들리고 있다.
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: Player
+      text: 설마 이렇게 많이 썼을 리는 없겠지...?
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: 해설
+      text: 가진 돈의 50%를 지불해야 한다.
+      background: {fileID: 0}
+      nextIndex: -1
+      choices:
+      - choiceText: 계산한다
+        nextIndex: -2
+        effects:
+        - {fileID: 2026090847}
+    endEffects: []
+  - eventName: 돈주머니를 잃어버렸어ㅠㅠ
+    background: {fileID: -7332996254234084354, guid: eb848eb4a4d202844b44fe954fd1aa1a,
+      type: 3}
+    dialogues:
+    - speaker: Player
+      text: 내 돈주머니!!
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: Player
+      text: 분명 조금 전까지 가지고 있었는데...
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: 해설
+      text: 돈주머니를 잃어버려 가진 돈의 30%를 잃었다.
+      background: {fileID: 0}
+      nextIndex: -1
+      choices:
+      - choiceText: 잃어버렸다
+        nextIndex: -2
+        effects:
+        - {fileID: 2026090837}
+    endEffects: []
+  - eventName: 이거... 좋은건가?
+    background: {fileID: -3542734953459156508, guid: 028a5be028fda2c498aea0b9d399e234,
+      type: 3}
+    dialogues:
+    - speaker: 해설
+      text: 황금빛 물약 한 병이 눈앞에서 반짝이고 있다.
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: Player
+      text: 마시면 좋은 일이 생길 것 같은 느낌이 들어.
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: 해설
+      text: 병을 여는 순간 달콤한 향기가 주변에 퍼졌다.
+      background: {fileID: 0}
+      nextIndex: -1
+      choices:
+      - choiceText: 회복 아이템을 챙긴다
+        nextIndex: -2
+        effects:
+        - {fileID: 2026090845}
+    endEffects: []
+  - eventName: 도박살인도박?
+    background: {fileID: -776536894745668459, guid: 59314ea6e12665547a5d685da5593c57,
+      type: 3}
+    dialogues:
+    - speaker: 도박사
+      text: 룰렛 한 번 어때? 성공하면 건 돈의 2.5배를 돌려주지.
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: Player
+      text: 실패하면 건 돈은 전부 사라지는 거군.
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: 도박사
+      text: 위험해야 도박이지. 100칩을 걸어보겠나?
+      background: {fileID: 0}
+      nextIndex: -1
+      choices:
+      - choiceText: 100칩을 걸고 룰렛을 돌린다
+        nextIndex: -2
+        effects:
+        - {fileID: 2026090843}
+    endEffects: []
+  - eventName: 어라 내 소지품이...
+    background: {fileID: 1168007856243417429, guid: e9d32ae2b22d05442b34cd70fde39846,
+      type: 3}
+    dialogues:
+    - speaker: Player
+      text: 잠깐, 가방이 왜 이렇게 가볍지?
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: 해설
+      text: 가방을 아무리 뒤져도 소지품 하나가 보이지 않는다.
+      background: {fileID: 0}
+      nextIndex: -1
+      choices: []
+    - speaker: Player
+      text: 주사위든 회복 아이템이든 뭔가 하나를 잃어버렸어...
+      background: {fileID: 0}
+      nextIndex: -1
+      choices:
+      - choiceText: 잃어버린 소지품을 확인한다
+        nextIndex: -2
+        effects:
+        - {fileID: 2026090846}
+    endEffects: []
 --- !u!1 &554541029
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,11 +1158,16 @@ MonoBehaviour:
   nameText: {fileID: 456898119}
   talkText: {fileID: 664039928}
   eventImage: {fileID: 0}
+  dialoguePanel: {fileID: 2042568341}
   nextButton: {fileID: 1483063591}
   skipButton: {fileID: 1937894227}
   choiceParent: {fileID: 936962000}
   choiceButtonPrefab: {fileID: 7994154148348285866, guid: 918ccb297732d22419011b09f50b2aa4,
     type: 3}
+  choiceWidth: 720
+  choiceButtonHeight: 64
+  choiceSpacing: 12
+  choicePadding: 12
 --- !u!1 &1193165911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,6 +1584,15 @@ GameObject:
   m_Component:
   - component: {fileID: 2026090838}
   - component: {fileID: 2026090837}
+  - component: {fileID: 2026090839}
+  - component: {fileID: 2026090840}
+  - component: {fileID: 2026090841}
+  - component: {fileID: 2026090842}
+  - component: {fileID: 2026090843}
+  - component: {fileID: 2026090844}
+  - component: {fileID: 2026090845}
+  - component: {fileID: 2026090846}
+  - component: {fileID: 2026090847}
   m_Layer: 0
   m_Name: Event
   m_TagString: Untagged
@@ -1397,7 +1612,136 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e2e039ff1154ab4ba984fae057fde44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lossRate: 0.7
+  lossRate: 0.3
+--- !u!114 &2026090839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026090836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316365ddb5874fe4a1941a35555d9406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dice: {fileID: 11400000, guid: eb1e2a53ceebb4d48b0ed9a3dfc9f8e9, type: 2}
+  discountRate: 0.2
+--- !u!114 &2026090840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026090836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316365ddb5874fe4a1941a35555d9406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dice: {fileID: 11400000, guid: c434f24f11970f14385529eb31992fef, type: 2}
+  discountRate: 0.2
+--- !u!114 &2026090841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026090836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316365ddb5874fe4a1941a35555d9406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dice: {fileID: 11400000, guid: c184773a1a23d2d44a7c0569c90d850e, type: 2}
+  discountRate: 0.2
+--- !u!114 &2026090842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026090836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f616984bd56745979894412c8c4097e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dicePool:
+  - {fileID: 11400000, guid: eb1e2a53ceebb4d48b0ed9a3dfc9f8e9, type: 2}
+  - {fileID: 11400000, guid: c434f24f11970f14385529eb31992fef, type: 2}
+  - {fileID: 11400000, guid: c184773a1a23d2d44a7c0569c90d850e, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: a85aeb3b95abedb4a9e9f18085500b7d, type: 2}
+  - {fileID: 11400000, guid: f88304f66462f41498f4521e4333ad59, type: 2}
+  - {fileID: 11400000, guid: ededb5722840fe042b0e965e8f252778, type: 2}
+  - {fileID: 11400000, guid: d579a2b77abbb5f4a8081fda848804a1, type: 2}
+--- !u!114 &2026090843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026090836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595ab8d7c30b4d4d9ae109e9013b6254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stake: 100
+  successRate: 0.5
+  rewardMultiplier: 2.5
+--- !u!114 &2026090844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026090836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b871f8a27a440c192fcd8fbe8e7d0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stake: 100
+--- !u!114 &2026090845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026090836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132592cce4a34c519bc101aba46ab26c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recoveryItem: {fileID: 11400000, guid: ededb5722840fe042b0e965e8f252778, type: 2}
+--- !u!114 &2026090846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026090836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 198ad0b59d4f44b3b1c844cff2739772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2026090847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026090836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e2e039ff1154ab4ba984fae057fde44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lossRate: 0.5
 --- !u!4 &2026090838
 Transform:
   m_ObjectHideFlags: 0
