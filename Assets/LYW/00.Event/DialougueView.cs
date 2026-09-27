@@ -28,6 +28,7 @@ public sealed class DialogueView : MonoBehaviour
     private readonly List<Button> choiceButtons = new();
     private Button dialoguePanelButton;
     private bool ownsDialoguePanelButton;
+    [SerializeField] TMP_FontAsset _font;
 
     public event Action NextClicked;
     public event Action SkipClicked;
@@ -166,6 +167,8 @@ public sealed class DialogueView : MonoBehaviour
             TMP_Text buttonText =
                 button.GetComponentInChildren<TMP_Text>(true);
 
+            buttonText.font = _font;
+            
             if (buttonText != null)
                 buttonText.text = choices[i].choiceText ?? string.Empty;
 
