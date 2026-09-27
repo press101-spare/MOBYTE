@@ -15,7 +15,8 @@ namespace JJB.Script.Battle
 
         [field: SerializeField] public PlayerDamageReceiver PlayerDamageReceiver { get; private set; }
         [field: SerializeField] public EnemyDamageReceiver EnemyDamageReceiver { get; private set; }
-
+        
+        [field: SerializeField] public PlayerProgression PlayerProgression { get; private set; }
         [field: SerializeField] public StageManager StageManager { get; private set; }
         public bool isFighting;
         

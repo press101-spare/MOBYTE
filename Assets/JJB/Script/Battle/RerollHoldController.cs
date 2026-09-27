@@ -21,6 +21,7 @@ namespace JJB.Script.Battle
 
         private Coroutine _holdCoroutine;
         private bool _isLongPress;
+        private bool _hasChangedDiceType;
 
         private Texture2D _holdGaugeTexture;
         private Sprite _holdGaugeSprite;
@@ -92,6 +93,13 @@ namespace JJB.Script.Battle
             _isLongPress = true;
             _holdCoroutine = null;
 
+            // 이번 턴에 이미 종류 변경을 했다면 실행하지 않음
+            if (_hasChangedDiceType)
+            {
+                ResetGauge();
+                yield break;
+            }
+
             yield return ChangeSelectedDiceTypeRoutine();
         }
 
@@ -118,6 +126,8 @@ namespace JJB.Script.Battle
 
             if (selectedDice.Count == 0)
                 yield break;
+            
+            _hasChangedDiceType = true;
 
             manager.isRolling = true;
             manager.reRollUI.UpdateReRollCount(-1);
@@ -314,6 +324,12 @@ namespace JJB.Script.Battle
             holdGauge.fillAmount = 0f;
             holdGauge.raycastTarget = false;
             holdGauge.preserveAspect = true;
+        }
+        
+        public void ResetDiceTypeChange()
+        {
+            _hasChangedDiceType = false;
+            ResetGauge();
         }
 
         private void ResetGauge()
