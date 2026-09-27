@@ -15,11 +15,6 @@ public class GambleManager : MonoBehaviour
 
     public static GambleManager instance;
 
-    public bool _isFirst = true;
-
-    public GameObject _title;
-    public GameObject _casino;
-
     public SelectTest_HTY selectCompo;
 
     
@@ -35,20 +30,6 @@ public class GambleManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
-        }
-    }
-
-    private void Start()
-    {
-        if (_isFirst)
-        {
-            _title.SetActive(true);
-            _casino.SetActive(false);
-        }
-        else
-        {
-            _title.SetActive(false);
-            _casino.SetActive(true);
         }
     }
 
