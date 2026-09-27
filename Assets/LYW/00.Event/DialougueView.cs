@@ -325,7 +325,7 @@ public sealed class DialogueView : MonoBehaviour
 
         rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
         rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
-        rectTransform.anchoredPosition = Vector2.zero;
+        // rectTransform.anchoredPosition = Vector2.zero;
         rectTransform.sizeDelta = new Vector2(choiceWidth, 0f);
         rectTransform.pivot = new Vector2(0.5f, 0.5f);
 
