@@ -52,12 +52,12 @@ public class DiceDeckManager_JCY : MonoBehaviour
 
     private void InitializeDeck()
     {
-        diceDeck = diceCollection;
         for (int i = 0; i < defaultDiceCount; i++)
         {
-            diceDeck.Add(defaultDice);
             diceCollection.Add(defaultDice);
         }
+
+        diceDeck = new List<DiceSO_JCY>(diceCollection);
 
         ShuffleDeck();
     }

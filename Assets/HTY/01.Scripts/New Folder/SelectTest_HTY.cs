@@ -1,6 +1,7 @@
 
 using JJB.Script.Battle.Player.Progression;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
@@ -40,15 +41,22 @@ public class SelectTest_HTY : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(Coll());
+    }
+
+    private IEnumerator Coll()
+    {
+        yield return new WaitForSeconds(0.5f);
         _scripts = FindObjectsByType<GambleTable_HTY>(FindObjectsSortMode.None).ToList();
         _uiList = _bettingUI.transform.GetComponentsInChildren<GambleUI_HTY>(true);
     }
+
     private void Update()
     {
         if (!_canSelect)
         { 
             _selectBT.SetActive(false);
-            return; 
+            return;
         }
 
         foreach (var script in _scripts)
