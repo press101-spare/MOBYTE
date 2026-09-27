@@ -24,6 +24,8 @@ namespace JJB.Script.Battle.Player
 
         public void TakeDamage(int damage)
         {
+            int rockStack = DiceManager_JCY.Instance.diceEffect.rockstack;
+            
             if (_health.IsDead)
                 return;
 
@@ -32,6 +34,11 @@ namespace JJB.Script.Battle.Player
 
             if (damage <= 0)
                 return;
+
+            if (rockStack > 0)
+            {
+                damage -= damage * (10 * rockStack / 100);
+            }
 
             _health.TakeDamage(damage);
             

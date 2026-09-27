@@ -38,6 +38,8 @@ public class DiceTree_JCY : MonoBehaviour
 
     [Header("UI 목록 설정")] [SerializeField] private List<TreeUI> treeUIList;
 
+    public GameObject treeNotice;
+
     private void Start()
     {
         Reset();
@@ -49,7 +51,6 @@ public class DiceTree_JCY : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // 씬이 넘어가도 파괴되지 않음
         }
         else
         {
@@ -203,6 +204,7 @@ public class DiceTree_JCY : MonoBehaviour
         GameObject clickBtn = EventSystem.current.currentSelectedGameObject;
         
         TextMeshProUGUI scoreText = clickBtn.transform.Find("ScoreText")?.GetComponent<TextMeshProUGUI>();
+        DiceManager_JCY.Instance.diceTree.treeNotice.SetActive(false);
         AudioManager.Instance.PlayClipSFX("SFX_CHOICE");
         
         
