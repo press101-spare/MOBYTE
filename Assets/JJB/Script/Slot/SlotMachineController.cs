@@ -71,7 +71,7 @@ namespace JJB.Script.Slot
         }
         public void UseChip()
         {
-            PlayerProfileManager.Instance.Profile.money -= 500;
+            PlayerProfileManager.Instance.Profile.money -= 50;
         }
     }
 }
