@@ -13,12 +13,20 @@ public class DiceType_HTY : MonoBehaviour
 
     public void BuyDice()
     {
-        PlayerProfileManager.Instance.Profile.money-=_myDice.cost;
-        DiceDeckManager_JCY.Instance.AddDice(_myDice);
-        Debug.Log($"성공적으로{_myDice}구매했습니다zz");
-        transform.GetChild(3).GetComponent<Image>().color = Color.gray;
-        transform.GetComponentInChildren<Button>().interactable = false;
-        GambleManager.instance._shopChipText.text = PlayerProfileManager.Instance.Profile.money.ToString();
+        if(PlayerProfileManager.Instance.Profile.money>_myDice.cost)
+        {
+            PlayerProfileManager.Instance.Profile.money -= _myDice.cost;
+            DiceDeckManager_JCY.Instance.AddDice(_myDice);
+            Debug.Log($"성공적으로{_myDice}구매했습니다zz");
+            transform.GetChild(3).GetComponent<Image>().color = Color.gray;
+            transform.GetComponentInChildren<Button>().interactable = false;
+            GambleManager.instance._shopChipText.text = PlayerProfileManager.Instance.Profile.money.ToString();
+        }
+        else
+        {
+            Debug.Log("못사");
+        }
+        
     }
 
     public void SetRe()
