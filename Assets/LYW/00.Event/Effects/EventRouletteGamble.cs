@@ -1,6 +1,10 @@
 using JJB.Script.Battle.Player.Progression;
 using UnityEngine;
 
+/// <summary>
+/// 지정한 확률로 성공하는 룰렛 도박입니다.
+/// 실패하면 베팅금을 잃고, 성공하면 베팅금에 배율을 곱한 금액을 받습니다.
+/// </summary>
 public sealed class EventRouletteGamble : EventEffect
 {
     [SerializeField, Min(1)] private int stake = 100;
@@ -22,6 +26,7 @@ public sealed class EventRouletteGamble : EventEffect
             return;
         }
 
+        // 결과를 뽑기 전에 베팅금을 먼저 지불합니다.
         profile.money -= actualStake;
         bool success = Random.value < successRate;
 

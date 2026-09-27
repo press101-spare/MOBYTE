@@ -593,6 +593,7 @@ public class DiceManager_JCY : MonoBehaviour
                 for (int glass = 0; glass < glassStack; glass++)
                 {
                     onDiceHit?.Invoke(10);
+                    AudioManager.Instance.PlayClipSFX("SFX_GLASS");
                 }
 
                 if (glassStack > 0)
