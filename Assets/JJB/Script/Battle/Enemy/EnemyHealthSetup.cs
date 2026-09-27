@@ -1,11 +1,16 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.U2D.Animation;
+using UnityEngine.UI;
 
 namespace JJB.Script.Battle.Enemy
 {
     [RequireComponent(typeof(JJBHealth))]
     public class EnemyHealthSetup : MonoBehaviour
     {
+        [SerializeField] private SpriteLibrary spriteLibrary;
+        [SerializeField] private Image enemyImage;
+        
         [SerializeField] private EnemyData data;
         [SerializeField] private TMP_Text enemyNameText;
 
@@ -23,7 +28,26 @@ namespace JJB.Script.Battle.Enemy
         public void SetData(EnemyData enemyData)
         {
             data = enemyData;
+            
+            if (enemyNameText != null)
+                enemyNameText.text = data.EnemyName;
+
+            //UpdateEnemySprite();
         }
+        
+        /*private void UpdateEnemySprite()
+        {
+            if (data == null)
+                return;
+
+            if (spriteLibrary == null || enemyImage == null)
+                return;
+
+            Sprite sprite = spriteLibrary.GetSprite("Enemy", data.SpriteLabel);
+
+            if (sprite != null)
+                enemyImage.sprite = sprite;
+        }*/
 
         public void Initialize()
         {

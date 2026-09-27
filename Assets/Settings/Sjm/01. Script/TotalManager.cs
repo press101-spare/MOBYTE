@@ -4,7 +4,7 @@ using UnityEngine.WSA;
 
 public class TotalManager : MonoBehaviour
 {
-    public int Cost {  get; private set; }
+   /* public int Cost {  get; private set; }
     public static TotalManager Instance { get; private set; }
     private void Awake()
     {
@@ -22,7 +22,7 @@ public class TotalManager : MonoBehaviour
     public void BuyItem(int cost)//혹시몰라서 회복물약의 쓸거면 쓰기
     {
 
-    }
+    }*/
 
 
 }

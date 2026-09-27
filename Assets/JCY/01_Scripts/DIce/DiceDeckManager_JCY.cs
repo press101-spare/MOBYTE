@@ -27,7 +27,11 @@ public class DiceDeckManager_JCY : MonoBehaviour
     [SerializeField] private List<DiceSO_JCY> diceFile_JCy;
 
     // 한 턴에 뽑을 주사위 개수
-    [SerializeField] private int drawCount = 6;
+    [SerializeField] private int drawCount = 5;
+    
+    // 다이스 디펙트 UI 스크립트
+    public DiceEffectUIUpdate diceEffectUIUpdate;
+    
 
     public bool IsFight => false;
 
@@ -48,12 +52,12 @@ public class DiceDeckManager_JCY : MonoBehaviour
 
     private void InitializeDeck()
     {
-        diceDeck = diceCollection;
         for (int i = 0; i < defaultDiceCount; i++)
         {
-            diceDeck.Add(defaultDice);
             diceCollection.Add(defaultDice);
         }
+
+        diceDeck = new List<DiceSO_JCY>(diceCollection);
 
         ShuffleDeck();
     }
@@ -74,6 +78,12 @@ public class DiceDeckManager_JCY : MonoBehaviour
     {
         DiscardDice(); 
         DiceManager_JCY.Instance.reRollUI.ResetReRollCount(2);
+        
+        RerollHoldController rerollHoldController = FindFirstObjectByType<RerollHoldController>();
+
+        if (rerollHoldController != null)
+            rerollHoldController.ResetDiceTypeChange();
+        
         for (int i = 0; i < drawCount; i++)
         {
             int randomIndex = Random.Range(0, diceDeck.Count);
@@ -89,6 +99,7 @@ public class DiceDeckManager_JCY : MonoBehaviour
 
         // 3. DiceManager에게 전달
         DiceManager_JCY.Instance.StartTurn(drawnDice);
+        diceEffectUIUpdate.UpdateUI(drawnDice);
         if (diceDeck.Count < drawCount)
         {
             ReshuffleDeck();
@@ -97,6 +108,7 @@ public class DiceDeckManager_JCY : MonoBehaviour
         {
             DiscardDice();
         }
+        
     }
 
     //다이스 버린거 버리는 덱에 넣고 드로우한 다이스 초기화

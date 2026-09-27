@@ -16,6 +16,8 @@ namespace JJB.Script.Battle
         private JJBHealth _enemyHealth;
         
         private EnemyDamageReceiver _enemyDamageReceiver;
+        
+        private bool _rewardReceived;
 
         public BattlePhase CurrentPhase { get; private set; }
 
@@ -36,6 +38,8 @@ namespace JJB.Script.Battle
             _enemyHealth = enemyHealth;
             _enemyTurnController = enemyTurnController;
             _enemyDamageReceiver = enemyDamageReceiver;
+            
+            _rewardReceived = false;
             
             if (JJBGameManager.Instance != null)
                 JJBGameManager.Instance.isFighting = true;
@@ -131,9 +135,24 @@ namespace JJB.Script.Battle
 
         private void EndBattle()
         {
+            bool isVictory = _enemyHealth != null && _enemyHealth.IsDead && _playerHealth != null && !_playerHealth.IsDead;
+
+            if (isVictory && !_rewardReceived)
+            {
+                _rewardReceived = true;
+
+                // 경험치 +5
+                JJBGameManager.Instance.PlayerProgression.AddExp(5);
+
+                // 돈 +200
+                JJBGameManager.Instance.AddMoney(200);
+                
+                Debug.Log("전투 승리 보상 : 경험치 +5 / 골드 +200");
+            }
+
             if (JJBGameManager.Instance != null)
                 JJBGameManager.Instance.isFighting = false;
-            
+
             ChangePhase(BattlePhase.BattleEnd);
         }
 

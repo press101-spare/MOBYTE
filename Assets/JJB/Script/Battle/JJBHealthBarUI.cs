@@ -37,6 +37,9 @@ namespace JJB.Script.Battle
             {
                 healthSlider.maxValue = maxHealth;
                 healthSlider.value = currentHealth;
+
+                if (healthSlider.fillRect != null)
+                    healthSlider.fillRect.gameObject.SetActive(currentHealth > 0);
             }
 
             if (healthText != null)

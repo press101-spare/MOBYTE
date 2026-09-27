@@ -16,6 +16,7 @@ public class DiceManager_JCY : MonoBehaviour
     [SerializeField] private List<GameObject> activeDiceObjects = new List<GameObject>();
     [SerializeField] private List<DiceObject_JCY> activeDiceScripts = new List<DiceObject_JCY>();
     [SerializeField] private List<JJB_DicePhysics> activeDicePhysicd = new List<JJB_DicePhysics>();
+    public List<DiceSO_JCY> activeDiceSo = new List<DiceSO_JCY>();
 
     [Header("기타 수치")] [field: SerializeField]
     public int[] currentDiceValue = new int[5]; 
@@ -30,6 +31,7 @@ public class DiceManager_JCY : MonoBehaviour
     [SerializeField] string sumUiTxt;
     [SerializeField] TextMeshProUGUI sumTxt;
     [SerializeField] GameObject backUiPannel;
+    [SerializeField] private GameObject[] canvas;
     public bool isRolling;
     public bool isShled;
 
@@ -73,7 +75,7 @@ public class DiceManager_JCY : MonoBehaviour
             Instance = this;
             if(backUiPannel != null)
                  backUiPannel.SetActive(false);
-            DontDestroyOnLoad(gameObject); // 씬이 넘어가도 파괴되지 않음
+      //      DontDestroyOnLoad(gameObject); // 씬이 넘어가도 파괴되지 않음
         }
         else
         {
@@ -98,7 +100,8 @@ public class DiceManager_JCY : MonoBehaviour
             // 스크립트에 SO 데이터 전달
             diceScript.Setup(currentSO);
             diceEffect.Effect(currentSO);
-
+            
+            activeDiceSo.Add(currentSO);
             activeDiceObjects.Add(newDice);
             activeDiceScripts.Add(diceScript);
             activeDicePhysicd.Add(jjbDicePhysicdScript);
@@ -629,6 +632,37 @@ public class DiceManager_JCY : MonoBehaviour
         {
             diceScript.trailRenderer.enabled = on;
         }
+    }
+
+    public void DiceSet(bool amount)
+    {
+        // 1. 현재 켜져 있는 UI Canvas의 개수를 세어봅니다.
+        int activeCanvasCount = 0;
+        foreach (var canva in canvas)
+        {
+            if (canva != null && canva.activeInHierarchy)
+            {
+                activeCanvasCount++;
+            }
+        }
+
+        // 2. 켜진 UI가 0개면 주사위 활성화(true), 1개 이상이면 비활성화(false)
+        bool shouldShowDice = (activeCanvasCount == 0);
+
+        // 3. 주사위 상태 적용
+        foreach (var activeDiceObject in activeDiceObjects)
+        {
+            if (activeDiceObject != null)
+            {
+                activeDiceObject.SetActive(shouldShowDice);
+            }
+        }
+    }
+
+    public void DiceSlotSet()
+    {
+        DiceDeckManager_JCY.Instance.diceEffectUIUpdate.UpdateUI(activeDiceSo);
+        UpdateCurrentDiceValues();
     }
 }
 

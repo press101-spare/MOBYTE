@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JJB.Script.Battle.Player.Progression;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -56,17 +57,21 @@ namespace JJB.Script.Slot
 
             if (a == b && b == c)
             {
-                resultText.text = "JACKPOT";
+                resultText.text = "JACKPOT \n GetChip:2000";
                 return;
             }
 
             if (a == b || b == c || a == c)
             {
-                resultText.text = "PAIR";
+                resultText.text = "PAIR \n GetChip:700";
                 return;
             }
 
-            resultText.text = "MISS";
+            resultText.text = "MISS \n GetChip:0";
+        }
+        public void UseChip()
+        {
+            PlayerProfileManager.Instance.Profile.money -= 500;
         }
     }
 }

@@ -21,6 +21,7 @@ public class SaveManager : MonoBehaviour
     // [2] 데이터 불러오기
     public SaveData LoadGame()
     {
+        
         if (File.Exists(SavePath))
         {
             // 1. 파일에서 JSON 문자열 읽어오기

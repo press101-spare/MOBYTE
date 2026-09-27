@@ -54,6 +54,10 @@ MonoBehaviour:
   <OutLine>k__BackingField: {fileID: 2100000, guid: c6f288c5f5c442d498ba189ddcc568ec,
     type: 2}
   <IsSelected>k__BackingField: 0
+  glassSelectMaterial: {fileID: -7914976781284674461, guid: 4cfcff055c565fa429575d89d0d70ad5,
+    type: 3}
+  fraudDiceMaterial: {fileID: 4161324123064528648, guid: 82276082ebb3cb145b49019905b716e1,
+    type: 3}
 --- !u!54 &508322639934586137
 Rigidbody:
   m_ObjectHideFlags: 0

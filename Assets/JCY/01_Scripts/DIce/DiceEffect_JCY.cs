@@ -1,15 +1,22 @@
 using System;
 using System.Collections.Generic;
 using JJB.Script.Battle;
+using JJB.Script.Battle.Enemy;
 using JJB.Script.Battle.Player;
 using JJB.Script.Battle.Player.Progression;
+using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class DiceEffect_JCY : MonoBehaviour
 {
     public DiceEffect_JCY Instance { get; set; }
     [SerializeField] private PlayerDamageReceiver playerDamageReceiver;
-    
+    [SerializeField] private EnemyDamageReceiver enemyDamageReceiver;
+
+    public int bloodStack;
+    public int rockstack;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -44,8 +51,7 @@ public class DiceEffect_JCY : MonoBehaviour
     public int CalculateFinalDamage(IReadOnlyList<DiceObject_JCY> activeDice, int baseDamage)
     {
         float finalDamage = baseDamage;
-        int allinStack = 0;
-        int growStack = 0;
+        bloodStack = 0;
 
         foreach (DiceObject_JCY dice in activeDice)
         {
@@ -55,17 +61,7 @@ public class DiceEffect_JCY : MonoBehaviour
             // 2. 주사위 결과 눈금 가져오기
             int rolledValue = dice.currentIndex;
 
-            // 3. Allin 주사위 판별 예시
-            if (effectType == DiceSO_JCY.DiceEffectType.Allin && allinStack < 10)
-            {
-                if (rolledValue == 6)
-                {
-                    Debug.Log("올인 터짐");
-                    finalDamage *= 1.5f ; // 6이 나왔을 때 대폭 증가
-                    allinStack++;
-                }
-                continue;
-            }
+          
             
             //처형
             if (effectType == DiceSO_JCY.DiceEffectType.ExecutionDice)
@@ -74,21 +70,28 @@ public class DiceEffect_JCY : MonoBehaviour
                 continue;
             }
             
+            //출혈
+            if (effectType == DiceSO_JCY.DiceEffectType.Blood)
+            {
+                bloodStack++;
+                continue;
+            }
+            
+            //출혈
+            if (effectType == DiceSO_JCY.DiceEffectType.Rock)
+            {
+                rockstack++;
+                continue;
+            }
+            
             //흡혈
             if (effectType == DiceSO_JCY.DiceEffectType.Vampire)
             {
-                
+                DiceManager_JCY.Instance._vamfire++;
                 continue;
             }
                 
-            //핵폭탄
-            if (effectType == DiceSO_JCY.DiceEffectType.Hack)
-            {
-              //  playerDamageReceiver.TakeDamage((JJBGameManager.Instance.PlayerJjbHealth.MaxHealth * 15) / 100);
-                playerDamageReceiver.TakeDamage(10);
-                finalDamage *= 1.5f;
-                continue;
-            }
+          
             
             //방어막
             if (effectType == DiceSO_JCY.DiceEffectType.Shield)
@@ -122,12 +125,75 @@ public class DiceEffect_JCY : MonoBehaviour
             }
         
             //성장
-            if (effectType == DiceSO_JCY.DiceEffectType.Grow && growStack < 2)
+            if (effectType == DiceSO_JCY.DiceEffectType.Grow)
             {
                 Debug.Log($"성장 {(float)JJBGameManager.Instance.BattleTurnManager.CurrentPhase / 2f}만큼");
                 finalDamage += (float)JJBGameManager.Instance.BattleTurnManager.CurrentPhase / 2f;
-                growStack++;
-                Debug.Log(growStack);
+                continue;
+            }
+            
+            //불사조
+            if (effectType == DiceSO_JCY.DiceEffectType.Phoenix)
+            {
+                JJBGameManager.Instance.PlayerJjbHealth.EnableOneHpRevive();
+                continue;
+            }
+            
+            //칩
+            if (effectType == DiceSO_JCY.DiceEffectType.Chip)
+            {
+                PlayerProfileManager.Instance.AddMoney(Random.Range(100, 500));
+                continue;
+            }
+
+            //반사
+            if (effectType == DiceSO_JCY.DiceEffectType.Mirror)
+            {
+                playerDamageReceiver.EnableReflection(0.34f);
+            }
+
+            //독
+            if (effectType == DiceSO_JCY.DiceEffectType.Poison)
+            {
+                enemyDamageReceiver.ApplyPoison(5);
+            }
+            
+            //거대
+            if (effectType == DiceSO_JCY.DiceEffectType.Giant)
+            {
+                if (effectType == DiceSO_JCY.DiceEffectType.Giant)
+                {
+                    int value = Mathf.RoundToInt(JJBGameManager.Instance.PlayerJjbHealth.CurrentHealth * 0.1f);
+                    finalDamage += value;
+                }
+            }
+            
+            //카운터
+            if (effectType == DiceSO_JCY.DiceEffectType.Giant)
+            {
+                if (effectType == DiceSO_JCY.DiceEffectType.Giant)
+                {
+                    int value = Mathf.RoundToInt(JJBGameManager.Instance.PlayerJjbHealth.MaxHealth / JJBGameManager.Instance.PlayerJjbHealth.CurrentHealth);
+                    finalDamage += value;
+                }
+            }
+            
+            //핵폭탄
+            if (effectType == DiceSO_JCY.DiceEffectType.Hack)
+            {
+                playerDamageReceiver.TakeDamage((JJBGameManager.Instance.PlayerJjbHealth.CurrentHealth * 20) / 100);
+                finalDamage *= 1.5f;
+                continue;
+            }
+            
+            // 3. Allin 주사위 판별 예시
+            if (effectType == DiceSO_JCY.DiceEffectType.Allin)
+            {
+                if (rolledValue == 6)
+                {
+                    Debug.Log("올인 터짐");
+                    finalDamage *= 1.5f ; // 6이 나왔을 때 대폭 증가
+                }
                 continue;
             }
         }

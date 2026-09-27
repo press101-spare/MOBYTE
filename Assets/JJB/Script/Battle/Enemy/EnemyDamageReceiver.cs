@@ -24,6 +24,13 @@ namespace JJB.Script.Battle.Enemy
             if (_enemy.Health.IsDead)
                 return;
             
+            int bloodStack = DiceManager_JCY.Instance.diceEffect.bloodStack;
+            
+            if (bloodStack > 0)
+            {
+                damage += damage * (10 * bloodStack / 100);
+            }
+
             RecordPlayerTree();
 
             if (_enemy.Ability != null)
@@ -69,7 +76,7 @@ namespace JJB.Script.Battle.Enemy
 
             _enemy.Health.TakeDamage(damage);
 
-            _hitFlash?.Play();
+            _hitFlash?.Play(new Color(0.6f, 0f, 1f));
 
             _poison--;
         }

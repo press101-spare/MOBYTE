@@ -38,6 +38,8 @@ public class DiceTree_JCY : MonoBehaviour
 
     [Header("UI 목록 설정")] [SerializeField] private List<TreeUI> treeUIList;
 
+    public GameObject treeNotice;
+
     private void Start()
     {
         Reset();
@@ -49,7 +51,6 @@ public class DiceTree_JCY : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // 씬이 넘어가도 파괴되지 않음
         }
         else
         {
@@ -203,6 +204,9 @@ public class DiceTree_JCY : MonoBehaviour
         GameObject clickBtn = EventSystem.current.currentSelectedGameObject;
         
         TextMeshProUGUI scoreText = clickBtn.transform.Find("ScoreText")?.GetComponent<TextMeshProUGUI>();
+        DiceManager_JCY.Instance.diceTree.treeNotice.SetActive(false);
+        AudioManager.Instance.PlayClipSFX("SFX_CHOICE");
+        
         
         if (scoreText != null)
         {
@@ -210,6 +214,7 @@ public class DiceTree_JCY : MonoBehaviour
             if (int.TryParse(scoreText.text, out int score))
             {
                 CurrentTree = clickBtn.name;
+                Debug.Log(CurrentTree);
                 if (Enum.TryParse(clickBtn.name, out Trees parsedTree))
                 {
                     CurrentTrees = parsedTree;
@@ -234,11 +239,11 @@ public class DiceTree_JCY : MonoBehaviour
                 break;
             case Trees.OnePair:
                 DiceManager_JCY.Instance.shledDice.ShledHP((PlayerProfileManager.Instance.Profile.stats.maxHealth 
-                                                            * 15) / 100);
+                                                            * 5) / 100);
                 break;
             case Trees.TwoPair:
                 DiceManager_JCY.Instance.shledDice.ShledHP((PlayerProfileManager.Instance.Profile.stats.maxHealth
-                                                            * 30) / 100);
+                                                            * 10) / 100);
                 break;
             case Trees.FullHouse:
                 JJBGameManager.Instance.PlayerJjbHealth.Heal((PlayerProfileManager.Instance.Profile.stats.maxHealth
@@ -259,10 +264,10 @@ public class DiceTree_JCY : MonoBehaviour
                 }
                 break;
             case Trees.Four_Of_AKind:
-                //칩 획득
+                PlayerProfileManager.Instance.AddMoney(20);
                 break;
             case Trees.Yahtzee:
-                DiceManager_JCY.Instance.shledDice.ShledHP(999);
+                DiceManager_JCY.Instance.shledDice.ShledHP(25);
                 break;
             
         } 
@@ -273,7 +278,11 @@ public class DiceTree_JCY : MonoBehaviour
     {
         foreach (var ui in treeUIList)
         {
-            ui.checkMarkUI.SetActive(false);
+            // 🟢 UI 오브젝트가 살아있는지(null이 아닌지) 먼저 확인 후 SetActive 실행
+            if (ui.checkMarkUI != null)
+            {
+                ui.checkMarkUI.SetActive(false);
+            }
         }
 
         CurrentTree = "";

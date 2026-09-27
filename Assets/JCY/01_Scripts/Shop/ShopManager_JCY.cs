@@ -14,6 +14,7 @@ public class ShopManager_JCY : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] costText;
     [SerializeField] private TextMeshProUGUI[] description;
     [SerializeField] private DiceType_HTY[] _btType;
+    [SerializeField] private Image[] _diceImage;
     [SerializeField] private TextMeshProUGUI _reRollText;
 
     [SerializeField] private TextMeshProUGUI _notReRoll;
@@ -35,6 +36,7 @@ public class ShopManager_JCY : MonoBehaviour
         _reRollText.text = $"남은 새로고침 수:{_reRoll}";
         _reRoll++;
         OnDisplay();
+
     }
 
     public void OnDisplay()
@@ -54,6 +56,8 @@ public class ShopManager_JCY : MonoBehaviour
             costText[i].text = $"{currentDiceSO[i].cost.ToString()} 칩";
             description[i].text = currentDiceSO[i].diceDescription;
             _btType[i].SetDice(currentDiceSO[i]);
+            _btType[i].SetRe();
+            _diceImage[i].sprite = currentDiceSO[i].diceIcon;
         }
 
         _reRoll--;

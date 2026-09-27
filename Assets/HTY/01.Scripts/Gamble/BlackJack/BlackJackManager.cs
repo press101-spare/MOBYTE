@@ -46,17 +46,19 @@ public class BlackJackManager : MonoBehaviour
 
     private List<GameObject> _spawnedCards = new List<GameObject>();
 
-    private void Start()
-    {
+    public GameObject _delerCard;
 
+    public GameObject _startBT;
+
+
+    private void OnEnable()
+    {
+        ResetGame();
     }
 
-    private void Update()
+    public void GambleStart()
     {
-        if (Keyboard.current != null && Keyboard.current.yKey.wasPressedThisFrame)
-        {
-            StartCoroutine(BlackjackGame());
-        }
+        StartCoroutine(BlackjackGame());
     }
 
     private IEnumerator BlackjackGame()
@@ -113,6 +115,8 @@ public class BlackJackManager : MonoBehaviour
 
         _endingText.text = "";
         _titleText.text = "";
+        _startBT.SetActive(true);
+        _playerSumText.text = "";
     }//게임 리셋
 
     private IEnumerator TimerCol()
@@ -405,6 +409,10 @@ public class BlackJackManager : MonoBehaviour
         if (id == 0)
         {
             compo.gameObject.transform.parent = gameObject.transform;
+        }
+        else
+        {
+            compo.gameObject.transform.parent = _delerCard.transform;
         }
 
         Sprite sprite = CheckSprite();
