@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PinballRewardZone : MonoBehaviour
 {
-    [SerializeField] private int _multiplier = 1;
+    [SerializeField] private float _multiplier;
     [SerializeField] private PinBall _pinBall;
 
     private void OnTriggerEnter2D(Collider2D other)

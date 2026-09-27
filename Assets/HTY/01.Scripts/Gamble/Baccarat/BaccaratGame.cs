@@ -13,7 +13,6 @@ public class BaccaratGame : MonoBehaviour
     public Batting _winer;
 
     [SerializeField] private Outline[] _battingOutlines;
-
     public Transform[] _settingPoint;
 
     [Header("게임진행")]
@@ -27,6 +26,14 @@ public class BaccaratGame : MonoBehaviour
     [Header("UI오브젝트")]
     public TextMeshProUGUI _endingText;
 
+    [Header("카드 확인 UI")]
+    [SerializeField] private Transform _playerCardGroup;
+    [SerializeField] private Transform _bankerCardGroup;
+    [SerializeField] private GameObject _cardImagePrefab;
+    [SerializeField] private float _endingDelay = 10f;
+    private List<GameObject> _spawnedCardUI = new List<GameObject>();
+    private bool _cardsRevealed;
+
     [Header("카드덱")]
     public List<Sprite> _originCard = new List<Sprite>();
     public List<Sprite> _copyCard = new List<Sprite>();
@@ -38,14 +45,13 @@ public class BaccaratGame : MonoBehaviour
     [SerializeField] private Vector3 _endRotate;
     public float _during = 2f;
     public GameObject _thisCard;
+    [SerializeField] private TextMeshProUGUI _bettingText;
 
     public int _thardCard;
 
     private int _playerCardCount;
     private bool _isPlaying;
-
     private List<GameObject> _spawnCards = new List<GameObject>();
-
 
     public GameObject _btBetting;
 
@@ -68,6 +74,9 @@ public class BaccaratGame : MonoBehaviour
         {
             _battingOutlines[i].enabled = i == a;
         }
+
+        _bettingText.text = $"현재 베팅:{_whoBatting}";
+
     }
 
     public void StartGamble()
@@ -75,6 +84,7 @@ public class BaccaratGame : MonoBehaviour
         if (_isPlaying) return;
 
         _isPlaying = true;
+        _btBetting.SetActive(false);
         StartCoroutine(BlackjackGame());
     }
 
@@ -91,6 +101,10 @@ public class BaccaratGame : MonoBehaviour
 
         NewCard(1);
         yield return new WaitForSeconds(3f);
+
+        // 처음 4장 모두 UI에 공개
+        _cardsRevealed = true;
+        ShowAllCards();
 
         Debug.Log(CheckNature());
 
@@ -142,19 +156,15 @@ public class BaccaratGame : MonoBehaviour
                     case 3:
                         if (_thardCard != 8) NewCard(1);
                         break;
-
                     case 4:
                         if (_thardCard >= 2 && _thardCard <= 7) NewCard(1);
                         break;
-
                     case 5:
                         if (_thardCard >= 4 && _thardCard <= 7) NewCard(1);
                         break;
-
                     case 6:
                         if (_thardCard >= 6 && _thardCard <= 7) NewCard(1);
                         break;
-
                     case 7:
                         break;
                 }
@@ -164,25 +174,57 @@ public class BaccaratGame : MonoBehaviour
 
     private void EndingGame()
     {
+        if (!_isPlaying) return;
+
         Debug.Log($"EndingGame 실행 / Player: {_playerSum}, Banker: {_dealerSum}");
 
         if (_playerSum > _dealerSum)
         {
-            _endingText.text = "플레이어의 승";
             _winer = Batting.Player;
         }
         else if (_playerSum < _dealerSum)
         {
-            _endingText.text = "밴커의 승";
             _winer = Batting.Backer;
         }
         else
         {
-            _endingText.text = "타이 판정 무승부";
             _winer = Batting.Tie;
         }
 
-        if (_whoBatting == _winer)
+        bool isWin = _whoBatting == _winer;
+
+        string winnerText = "";
+
+        if (_winer == Batting.Player)
+        {
+            winnerText = "플레이어 승";
+        }
+        else if (_winer == Batting.Backer)
+        {
+            winnerText = "뱅커 승";
+        }
+        else
+        {
+            winnerText = "타이";
+        }
+
+        string bettingText = isWin ? "베팅 성공!" : "베팅 실패!";
+
+        _endingText.text =
+            winnerText +
+            "\n" +
+            bettingText +
+            "\n\nPlayer : " + _playerSum +
+            "\nBanker : " + _dealerSum;
+
+        StartCoroutine(EndingDelay(isWin));
+    }
+
+    private IEnumerator EndingDelay(bool isWin)
+    {
+        yield return new WaitForSeconds(_endingDelay);
+
+        if (isWin)
         {
             GambleManager.instance.GambleEnd(2);
         }
@@ -211,15 +253,8 @@ public class BaccaratGame : MonoBehaviour
 
     public bool CheckNature()
     {
-        if (_playerSum >= 8)
-        {
-            return true;
-        }
-
-        if (_dealerSum >= 8)
-        {
-            return true;
-        }
+        if (_playerSum >= 8) return true;
+        if (_dealerSum >= 8) return true;
 
         return false;
     }
@@ -228,15 +263,14 @@ public class BaccaratGame : MonoBehaviour
     {
         _playerSum = 0;
         _dealerSum = 0;
-
         _morePlay = false;
         _notMorePlayer = false;
         _notMoreDealer = false;
         _checkCard = false;
-
         _thardCard = 0;
         _playerCardCount = 0;
         _isPlaying = false;
+        _cardsRevealed = false;
 
         _whoBatting = Batting.Player;
         _winer = Batting.Player;
@@ -256,10 +290,56 @@ public class BaccaratGame : MonoBehaviour
 
         _spawnCards.Clear();
 
+        for (int i = 0; i < _spawnedCardUI.Count; i++)
+        {
+            if (_spawnedCardUI[i] != null)
+            {
+                Destroy(_spawnedCardUI[i]);
+            }
+        }
+
+        _spawnedCardUI.Clear();
+
         for (int i = 0; i < _battingOutlines.Length; i++)
         {
             _battingOutlines[i].enabled = i == 0;
         }
+    }
+
+    private void ShowAllCards()
+    {
+        for (int i = 0; i < _spawnCards.Count; i++)
+        {
+            if (_spawnCards[i] == null) continue;
+
+            BlackJackCard card = _spawnCards[i].GetComponent<BlackJackCard>();
+
+            if (card == null) continue;
+
+            if (card._myId == 0)
+            {
+                CreateCardImage(card, _playerCardGroup);
+            }
+            else
+            {
+                CreateCardImage(card, _bankerCardGroup);
+            }
+        }
+    }
+
+    private void CreateCardImage(BlackJackCard card, Transform group)
+    {
+        GameObject cardUI = Instantiate(_cardImagePrefab, group);
+
+        Image image = cardUI.GetComponent<Image>();
+
+        if (image != null)
+        {
+            image.sprite = card._myImage;
+        }
+
+        cardUI.SetActive(true);
+        _spawnedCardUI.Add(cardUI);
     }
 
     #region 카드전용
@@ -305,6 +385,19 @@ public class BaccaratGame : MonoBehaviour
             moveCard.GetComponent<BlackJackCard>();
 
         CardInfo(cardCompo, id);
+
+        // 최초 공개 이후 추가된 3번째 카드는 바로 UI에 추가
+        if (_cardsRevealed)
+        {
+            if (id == 0)
+            {
+                CreateCardImage(cardCompo, _playerCardGroup);
+            }
+            else
+            {
+                CreateCardImage(cardCompo, _bankerCardGroup);
+            }
+        }
     }
 
     private void CardInfo(BlackJackCard compo, int id)
@@ -349,31 +442,22 @@ public class BaccaratGame : MonoBehaviour
         {
             case "2":
                 return 2;
-
             case "3":
                 return 3;
-
             case "4":
                 return 4;
-
             case "5":
                 return 5;
-
             case "6":
                 return 6;
-
             case "7":
                 return 7;
-
             case "8":
                 return 8;
-
             case "9":
                 return 9;
-
             case "ace":
                 return 1;
-
             case "10":
             case "jack":
             case "queen":
