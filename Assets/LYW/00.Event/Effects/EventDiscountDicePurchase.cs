@@ -19,7 +19,9 @@ public sealed class EventDiscountDicePurchase : EventEffect
 
         if (profile.money < price)
         {
-            Debug.Log($"돈이 부족합니다. 필요 금액: {price}칩", this);
+            string noMoney = $"돈이 부족합니다.\n필요 금액: {price}칩";
+            Debug.Log(noMoney, this);
+            ShowResult(noMoney);
             return;
         }
 
@@ -28,9 +30,10 @@ public sealed class EventDiscountDicePurchase : EventEffect
 
         profile.money -= price;
 
-        Debug.Log(
-            $"{dice.diceName}을(를) {price}칩에 구매했습니다. 남은 돈: {profile.money}",
-            this
-        );
+        string message =
+            $"{dice.diceName} 구매 완료!\n가격: {price}칩 / 남은 돈: {profile.money}칩";
+
+        Debug.Log(message, this);
+        ShowResult(message);
     }
 }

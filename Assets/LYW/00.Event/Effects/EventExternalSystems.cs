@@ -4,6 +4,8 @@ using UnityEngine;
 
 internal static class EventExternalSystems
 {
+    private static readonly List<DiceSO_JCY> pendingDice = new();
+
     public static bool TryGetProfile(
         Object context,
         out PlayerProfile profile)
@@ -32,9 +34,21 @@ internal static class EventExternalSystems
 
     public static DiceDeckManager_JCY GetDiceDeck()
     {
-        return DiceDeckManager_JCY.Instance != null
+        DiceDeckManager_JCY deck = DiceDeckManager_JCY.Instance != null
             ? DiceDeckManager_JCY.Instance
             : Object.FindFirstObjectByType<DiceDeckManager_JCY>();
+
+        if (deck == null || pendingDice.Count == 0)
+            return deck;
+
+        foreach (DiceSO_JCY dice in pendingDice)
+        {
+            if (dice != null)
+                deck.AddDice(dice);
+        }
+
+        pendingDice.Clear();
+        return deck;
     }
 
     public static DiceSO_JCY[] GetGlobalDicePool()
@@ -93,17 +107,27 @@ internal static class EventExternalSystems
             return true;
         }
 
-        if (!TryGetProfile(context, out PlayerProfile profile))
-            return false;
-
-        profile.unlockedDice ??= new List<string>();
-        profile.unlockedDice.Add(dice.diceName);
+        pendingDice.Add(dice);
 
         Debug.LogWarning(
-            "DiceDeckManager가 없어 획득 주사위를 unlockedDice에 기록했습니다.",
+            "DiceDeckManager가 없어 획득 주사위를 임시 보관했습니다. " +
+            "덱이 생성되면 자동으로 전달합니다.",
             context
         );
 
+        return true;
+    }
+
+    public static bool TryRemovePendingDice(out DiceSO_JCY lostDice)
+    {
+        lostDice = null;
+
+        if (pendingDice.Count == 0)
+            return false;
+
+        int index = Random.Range(0, pendingDice.Count);
+        lostDice = pendingDice[index];
+        pendingDice.RemoveAt(index);
         return true;
     }
 }

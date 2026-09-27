@@ -16,6 +16,8 @@ public sealed class EventRandomDiceGift : EventEffect
         if (!EventExternalSystems.TryAddDice(selected, this))
             return;
 
-        Debug.Log($"주사위 증정: {selected.diceName}", this);
+        string message = $"주사위 획득!\n{selected.diceName}";
+        Debug.Log(message, this);
+        ShowResult(message);
     }
 }

@@ -46,6 +46,9 @@ public sealed class DialogueView : MonoBehaviour
 
     private void Awake()
     {
+        if (talkText != null)
+            EventResultDisplay.SetFont(talkText.font);
+
         EnsureEventBackground();
         ConfigureDialoguePanel();
         ConfigureChoiceParent();

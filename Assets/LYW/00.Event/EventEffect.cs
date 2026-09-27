@@ -7,4 +7,9 @@ using UnityEngine;
 public abstract class EventEffect : MonoBehaviour
 {
     public abstract void Apply();
+
+    protected void ShowResult(string message)
+    {
+        EventResultDisplay.Show(message, this);
+    }
 }

@@ -14,7 +14,9 @@ public sealed class EventRecoveryItemReward : EventEffect
         if (!EventExternalSystems.TryAddDice(item, this))
             return;
 
-        Debug.Log($"회복 아이템 획득: {item.diceName}", this);
+        string message = $"회복 아이템 획득!\n{item.diceName}";
+        Debug.Log(message, this);
+        ShowResult(message);
     }
 
     private static DiceSO_JCY FindRecoveryItem(DiceSO_JCY[] pool)

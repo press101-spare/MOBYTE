@@ -8,28 +8,8 @@ public sealed class EventMoneyLoss : EventEffect
 
     public override void Apply()
     {
-        if (PlayerProfileManager.Instance == null)
-        {
-            Debug.LogError(
-                "PlayerProfileManager.Instance가 없습니다.",
-                this
-            );
-
+        if (!EventExternalSystems.TryGetProfile(this, out PlayerProfile profile))
             return;
-        }
-
-        PlayerProfile profile =
-            PlayerProfileManager.Instance.Profile;
-
-        if (profile == null)
-        {
-            Debug.LogError(
-                "PlayerProfile이 생성되지 않았습니다.",
-                this
-            );
-
-            return;
-        }
 
         int lostMoney =
             Mathf.FloorToInt(
@@ -38,8 +18,10 @@ public sealed class EventMoneyLoss : EventEffect
 
         profile.money -= lostMoney;
 
-        Debug.Log(
-            $"이벤트로 {lostMoney}원을 잃었습니다. 현재 돈: {profile.money}"
-        );
+        string message =
+            $"돈 {lostMoney}칩을 잃었습니다.\n현재 돈: {profile.money}칩";
+
+        Debug.Log(message, this);
+        ShowResult(message);
     }
 }

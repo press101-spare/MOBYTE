@@ -14,7 +14,9 @@ public sealed class EventDiceMultiplierGamble : EventEffect
 
         if (actualStake <= 0)
         {
-            Debug.Log("주사위에 걸 돈이 없습니다.", this);
+            const string noMoney = "주사위에 걸 돈이 없습니다.";
+            Debug.Log(noMoney, this);
+            ShowResult(noMoney);
             return;
         }
 
@@ -26,10 +28,11 @@ public sealed class EventDiceMultiplierGamble : EventEffect
 
         profile.money += reward;
 
-        Debug.Log(
-            $"주사위 결과 {roll}! {multiplier}배인 {reward}칩을 받았습니다. " +
-            $"현재 돈: {profile.money}",
-            this
-        );
+        string message =
+            $"주사위 결과: {roll}\n{multiplier}배 보상 {reward}칩 획득! " +
+            $"현재 돈: {profile.money}칩";
+
+        Debug.Log(message, this);
+        ShowResult(message);
     }
 }
