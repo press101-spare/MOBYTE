@@ -11,18 +11,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/JJB/Scene/Elevator.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Background.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleEndPanelController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleEndPanelController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HTY/07.Fonts/CookieRun Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/07.Fonts/CookieRun Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/01.Scripts/Player/Top-down Character (32x32, idle-run).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/01.Scripts/Player/Top-down Character (32x32, idle-run).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Texture/GambleTexture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Texture/GambleTexture.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/05.Texture/MiniMapTexture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/05.Texture/MiniMapTexture.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceDeckManager_JCY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceDeckManager_JCY.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/JJB/Scene/JJBBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Scene/JJBBattle.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleUIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyHealthSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyHealthSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/JJBHealthBarUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/JJBHealthBarUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Stage/StageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Stage/StageManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleTurnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleTurnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/JJBGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/JJBGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/Progression/PlayerProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/Progression/PlayerProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/RerollHoldController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/RerollHoldController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/The Jamsil 4 Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/The Jamsil 4 Medium SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +51,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/BloodDice.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/DebtDice.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/NormalDice.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/ShowUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Background.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleEndPanelController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/OddEvenJudgeAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/PaybackAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/StealMoneyAbility.cs" root0="FORCE_HIGHLIGHTING" />
@@ -62,6 +68,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@bff931d63a7a/Editor/Drawing/Controllers/BlackboardController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@7537063fea2b/Editor/UGUI/UI/SelectableEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@7537063fea2b/Runtime/UGUI/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@7537063fea2b/Runtime/UGUI/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Core/Utilities/LinqUtility.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
@@ -72,60 +79,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.000000118684547" />
-      <entry key="S2" value="1.0757103334343447" />
-      <entry key="S5" value="2.785708571411843" />
-      <entry key="S10" value="6.568835675534906" />
-      <entry key="S30" value="13.445440871314426" />
-      <entry key="S60" value="16.345196476529537" />
-      <entry key="M2" value="18.065648554537486" />
-      <entry key="M5" value="19.203150752390737" />
-      <entry key="M10" value="19.71671679682755" />
-      <entry key="M15" value="20.147742479387947" />
-      <entry key="M30" value="21.63222279696498" />
-      <entry key="H1" value="24.34392143048537" />
-      <entry key="H2" value="31.22285858656892" />
-      <entry key="H4" value="63.229211129064176" />
-      <entry key="D1" value="354.7657049304599" />
-      <entry key="W1" value="523.8981329599197" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0000000000058742" />
+      <entry key="M2" value="1.0000024325599572" />
+      <entry key="M5" value="1.0081254531017072" />
+      <entry key="M10" value="1.2949896939247123" />
+      <entry key="M15" value="2.19243117150811" />
+      <entry key="M30" value="6.36147845166294" />
+      <entry key="H1" value="13.47507269210628" />
+      <entry key="H2" value="23.800736069775297" />
+      <entry key="H4" value="54.93198910277492" />
+      <entry key="D1" value="346.54429666798137" />
+      <entry key="W1" value="524.5012509508124" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="3.3060248164481445E-185" />
-      <entry key="S10" value="5.749804184881558E-93" />
-      <entry key="S30" value="1.7915035986120908E-31" />
-      <entry key="S60" value="4.232615738959476E-16" />
-      <entry key="M2" value="2.057366839713482E-8" />
-      <entry key="M5" value="8.663474549202758E-4" />
-      <entry key="M10" value="0.04216343941884472" />
-      <entry key="M15" value="0.20456591041472666" />
-      <entry key="M30" value="1.2424320431017994" />
-      <entry key="H1" value="3.391829235614133" />
-      <entry key="H2" value="6.673287146941936" />
-      <entry key="H4" value="13.624295292345671" />
-      <entry key="D1" value="53.64712217961533" />
-      <entry key="W1" value="74.60139066553849" />
+      <entry key="MS100" value="7.124477680336142E-17" />
+      <entry key="MS500" value="6.400677367314299E-4" />
+      <entry key="S2" value="0.24374055411172943" />
+      <entry key="S5" value="0.9927874003537852" />
+      <entry key="S10" value="1.8287203272418628" />
+      <entry key="S30" value="3.010028123951565" />
+      <entry key="S60" value="3.459023329565772" />
+      <entry key="M2" value="3.7167379119937363" />
+      <entry key="M5" value="3.889720371737679" />
+      <entry key="M10" value="4.040767315337064" />
+      <entry key="M15" value="4.231125478458478" />
+      <entry key="M30" value="4.957048796232507" />
+      <entry key="H1" value="6.748872409381913" />
+      <entry key="H2" value="10.077759908552384" />
+      <entry key="H4" value="16.994157819850567" />
+      <entry key="D1" value="57.91294158589839" />
+      <entry key="W1" value="80.25464756826311" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="4.651552724823912E-4" />
-      <entry key="MS500" value="0.21553593169329638" />
-      <entry key="S2" value="0.751464354937929" />
-      <entry key="S5" value="2.5965870978227414" />
-      <entry key="S10" value="6.404473008285865" />
-      <entry key="S30" value="13.331481354040019" />
-      <entry key="S60" value="16.273025776592586" />
-      <entry key="M2" value="18.02473215577398" />
-      <entry key="M5" value="19.18630936010271" />
-      <entry key="M10" value="19.749504649990932" />
-      <entry key="M15" value="20.345442634279483" />
-      <entry key="M30" value="22.869693800020077" />
-      <entry key="H1" value="27.73173488301727" />
-      <entry key="H2" value="37.89248726925184" />
-      <entry key="H4" value="76.84788341513732" />
-      <entry key="D1" value="408.405917086355" />
-      <entry key="W1" value="598.4980406858726" />
+      <entry key="MS100" value="7.147074634770364E-9" />
+      <entry key="MS500" value="0.023537465815720734" />
+      <entry key="S2" value="0.4944069782202314" />
+      <entry key="S5" value="1.3526513545669347" />
+      <entry key="S10" value="2.312692428693083" />
+      <entry key="S30" value="3.7425122827085797" />
+      <entry key="S60" value="4.306750698782648" />
+      <entry key="M2" value="4.635252334366038" />
+      <entry key="M5" value="4.863826867330525" />
+      <entry key="M10" value="5.318196460473945" />
+      <entry key="M15" value="6.411301829786646" />
+      <entry key="M30" value="11.311150837299214" />
+      <entry key="H1" value="20.218760996267246" />
+      <entry key="H2" value="33.874283898715994" />
+      <entry key="H4" value="71.9206283360847" />
+      <entry key="D1" value="404.45039676578875" />
+      <entry key="W1" value="604.7544009613409" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -140,31 +147,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Unity 에디터에 연결.Unity 에디터에 연결.executor&quot;: &quot;Debug&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;JJB&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Unity 에디터에 연결.Unity 에디터에 연결.executor": "Debug",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "JCY",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CodeLensConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.75f1\Editor\Unity.exe" />
@@ -222,6 +229,7 @@
       <workItem from="1790233630075" duration="1829000" />
       <workItem from="1790314406784" duration="709000" />
       <workItem from="1790392114091" duration="5755000" />
+      <workItem from="1790425369088" duration="6623000" />
     </task>
     <servers />
   </component>
@@ -256,15 +264,8 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceDeckManager_JCY.cs</url>
-          <line>103</line>
-          <properties documentPath="C:\Users\const\GitHub\MOBYTE\Assets\JCY\01_Scripts\DIce\DiceDeckManager_JCY.cs" containingFunctionPresentation="메서드 'DrawDice'">
-            <startOffsets>
-              <option value="2520" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2521" />
-            </endOffsets>
-          </properties>
+          <line>109</line>
+          <properties documentPath="C:\Users\const\GitHub\MOBYTE\Assets\JCY\01_Scripts\DIce\DiceDeckManager_JCY.cs" containingFunctionPresentation="메서드 'DrawDice'" />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>

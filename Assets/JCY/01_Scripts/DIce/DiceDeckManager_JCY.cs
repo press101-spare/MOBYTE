@@ -52,12 +52,12 @@ public class DiceDeckManager_JCY : MonoBehaviour
 
     private void InitializeDeck()
     {
-        diceDeck = diceCollection;
         for (int i = 0; i < defaultDiceCount; i++)
         {
-            diceDeck.Add(defaultDice);
             diceCollection.Add(defaultDice);
         }
+
+        diceDeck = new List<DiceSO_JCY>(diceCollection);
 
         ShuffleDeck();
     }
@@ -78,6 +78,12 @@ public class DiceDeckManager_JCY : MonoBehaviour
     {
         DiscardDice(); 
         DiceManager_JCY.Instance.reRollUI.ResetReRollCount(2);
+        
+        RerollHoldController rerollHoldController = FindFirstObjectByType<RerollHoldController>();
+
+        if (rerollHoldController != null)
+            rerollHoldController.ResetDiceTypeChange();
+        
         for (int i = 0; i < drawCount; i++)
         {
             int randomIndex = Random.Range(0, diceDeck.Count);

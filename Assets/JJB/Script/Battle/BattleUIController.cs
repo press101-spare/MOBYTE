@@ -13,29 +13,26 @@ namespace JJB.Script.Battle
         [SerializeField] private Button turnEndButton;
 
         [Header("Stage Intro")]
-        [SerializeField] private RectTransform stageIntroUI;
-        [SerializeField] private RectTransform stageIntroTarget;
-        [SerializeField] private CanvasGroup stageIntroCanvasGroup;
-        [SerializeField] private TMP_Text stageNameText;
+        [SerializeField] private RectTransform stagePanel;
+        [SerializeField] private Image stagePanelImage;
+        [SerializeField] private TMP_Text stageText;
 
+        [SerializeField] private RectTransform targetPosition;
         [SerializeField] private float fadeDuration = 0.5f;
         [SerializeField] private float moveDuration = 0.7f;
-        [SerializeField] private float endScale = 0.67f;
+        [SerializeField] private float targetScale = 0.67f;
 
-        private Vector2 _stageIntroStartPosition;
-        private Vector3 _stageIntroStartScale;
+        private Vector2 _startPosition;
+        private Vector3 _startScale;
 
         private BattleTurnManager _battleTurnManager;
         
         private void Awake()
         {
-            if (stageIntroUI == null)
-                return;
+            _startPosition = stagePanel.anchoredPosition;
+            _startScale = stagePanel.localScale;
 
-            _stageIntroStartPosition = stageIntroUI.anchoredPosition;
-            _stageIntroStartScale = stageIntroUI.localScale;
-
-            stageIntroUI.gameObject.SetActive(false);
+            stagePanel.gameObject.SetActive(false);
         }
 
         public void Initialize(BattleTurnManager battleTurnManager)
@@ -49,44 +46,52 @@ namespace JJB.Script.Battle
 
         public IEnumerator PlayStageIntro(string stageName)
         {
-            if (stageIntroUI == null ||
-                stageIntroTarget == null ||
-                stageIntroCanvasGroup == null ||
-                stageNameText == null)
-                yield break;
+            stageText.text = stageName;
 
-            stageNameText.text = stageName;
+            stagePanel.DOKill();
+            stagePanelImage.DOKill();
+            stageText.DOKill();
 
-            stageIntroUI.DOKill();
-            stageIntroCanvasGroup.DOKill();
+            stagePanel.gameObject.SetActive(true);
 
-            stageIntroUI.gameObject.SetActive(true);
+            stagePanel.anchoredPosition = _startPosition;
+            stagePanel.localScale = _startScale;
 
-            // 처음 상태
-            stageIntroUI.anchoredPosition = _stageIntroStartPosition;
-            stageIntroUI.localScale = _stageIntroStartScale;
-            stageIntroCanvasGroup.alpha = 0f;
+            Color panelColor = stagePanelImage.color;
+            panelColor.a = 0f;
+            stagePanelImage.color = panelColor;
+
+            Color textColor = stageText.color;
+            textColor.a = 0f;
+            stageText.color = textColor;
 
             Sequence sequence = DOTween.Sequence();
 
-            // 1. 투명 → 불투명
+            // 1. Fade In
             sequence.Append(
-                stageIntroCanvasGroup
-                    .DOFade(1f, fadeDuration)
-                    .SetEase(Ease.OutQuad)
-            );
-
-            // 2. 지정 위치로 이동하면서 동시에 작아짐
-            sequence.Append(
-                stageIntroUI
-                    .DOAnchorPos(stageIntroTarget.anchoredPosition, moveDuration)
-                    .SetEase(Ease.OutCubic)
+                stagePanelImage.DOFade(1f, fadeDuration)
             );
 
             sequence.Join(
-                stageIntroUI
-                    .DOScale(_stageIntroStartScale * endScale, moveDuration)
-                    .SetEase(Ease.OutCubic)
+                stageText.DOFade(1f, fadeDuration)
+            );
+            
+            sequence.AppendInterval(0.2f);
+
+            // 2. Fade가 완전히 끝난 다음 이동 시작
+            sequence.Append(
+                stagePanel.DOAnchorPos(
+                    targetPosition.anchoredPosition,
+                    moveDuration
+                ).SetEase(Ease.OutCubic)
+            );
+
+            // 3. 이동과 크기 축소는 동시에
+            sequence.Join(
+                stagePanel.DOScale(
+                    _startScale * targetScale,
+                    moveDuration
+                ).SetEase(Ease.OutCubic)
             );
 
             yield return sequence.WaitForCompletion();
@@ -96,8 +101,15 @@ namespace JJB.Script.Battle
         {
             if (_battleTurnManager != null)
                 _battleTurnManager.OnPhaseChanged -= UpdateUI;
-            if (stageIntroUI != null)
-                stageIntroUI.DOKill();
+            
+            if (stagePanel != null)
+                stagePanel.DOKill();
+
+            if (stagePanelImage != null)
+                stagePanelImage.DOKill();
+
+            if (stageText != null)
+                stageText.DOKill();
         }
 
         private void UpdateUI(BattlePhase phase)

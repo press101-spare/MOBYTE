@@ -24,6 +24,13 @@ namespace JJB.Script.Battle.Enemy
             if (_enemy.Health.IsDead)
                 return;
             
+            int bloodStack = DiceManager_JCY.Instance.diceEffect.bloodStack;
+            
+            if (bloodStack > 0)
+            {
+                damage += damage * (10 * bloodStack / 100);
+            }
+
             RecordPlayerTree();
 
             if (_enemy.Ability != null)
