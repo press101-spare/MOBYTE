@@ -8,8 +8,8 @@ public sealed class EventMoneyLoss : EventEffect
 
     public override void Apply()
     {
-        PlayerProfile profile =
-            PlayerProfileManager.Instance.Profile;
+        if (!EventExternalSystems.TryGetProfile(this, out PlayerProfile profile))
+            return;
 
         int lostMoney =
             Mathf.FloorToInt(
@@ -17,5 +17,11 @@ public sealed class EventMoneyLoss : EventEffect
             );
 
         profile.money -= lostMoney;
+
+        string message =
+            $"돈 {lostMoney}칩을 잃었습니다.\n현재 돈: {profile.money}칩";
+
+        Debug.Log(message, this);
+        ShowResult(message);
     }
 }
