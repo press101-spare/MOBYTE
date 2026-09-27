@@ -6,8 +6,10 @@ using UnityEngine;
 /// </summary>
 public abstract class EventEffect : MonoBehaviour
 {
+    // 선택지를 눌렀을 때 각 효과가 실제 결과를 적용합니다.
     public abstract void Apply();
 
+    // 모든 효과가 같은 방식으로 화면 결과 알림을 띄우도록 공통 처리합니다.
     protected void ShowResult(string message)
     {
         EventResultDisplay.Show(message, this);

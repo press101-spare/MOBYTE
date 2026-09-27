@@ -4,6 +4,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// 대화 화면의 표시만 담당합니다.
+/// 이름/대사/배경을 갱신하고 선택지 버튼을 생성하며,
+/// 패널·NEXT·SKIP 입력을 Talk에 이벤트로 전달합니다.
+/// </summary>
 public sealed class DialogueView : MonoBehaviour
 {
     [Header("대화 UI")]
@@ -25,14 +30,19 @@ public sealed class DialogueView : MonoBehaviour
     [SerializeField, Min(0f)] private float choiceSpacing = 12f;
     [SerializeField, Min(0)] private int choicePadding = 12;
 
+    // 현재 화면에 생성한 선택지 버튼입니다. 다음 대사로 갈 때 모두 제거합니다.
     private readonly List<Button> choiceButtons = new();
+
+    // dialoguePanel에 Button이 없으면 실행 중 추가하고 소유 여부를 기록합니다.
     private Button dialoguePanelButton;
     private bool ownsDialoguePanelButton;
     [SerializeField] TMP_FontAsset _font;
 
+    // Talk가 구독하는 UI 입력 이벤트입니다.
     public event Action NextClicked;
     public event Action SkipClicked;
 
+    // 타이핑 효과가 몇 글자까지 진행되어야 하는지 알려줍니다.
     public int CharacterCount
     {
         get
@@ -47,9 +57,11 @@ public sealed class DialogueView : MonoBehaviour
 
     private void Awake()
     {
+        // 결과 알림도 대화창과 같은 한글 폰트를 사용합니다.
         if (talkText != null)
             EventResultDisplay.SetFont(talkText.font);
 
+        // Inspector 연결이 없어도 필요한 UI를 실행 중 준비합니다.
         EnsureEventBackground();
         ConfigureDialoguePanel();
         ConfigureChoiceParent();
@@ -58,8 +70,7 @@ public sealed class DialogueView : MonoBehaviour
         {
             nextButton.onClick.AddListener(OnNextClicked);
 
-            // The dialogue panel is a large raycast target. Keep the actual
-            // control buttons above it so their clicks are not swallowed.
+            // 큰 대화 패널이 NEXT 버튼의 클릭을 가로채지 않도록 맨 위에 둡니다.
             nextButton.transform.SetAsLastSibling();
         }
 
@@ -100,6 +111,7 @@ public sealed class DialogueView : MonoBehaviour
 
     public void ShowDialogue(string speaker, string text, Sprite image)
     {
+        // 새 대사를 넣고 처음에는 글자를 모두 숨겨 타이핑 효과를 준비합니다.
         if (nameText != null)
             nameText.text = speaker;
 
@@ -133,6 +145,7 @@ public sealed class DialogueView : MonoBehaviour
         EventDialogueData.ChoiceData[] choices,
         Action<int> onSelected)
     {
+        // 이전 선택지를 제거한 뒤 데이터 개수만큼 버튼을 동적으로 만듭니다.
         ClearChoices();
 
         if (choices == null ||
@@ -156,6 +169,7 @@ public sealed class DialogueView : MonoBehaviour
 
             int choiceIndex = i;
 
+            // 프리팹 원본은 유지하고 Choice Parent 아래에 복사본을 만듭니다.
             Button button = Instantiate(
                 choiceButtonPrefab,
                 choiceParent,
@@ -209,9 +223,7 @@ public sealed class DialogueView : MonoBehaviour
         {
             if (button != null)
             {
-                // Destroy is deferred until the end of the frame. Disable the
-                // old choice immediately so it cannot be drawn or clicked
-                // while the next choice screen is being created.
+                // Destroy는 프레임 끝에 실행되므로 먼저 꺼서 중복 클릭을 방지합니다.
                 button.gameObject.SetActive(false);
                 Destroy(button.gameObject);
             }
@@ -244,6 +256,7 @@ public sealed class DialogueView : MonoBehaviour
 
         if (dialoguePanelButton == null)
         {
+            // 대화 패널 자체를 클릭해 다음 대사로 갈 수 있도록 Button을 자동 추가합니다.
             dialoguePanelButton = dialoguePanel.gameObject.AddComponent<Button>();
             ownsDialoguePanelButton = true;
         }
@@ -265,6 +278,7 @@ public sealed class DialogueView : MonoBehaviour
 
     private void EnsureEventBackground()
     {
+        // Event Image를 Inspector에서 연결했다면 그대로 사용합니다.
         if (eventImage != null)
             return;
 
@@ -279,6 +293,7 @@ public sealed class DialogueView : MonoBehaviour
             return;
         }
 
+        // 연결된 이미지가 없으면 Canvas 전체를 덮는 배경 Image를 자동 생성합니다.
         GameObject backgroundObject = new GameObject(
             "Event Background",
             typeof(RectTransform),
@@ -294,6 +309,7 @@ public sealed class DialogueView : MonoBehaviour
         rectTransform.anchorMax = Vector2.one;
         rectTransform.offsetMin = Vector2.zero;
         rectTransform.offsetMax = Vector2.zero;
+        // 대화창과 버튼보다 뒤에 그려지도록 첫 번째 자식으로 이동합니다.
         rectTransform.SetAsFirstSibling();
 
         eventImage = backgroundObject.GetComponent<Image>();
@@ -317,6 +333,7 @@ public sealed class DialogueView : MonoBehaviour
         if (background != null)
             background.raycastTarget = true;
 
+        // 선택지 개수에 맞춰 세로로 자동 배치합니다.
         VerticalLayoutGroup layout =
             choiceParent.GetComponent<VerticalLayoutGroup>();
 
@@ -332,6 +349,7 @@ public sealed class DialogueView : MonoBehaviour
         layout.childForceExpandWidth = true;
         layout.childForceExpandHeight = false;
 
+        // 선택지 버튼 수에 따라 부모 높이가 자동으로 변하게 합니다.
         ContentSizeFitter fitter =
             choiceParent.GetComponent<ContentSizeFitter>();
 
