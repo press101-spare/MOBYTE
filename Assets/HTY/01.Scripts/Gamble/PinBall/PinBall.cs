@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ public class PinBall : MonoBehaviour
 
     private Rigidbody2D _ballRb;
 
-    private int _coinX;
+    private float _coinX;
     private bool _isPlaying;
 
 
@@ -68,7 +69,7 @@ public class PinBall : MonoBehaviour
     }
 
 
-    public void GetScore(int value)
+    public void GetScore(float value)
     {
         if (!_isPlaying)
         {
@@ -81,10 +82,14 @@ public class PinBall : MonoBehaviour
 
         _text.text = _coinX.ToString();
         Debug.Log(value);
+        StartCoroutine(Col((float)value));
+    }
+
+    private IEnumerator Col(float value)
+    {
+        yield return new WaitForSeconds(5f);
         GambleManager.instance.GambleEnd((float)value);
-
         ResetPinBall();
-
         transform.parent.gameObject.SetActive(false);
     }
 }
