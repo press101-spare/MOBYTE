@@ -3207,7 +3207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 47.9, y: 11}
+  m_AnchoredPosition: {x: 47.899994, y: 11}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &748944577
@@ -4846,7 +4846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 47.9, y: 11}
+  m_AnchoredPosition: {x: 47.899994, y: 11}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1051427326
@@ -5417,7 +5417,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 54.999893, y: -176}
+  m_AnchoredPosition: {x: 54.999878, y: -176}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1138141882
@@ -6711,7 +6711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 47.9, y: 11}
+  m_AnchoredPosition: {x: 47.899994, y: 11}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1419050379
@@ -7176,21 +7176,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diceCollection:
-  - {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
-  - {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
-  - {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
-  - {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
-  - {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
-  - {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
-  - {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
-  - {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
-  - {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
-  - {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
-  - {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
-  - {fileID: 11400000, guid: d579a2b77abbb5f4a8081fda848804a1, type: 2}
-  - {fileID: 11400000, guid: d579a2b77abbb5f4a8081fda848804a1, type: 2}
-  - {fileID: 11400000, guid: eb1e2a53ceebb4d48b0ed9a3dfc9f8e9, type: 2}
-  - {fileID: 11400000, guid: c434f24f11970f14385529eb31992fef, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
+  - {fileID: 11400000, guid: 39527c9d4fc76e8428ac7bfbce260322, type: 2}
   defaultDice: {fileID: 11400000, guid: f8456d87cbe964747a106e3ff68084b4, type: 2}
   defaultDiceCount: 0
   diceDeck: []
@@ -7988,7 +7998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 47.9, y: 11}
+  m_AnchoredPosition: {x: 47.899994, y: 11}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1569502304
@@ -9774,7 +9784,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 47.9, y: 11}
+  m_AnchoredPosition: {x: 47.899994, y: 11}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1834780480
@@ -11463,7 +11473,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: HomeBase_HTY
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2134393285
