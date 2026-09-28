@@ -1,8 +1,13 @@
 using JJB.Script.Battle.Player.Progression;
 using UnityEngine;
 
+/// <summary>
+/// 주사위 하나를 굴려 1~3이면 베팅금의 2배,
+/// 4~6이면 베팅금의 3배를 돌려주는 이벤트입니다.
+/// </summary>
 public sealed class EventDiceMultiplierGamble : EventEffect
 {
+    // 실제 보유 금액이 더 적으면 가진 돈까지만 베팅합니다.
     [SerializeField, Min(1)] private int stake = 100;
 
     public override void Apply()
@@ -14,10 +19,13 @@ public sealed class EventDiceMultiplierGamble : EventEffect
 
         if (actualStake <= 0)
         {
-            Debug.Log("주사위에 걸 돈이 없습니다.", this);
+            const string noMoney = "주사위에 걸 돈이 없습니다.";
+            Debug.Log(noMoney, this);
+            ShowResult(noMoney);
             return;
         }
 
+        // 먼저 베팅금을 차감한 뒤 결과 보상을 더합니다.
         profile.money -= actualStake;
 
         int roll = Random.Range(1, 7);
@@ -26,10 +34,11 @@ public sealed class EventDiceMultiplierGamble : EventEffect
 
         profile.money += reward;
 
-        Debug.Log(
-            $"주사위 결과 {roll}! {multiplier}배인 {reward}칩을 받았습니다. " +
-            $"현재 돈: {profile.money}",
-            this
-        );
+        string message =
+            $"주사위 결과: {roll}\n{multiplier}배 보상 {reward}칩 획득! " +
+            $"현재 돈: {profile.money}칩";
+
+        Debug.Log(message, this);
+        ShowResult(message);
     }
 }
