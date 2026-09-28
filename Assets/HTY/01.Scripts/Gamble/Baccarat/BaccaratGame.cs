@@ -316,6 +316,7 @@ public class BaccaratGame : MonoBehaviour
             if (_spawnCards[i] == null) continue;
 
             BlackJackCard card = _spawnCards[i].GetComponent<BlackJackCard>();
+            AudioManager.Instance.PlayClipSFX("SFX_CARD");
 
             if (card == null) continue;
 
