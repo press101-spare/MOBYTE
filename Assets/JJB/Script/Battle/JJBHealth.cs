@@ -21,6 +21,22 @@ namespace JJB.Script.Battle
 
             OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
         }
+        
+        public void Initialize(int maxHealth, int currentHealth)
+        {
+            MaxHealth = Mathf.Max(1, maxHealth);
+
+            CurrentHealth = Mathf.Clamp(
+                currentHealth,
+                0,
+                MaxHealth
+            );
+
+            OnHealthChanged?.Invoke(
+                CurrentHealth,
+                MaxHealth
+            );
+        }
 
         public void TakeDamage(int damage)
         {

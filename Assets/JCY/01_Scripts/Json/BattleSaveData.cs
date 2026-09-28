@@ -1,8 +1,6 @@
-using UnityEngine;
-
 [System.Serializable]
-public class BattleSaveData : MonoBehaviour
+public class BattleSaveData
 {
-    public int playerHp;
+    public int playerHp = 100;
     public int currentStage;
 }

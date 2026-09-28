@@ -17,4 +17,6 @@ MonoBehaviour:
   attackPower: 10
   attackPower2: 25
   attackPower3: 30
+  spriteLibraryAsset: {fileID: 7108339969198208228, guid: 73c7bd039929aae4e80f9d59a5689f60,
+    type: 3}
   ability: {fileID: 11400000, guid: 1314aa4b6cff34a4fb0f8c9442550f9e, type: 2}

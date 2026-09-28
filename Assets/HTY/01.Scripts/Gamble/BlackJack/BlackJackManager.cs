@@ -163,6 +163,7 @@ public class BlackJackManager : MonoBehaviour
 
         _checkCard = true;
         _playerSumText.text = "당신의 합 :" + _playerSum.ToString();
+        AudioManager.Instance.PlayClipSFX("SFX_CARD");
 
         if (_playerSum > _blackJackNumber)
         {
@@ -349,6 +350,7 @@ public class BlackJackManager : MonoBehaviour
 
             CreateCardImage(cards[i], _dealerCardGroup);
         }
+        AudioManager.Instance.PlayClipSFX("SFX_CARD");
     }
 
     private void CreateCardImage(BlackJackCard card, Transform group)
@@ -386,7 +388,7 @@ public class BlackJackManager : MonoBehaviour
         _endRotate = new Vector3(0, 0, UnityEngine.Random.Range(90, 210));
         moveCard.transform.DOMove(endVec.position, _during);
         moveCard.transform.DORotate(_endRotate, _during - 1f);
-
+        AudioManager.Instance.PlayClipSFX("SFX_CARD");
         BlackJackCard cardCompo = moveCard.GetComponent<BlackJackCard>();
         CardInfo(cardCompo, id);
     }

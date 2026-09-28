@@ -231,7 +231,6 @@ public class DiceTree_JCY : MonoBehaviour
     public int TreeEffect(int damage)
     {
         int finalDamage = damage;
-        Debug.Log(CurrentTree);
         switch (CurrentTrees)
         {
             case Trees.Choice:

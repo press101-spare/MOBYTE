@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.U2D.Animation;
 
 namespace JJB.Script.Battle.Enemy
 {
@@ -11,8 +12,8 @@ namespace JJB.Script.Battle.Enemy
         [SerializeField] private int attackPower;
         [SerializeField] private int attackPower2;
         [SerializeField] private int attackPower3;
+        [SerializeField] private SpriteLibraryAsset spriteLibraryAsset;
 
-        [FormerlySerializedAs("abilities")]
         [Header("Abilities")]
         [SerializeField] private EnemyAbility ability;
 
@@ -22,5 +23,6 @@ namespace JJB.Script.Battle.Enemy
         public int AttackPower2 => attackPower2;
         public int AttackPower3 => attackPower3;
         public EnemyAbility Ability => ability;
+        public SpriteLibraryAsset SpriteLibraryAsset => spriteLibraryAsset;
     }
 }

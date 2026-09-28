@@ -57,5 +57,8 @@ TagManager:
   - name: Icon
     uniqueID: 539406441
     locked: 0
+  - name: elevator
+    uniqueID: 4095569471
+    locked: 0
   m_RenderingLayers:
   - Default

@@ -10,7 +10,8 @@ public enum GambleType
     Roulette,
     SellGame,
     SlotGame,
-    Shop
+    Shop,
+    Elevator
 }
 
 [CreateAssetMenu(fileName = "GamebleSoData", menuName = "Gameble/GamebleSoData")]

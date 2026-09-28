@@ -2,6 +2,7 @@
 using System.Collections;
 using JJB.Script.Battle.Enemy;
 using JJB.Script.Battle.Player;
+using JJB.Script.Battle.Stage;
 using UnityEngine;
 
 namespace JJB.Script.Battle
@@ -9,6 +10,9 @@ namespace JJB.Script.Battle
     [RequireComponent(typeof(PlayerTurnController))]
     public class BattleTurnManager : MonoBehaviour
     {
+        public DiceEffectUIUpdate diceEffectUIUpdate;
+        [SerializeField] private BattleDefeatController battleDefeatController;
+        
         private PlayerTurnController _playerTurnController;
 
         private EnemyTurnController _enemyTurnController;
@@ -135,25 +139,41 @@ namespace JJB.Script.Battle
 
         private void EndBattle()
         {
-            bool isVictory = _enemyHealth != null && _enemyHealth.IsDead && _playerHealth != null && !_playerHealth.IsDead;
+            JJBGameManager.Instance.isFighting = false;
 
-            if (isVictory && !_rewardReceived)
+            if (_playerHealth.IsDead)
             {
-                _rewardReceived = true;
-
-                // 경험치 +5
-                JJBGameManager.Instance.PlayerProgression.AddExp(5);
-
-                // 돈 +200
-                JJBGameManager.Instance.AddMoney(200);
-                
-                Debug.Log("전투 승리 보상 : 경험치 +5 / 골드 +200");
+                battleDefeatController.PlayDefeat();
+                return;
             }
 
-            if (JJBGameManager.Instance != null)
-                JJBGameManager.Instance.isFighting = false;
-
             ChangePhase(BattlePhase.BattleEnd);
+            if (_enemyHealth.IsDead && !_playerHealth.IsDead)
+            {
+                StageManager stageManager =
+                    JJBGameManager.Instance.StageManager;
+
+                stageManager.SetStageIndex(
+                    stageManager.CurrentStageIndex + 1
+                );
+                
+                bool isVictory = _enemyHealth != null && _enemyHealth.IsDead && _playerHealth != null && !_playerHealth.IsDead;
+
+                if (isVictory && !_rewardReceived)
+                {
+                    _rewardReceived = true;
+
+                    // 경험치 +5
+                    JJBGameManager.Instance.PlayerProgression.AddExp(5);
+
+                    // 돈 +200
+                    JJBGameManager.Instance.AddMoney(200);
+                }
+
+                if (JJBGameManager.Instance != null)
+                    JJBGameManager.Instance.isFighting = false;
+                
+            }
         }
 
         private void ChangePhase(BattlePhase phase)

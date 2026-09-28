@@ -24,11 +24,6 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-        switch (currentSceneIndex)
-        {
-            
-        }
     }
 
     public void PlayClipSFX(string sfxName)

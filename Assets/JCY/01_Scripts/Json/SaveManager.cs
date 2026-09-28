@@ -14,14 +14,11 @@ public class SaveManager : MonoBehaviour
 
         // 2. 파일에 JSON 문자열 쓰기
         File.WriteAllText(SavePath, jsonString);
-
-        Debug.Log($"[SaveManager] 게임 저장 완료! 경로: {SavePath}");
     }
 
     // [2] 데이터 불러오기
     public SaveData LoadGame()
     {
-        
         if (File.Exists(SavePath))
         {
             // 1. 파일에서 JSON 문자열 읽어오기
@@ -30,7 +27,6 @@ public class SaveManager : MonoBehaviour
             // 2. JSON 문자열을 SaveData 객체로 역직렬화
             SaveData data = JsonUtility.FromJson<SaveData>(jsonString);
 
-            Debug.Log("[SaveManager] 세이브 파일을 성공적으로 불러왔습니다.");
             return data;
         }
         else
@@ -41,12 +37,12 @@ public class SaveManager : MonoBehaviour
     }
 
     // [3] 세이브 파일 삭제 (초기화용)
+    [ContextMenu("Delete Save File")]
     public void DeleteSaveFile()
     {
         if (File.Exists(SavePath))
         {
             File.Delete(SavePath);
-            Debug.Log("[SaveManager] 세이브 파일이 삭제되었습니다.");
         }
     }
 }

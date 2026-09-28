@@ -704,7 +704,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 593565117}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1995401374}
+        m_TargetAssemblyTypeName: JJB.Script.SceneMove, Assembly-CSharp
+        m_MethodName: MoveScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &593565117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1437,6 +1449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1995401372}
   - component: {fileID: 1995401373}
+  - component: {fileID: 1995401374}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1471,6 +1484,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3029b1034dad64340a36109a7600724e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1995401374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995401371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4857c4360031483ca4b034705fa29977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: HTY_Title
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
