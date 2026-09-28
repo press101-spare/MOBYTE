@@ -11,67 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleDefeatController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleDefeatController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/FinelBossAbility.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/FinelBossAbility.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/SceneMove.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/SceneMove.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DHM/01. Assets/딜러/_EnemySpriteLibrary.spriteLib" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/01. Assets/딜러/_EnemySpriteLibrary.spriteLib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DHM/01. Assets/마스터/_MaterAsset.spriteLib" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/01. Assets/마스터/_MaterAsset.spriteLib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DHM/01. Assets/빚쟁이/_DebtAsset.spriteLib" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/01. Assets/빚쟁이/_DebtAsset.spriteLib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DHM/01. Assets/사기꾼/_FakerAsset.spriteLib" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/01. Assets/사기꾼/_FakerAsset.spriteLib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DHM/01. Assets/조직원/_MafiaAsset.spriteLib" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/01. Assets/조직원/_MafiaAsset.spriteLib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DHM/01. Assets/채무자/_ChamuAsset.spriteLib" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/01. Assets/채무자/_ChamuAsset.spriteLib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DHM/01. Assets/홀짝 도박사/_HojjackAsset.spriteLib" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/01. Assets/홀짝 도박사/_HojjackAsset.spriteLib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SoundTestScripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SoundTestScripts/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HTY/07.Fonts/CookieRun Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/07.Fonts/CookieRun Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JCY/00_Scenes/Ending.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/00_Scenes/Ending.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceDeckManager_JCY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceDeckManager_JCY.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceEffectUIUpdate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceEffectUIUpdate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceManager_JCY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceManager_JCY.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/FadeOut.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/FadeOut.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/BattleSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/BattleSaveData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/DataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/DataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/DealerEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/DealerEnemy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/DebtorEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/DebtorEnemy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/JackpotEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/JackpotEnemy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/MasterEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/MasterEnemy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/OddEvenJudgeEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/OddEvenJudgeEnemy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/OrganizationmemberEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/OrganizationmemberEnemy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/ScammerEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/ScammerEnemy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/StealMoneyEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/StealMoneyEnemy.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleTurnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleTurnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyDamageReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyDamageReceiver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyHealthSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyHealthSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyTurnController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyTurnController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/PlayerAttackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/PlayerAttackController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/PlayerDamageReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/PlayerDamageReceiver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/PlayerHealthSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/PlayerHealthSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Elevator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Elevator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Sprite/modern_fantasy/modern_fantasy/game/fonts/CrimsonText-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Sprite/modern_fantasy/modern_fantasy/game/fonts/CrimsonText-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Sprite/modern_fantasy/modern_fantasy/game/fonts/SpaceAndAstronomy-pZRD SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Sprite/modern_fantasy/modern_fantasy/game/fonts/SpaceAndAstronomy-pZRD SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Merge/Elevator.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Merge/Elevator.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Merge/HomeBase_HTY.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Merge/HomeBase_HTY.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Merge/JJBBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Merge/JJBBattle.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/01. Script/TotalManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/01. Script/TotalManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/GmarketSansTTF/GmarketSansTTFMedium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/GmarketSansTTF/GmarketSansTTFMedium SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/The Jamsil 4 Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/The Jamsil 4 Medium SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/GmarketSansTTF/GmarketSansTTFBold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/GmarketSansTTF/GmarketSansTTFBold SDF 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
