@@ -25,21 +25,11 @@ public class BeggingSystem_HTY : MonoBehaviour
 
     public void Begging()
     {
-        int currentChip = PlayerProfileManager.Instance.Profile.money;
+       
+        PlayerProfileManager.Instance.Profile.money += 50;
 
-        if (currentChip >= MinChip)
-            return;
-
-        int getChip = Random.Range(1, 4);
-
-        int newChip = Mathf.Min(currentChip + getChip, MinChip);
-
-        int realGetChip = newChip - currentChip;
-
-        PlayerProfileManager.Instance.Profile.money = newChip;
-
-        _getChipText.text = $"+{realGetChip}칩";
-        _chipText.text = newChip.ToString();
+        _getChipText.text = $"+{50}칩";
+        _chipText.text = PlayerProfileManager.Instance.Profile.money.ToString();
 
         Refresh();
     }
