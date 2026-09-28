@@ -12,6 +12,7 @@ public abstract class EventEffect : MonoBehaviour
     // 모든 효과가 같은 방식으로 화면 결과 알림을 띄우도록 공통 처리합니다.
     protected void ShowResult(string message)
     {
+        AudioManager.Instance.PlayClipSFX("SFX_CHOICE");
         EventResultDisplay.Show(message, this);
     }
 }
