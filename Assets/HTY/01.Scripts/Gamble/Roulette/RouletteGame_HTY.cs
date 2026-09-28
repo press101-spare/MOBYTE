@@ -56,9 +56,9 @@ public class RouletteGame_HTY : MonoBehaviour
         }
 
         float coin = resultSlot._result;
-
+        GambleManager.instance._successEffect.PlayEffect($"{coin}배!");
         Debug.Log($"룰렛 결과 배수 : {coin}");
-
+        yield return new WaitForSeconds(5f);
         GambleManager.instance.GambleEnd(coin);
 
         yield return new WaitForSeconds(2f);

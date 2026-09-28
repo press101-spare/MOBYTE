@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 
 public class BaccaratGame : MonoBehaviour
 {
@@ -210,6 +211,8 @@ public class BaccaratGame : MonoBehaviour
 
         string bettingText = isWin ? "베팅 성공!" : "베팅 실패!";
 
+        GambleManager.instance._successEffect.PlayEffect(bettingText = isWin ? "베팅 성공!" : "베팅 실패!");
+
         _endingText.text =
             winnerText +
             "\n" +
@@ -331,7 +334,7 @@ public class BaccaratGame : MonoBehaviour
     {
         GameObject cardUI = Instantiate(_cardImagePrefab, group);
 
-        Image image = cardUI.GetComponent<Image>();
+        UnityEngine.UI.Image image = cardUI.GetComponent<UnityEngine.UI.Image>();
 
         if (image != null)
         {

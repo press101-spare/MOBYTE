@@ -21,6 +21,8 @@ public class LotteryTicket_Test : MonoBehaviour
     [SerializeField] private int _buyChip = 500;
     [SerializeField] private TextMeshProUGUI _textLoto;
 
+    [SerializeField] private Button _bt;
+
     private void Awake()
     {
         // Inspector에서 배열 크기를 설정하지 않아도 됨
@@ -62,6 +64,7 @@ public class LotteryTicket_Test : MonoBehaviour
         if (clickDic.Count > 0)
         {
             ResetLotto();
+            _bt.interactable = true;
         }
     }
 
@@ -153,6 +156,7 @@ public class LotteryTicket_Test : MonoBehaviour
             StartCoroutine(Coll(count, 3000));
         }
 
+        _bt.interactable = false;
         
     }
 
@@ -165,6 +169,7 @@ public class LotteryTicket_Test : MonoBehaviour
         _textLoto.text =
             $"{ranNums[0]}, {ranNums[1]}, {ranNums[2]}, {ranNums[3]}, {ranNums[4]}\n" +
             $"맞은 개수 {count} \n 획득한 칩 {getchip}";
+        GambleManager.instance._successEffect.PlayEffect($"{count}일치!");
 
         yield return new WaitForSeconds(4f);
 

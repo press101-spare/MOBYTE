@@ -87,6 +87,7 @@ public class PinBall : MonoBehaviour
 
     private IEnumerator Col(float value)
     {
+        GambleManager.instance._successEffect.PlayEffect($"{value}배!");
         yield return new WaitForSeconds(5f);
         GambleManager.instance.GambleEnd((float)value);
         ResetPinBall();
