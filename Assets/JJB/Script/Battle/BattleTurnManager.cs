@@ -167,7 +167,7 @@ namespace JJB.Script.Battle
                     JJBGameManager.Instance.PlayerProgression.AddExp(5);
 
                     // 돈 +200
-                    JJBGameManager.Instance.AddMoney(200);
+                    JJBGameManager.Instance.AddMoney(JJBGameManager.Instance.CurrentStageIndex * 15);
                 }
 
                 if (JJBGameManager.Instance != null)

@@ -142,7 +142,7 @@ public class DiceEffect_JCY : MonoBehaviour
             //칩
             if (effectType == DiceSO_JCY.DiceEffectType.Chip)
             {
-                PlayerProfileManager.Instance.AddMoney(Random.Range(100, 500));
+                PlayerProfileManager.Instance.AddMoney(Random.Range(10, 50));
                 continue;
             }
 
