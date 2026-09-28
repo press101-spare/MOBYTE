@@ -20,7 +20,7 @@ public class DiceManager_JCY : MonoBehaviour
 
     [Header("기타 수치")] [field: SerializeField]
     public int[] currentDiceValue = new int[5]; 
-    [SerializeField] private float reRollUp= 1.5f;
+    [SerializeField] private float reRollUp = 1.5f;
     
     [Header("주사위 정렬 관련")]
     [SerializeField] private Transform[] spawnPositions; // 주사위 스폰 위치들

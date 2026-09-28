@@ -35,7 +35,9 @@ namespace JJB.Script.Battle.Enemy
 
             if (_enemy.Ability != null)
                 damage = _enemy.Ability.ModifyIncomingDamage(damage, _enemy.Health);
-
+            
+            _enemy.PlayHurt();
+            
             _enemy.Health.TakeDamage(damage);
             
             _hitFlash?.Play();

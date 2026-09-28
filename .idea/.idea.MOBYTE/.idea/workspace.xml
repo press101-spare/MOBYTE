@@ -11,18 +11,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleDefeatController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleDefeatController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/FinelBossAbility.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/FinelBossAbility.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/SceneMove.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JJB/Script/SceneMove.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HTY/01.Scripts/New Folder/SelectTest_HTY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/01.Scripts/New Folder/SelectTest_HTY.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HTY/04.SO/SoScripts/GambleSoData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/04.SO/SoScripts/GambleSoData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/01. Assets/딜러/_EnemySpriteLibrary.spriteLib" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/01. Assets/딜러/_EnemySpriteLibrary.spriteLib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/01. Assets/마스터/_MaterAsset.spriteLib" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/01. Assets/마스터/_MaterAsset.spriteLib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/01. Assets/빚쟁이/_DebtAsset.spriteLib" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/01. Assets/빚쟁이/_DebtAsset.spriteLib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/01. Assets/사기꾼/_FakerAsset.spriteLib" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/01. Assets/사기꾼/_FakerAsset.spriteLib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/01. Assets/조직원/_MafiaAsset.spriteLib" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/01. Assets/조직원/_MafiaAsset.spriteLib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/01. Assets/채무자/_ChamuAsset.spriteLib" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/01. Assets/채무자/_ChamuAsset.spriteLib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/01. Assets/홀짝 도박사/_HojjackAsset.spriteLib" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/01. Assets/홀짝 도박사/_HojjackAsset.spriteLib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SoundTestScripts/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DHM/02. Scripts/SoundTestScripts/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HTY/07.Fonts/CookieRun Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/07.Fonts/CookieRun Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/00_Scenes/Ending.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/00_Scenes/Ending.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceDeckManager_JCY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceDeckManager_JCY.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceEffectUIUpdate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceEffectUIUpdate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceManager_JCY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceManager_JCY.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/FadeOut.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/FadeOut.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/BattleSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/BattleSaveData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/DataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/DataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/SaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/DealerEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/DealerEnemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/DebtorEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/DebtorEnemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/JackpotEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/JackpotEnemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/MasterEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/MasterEnemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/OddEvenJudgeEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/OddEvenJudgeEnemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/OrganizationmemberEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/OrganizationmemberEnemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/ScammerEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/ScammerEnemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/StealMoneyEnemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/SO/EnemyData/StealMoneyEnemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleTurnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleTurnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyDamageReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyDamageReceiver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyHealthSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyHealthSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/JJBHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/JJBHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyTurnController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyTurnController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/PlayerAttackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/PlayerAttackController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/PlayerDamageReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/PlayerDamageReceiver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/PlayerHealthSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/PlayerHealthSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Sprite/dpffpqpdlxj.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Sprite/dpffpqpdlxj.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Elevator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Elevator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Sprite/modern_fantasy/modern_fantasy/game/fonts/CrimsonText-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Sprite/modern_fantasy/modern_fantasy/game/fonts/CrimsonText-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JJB/Sprite/modern_fantasy/modern_fantasy/game/fonts/SpaceAndAstronomy-pZRD SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Sprite/modern_fantasy/modern_fantasy/game/fonts/SpaceAndAstronomy-pZRD SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Merge/Elevator.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Merge/Elevator.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Merge/HomeBase_HTY.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Merge/HomeBase_HTY.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Merge/JJBBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Merge/JJBBattle.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/01. Script/TotalManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/01. Script/TotalManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/GmarketSansTTF/GmarketSansTTFMedium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/GmarketSansTTF/GmarketSansTTFMedium SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/The Jamsil 4 Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/The Jamsil 4 Medium SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/GmarketSansTTF/GmarketSansTTFBold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/GmarketSansTTF/GmarketSansTTFBold SDF 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +88,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ffe351aa6232372f4a3b8c3ff36a636f33de226f60e607acbfe569289d7289d/System.IO.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceEffectUIUpdate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/EndingBGm.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/Json/BattleSaveData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -52,7 +102,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/SO/NormalDice.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JCY/01_Scripts/ShowUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Background.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleDefeatController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleEndPanelController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/FinelBossAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/OddEvenJudgeAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/PaybackAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/Battle/Enemy/EnemyAbilities/StealMoneyAbility.cs" root0="FORCE_HIGHLIGHTING" />
@@ -63,9 +115,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/ElevatorPlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/ExitConfirmUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/PanelController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/SceneMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JJB/Script/SimpleJoystick.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@81172dccd143/Editor/GridBrushEditorBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@81172dccd143/Editor/GridEditorUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@81172dccd143/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@726b3b36c932/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@bff931d63a7a/Editor/Drawing/Controllers/BlackboardController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@7537063fea2b/Editor/UGUI/UI/SelectableEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@7537063fea2b/Runtime/UGUI/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
@@ -79,61 +134,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="1.9674118183435523E-194" />
-      <entry key="S10" value="2.004660362260286E-97" />
-      <entry key="S30" value="2.099628796366765E-32" />
-      <entry key="S60" value="4.276981657982297E-16" />
-      <entry key="M2" value="6.183003857010442E-8" />
-      <entry key="M5" value="0.004883236688164817" />
-      <entry key="M10" value="0.21020107847556002" />
-      <entry key="M15" value="0.7461361932613804" />
-      <entry key="M30" value="3.0415098356496073" />
-      <entry key="H1" value="10.28583467987391" />
-      <entry key="H2" value="29.685731914576074" />
-      <entry key="H4" value="68.21731533087238" />
-      <entry key="D1" value="375.43110097458367" />
-      <entry key="W1" value="595.7420516891476" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000067908376427" />
+      <entry key="S2" value="1.0542000985396986" />
+      <entry key="S5" value="1.4040930945297163" />
+      <entry key="S10" value="1.8675866017047085" />
+      <entry key="S30" value="2.501241869551185" />
+      <entry key="S60" value="2.7309072457853185" />
+      <entry key="M2" value="2.861069545311299" />
+      <entry key="M5" value="3.12423364861964" />
+      <entry key="M10" value="4.013293682271639" />
+      <entry key="M15" value="4.848083622409897" />
+      <entry key="M30" value="6.363973558675455" />
+      <entry key="H1" value="8.225434573540937" />
+      <entry key="H2" value="15.525304419959522" />
+      <entry key="H4" value="41.98531432802615" />
+      <entry key="D1" value="342.42236467904945" />
+      <entry key="W1" value="598.5303283504408" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000024344039322" />
-      <entry key="S2" value="1.0395000968266501" />
-      <entry key="S5" value="1.2745612630818381" />
-      <entry key="S10" value="1.5239863255007746" />
-      <entry key="S30" value="1.8134877681080037" />
-      <entry key="S60" value="1.9846293971764313" />
-      <entry key="M2" value="2.2766144352190922" />
-      <entry key="M5" value="2.8582087105915406" />
-      <entry key="M10" value="3.337199336308028" />
-      <entry key="M15" value="3.662290972938148" />
-      <entry key="M30" value="4.486880551125201" />
-      <entry key="H1" value="6.269010939080034" />
-      <entry key="H2" value="10.508622983458881" />
-      <entry key="H4" value="18.847001572178385" />
-      <entry key="D1" value="66.10334904841808" />
-      <entry key="W1" value="95.47327058930789" />
+      <entry key="MS100" value="3.0571535786517454E-53" />
+      <entry key="MS500" value="3.140967561934452E-11" />
+      <entry key="S2" value="0.002367368490140219" />
+      <entry key="S5" value="0.08906485088429904" />
+      <entry key="S10" value="0.29843734834014835" />
+      <entry key="S30" value="0.6682686033148529" />
+      <entry key="S60" value="0.8174770951583874" />
+      <entry key="M2" value="0.9049153863506517" />
+      <entry key="M5" value="1.1095221084103002" />
+      <entry key="M10" value="1.8429391227401408" />
+      <entry key="M15" value="2.536501915892701" />
+      <entry key="M30" value="3.804933073646723" />
+      <entry key="H1" value="5.275421312400819" />
+      <entry key="H2" value="8.541206478684664" />
+      <entry key="H4" value="16.252805416173747" />
+      <entry key="D1" value="67.45762081320083" />
+      <entry key="W1" value="103.62015044349096" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.234017480385781E-5" />
-      <entry key="MS500" value="0.11744034365384673" />
-      <entry key="S2" value="0.5866052936346693" />
-      <entry key="S5" value="0.8751408377037957" />
-      <entry key="S10" value="1.1590966367365352" />
-      <entry key="S30" value="1.6108914702501693" />
-      <entry key="S60" value="1.8675062659085018" />
-      <entry key="M2" value="2.2116548611023163" />
-      <entry key="M5" value="2.8321371732983183" />
-      <entry key="M10" value="3.5296331655183177" />
-      <entry key="M15" value="4.3956335747794295" />
-      <entry key="M30" value="7.520815367911101" />
-      <entry key="H1" value="16.549087818677883" />
-      <entry key="H2" value="40.18866422058313" />
-      <entry key="H4" value="87.05816797343991" />
-      <entry key="D1" value="441.5275408743657" />
-      <entry key="W1" value="691.2137045145143" />
+      <entry key="MS100" value="4.197820489928418E-5" />
+      <entry key="MS500" value="0.13323093378215684" />
+      <entry key="S2" value="0.6256632608875955" />
+      <entry key="S5" value="1.18283676683593" />
+      <entry key="S10" value="1.9274629111362669" />
+      <entry key="S30" value="3.0528445107361444" />
+      <entry key="S60" value="3.4833807794461555" />
+      <entry key="M2" value="3.731587890406591" />
+      <entry key="M5" value="4.21744445561573" />
+      <entry key="M10" value="5.842740229198881" />
+      <entry key="M15" value="7.372118400420545" />
+      <entry key="M30" value="10.159479022331299" />
+      <entry key="H1" value="13.494540377453209" />
+      <entry key="H2" value="24.0617133367967" />
+      <entry key="H4" value="58.233276437062116" />
+      <entry key="D1" value="409.8735369260923" />
+      <entry key="W1" value="702.1488335111314" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -178,6 +233,16 @@
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.75f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\GitHub\MOBYTE -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\GitHub\MOBYTE" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="독립실행형 플레이어" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Mobyte\MOBYTE.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\const\Mobyte" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
@@ -265,12 +330,6 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceDeckManager_JCY.cs</url>
-          <line>109</line>
-          <properties documentPath="C:\Users\const\GitHub\MOBYTE\Assets\JCY\01_Scripts\DIce\DiceDeckManager_JCY.cs" containingFunctionPresentation="메서드 'DrawDice'" />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -14,7 +14,6 @@ public class DataManager : MonoBehaviour
     private DiceDatabase diceDatabase;
 
     [Header("현재 게임 플레이 데이터")]
-    public int playerCurrentHp;
     public int currentSceneIndex => SceneManager.GetActiveScene().buildIndex;
     public int currentStage => JJBGameManager.Instance != null && JJBGameManager.Instance.StageManager != null 
         ? JJBGameManager.Instance.StageManager.CurrentStageIndex 
@@ -80,8 +79,7 @@ public class DataManager : MonoBehaviour
 
             
             case 2:
-                if (data.BattleSaveData == null)
-                    data.BattleSaveData = new BattleSaveData();
+                data.BattleSaveData = new BattleSaveData();
 
                 if (JJBGameManager.Instance != null &&
                     JJBGameManager.Instance.PlayerJjbHealth != null)

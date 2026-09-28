@@ -15,7 +15,13 @@ EditorBuildSettings:
     path: Assets/Merge/Elevator.unity
     guid: 5922379ef9c0ad345a485bfc7248880b
   - enabled: 1
+    path: Assets/Merge/JJBBattle.unity
+    guid: 86f80ee761406e04d839867a3627a6ca
+  - enabled: 1
     path: Assets/Settings/Sjm/03. Scene/Colllect Scene/Collection Boss.unity
     guid: 4ec88d3f64df83e478377cb8ac124e6e
+  - enabled: 1
+    path: Assets/JCY/00_Scenes/Ending.unity
+    guid: 685ff1ab29adba943aa72d116ce72935
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

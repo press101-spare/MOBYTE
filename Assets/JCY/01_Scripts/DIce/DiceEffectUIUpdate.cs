@@ -33,9 +33,6 @@ public class DiceEffectUIUpdate : MonoBehaviour
 
         // 슬롯에 표시
         int slotIndex = 0;
-        Debug.Log($"drawnDiceSO 개수: {drawnDiceSO.Count}");
-        Debug.Log($"diceCounts 개수: {diceCounts.Count}");
-
 
         foreach (var dice in diceCounts)
         {

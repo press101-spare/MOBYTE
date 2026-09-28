@@ -58,36 +58,36 @@ MonoBehaviour:
     m_Hash: 7088141
     m_CategoryList: []
     m_OverrideEntries:
-    - m_Name: Attack_1_0
-      m_Hash: 937006278
+    - m_Name: Attack
+      m_Hash: 7088141
       m_Sprite: {fileID: -8915327726919978405, guid: b91ecc1692c1ef2468ecf76b2530a8de,
         type: 3}
       m_FromMain: 1
       m_SpriteOverride: {fileID: 8886490851947454144, guid: 34552cb088ab2da479175b7d7e9ee9fb,
         type: 3}
-    - m_Name: Attack_1_1
-      m_Hash: 14591056
+    - m_Name: Attack1
+      m_Hash: 1026424610
       m_Sprite: {fileID: 4416717768442454902, guid: b91ecc1692c1ef2468ecf76b2530a8de,
         type: 3}
       m_FromMain: 1
       m_SpriteOverride: {fileID: 6548489276043825817, guid: 34552cb088ab2da479175b7d7e9ee9fb,
         type: 3}
-    - m_Name: Attack_1_2
-      m_Hash: 433583594
+    - m_Name: Attack2
+      m_Hash: 606383768
       m_Sprite: {fileID: -8053095777402275025, guid: b91ecc1692c1ef2468ecf76b2530a8de,
         type: 3}
       m_FromMain: 1
       m_SpriteOverride: {fileID: -9022913262071093832, guid: 34552cb088ab2da479175b7d7e9ee9fb,
         type: 3}
-    - m_Name: Attack_1_3
-      m_Hash: 785433980
+    - m_Name: Attack3
+      m_Hash: 321101326
       m_Sprite: {fileID: 4688295478533005478, guid: b91ecc1692c1ef2468ecf76b2530a8de,
         type: 3}
       m_FromMain: 1
       m_SpriteOverride: {fileID: 4172772526038875549, guid: 34552cb088ab2da479175b7d7e9ee9fb,
         type: 3}
-    - m_Name: Attack_1_5
-      m_Hash: 129196105
+    - m_Name: Attack4
+      m_Hash: 222759853
       m_Sprite: {fileID: -4176445809780997858, guid: b91ecc1692c1ef2468ecf76b2530a8de,
         type: 3}
       m_FromMain: 1
@@ -99,15 +99,15 @@ MonoBehaviour:
     m_Hash: 666872612
     m_CategoryList: []
     m_OverrideEntries:
-    - m_Name: Hurt_0
-      m_Hash: 718249905
+    - m_Name: Hurt
+      m_Hash: 666872612
       m_Sprite: {fileID: -2048800907179887802, guid: 80faedd28afe98a4caf11c8b2ef01822,
         type: 3}
       m_FromMain: 1
       m_SpriteOverride: {fileID: -6552392919759675800, guid: 6ba474ac66bc76746a3ad017ec552a2f,
         type: 3}
-    - m_Name: Hurt_1
-      m_Hash: 499691303
+    - m_Name: Hurt1
+      m_Hash: 1069069517
       m_Sprite: {fileID: 490842205202310979, guid: 80faedd28afe98a4caf11c8b2ef01822,
         type: 3}
       m_FromMain: 1
@@ -116,5 +116,5 @@ MonoBehaviour:
     m_FromMain: 1
     m_EntryOverrideCount: 2
   m_PrimaryLibraryGUID: 47ed29c5e176fa94e9efb8a7d0e4944f
-  m_ModificationHash: 639261570061991896
+  m_ModificationHash: 639262260558256741
   m_Version: 1
