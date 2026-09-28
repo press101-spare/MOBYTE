@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class FadeOut : MonoBehaviour
 {
     private Image image;
+    public int duration = 1;
     private void Awake()
     {
         image = GetComponent<Image>();
@@ -13,8 +14,9 @@ public class FadeOut : MonoBehaviour
 
     private void Start()
     {
+        gameObject.SetActive(true);
         Sequence sequence = DOTween.Sequence();
-        sequence.Append(image.DOFade(0, 1));
+        sequence.Append(image.DOFade(0, duration));
         sequence.OnComplete(() => gameObject.SetActive(false));
     }
 }
