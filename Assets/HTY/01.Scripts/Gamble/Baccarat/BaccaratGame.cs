@@ -383,7 +383,7 @@ public class BaccaratGame : MonoBehaviour
             _endRotate,
             _during - 1f
         );
-
+        AudioManager.Instance.PlayClipSFX("SFX_CARD");
         BlackJackCard cardCompo =
             moveCard.GetComponent<BlackJackCard>();
 

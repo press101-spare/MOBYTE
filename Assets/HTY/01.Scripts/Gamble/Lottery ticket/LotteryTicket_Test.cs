@@ -102,8 +102,10 @@ public class LotteryTicket_Test : MonoBehaviour
             Debug.Log("돈이 부족합니다.");
             return;
         }
-
+        transform.parent.parent.gameObject.SetActive(false);
+        transform.parent.gameObject.SetActive(true);
         PlayerProfileManager.Instance.Profile.money -= _buyChip;
+        AudioManager.Instance.PlayClipSFX("SFX_BUY2");
     }
 
     public void EndLoto()
