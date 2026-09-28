@@ -73,7 +73,12 @@ namespace JJB.Script.Slot
         }
         public void UseChip()
         {
-            PlayerProfileManager.Instance.Profile.money -= 50;
+            if(PlayerProfileManager.Instance.Profile.money>= 50)
+            {
+                PlayerProfileManager.Instance.Profile.money -= 50;
+                AudioManager.Instance.PlayClipSFX("SFX_BUY2");
+            }
+            
         }
     }
 }

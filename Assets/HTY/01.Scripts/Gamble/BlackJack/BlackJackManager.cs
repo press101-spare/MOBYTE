@@ -386,7 +386,7 @@ public class BlackJackManager : MonoBehaviour
         _endRotate = new Vector3(0, 0, UnityEngine.Random.Range(90, 210));
         moveCard.transform.DOMove(endVec.position, _during);
         moveCard.transform.DORotate(_endRotate, _during - 1f);
-
+        AudioManager.Instance.PlayClipSFX("SFX_CARD");
         BlackJackCard cardCompo = moveCard.GetComponent<BlackJackCard>();
         CardInfo(cardCompo, id);
     }

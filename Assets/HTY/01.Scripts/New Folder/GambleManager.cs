@@ -69,6 +69,7 @@ public class GambleManager : MonoBehaviour
 
         PlayerProfileManager.Instance.Profile.money
             += Mathf.CeilToInt(coin * _bettingChip);
+        AudioManager.Instance.PlayClipSFX("SFX_BUY2");
 
         ResetGamble();
         
