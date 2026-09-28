@@ -143,10 +143,10 @@ namespace JJB.Script.Battle
             }
 
             yield return new WaitForSeconds(rollDuration);
-
-            DiceManager_JCY.Instance.DiceSlotSet();
-
+            
             manager.isRolling = false;
+            
+            DiceManager_JCY.Instance.DiceSlotSet();
         }
 
         private IEnumerator ChangeDiceRoutine(DiceObject_JCY dice, List<DiceSO_JCY> allDiceSo)
@@ -207,11 +207,7 @@ namespace JJB.Script.Battle
             dice.Setup(randomSO);
             dice.currentIndex = dice.currentDiceSO.faceValues[valueIndex];
 
-            Debug.Log($"주사위 종류 변경 : {randomSO.name}");
-
-            yield return new WaitForSeconds(
-                Mathf.Max(0f, rollDuration - changeDelay)
-            );
+            yield return new WaitForSeconds(Mathf.Max(0f, rollDuration - changeDelay));
 
             Rigidbody rb = dice.GetComponent<Rigidbody>();
 
