@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 
 public class BlackJackManager : MonoBehaviour
 {
@@ -299,16 +300,19 @@ public class BlackJackManager : MonoBehaviour
         if (_playerSum > _blackJackNumber)
         {
             result = "플레이어 버스트!\n딜러 승리";
+            
             resultType = 0;
         }
         else if (_dealerSum > _blackJackNumber)
         {
             result = "딜러 버스트!\n플레이어 승리";
+            GambleManager.instance._successEffect.PlayEffect("플레이어 승리");
             resultType = 2;
         }
         else if (_playerSum > _dealerSum)
         {
             result = "플레이어 승리!";
+            GambleManager.instance._successEffect.PlayEffect("플레이어 승리");
             resultType = 2;
         }
         else if (_playerSum < _dealerSum)
@@ -350,7 +354,7 @@ public class BlackJackManager : MonoBehaviour
     private void CreateCardImage(BlackJackCard card, Transform group)
     {
         GameObject cardUI = Instantiate(_cardImagePrefab, group);
-        Image image = cardUI.GetComponent<Image>();
+        UnityEngine.UI.Image image = cardUI.GetComponent<UnityEngine.UI.Image>();
 
         if (image != null)
             image.sprite = card._myImage;

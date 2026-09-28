@@ -16,6 +16,7 @@ public class GambleManager : MonoBehaviour
     public static GambleManager instance;
 
     public SelectTest_HTY selectCompo;
+    public GambleSuccessEffect_HTY _successEffect;
 
     
 
@@ -59,6 +60,7 @@ public class GambleManager : MonoBehaviour
 
         TextMeshProUGUI resultText =
             _endPanel.GetComponentInChildren<TextMeshProUGUI>();
+        
         resultText.text =
             $"{_gambleData._gambleName}의 게임 결과: \n" +
             $"획득배수: {coin}x \n" +
@@ -69,6 +71,7 @@ public class GambleManager : MonoBehaviour
             += Mathf.CeilToInt(coin * _bettingChip);
 
         ResetGamble();
+        
     }
 
     public void ResetGamble()
