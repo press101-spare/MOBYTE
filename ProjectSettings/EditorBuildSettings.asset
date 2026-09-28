@@ -6,14 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/HTY/00.Scenes/HTY_Title.unity
+    path: Assets/Merge/HTY_Title.unity
     guid: af063c830949e0a45a303eebbf91c0dc
   - enabled: 1
-    path: Assets/Merge/HomeBase_HTY 1.unity
-    guid: a7ac7f4e3735030468461a2b3e1f96b7
-  - enabled: 1
-    path: Assets/Merge/JJBBattle 1.unity
-    guid: 3aae069b510e8b34a91b203d6f09ea25
+    path: Assets/Merge/HomeBase_HTY.unity
+    guid: 24e66374240742b4298d1dfe04b5c6e0
   - enabled: 1
     path: Assets/Merge/Elevator.unity
     guid: 5922379ef9c0ad345a485bfc7248880b
