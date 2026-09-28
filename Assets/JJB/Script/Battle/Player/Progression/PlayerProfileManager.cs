@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace JJB.Script.Battle.Player.Progression
 {
@@ -22,12 +23,18 @@ namespace JJB.Script.Battle.Player.Progression
 
             Profile = new PlayerProfile();
         }
+
+        private void Start()
+        {
+            AddMoney(100);
+        }
+
         public void AddMoney(int amount)
         {
             if (amount <= 0)
                 return;
 
-            Profile.money += amount;
+            Profile.money += amount * 15;
         }
     }
 }
