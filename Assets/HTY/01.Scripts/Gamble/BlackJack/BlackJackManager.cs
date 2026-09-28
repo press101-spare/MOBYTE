@@ -163,6 +163,7 @@ public class BlackJackManager : MonoBehaviour
 
         _checkCard = true;
         _playerSumText.text = "당신의 합 :" + _playerSum.ToString();
+        AudioManager.Instance.PlayClipSFX("SFX_CARD");
 
         if (_playerSum > _blackJackNumber)
         {
@@ -349,6 +350,7 @@ public class BlackJackManager : MonoBehaviour
 
             CreateCardImage(cards[i], _dealerCardGroup);
         }
+        AudioManager.Instance.PlayClipSFX("SFX_CARD");
     }
 
     private void CreateCardImage(BlackJackCard card, Transform group)

@@ -30,7 +30,7 @@ public class GambleSuccessEffect_HTY : MonoBehaviour
             {
                 _successText.transform.DOScale(1f, 0.15f);
             });
-
+        AudioManager.Instance.PlayClipSFX("SFX_CHEER");
         PlayParticles();
 
         _successText

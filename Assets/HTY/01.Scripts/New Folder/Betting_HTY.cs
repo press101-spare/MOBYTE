@@ -39,6 +39,7 @@ public class Betting_HTY : MonoBehaviour
                 GambleManager.instance.GetSetting(_currentBettingChip, _currentGamble);
                 PlayerProfileManager.Instance.Profile.money -= bettingChip;
                 GambleManager.instance.GambleStart();
+                AudioManager.Instance.PlayClipSFX("SFX_BUY2");
                 gameObject.SetActive(false);
             }
             else

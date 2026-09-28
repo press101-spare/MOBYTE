@@ -20,12 +20,12 @@ public class MoveCup : MonoBehaviour
 
     [Header("컵 이동")]
     [SerializeField] private float _raiseHeight = 200f;
-    [SerializeField] private float _during = 0.5f;
+    [SerializeField] private float _during = 0.3f;
 
     [Header("셔플")]
-    [SerializeField] private int _minMoveCount = 3;
-    [SerializeField] private int _maxMoveCount = 6;
-    [SerializeField] private float _shuffleDelay = 0.2f;
+    [SerializeField] private int _minMoveCount = 6;
+    [SerializeField] private int _maxMoveCount = 12;
+    [SerializeField] private float _shuffleDelay = 0.1f;
 
     [Header("선택")]
     [SerializeField] private float _selectTimeLimit = 5f;
