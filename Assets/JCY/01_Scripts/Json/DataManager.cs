@@ -43,12 +43,17 @@ public class DataManager : MonoBehaviour
 
     private void Start()
     {
-        // 🟢 씬이 로드 완료되고 매니저들이 Awake()를 마친 직후(Start 시점) 대기 데이터가 있다면 복원!
         if (pendingSaveData != null)
         {
             ApplyLoadedData(pendingSaveData);
-            pendingSaveData = null; // 대기 데이터 사용 완료 후 초기화
+            pendingSaveData = null;
+            return;
         }
+
+        SaveData data = saveManager.LoadGame();
+
+        if (data != null)
+            ApplyLoadedData(data);
     }
 
     // ===================================================
@@ -57,6 +62,9 @@ public class DataManager : MonoBehaviour
     public void SaveGame()
     {
         SaveData data = new SaveData();
+        
+        if (data == null)
+            data = new SaveData();
 
         data.currentSceneNum = currentSceneIndex;
         
@@ -72,9 +80,16 @@ public class DataManager : MonoBehaviour
 
             
             case 2:
-                data.BattleSaveData = new BattleSaveData();
+                if (data.BattleSaveData == null)
+                    data.BattleSaveData = new BattleSaveData();
 
-                data.BattleSaveData.playerHp = playerCurrentHp;
+                if (JJBGameManager.Instance != null &&
+                    JJBGameManager.Instance.PlayerJjbHealth != null)
+                {
+                    data.BattleSaveData.playerHp =
+                        JJBGameManager.Instance.PlayerJjbHealth.CurrentHealth;
+                }
+
                 data.BattleSaveData.currentStage = currentStage;
                 break;
 
@@ -138,6 +153,17 @@ public class DataManager : MonoBehaviour
     {
         // 1. 기본 상태 데이터 복원
         CurrentBattleData = data.BattleSaveData;
+        
+        // 저장된 스테이지 복원
+        if (CurrentBattleData != null &&
+            JJBGameManager.Instance != null &&
+            JJBGameManager.Instance.StageManager != null)
+        {
+            JJBGameManager.Instance.StageManager.SetStageIndex(
+                CurrentBattleData.currentStage
+            );
+        }
+        
         if (PlayerProfileManager.Instance != null && PlayerProfileManager.Instance.Profile != null)
         {
             PlayerProfileManager.Instance.Profile.money = data.currntChip;

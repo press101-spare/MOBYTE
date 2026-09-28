@@ -1,16 +1,9 @@
-
-using JJB.Script.Battle.Player.Progression;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.NetworkInformation;
-using UnityEditor.Experimental.GraphView;
-using UnityEditor.Rendering;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using DG.Tweening;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class SelectTest_HTY : MonoBehaviour
 {
@@ -34,13 +27,24 @@ public class SelectTest_HTY : MonoBehaviour
     [SerializeField] private GameObject _loto;
     [SerializeField] private GameObject _slot;
 
+    [Header("씬 이동")]
+    [SerializeField] private CanvasGroup _fadePanel;
+    [SerializeField] private string _elevatorSceneName = "Elevator_HTY";
+    [SerializeField] private float _fadeDuration = 0.5f;
     
+    private bool _isSceneMoving;
 
     public bool _canSelect =true;
 
 
     private void Start()
     {
+        if (_fadePanel != null)
+        {
+            _fadePanel.alpha = 0f;
+            _fadePanel.blocksRaycasts = false;
+        }
+        
         StartCoroutine(Coll());
     }
 
@@ -112,11 +116,57 @@ public class SelectTest_HTY : MonoBehaviour
                 _slot.SetActive(true);
                 _canSelect = false;
                 break;
+            case GambleType.Elevator:
+                MoveToElevator();
+                break;
         }
+    }
+    
+    private void MoveToElevator()
+    {
+        if (_isSceneMoving)
+            return;
+
+        _isSceneMoving = true;
+        _canSelect = false;
+
+        if (_selectBT != null)
+            _selectBT.SetActive(false);
+
+        // 씬 이동 직전에 현재 데이터 저장
+        DataManager dataManager =
+            FindFirstObjectByType<DataManager>();
+
+        if (dataManager != null)
+            dataManager.SaveGame();
+
+        // FadePanel이 없으면 바로 이동
+        if (_fadePanel == null)
+        {
+            SceneManager.LoadScene(_elevatorSceneName);
+            return;
+        }
+
+        _fadePanel.blocksRaycasts = true;
+        _fadePanel.DOKill();
+
+        _fadePanel
+            .DOFade(1f, _fadeDuration)
+            .SetEase(Ease.InOutSine)
+            .OnComplete(() =>
+            {
+                SceneManager.LoadScene(_elevatorSceneName);
+            });
     }
 
     public void ExitGame()
     {
         _canSelect = true;
+    }
+    
+    private void OnDestroy()
+    {
+        if (_fadePanel != null)
+            _fadePanel.DOKill();
     }
 }
