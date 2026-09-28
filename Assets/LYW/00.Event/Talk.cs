@@ -53,6 +53,7 @@ public sealed class Talk : MonoBehaviour
     private void Start()
     {
         StartDialogue();
+        AudioManager.Instance.PlayBGM("BGM_Map1");
     }
 
     public void StartDialogue()

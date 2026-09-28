@@ -1,11 +1,13 @@
 ﻿using DG.Tweening;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 namespace JJB.Script
 {
-    public class Elevator : MonoBehaviour, IPointerDownHandler
+    [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(Collider2D))]
+    public class Elevator : MonoBehaviour
     {
         [Header("Player")] 
         [SerializeField] private Transform player;
@@ -19,10 +21,13 @@ namespace JJB.Script
 
         [SerializeField] private CanvasGroup fadePanel;
         [SerializeField] private float fadeDuration = 0.5f;
-        
-        private Animator _animator;
 
-        private static readonly int IsOpen = Animator.StringToHash("Open");
+        private static readonly int IsOpenHash =
+            Animator.StringToHash("Open");
+
+        private Animator _animator;
+        private Collider2D _collider;
+        private Camera _camera;
 
         private bool _canInteract;
         private bool _isMoving;
@@ -30,7 +35,9 @@ namespace JJB.Script
         private void Awake()
         {
             _animator = GetComponent<Animator>();
-            
+            _collider = GetComponent<Collider2D>();
+            _camera = Camera.main;
+
             if (outlineObject != null)
                 outlineObject.SetActive(false);
 
@@ -43,6 +50,12 @@ namespace JJB.Script
 
         private void Update()
         {
+            CheckDistance();
+            CheckInput();
+        }
+
+        private void CheckDistance()
+        {
             if (player == null)
                 return;
 
@@ -54,32 +67,45 @@ namespace JJB.Script
             _canInteract = distance <= interactDistance;
 
             if (outlineObject != null)
-            {
-                outlineObject.SetActive(
-                    _canInteract && !_isMoving
-                );
-            }
+                outlineObject.SetActive(_canInteract && !_isMoving);
         }
 
-        public void OnPointerDown(PointerEventData eventData)
+        private void CheckInput()
         {
-            if (!_canInteract)
+            if (!_canInteract || _isMoving)
                 return;
 
-            if (_isMoving)
+            if (Pointer.current == null)
                 return;
 
+            if (!Pointer.current.press.wasPressedThisFrame)
+                return;
+
+            Vector2 screenPosition =
+                Pointer.current.position.ReadValue();
+
+            Vector2 worldPosition =
+                _camera.ScreenToWorldPoint(screenPosition);
+
+            if (!_collider.OverlapPoint(worldPosition))
+                return;
+
+            Interact();
+        }
+
+        private void Interact()
+        {
             _isMoving = true;
 
             if (outlineObject != null)
                 outlineObject.SetActive(false);
 
-            if (_animator != null)
-                _animator.SetBool(IsOpen, true);
+            Debug.Log("엘리베이터 클릭 성공");
+
+            _animator.SetBool(IsOpenHash, true);
         }
 
-        // Elevator Open 애니메이션 마지막 프레임에서
-        // Animation Event로 호출
+        // Open 애니메이션 마지막 프레임 Animation Event
         public void OnElevatorOpenFinished()
         {
             FadeAndMoveScene();
@@ -94,7 +120,6 @@ namespace JJB.Script
             }
 
             fadePanel.blocksRaycasts = true;
-
             fadePanel.DOKill();
 
             fadePanel
