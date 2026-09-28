@@ -58,12 +58,14 @@ namespace JJB.Script.Slot
             if (a == b && b == c)
             {
                 resultText.text = "JACKPOT \n GetChip:2000";
+                GambleManager.instance._successEffect.PlayEffect("JACKPOT!");
                 return;
             }
 
             if (a == b || b == c || a == c)
             {
-                resultText.text = "PAIR \n GetChip:700";
+                resultText.text = "PAIR \n GetChip:300";
+                GambleManager.instance._successEffect.PlayEffect("PAIR!");
                 return;
             }
 
@@ -71,7 +73,12 @@ namespace JJB.Script.Slot
         }
         public void UseChip()
         {
-            PlayerProfileManager.Instance.Profile.money -= 500;
+            if(PlayerProfileManager.Instance.Profile.money>= 50)
+            {
+                PlayerProfileManager.Instance.Profile.money -= 50;
+                AudioManager.Instance.PlayClipSFX("SFX_BUY2");
+            }
+            
         }
     }
 }

@@ -4,6 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// 대화의 진행 상태를 관리하는 컨트롤러입니다.
+/// 타이핑, 다음 대사, 전체 스킵, 선택지 대기와 효과 실행을 담당합니다.
+/// 화면 표시는 DialogueView, 데이터 보관은 EventDialogueData가 담당합니다.
+/// </summary>
 public sealed class Talk : MonoBehaviour
 {
     [Header("대화")]
@@ -16,8 +21,10 @@ public sealed class Talk : MonoBehaviour
     [Header("종료")]
     [SerializeField] private UnityEvent onDialogueEnded;
 
+    // 현재 출력 중인 대사의 배열 번호입니다.
     private int index;
 
+    // 대화/타이핑/선택지 상태를 분리하여 잘못된 중복 입력을 막습니다.
     private bool running;
     private bool typing;
     private bool choosing;
@@ -26,6 +33,7 @@ public sealed class Talk : MonoBehaviour
 
     private void OnEnable()
     {
+        // View의 버튼 입력을 대화 진행 함수와 연결합니다.
         if (view == null)
             return;
 
@@ -45,6 +53,7 @@ public sealed class Talk : MonoBehaviour
     private void Start()
     {
         StartDialogue();
+        AudioManager.Instance.PlayBGM("BGM_Map1");
     }
 
     public void StartDialogue()
@@ -64,6 +73,7 @@ public sealed class Talk : MonoBehaviour
         running = true;
         choosing = false;
 
+        // 등록된 이벤트 중 유효한 대화 하나를 무작위로 선택합니다.
         dialogueData.SelectRandomDialogue();
 
         Show();
@@ -71,9 +81,11 @@ public sealed class Talk : MonoBehaviour
 
     private void Next()
     {
+        // 선택지 화면에서는 패널/NEXT 클릭으로 넘어가지 못하게 합니다.
         if (!running || choosing)
             return;
 
+        // 타이핑 중 클릭하면 다음 대사 대신 현재 문장을 즉시 완성합니다.
         if (typing)
         {
             FinishTyping();
@@ -91,6 +103,7 @@ public sealed class Talk : MonoBehaviour
 
     private void Skip()
     {
+        // 선택지를 고르기 전에는 스킵할 수 없습니다.
         if (!running || choosing)
             return;
 
@@ -100,6 +113,7 @@ public sealed class Talk : MonoBehaviour
         if (choosing)
             return;
 
+        // 잘못 연결된 대사 순환으로 무한 반복되는 것을 방지합니다.
         HashSet<int> visited = new();
 
         while (visited.Add(index))
@@ -121,6 +135,7 @@ public sealed class Talk : MonoBehaviour
 
             index = next;
 
+            // 선택지가 없는 대사는 계속 건너뛰고 선택지가 나오면 멈춥니다.
             if (!HasChoices(nextNode))
                 continue;
 
@@ -147,6 +162,7 @@ public sealed class Talk : MonoBehaviour
             return;
         }
 
+        // 대사별 배경이 없으면 선택된 이벤트의 기본 배경을 사용합니다.
         Sprite image = node.background != null
             ? node.background
             : dialogueData.DefaultBackground;
@@ -174,6 +190,7 @@ public sealed class Talk : MonoBehaviour
 
     private IEnumerator TypeText(int length)
     {
+        // 실제 시간 기준으로 한 글자씩 공개합니다(Time.timeScale의 영향을 받지 않음).
         for (int i = 1; i <= length; i++)
         {
             yield return new WaitForSecondsRealtime(
@@ -210,6 +227,7 @@ public sealed class Talk : MonoBehaviour
             !HasChoices(node))
             return;
 
+        // 버튼 번호를 다시 실제 ChoiceData로 변환해 선택 결과를 실행합니다.
         choosing = view.ShowChoices(
             node.choices,
             i => SelectChoice(node.choices[i])
@@ -234,6 +252,7 @@ public sealed class Talk : MonoBehaviour
 
         view.ClearChoices();
 
+        // 하나의 선택지에 여러 효과를 순서대로 연결할 수 있습니다.
         if (choice.effects != null)
         {
             Array.ForEach(
@@ -266,6 +285,7 @@ public sealed class Talk : MonoBehaviour
 
     private int GetNext(int target)
     {
+        // -1은 다음 대사, -2는 종료, 0 이상은 지정된 대사 번호입니다.
         return target == -1
             ? index + 1
             : target;
@@ -314,6 +334,7 @@ public sealed class Talk : MonoBehaviour
 
         view.Clear();
 
+        // 선택된 이벤트 전체가 끝났을 때 실행할 공통 효과입니다.
         if (dialogueData.EndEffects != null)
         {
             Array.ForEach(

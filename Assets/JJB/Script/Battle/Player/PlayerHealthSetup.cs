@@ -19,7 +19,18 @@ namespace JJB.Script.Battle.Player
         {
             int maxHealth = PlayerProfileManager.Instance.Profile.stats.maxHealth;
 
-            _health.Initialize(maxHealth);
+            DataManager dataManager = FindFirstObjectByType<DataManager>();
+
+            if (dataManager != null &&
+                dataManager.CurrentBattleData != null &&
+                dataManager.CurrentBattleData.playerHp != 0)
+            {
+                _health.Initialize(dataManager.CurrentBattleData.playerHp);
+            }
+            else
+            {
+                _health.Initialize(maxHealth);
+            }
         }
     }
 }

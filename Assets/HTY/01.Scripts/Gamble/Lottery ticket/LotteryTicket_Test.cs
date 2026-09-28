@@ -21,6 +21,8 @@ public class LotteryTicket_Test : MonoBehaviour
     [SerializeField] private int _buyChip = 500;
     [SerializeField] private TextMeshProUGUI _textLoto;
 
+    [SerializeField] private Button _bt;
+
     private void Awake()
     {
         // Inspector에서 배열 크기를 설정하지 않아도 됨
@@ -62,6 +64,7 @@ public class LotteryTicket_Test : MonoBehaviour
         if (clickDic.Count > 0)
         {
             ResetLotto();
+            _bt.interactable = true;
         }
     }
 
@@ -99,8 +102,10 @@ public class LotteryTicket_Test : MonoBehaviour
             Debug.Log("돈이 부족합니다.");
             return;
         }
-
+        transform.parent.parent.gameObject.SetActive(false);
+        transform.parent.gameObject.SetActive(true);
         PlayerProfileManager.Instance.Profile.money -= _buyChip;
+        AudioManager.Instance.PlayClipSFX("SFX_BUY2");
     }
 
     public void EndLoto()
@@ -130,44 +135,48 @@ public class LotteryTicket_Test : MonoBehaviour
         if (count == 1)
         {
             PlayerProfileManager.Instance.Profile.money += 400;
+            StartCoroutine(Coll(count,400));
         }
         else if (count == 2)
         {
             PlayerProfileManager.Instance.Profile.money += 600;
+            StartCoroutine(Coll(count, 600));
         }
         else if (count == 3)
         {
             PlayerProfileManager.Instance.Profile.money += 900;
+            StartCoroutine(Coll(count, 900));
         }
         else if (count == 4)
         {
             PlayerProfileManager.Instance.Profile.money += 1500;
+            StartCoroutine(Coll(count, 1500));
         }
         else if (count == 5)
         {
             PlayerProfileManager.Instance.Profile.money += 3000;
+            StartCoroutine(Coll(count, 3000));
         }
 
-        StartCoroutine(Coll(count));
+        _bt.interactable = false;
+        
     }
 
-    private IEnumerator Coll(int count)
+    private IEnumerator Coll(int count,int getchip)
     {
         _textLoto.gameObject.SetActive(true);
 
-        // 이전 판에서 Fade 됐을 수 있으므로 알파값 복구
         _textLoto.alpha = 1f;
 
         _textLoto.text =
             $"{ranNums[0]}, {ranNums[1]}, {ranNums[2]}, {ranNums[3]}, {ranNums[4]}\n" +
-            $"맞은 개수 {count}";
+            $"맞은 개수 {count} \n 획득한 칩 {getchip}";
+        GambleManager.instance._successEffect.PlayEffect($"{count}일치!");
 
         yield return new WaitForSeconds(4f);
 
         // Fade 실행
         _textLoto.DOFade(0f, 1.2f);
-
-        // DOFade는 기다리지 않기 때문에 직접 기다려줘야 함
         yield return new WaitForSeconds(1.2f);
 
         GambleManager.instance.selectCompo._canSelect = true;

@@ -404,6 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ani: {fileID: 3124645376977065388}
+  sceneName: HomeBase_HTY
 --- !u!1 &919954220904017122
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ public class ShopManager_JCY : MonoBehaviour
     private int _reRoll;
 
     [Header("SO 관련")]
-    private List<DiceSO_JCY> currentDiceSO = new List<DiceSO_JCY>();
+    public List<DiceSO_JCY> currentDiceSO = new List<DiceSO_JCY>();
 
     Sequence seq;
 

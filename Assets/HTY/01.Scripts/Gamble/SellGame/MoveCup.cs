@@ -166,7 +166,7 @@ public class MoveCup : MonoBehaviour
         SetCupButtons(false);
         _resultText.text = "시간 초과!";
         _timer.gameObject.SetActive(false);
-
+        GambleManager.instance._successEffect.PlayEffect("실패!");
         yield return new WaitForSeconds(_openWaitTime);
         yield return StartCoroutine(RaiseAllCups());
 
@@ -205,8 +205,8 @@ public class MoveCup : MonoBehaviour
             if (_cups[i] == selectedCup) continue;
             _cups[i].DOAnchorPosY(_cups[i].anchoredPosition.y + _raiseHeight, _during);
         }
-
-        yield return new WaitForSeconds(_during);
+        GambleManager.instance._successEffect.PlayEffect(selectedCup == _winCup ? "정답!" : "실패!");
+        yield return new WaitForSeconds(5);
 
         EndGame(selectedCup == _winCup ? 2 : 0);
     }

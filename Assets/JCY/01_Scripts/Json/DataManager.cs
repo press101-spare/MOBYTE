@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using JJB.Script.Battle;
+using JJB.Script.Battle.Player.Progression;
 using JJB.Script.Battle.Stage;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -18,7 +19,10 @@ public class DataManager : MonoBehaviour
     public int currentStage => JJBGameManager.Instance != null && JJBGameManager.Instance.StageManager != null 
         ? JJBGameManager.Instance.StageManager.CurrentStageIndex 
         : 0;
-    public int gambleProgressData = 0;
+
+    public int currentChip => PlayerProfileManager.Instance != null && PlayerProfileManager.Instance.Profile != null
+        ? PlayerProfileManager.Instance.Profile.money
+        : 0;
 
     [Header("현재 플레이어의 주사위 덱")] 
     public List<DiceSO_JCY> playerDeck => DiceDeckManager_JCY.Instance != null ? DiceDeckManager_JCY.Instance.diceCollection : null;
@@ -28,6 +32,8 @@ public class DataManager : MonoBehaviour
 
     // 🟢 씬이 전환되어도 파괴되지 않고 세이브 데이터를 유지하는 정적(static) 대기열
     private static SaveData pendingSaveData = null;
+    
+    public BattleSaveData CurrentBattleData { get; private set; }
 
     private void Awake()
     {
@@ -45,22 +51,6 @@ public class DataManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Keyboard.current.sKey.wasPressedThisFrame)
-        {
-            SaveGame();
-        }
-        if (Keyboard.current.dKey.wasPressedThisFrame)
-        {
-            saveManager.DeleteSaveFile();
-        }
-        if (Keyboard.current.lKey.wasPressedThisFrame)
-        {
-            LoadGame();
-        }
-    }
-
     // ===================================================
     // 🔴 게임 저장 (Save)
     // ===================================================
@@ -69,10 +59,32 @@ public class DataManager : MonoBehaviour
         SaveData data = new SaveData();
 
         data.currentSceneNum = currentSceneIndex;
-        data.currentStage = currentStage;
-        data.playerCurrentHp = playerCurrentHp;
-        data.gambleProgressData = gambleProgressData;
+        
+        switch (data.currentSceneNum)
+        {
+            
+            case 0:
+                data.ShopSaveData = new ShopSaveData();
+            //    data.shopItemIDs = 
 
+                // 상점 데이터 저장
+                break;
+
+            
+            case 2:
+                data.BattleSaveData = new BattleSaveData();
+
+                data.BattleSaveData.playerHp = playerCurrentHp;
+                data.BattleSaveData.currentStage = currentStage;
+                break;
+
+            
+            case 3:
+                break;
+        }
+
+        data.currntChip = currentChip;
+        
         // 주사위 SO 덱 저장
         if (playerDeck != null)
         {
@@ -125,8 +137,11 @@ public class DataManager : MonoBehaviour
     private void ApplyLoadedData(SaveData data)
     {
         // 1. 기본 상태 데이터 복원
-        playerCurrentHp = data.playerCurrentHp;
-        gambleProgressData = data.gambleProgressData;
+        CurrentBattleData = data.BattleSaveData;
+        if (PlayerProfileManager.Instance != null && PlayerProfileManager.Instance.Profile != null)
+        {
+            PlayerProfileManager.Instance.Profile.money = data.currntChip;
+        }
 
         // 2. 주사위 덱 복원
         if (playerDeck != null)
