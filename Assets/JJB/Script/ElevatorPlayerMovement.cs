@@ -5,8 +5,9 @@ namespace JJB.Script
 {
     public class ElevatorPlayerMovement : MonoBehaviour
     {
-        [SerializeField] private float speed;
-        private Vector2 _dir;
+        [SerializeField] private SimpleJoystick joystick;
+        [SerializeField] private float moveSpeed = 5f;
+
         private Rigidbody2D _rb;
 
         private void Awake()
@@ -16,12 +17,12 @@ namespace JJB.Script
 
         private void FixedUpdate()
         {
-            _rb.linearVelocityX =  _dir.x * speed;
-        }
+            float moveX = joystick.Direction.x;
 
-        private void OnMove(InputValue value)
-        {
-            _dir = value.Get<Vector2>();
+            _rb.linearVelocity = new Vector2(
+                moveX * moveSpeed,
+                _rb.linearVelocity.y
+            );
         }
     }
 }

@@ -25,7 +25,10 @@ namespace JJB.Script.Battle
         [SerializeField] private float victoryMoveDuration = 0.4f;
         [SerializeField] private float textFadeDuration = 0.25f;
         [SerializeField] private float buttonDuration = 0.25f;
-
+        
+        private Vector3 _returnButtonScale;
+        private Vector3 _battleButtonScale;
+        
         private const int VictoryExp = 5;
         private const int VictoryMoney = 200;
 
@@ -38,13 +41,16 @@ namespace JJB.Script.Battle
 
         private void Awake()
         {
+            if (returnButton != null)
+                _returnButtonScale = returnButton.localScale;
+
+            if (battleButton != null)
+                _battleButtonScale = battleButton.localScale;
+
             if (victoryText != null)
             {
-                _victoryTextRect =
-                    victoryText.GetComponent<RectTransform>();
-
-                _victoryTextPosition =
-                    _victoryTextRect.anchoredPosition;
+                _victoryTextRect = victoryText.GetComponent<RectTransform>();
+                _victoryTextPosition = _victoryTextRect.anchoredPosition;
             }
 
             if (victoryPanel != null)
@@ -131,10 +137,10 @@ namespace JJB.Script.Battle
                 moneyText.alpha = 0f;
 
             if (returnButton != null)
-                returnButton.localScale = Vector3.zero;
+                returnButton.localScale = _returnButtonScale * 0.8f;
 
             if (battleButton != null)
-                battleButton.localScale = Vector3.zero;
+                battleButton.localScale = _battleButtonScale * 0.8f;
 
             _sequence = DOTween.Sequence();
 
@@ -183,22 +189,20 @@ namespace JJB.Script.Battle
                 );
             }
 
-            // 돌아가기 버튼
             if (returnButton != null)
             {
                 _sequence.Append(
                     returnButton
-                        .DOScale(1f, buttonDuration)
+                        .DOScale(_returnButtonScale, buttonDuration)
                         .SetEase(Ease.OutBack)
                 );
             }
 
-            // 전투하기 버튼
             if (battleButton != null)
             {
                 _sequence.Join(
                     battleButton
-                        .DOScale(1f, buttonDuration)
+                        .DOScale(_battleButtonScale, buttonDuration)
                         .SetEase(Ease.OutBack)
                 );
             }

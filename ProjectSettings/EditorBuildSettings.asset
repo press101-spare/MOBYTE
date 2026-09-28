@@ -9,19 +9,16 @@ EditorBuildSettings:
     path: Assets/HTY/00.Scenes/HTY_Title.unity
     guid: af063c830949e0a45a303eebbf91c0dc
   - enabled: 1
-    path: Assets/JJB/Scene/JJBBattle.unity
-    guid: 86f80ee761406e04d839867a3627a6ca
+    path: Assets/Merge/HomeBase_HTY 1.unity
+    guid: a7ac7f4e3735030468461a2b3e1f96b7
   - enabled: 1
-    path: Assets/HTY/00.Scenes/HomeBase_HTY.unity
-    guid: 24e66374240742b4298d1dfe04b5c6e0
+    path: Assets/Merge/JJBBattle 1.unity
+    guid: 3aae069b510e8b34a91b203d6f09ea25
   - enabled: 1
-    path: Assets/LYW/01.Scene/Map.unity
-    guid: de77bbbb7573d334ba9d123b9a672ee7
-  - enabled: 1
-    path: Assets/JJB/Scene/Elevator.unity
+    path: Assets/Merge/Elevator.unity
     guid: 5922379ef9c0ad345a485bfc7248880b
   - enabled: 1
-    path: Assets/Sjm/03. Scene/Colllect Scene/Collection Boss.unity
+    path: Assets/Settings/Sjm/03. Scene/Colllect Scene/Collection Boss.unity
     guid: 4ec88d3f64df83e478377cb8ac124e6e
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
