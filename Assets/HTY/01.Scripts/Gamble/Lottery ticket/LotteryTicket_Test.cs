@@ -18,7 +18,7 @@ public class LotteryTicket_Test : MonoBehaviour
     private Dictionary<Button, int> buttonDic = new Dictionary<Button, int>();
     private Dictionary<int, bool> clickDic = new Dictionary<int, bool>();
 
-    [SerializeField] private int _buyChip = 500;
+    [SerializeField] private int _buyChip = 100;
     [SerializeField] private TextMeshProUGUI _textLoto;
 
     [SerializeField] private Button _bt;
@@ -100,9 +100,11 @@ public class LotteryTicket_Test : MonoBehaviour
         if (PlayerProfileManager.Instance.Profile.money < _buyChip)
         {
             Debug.Log("돈이 부족합니다.");
+            GambleManager.instance.ResetGamble();
+            transform.parent.parent.gameObject.SetActive(false);
             return;
         }
-        transform.parent.parent.gameObject.SetActive(false);
+        transform.parent.parent.GetChild(0).gameObject.SetActive(false);
         transform.parent.gameObject.SetActive(true);
         PlayerProfileManager.Instance.Profile.money -= _buyChip;
         AudioManager.Instance.PlayClipSFX("SFX_BUY2");

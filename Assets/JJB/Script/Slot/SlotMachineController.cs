@@ -21,16 +21,27 @@ namespace JJB.Script.Slot
 
         public void Spin()
         {
-            if (_isSpinning)
-                return;
+            if(PlayerProfileManager.Instance.Profile.money>=50)
+            {
+                if (_isSpinning)
+                    return;
 
-            StartCoroutine(SpinRoutine());
+                StartCoroutine(SpinRoutine());
+            }
+            else
+            {
+                GambleManager.instance.ResetGamble();
+                transform.parent.parent.gameObject.SetActive(false);
+            }
+            
+
+            
         }
 
         private IEnumerator SpinRoutine()
         {
             _isSpinning = true;
-
+            PlayerProfileManager.Instance.Profile.money -= 50;
             spinButton.interactable = false;
 
             if (resultText != null)
