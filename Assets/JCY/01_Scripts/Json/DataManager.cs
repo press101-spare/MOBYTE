@@ -46,13 +46,7 @@ public class DataManager : MonoBehaviour
         {
             ApplyLoadedData(pendingSaveData);
             pendingSaveData = null;
-            return;
         }
-
-        SaveData data = saveManager.LoadGame();
-
-        if (data != null)
-            ApplyLoadedData(data);
     }
 
     // ===================================================
@@ -60,26 +54,32 @@ public class DataManager : MonoBehaviour
     // ===================================================
     public void SaveGame()
     {
-        SaveData data = new SaveData();
-        
+        SaveData data = saveManager.LoadGame();
+
         if (data == null)
             data = new SaveData();
 
         data.currentSceneNum = currentSceneIndex;
-        
+
+        // 돈 저장
+        if (PlayerProfileManager.Instance != null &&
+            PlayerProfileManager.Instance.Profile != null)
+        {
+            data.currntChip =
+                PlayerProfileManager.Instance.Profile.money;
+        }
+
         switch (data.currentSceneNum)
         {
-            
             case 0:
-                data.ShopSaveData = new ShopSaveData();
-            //    data.shopItemIDs = 
+                if (data.ShopSaveData == null)
+                    data.ShopSaveData = new ShopSaveData();
 
-                // 상점 데이터 저장
                 break;
 
-            
             case 2:
-                data.BattleSaveData = new BattleSaveData();
+                if (data.BattleSaveData == null)
+                    data.BattleSaveData = new BattleSaveData();
 
                 if (JJBGameManager.Instance != null &&
                     JJBGameManager.Instance.PlayerJjbHealth != null)
@@ -88,39 +88,40 @@ public class DataManager : MonoBehaviour
                         JJBGameManager.Instance.PlayerJjbHealth.CurrentHealth;
                 }
 
-                data.BattleSaveData.currentStage = currentStage;
+                data.BattleSaveData.currentStage =
+                    currentStage;
+
                 break;
 
-            
             case 3:
                 break;
         }
 
-        data.currntChip = currentChip;
-        
-        // 주사위 SO 덱 저장
+        // 주사위 덱 갱신
+        data.diceDeckIDs.Clear();
+
         if (playerDeck != null)
         {
             foreach (DiceSO_JCY dice in playerDeck)
             {
                 if (dice != null)
-                {
                     data.diceDeckIDs.Add(dice.diceName);
-                }
             }
         }
-        
-        // 모든 주사위 SO 배열 저장
+
+        // 모든 주사위 갱신
+        data.allDiceIDs.Clear();
+
         if (allDiceSo != null)
         {
             foreach (DiceSO_JCY dice in allDiceSo)
             {
                 if (dice != null)
-                {
                     data.allDiceIDs.Add(dice.diceName);
-                }
             }
         }
+
+        Debug.Log($"저장되는 돈 : {data.currntChip}");
 
         saveManager.SaveGame(data);
     }
@@ -197,7 +198,5 @@ public class DataManager : MonoBehaviour
 
             DiceManager_JCY.Instance.allDiceSo = loadedDiceList.ToArray();
         }
-
-        Debug.Log("[DataManager] 씬 이동 완료 및 세이브 데이터 최종 적용 성공!");
     }
 }

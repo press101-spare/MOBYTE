@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: "\uB51C\uB7EC"
   maxHealth: 300
-  attackPower: 23
-  attackPower2: 27
-  attackPower3: 31
+  attackPower: 15
+  attackPower2: 20
+  attackPower3: 25
   spriteLibraryAsset: {fileID: 7108339969198208228, guid: 47ed29c5e176fa94e9efb8a7d0e4944f,
     type: 3}
   ability: {fileID: 11400000, guid: 27fbe9a7d2cceac42a0b980da2051d4b, type: 2}

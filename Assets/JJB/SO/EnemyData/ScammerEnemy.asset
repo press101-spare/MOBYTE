@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ScammerEnemy
   m_EditorClassIdentifier: 
   enemyName: "\uC0AC\uAE30\uAFBC"
-  maxHealth: 120
+  maxHealth: 150
   attackPower: 11
-  attackPower2: 14
-  attackPower3: 17
+  attackPower2: 15
+  attackPower3: 21
   spriteLibraryAsset: {fileID: 7108339969198208228, guid: d6dd05d419375b34ba9c9c621b879cfe,
     type: 3}
   ability: {fileID: 0}

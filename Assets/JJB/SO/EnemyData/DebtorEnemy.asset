@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DebtorEnemy
   m_EditorClassIdentifier: 
   enemyName: "\uCC44\uBB34\uC790"
-  maxHealth: 100
+  maxHealth: 125
   attackPower: 10
   attackPower2: 13
   attackPower3: 16
