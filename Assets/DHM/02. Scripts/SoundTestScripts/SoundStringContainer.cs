@@ -19,4 +19,5 @@ public static class SoundStringContainer
     public static readonly string SFX_BOOK = "SFX_BOOK";
     public static readonly string SFX_ROLLING = "SFX_ROLLING";
     public static readonly string SFX_GLASS = "SFX_GLASS";
+    public static readonly string SFX_HURT = "SFX_Hurt";
 }

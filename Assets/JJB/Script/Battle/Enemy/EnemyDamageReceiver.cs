@@ -40,6 +40,8 @@ namespace JJB.Script.Battle.Enemy
             
             _enemy.Health.TakeDamage(damage);
             
+            AudioManager.Instance.PlayClipSFX("SFX_Hurt");
+            
             _hitFlash?.Play();
         }
         

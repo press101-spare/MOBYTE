@@ -1,10 +1,21 @@
 ﻿using JJB.Script.Battle.Enemy;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
 
 namespace JJB.Script.Battle.Player
 {
     public class PlayerDamageReceiver : MonoBehaviour
     {
+        [Header("Hit Effect")]
+        [SerializeField] private Image playerImage;
+        [SerializeField] private RectTransform playerVisual;
+        [SerializeField] private float hitTilt = 15f;
+        [SerializeField] private float hitDuration = 0.1f;
+
+        private Color _originalColor;
+        private Vector3 _originalRotation;
+        
         private JJBHealth _health;
         private DiceBattleAdapter _diceBattleAdapter;
         private EnemyDamageReceiver _enemyDamageReceiver;
@@ -15,6 +26,12 @@ namespace JJB.Script.Battle.Player
         private void Awake()
         {
             _health = GetComponent<JJBHealth>();
+            
+            if (playerImage != null)
+                _originalColor = playerImage.color;
+
+            if (playerVisual != null)
+                _originalRotation = playerVisual.localEulerAngles;
         }
 
         public void Initialize(
@@ -78,6 +95,10 @@ namespace JJB.Script.Battle.Player
             }
 
             _health.TakeDamage(damage);
+            
+            PlayHitEffect();
+            
+            AudioManager.Instance.PlayClipSFX("SFX_Hurt");
 
             if (_reflectionEnabled &&
                 _enemyDamageReceiver != null)
@@ -103,6 +124,45 @@ namespace JJB.Script.Battle.Player
         {
             _reflectionEnabled = false;
             _reflectionRate = 0f;
+        }
+        
+        private void PlayHitEffect()
+        {
+            if (playerImage == null || playerVisual == null)
+                return;
+
+            playerImage.DOKill();
+            playerVisual.DOKill();
+
+            playerImage.color = _originalColor;
+            playerVisual.localEulerAngles = _originalRotation;
+
+            Sequence sequence = DOTween.Sequence();
+
+            sequence.Join(
+                playerImage.DOColor(Color.red, hitDuration)
+            );
+
+            sequence.Join(
+                playerVisual.DOLocalRotate(
+                    _originalRotation + new Vector3(0f, 0f, hitTilt),
+                    hitDuration
+                )
+            );
+
+            sequence.Append(
+                playerImage.DOColor(
+                    _originalColor,
+                    hitDuration
+                )
+            );
+
+            sequence.Join(
+                playerVisual.DOLocalRotate(
+                    _originalRotation,
+                    hitDuration
+                )
+            );
         }
     }
 }
