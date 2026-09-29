@@ -181,7 +181,6 @@ public class LotteryTicket_Test : MonoBehaviour
         _textLoto.DOFade(0f, 1.2f);
         yield return new WaitForSeconds(1.2f);
 
-        GambleManager.instance.selectCompo._canSelect = true;
 
         _textLoto.gameObject.SetActive(false);
 

@@ -87,7 +87,6 @@ public class GambleManager : MonoBehaviour
     {
         _bettingChip = 0;
         _gambleData = null;
-        selectCompo._canSelect = true;
     }
 
 

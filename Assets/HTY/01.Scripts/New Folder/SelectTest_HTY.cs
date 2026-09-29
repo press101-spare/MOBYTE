@@ -34,17 +34,10 @@ public class SelectTest_HTY : MonoBehaviour
     
     private bool _isSceneMoving;
 
-    public bool _canSelect =true;
 
 
     private void Start()
     {
-        if (_fadePanel != null)
-        {
-            _fadePanel.alpha = 0f;
-            _fadePanel.blocksRaycasts = false;
-        }
-        _canSelect = true;
         
         StartCoroutine(Coll());
     }
@@ -58,12 +51,6 @@ public class SelectTest_HTY : MonoBehaviour
 
     private void Update()
     {
-        if (!_canSelect)
-        { 
-            _selectBT.SetActive(false);
-            return;
-        }
-
         foreach (var script in _scripts)
         {
             if (script._rangeToPlayer < script._range)
@@ -76,7 +63,6 @@ public class SelectTest_HTY : MonoBehaviour
     }
     public void SelectBT()
     {
-        if (!_canSelect) return;
         _currnetMin = 10;
         _currnetTable = null;
         foreach (var script in _scripts)
@@ -96,7 +82,6 @@ public class SelectTest_HTY : MonoBehaviour
         {
             case GambleType.Shop:
                 _selectPanel.SetActive(true);
-                _canSelect = false;
                 break;
             case GambleType.PinBall:
             case GambleType.BlackJack:
@@ -105,17 +90,14 @@ public class SelectTest_HTY : MonoBehaviour
             case GambleType.Baccarat:
                 _bettingUI.SetActive(true);
                 _bettingUI.GetComponent<Betting_HTY>()._currentGamble = _currnetTable._myGamble;
-                _canSelect = false;
                 break;
             case GambleType.Loto:
                 _loto.gameObject.SetActive(true);
                 _loto.transform.GetChild(0).gameObject.SetActive(true);
                 _loto.transform.GetChild(1).gameObject.SetActive(false);
-                _canSelect = false;
                 break;
             case GambleType.SlotGame:
                 _slot.SetActive(true);
-                _canSelect = false;
                 break;
             case GambleType.Elevator:
                 MoveToElevator();
@@ -159,11 +141,6 @@ public class SelectTest_HTY : MonoBehaviour
             });
     }
 
-    public void ExitGame()
-    {
-        _canSelect = true;
-    }
-    
     private void OnDestroy()
     {
         if (_fadePanel != null)

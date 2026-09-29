@@ -19,6 +19,12 @@ namespace JJB.Script.Slot
 
         private bool _isSpinning;
 
+        private void OnEnable()
+        {
+            spinButton.interactable = true;
+            _isSpinning = false;
+        }
+
         public void Spin()
         {
             if(PlayerProfileManager.Instance.Profile.money>=50)
@@ -68,15 +74,17 @@ namespace JJB.Script.Slot
 
             if (a == b && b == c)
             {
-                resultText.text = "JACKPOT \n GetChip:2000";
+                resultText.text = "JACKPOT \n GetChip:\n2000";
                 GambleManager.instance._successEffect.PlayEffect("JACKPOT!");
+                PlayerProfileManager.Instance.Profile.money += 2000;
                 return;
             }
 
             if (a == b || b == c || a == c)
             {
-                resultText.text = "PAIR \n GetChip:300";
+                resultText.text = "PAIR \n GetChip:\n300";
                 GambleManager.instance._successEffect.PlayEffect("PAIR!");
+                PlayerProfileManager.Instance.Profile.money += 300;
                 return;
             }
 
