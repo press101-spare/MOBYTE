@@ -2,6 +2,7 @@
 using System.Collections;
 using JJB.Script.Battle.Enemy;
 using JJB.Script.Battle.Player;
+using JJB.Script.Battle.Player.Progression;
 using JJB.Script.Battle.Stage;
 using UnityEngine;
 
@@ -148,31 +149,44 @@ namespace JJB.Script.Battle
             }
 
             ChangePhase(BattlePhase.BattleEnd);
+
             if (_enemyHealth.IsDead && !_playerHealth.IsDead)
             {
-                StageManager stageManager =
-                    JJBGameManager.Instance.StageManager;
+                StageManager stageManager = JJBGameManager.Instance.StageManager;
 
-                stageManager.SetStageIndex(
-                    stageManager.CurrentStageIndex + 1
-                );
-                
-                bool isVictory = _enemyHealth != null && _enemyHealth.IsDead && _playerHealth != null && !_playerHealth.IsDead;
-
-                if (isVictory && !_rewardReceived)
+                if (!_rewardReceived)
                 {
                     _rewardReceived = true;
 
                     // 경험치 +5
                     JJBGameManager.Instance.PlayerProgression.AddExp(5);
 
-                    // 돈 +200
-                    JJBGameManager.Instance.AddMoney(JJBGameManager.Instance.CurrentStageIndex * 15);
-                }
+                    // 현재 클리어한 스테이지 기준 보상
+                    // StageIndex가 0부터 시작하므로 +1
+                    int rewardMoney = (stageManager.CurrentStageIndex + 1) * 15;
 
-                if (JJBGameManager.Instance != null)
-                    JJBGameManager.Instance.isFighting = false;
-                
+                    JJBGameManager.Instance.AddMoney(rewardMoney);
+
+                    Debug.Log(
+                        $"전투 보상 +{rewardMoney} / " +
+                        $"현재 돈 : {PlayerProfileManager.Instance.Profile.money}"
+                    );
+
+                    // 다음 스테이지로 증가
+                    stageManager.SetStageIndex(stageManager.CurrentStageIndex + 1);
+
+                    // 돈, 체력, 스테이지 등을 JSON에 저장
+                    DataManager dataManager = FindFirstObjectByType<DataManager>();
+
+                    if (dataManager != null)
+                    {
+                        dataManager.SaveGame();
+                    }
+                    else
+                    {
+                        Debug.LogError("DataManager를 찾지 못했습니다.");
+                    }
+                }
             }
         }
 
