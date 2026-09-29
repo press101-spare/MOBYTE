@@ -59,7 +59,6 @@ public class BaccaratGame : MonoBehaviour
     private void OnEnable()
     {
         _btBetting.SetActive(true);
-        ResetGame();
     }
 
     public void BattingBT(int a)
@@ -226,7 +225,7 @@ public class BaccaratGame : MonoBehaviour
     private IEnumerator EndingDelay(bool isWin)
     {
         yield return new WaitForSeconds(_endingDelay);
-
+        ResetGame();
         if (isWin)
         {
             GambleManager.instance.GambleEnd(2);

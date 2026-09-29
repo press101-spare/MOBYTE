@@ -34,6 +34,14 @@ public class GambleManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (_shopChipText)
+        {
+            _shopChipText.text = PlayerProfileManager.Instance.Profile.money.ToString();
+        }
+    }
+
     public void GetSetting(int chip,GambleSoData data)
     {
         _bettingChip = chip;

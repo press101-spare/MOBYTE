@@ -10,27 +10,7 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MOBYTE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HTY/07.Fonts/CookieRun Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HTY/07.Fonts/CookieRun Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceEffect_JCY.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JCY/01_Scripts/DIce/DiceEffect_JCY.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleTurnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/BattleTurnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/Progression/PlayerProfileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JJB/Script/Battle/Player/Progression/PlayerProfileManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Merge/HTY_Title.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Merge/HTY_Title.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Merge/HomeBase_HTY.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Merge/HomeBase_HTY.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Merge/JJBBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Merge/JJBBattle.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunInfo.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PerformanceTestRunSettings.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/GmarketSansTTF/GmarketSansTTFBold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/GmarketSansTTF/GmarketSansTTFBold SDF 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/NEXON_Warhaven_Bold SDF 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/NEXON_Warhaven_Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/The Jamsil 4 Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Sjm/02. Asset/The Jamsil 4 Medium SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="f99229c9-bc82-458e-81c3-9f996b9d7f22" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,7 +154,7 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;JJB&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;JCY&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -198,7 +178,7 @@
       <method v="2" />
     </configuration>
     <configuration name="독립실행형 플레이어" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/DiceCasino\DiceCasino.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Mobyte\MOBYTE.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\const\Mobyte" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -256,6 +236,7 @@
       <workItem from="1790425369088" duration="6623000" />
       <workItem from="1790470586516" duration="6744000" />
       <workItem from="1790561662300" duration="728000" />
+      <workItem from="1790680304239" duration="1848000" />
     </task>
     <servers />
   </component>

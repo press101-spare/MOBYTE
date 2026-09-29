@@ -44,6 +44,7 @@ public class SelectTest_HTY : MonoBehaviour
             _fadePanel.alpha = 0f;
             _fadePanel.blocksRaycasts = false;
         }
+        _canSelect = true;
         
         StartCoroutine(Coll());
     }
@@ -128,7 +129,6 @@ public class SelectTest_HTY : MonoBehaviour
             return;
 
         _isSceneMoving = true;
-        _canSelect = false;
 
         if (_selectBT != null)
             _selectBT.SetActive(false);
