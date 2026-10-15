@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class DataManager : MonoBehaviour
 {
+    public static DataManager Instance;
     [Header("필수 매니저 참조")]
     private SaveManager saveManager;
     private DiceDatabase diceDatabase;
@@ -38,6 +39,7 @@ public class DataManager : MonoBehaviour
     {
         saveManager = GetComponent<SaveManager>();
         diceDatabase = GetComponent<DiceDatabase>();
+        if (Instance == null) Instance = this;
     }
 
     private void Start()
@@ -48,6 +50,8 @@ public class DataManager : MonoBehaviour
             pendingSaveData = null;
         }
     }
+
+ 
 
     // ===================================================
     // 🔴 게임 저장 (Save)

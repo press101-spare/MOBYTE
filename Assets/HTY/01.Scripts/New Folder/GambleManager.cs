@@ -26,7 +26,6 @@ public class GambleManager : MonoBehaviour
         if(instance==null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -36,7 +35,7 @@ public class GambleManager : MonoBehaviour
 
     private void Update()
     {
-        if (_shopChipText)
+        if (_shopChipText.gameObject.activeSelf)
         {
             _shopChipText.text = PlayerProfileManager.Instance.Profile.money.ToString();
         }

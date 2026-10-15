@@ -51,6 +51,17 @@ namespace JJB.Script.Battle.Enemy
             if (enemyNameText != null)
                 enemyNameText.text = data.EnemyName;
 
+            RectTransform x = enemyImage.gameObject.GetComponent<RectTransform>();
+            if (data.EnemyName == "채무자")
+            {
+                
+                x.localScale = new Vector2(-2 , 1.5f);
+            }
+            else
+            {
+                x.localScale = new Vector2(-1, 1.5f);
+            }
+
             UpdateEnemySpriteLibrary();
             PlayIdle();
         }

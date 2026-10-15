@@ -159,6 +159,11 @@ public class LotteryTicket_Test : MonoBehaviour
             PlayerProfileManager.Instance.Profile.money += 3000;
             StartCoroutine(Coll(count, 3000));
         }
+        else
+        {
+            PlayerProfileManager.Instance.Profile.money += 0;
+            StartCoroutine(Coll(count, 0));
+        }
 
         _bt.interactable = false;
         

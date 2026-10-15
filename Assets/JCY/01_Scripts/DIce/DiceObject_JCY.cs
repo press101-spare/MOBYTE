@@ -37,8 +37,9 @@ public class DiceObject_JCY : MonoBehaviour
         if (DiceManager_JCY.Instance.isRolling)
             return;
         SetSelected(!IsSelected);
+        DiceDeckManager_JCY.Instance.diceEffectUIUpdate.slots.SetData(currentDiceSO);
     }
-    
+
     public void SetSelected(bool value)
     {
         if (IsSelected == value)
@@ -50,6 +51,7 @@ public class DiceObject_JCY : MonoBehaviour
          currentDiceSO.diceEffectType == DiceSO_JCY.DiceEffectType.Glass ||
          currentDiceSO.diceEffectType == DiceSO_JCY.DiceEffectType.Potion ||
          currentDiceSO.diceEffectType == DiceSO_JCY.DiceEffectType.Mirror ||
+         currentDiceSO.diceEffectType == DiceSO_JCY.DiceEffectType.Rock ||
          currentDiceSO.diceEffectType == DiceSO_JCY.DiceEffectType.Fraud)
         {
             ChageMeterial(currentDiceSO);

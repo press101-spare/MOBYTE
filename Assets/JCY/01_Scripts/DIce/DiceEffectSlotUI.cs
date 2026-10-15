@@ -8,17 +8,20 @@ public class DiceEffectSlotUI : MonoBehaviour
     [SerializeField] private Image diceImage;
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI descriptionText;
-    [SerializeField] private TMP_Text diceCount;
+    [SerializeField] private DiceSO_JCY defaultDice;
 
     [SerializeField] Image myImage;
 
-    public void SetData(DiceSO_JCY diceSO , int count)
+    private void Start()
+    {
+        SetData(defaultDice);
+    }
+    public void SetData(DiceSO_JCY diceSO)
     {
         diceImage.sprite = diceSO.diceIcon;
         myImage.color = diceSO.color;
         nameText.text = diceSO.diceName;
         descriptionText.text = diceSO.diceDescription;
         
-        diceCount.text = count > 1 ? $"x{count}" : "";
     }
 }

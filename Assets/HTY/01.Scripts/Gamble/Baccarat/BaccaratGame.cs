@@ -56,6 +56,10 @@ public class BaccaratGame : MonoBehaviour
 
     public GameObject _btBetting;
 
+
+
+    [SerializeField] private GameObject _uiObj;
+
     private void OnEnable()
     {
         _btBetting.SetActive(true);
@@ -236,7 +240,7 @@ public class BaccaratGame : MonoBehaviour
         }
 
         _isPlaying = false;
-        gameObject.transform.parent.gameObject.SetActive(false);
+        _uiObj.SetActive(false);
     }
 
     public void Sum(int id, int a)

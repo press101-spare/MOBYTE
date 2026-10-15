@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
+using Unity.Cinemachine;
 using UnityEngine;
 
 namespace JJB.Script.Battle
@@ -13,6 +15,13 @@ namespace JJB.Script.Battle
 
         public event Action<int, int> OnHealthChanged;
         public event Action OnDied;
+
+        public CinemachineImpulseSource _impulseSource;
+
+        private void Start()
+        {
+            _impulseSource = GetComponentInParent<CinemachineImpulseSource>();
+        }
 
         public void Initialize(int maxHealth)
         {
@@ -46,6 +55,8 @@ namespace JJB.Script.Battle
             damage = Mathf.Max(0, damage);
 
             CurrentHealth -= damage;
+            DiceManager_JCY.Instance.diceCamera.gameObject.transform.DOKill();
+            _impulseSource.GenerateImpulse(12);
             
             if (CurrentHealth <= 0 && _oneHpReviveEnabled)
             {

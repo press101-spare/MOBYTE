@@ -9,6 +9,8 @@ namespace JJB.Script.Battle.Player.Progression
 
         public PlayerProfile Profile { get; private set; }
 
+        public int currentStageIndex = 1;
+
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -26,7 +28,7 @@ namespace JJB.Script.Battle.Player.Progression
 
         private void Start()
         {
-            AddMoney(100);
+            AddMoney(300 * currentStageIndex);
         }
 
         public void AddMoney(int amount)

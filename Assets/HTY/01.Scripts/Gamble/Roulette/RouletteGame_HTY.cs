@@ -11,6 +11,8 @@ public class RouletteGame_HTY : MonoBehaviour
 
     public GameObject _startBT;
 
+    public Collider2D[] dd;
+
     private float _speed;
     private bool _isSpinning;
 
@@ -37,9 +39,18 @@ public class RouletteGame_HTY : MonoBehaviour
             transform.Rotate(0f, 0f, _speed * Time.deltaTime);
 
             _speed -= deceleration * Time.deltaTime;
-
+            if(_speed<1)
+            {
+                foreach(var v in dd)
+                {
+                    v.enabled = false;
+                }
+            }
             if (_speed < 0f)
+            {
                 _speed = 0f;
+            }
+                
 
             yield return null;
         }
@@ -50,8 +61,10 @@ public class RouletteGame_HTY : MonoBehaviour
 
         if (resultSlot == null)
         {
-            Debug.LogWarning("룰렛 결과 Collider를 찾지 못했습니다.");
+            yield return new WaitForSeconds(2f);
+
             _isSpinning = false;
+            ResetRoulette();
             yield break;
         }
 
@@ -64,6 +77,7 @@ public class RouletteGame_HTY : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         _isSpinning = false;
+        ResetRoulette();
 
         transform.parent.parent.gameObject.SetActive(false);
     }
@@ -75,5 +89,9 @@ public class RouletteGame_HTY : MonoBehaviour
         _isSpinning = false;
         transform.localRotation = Quaternion.identity;
         _startBT.SetActive(true);
+        foreach (var v in dd)
+        {
+            v.enabled = true;
+        }
     }
 }

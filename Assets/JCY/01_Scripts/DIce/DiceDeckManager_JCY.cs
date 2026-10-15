@@ -100,7 +100,6 @@ public class DiceDeckManager_JCY : MonoBehaviour
         // 3. DiceManager에게 전달
         DiceManager_JCY.Instance.StartTurn(drawnDice);
         
-        JJBGameManager.Instance.BattleTurnManager.diceEffectUIUpdate.UpdateUI(drawnDice);
         if (diceDeck.Count < drawCount)
         {
             ReshuffleDeck();

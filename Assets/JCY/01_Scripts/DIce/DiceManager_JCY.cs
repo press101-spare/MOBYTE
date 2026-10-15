@@ -665,7 +665,7 @@ public class DiceManager_JCY : MonoBehaviour
         if (DiceDeckManager_JCY.Instance != null &&
             DiceDeckManager_JCY.Instance.diceEffectUIUpdate != null)
         {
-            DiceDeckManager_JCY.Instance.diceEffectUIUpdate.UpdateUI(activeDiceSo);
+      //      DiceDeckManager_JCY.Instance.diceEffectUIUpdate.UpdateUI(activeDiceSo);
         }
 
         UpdateCurrentDiceValues();

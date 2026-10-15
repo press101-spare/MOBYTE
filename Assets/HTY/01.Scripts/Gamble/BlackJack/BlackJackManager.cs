@@ -54,6 +54,8 @@ public class BlackJackManager : MonoBehaviour
     public GameObject _delerCard;
     public GameObject _startBT;
 
+    [SerializeField] private GameObject _uiObj;
+
     private void OnEnable()
     {
         ResetGame();
@@ -336,7 +338,7 @@ public class BlackJackManager : MonoBehaviour
     {
         yield return new WaitForSeconds(_endingDelay);
         GambleManager.instance.GambleEnd(resultType);
-        gameObject.transform.parent.gameObject.SetActive(false);
+        _uiObj.SetActive(false);
     }
 
     private void OpenDealerCards()

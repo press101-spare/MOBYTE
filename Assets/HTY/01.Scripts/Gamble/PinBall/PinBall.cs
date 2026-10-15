@@ -36,6 +36,9 @@ public class PinBall : MonoBehaviour
     private bool _isPlaying;
 
 
+    [SerializeField] private GameObject _uiObj;
+
+
     private void Awake()
     {
         _ballRb = _ball.GetComponent<Rigidbody2D>();
@@ -179,6 +182,6 @@ public class PinBall : MonoBehaviour
 
         ResetPinBall();
 
-        transform.parent.gameObject.SetActive(false);
+        _uiObj.SetActive(false);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using JJB.Script.Battle.Enemy;
+using JJB.Script.Battle.Player.Progression;
 using UnityEngine;
 
 namespace JJB.Script.Battle.Stage
@@ -76,7 +77,9 @@ namespace JJB.Script.Battle.Stage
 
         public void NextStage()
         {
-            SetStageIndex(currentStageIndex + 1);
+            int value = currentStageIndex + 1;
+            PlayerProfileManager.Instance.currentStageIndex = value;
+            SetStageIndex(value);
         }
 
         private void RefreshEnemy()

@@ -2,5 +2,5 @@
 public class BattleSaveData
 {
     public int playerHp = 100;
-    public int currentStage;
+    public int currentStage = 1;
 }
